@@ -100,5 +100,7 @@ export function convertEntities(
 export function convertRelationships(
   jamfDataModel: JamfDataModel,
 ): JupiterOneRelationshipsData {
-  return {};
+  return {
+    userDeviceRelationships: [],
+  };
 }

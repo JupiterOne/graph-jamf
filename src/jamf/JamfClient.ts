@@ -30,13 +30,14 @@ export default class JamfClient {
   }
 
   public async fetchUsers(): Promise<User[]> {
+    const users: User[] = [];
     const result = (await this.makeRequest(
       `/users`,
       Method.GET,
       {},
     )) as UserResponse;
 
-    return result.users || [];
+    return [...users, ...result.users];
   }
 
   private async makeRequest(
@@ -45,7 +46,7 @@ export default class JamfClient {
     params: {},
     headers?: {},
   ): Promise<UserResponse> {
-    let options: RequestInit = {
+    const options: RequestInit = {
       method,
       headers: {
         "Content-type": "application/json",
@@ -56,10 +57,6 @@ export default class JamfClient {
         ...headers,
       },
     };
-
-    if (method === Method.POST) {
-      options = { ...options, body: JSON.stringify(params) };
-    }
 
     const response = await fetch(
       `https://${this.host}/JSSResource${url}`,

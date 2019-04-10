@@ -838,9 +838,9 @@
     "@types/yargs" "^12.0.9"
 
 "@jupiterone/jupiter-managed-integration-sdk@^21.0.0":
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/@jupiterone/jupiter-managed-integration-sdk/-/jupiter-managed-integration-sdk-21.1.6.tgz#9e504b30f0ea1c22073d5c95c8a0807cc081ce1d"
-  integrity sha512-jlkzd8N3C2G3m3TDhVzZWEtBW2qikjgtUQg6WKIBYAlhFCK0GiYDskLZyGtCy0MmkDKiC+IFL10VTtJx6muy+Q==
+  version "21.1.7"
+  resolved "https://registry.yarnpkg.com/@jupiterone/jupiter-managed-integration-sdk/-/jupiter-managed-integration-sdk-21.1.7.tgz#9c53afd708fed7caa97d5b6d6a2266b8b0a90f0d"
+  integrity sha512-3bo6fjihkAHuiKBKvRK8gWPHT9TpYqa9ixei3xr4a5bDkvIkLtb+OnCxliLFHFyPaoWVr3CP5v+zuS5tGvChtA==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -912,6 +912,13 @@
   integrity sha512-2kLuPC5FDnWIDvaJBzsGTBQaBbnDweznicvK7UGYzlIJP4RJR2a4A/ByLUXEyEgag6jz8eHdlWExGDtH3EYUXQ==
   dependencies:
     "@types/jest-diff" "*"
+
+"@types/node-fetch@^2.1.6":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.3.0.tgz#d1da24d56e9f1774a0e50a93cc8ee2a7922f4f0e"
+  integrity sha512-8hiAWrp7m9c0+LWLSMrUdPAoTJogvarqUdpQsyV9BlWnxVHTpdopNW0ldB4H8s/G4dg/KJLpqJIMb0GaZDf8/Q==
+  dependencies:
+    "@types/node" "*"
 
 "@types/node@*":
   version "11.13.2"
@@ -3793,6 +3800,11 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
+node-fetch@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
+  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
 
 node-int64@^0.4.0:
   version "0.4.0"

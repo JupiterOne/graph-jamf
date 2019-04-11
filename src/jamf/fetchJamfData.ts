@@ -1,9 +1,16 @@
-import JamfClient, { JamfDataModel } from "./JamfClient";
+import JamfClient, { JamfDataModel, User } from "./JamfClient";
 
 export default async function fetchJamfData(
   client: JamfClient,
 ): Promise<JamfDataModel> {
-  const [users] = await Promise.all([client.fetchUsers()]);
+  const [users, mobileDevices] = await Promise.all([
+    client.fetchUsers(),
+    client.fetchMobileDevices(),
+  ]);
 
-  return { users };
+  const usersFullProfiles: User[] = await Promise.all(
+    users.map(user => client.fetchUserById(user.id)),
+  );
+
+  return { users: usersFullProfiles, mobileDevices };
 }

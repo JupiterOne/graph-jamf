@@ -6,6 +6,7 @@ import {
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { createUserEntities } from "../converters";
+import { createMobileDeviceEntities } from "../converters/MobileDeviceEntityConverter";
 
 import {
   JupiterOneDataModel,
@@ -94,6 +95,7 @@ export function convertEntities(
 ): JupiterOneEntitiesData {
   return {
     users: createUserEntities(jamfDataModel.users),
+    mobileDevices: createMobileDeviceEntities(jamfDataModel.mobileDevices),
   };
 }
 

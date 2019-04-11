@@ -6,6 +6,7 @@ import * as Entities from "./entities";
 
 export interface JupiterOneEntitiesData {
   users: Entities.UserEntity[];
+  mobileDevices: Entities.MobileDeviceEntity[];
 }
 
 export interface JupiterOneDataModel {
@@ -31,12 +32,16 @@ export default async function fetchEntitiesAndRelationships(
 async function fetchEntities(
   graph: GraphClient,
 ): Promise<JupiterOneEntitiesData> {
-  const [users] = await Promise.all([
+  const [users, mobileDevices] = await Promise.all([
     graph.findEntitiesByType<Entities.UserEntity>(Entities.USER_ENTITY_TYPE),
+    graph.findEntitiesByType<Entities.MobileDeviceEntity>(
+      Entities.MOBILE_DEVICE_ENTITY_TYPE,
+    ),
   ]);
 
   return {
     users,
+    mobileDevices,
   };
 }
 

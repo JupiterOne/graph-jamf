@@ -1,0 +1,345 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users",
+    "body": "",
+    "status": 200,
+    "response": {
+      "users": [
+        {
+          "id": 5,
+          "name": "Heriberto Truby"
+        },
+        {
+          "id": 2,
+          "name": "Lael Buresh"
+        },
+        {
+          "id": 4,
+          "name": "Maira Fillman"
+        },
+        {
+          "id": 3,
+          "name": "Rory Overbey"
+        },
+        {
+          "id": 1,
+          "name": "Test"
+        }
+      ]
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:23 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "161",
+      "Connection",
+      "Close"
+    ]
+  },
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users/id/5",
+    "body": "",
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 5,
+        "name": "Heriberto Truby",
+        "full_name": "",
+        "email": "heriberto.truby@gmail.com",
+        "email_address": "heriberto.truby@gmail.com",
+        "phone_number": "",
+        "position": "",
+        "enable_custom_photo_url": false,
+        "custom_photo_url": "",
+        "ldap_server": {
+          "id": -1,
+          "name": "None"
+        },
+        "extension_attributes": [],
+        "sites": [],
+        "links": {
+          "computers": [],
+          "peripherals": [],
+          "mobile_devices": {
+            "mobile_device": {
+              "id": 35,
+              "name": "Update 1-3"
+            }
+          },
+          "vpp_assignments": [],
+          "total_vpp_code_count": 0
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:24 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "406",
+      "Connection",
+      "Close"
+    ]
+  },
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users/id/3",
+    "body": "",
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 3,
+        "name": "Rory Overbey",
+        "full_name": "",
+        "email": "rory.overbey@gmail.com",
+        "email_address": "rory.overbey@gmail.com",
+        "phone_number": "",
+        "position": "",
+        "enable_custom_photo_url": false,
+        "custom_photo_url": "",
+        "ldap_server": {
+          "id": -1,
+          "name": "None"
+        },
+        "extension_attributes": [],
+        "sites": [],
+        "links": {
+          "computers": [],
+          "peripherals": [],
+          "mobile_devices": {
+            "mobile_device": {
+              "id": 28,
+              "name": "Update 1-2"
+            }
+          },
+          "vpp_assignments": [],
+          "total_vpp_code_count": 0
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:24 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "397",
+      "Connection",
+      "Close"
+    ]
+  },
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users/id/2",
+    "body": "",
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 2,
+        "name": "Lael Buresh",
+        "full_name": "",
+        "email": "lael.buresh@gmail.com",
+        "email_address": "lael.buresh@gmail.com",
+        "phone_number": "",
+        "position": "",
+        "enable_custom_photo_url": false,
+        "custom_photo_url": "",
+        "ldap_server": {
+          "id": -1,
+          "name": "None"
+        },
+        "extension_attributes": [],
+        "sites": [],
+        "links": {
+          "computers": [],
+          "peripherals": [],
+          "mobile_devices": [],
+          "vpp_assignments": [],
+          "total_vpp_code_count": 0
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:24 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "394",
+      "Connection",
+      "Close"
+    ]
+  },
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users/id/1",
+    "body": "",
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 1,
+        "name": "Test",
+        "full_name": "Test User",
+        "email": "test@gmail.com",
+        "email_address": "test@gmail.com",
+        "phone_number": "",
+        "position": "",
+        "enable_custom_photo_url": false,
+        "custom_photo_url": "",
+        "ldap_server": {
+          "id": -1,
+          "name": "None"
+        },
+        "extension_attributes": [],
+        "sites": [],
+        "links": {
+          "computers": [],
+          "peripherals": [],
+          "mobile_devices": {
+            "mobile_device": {
+              "id": 16,
+              "name": "Update 1-1"
+            }
+          },
+          "vpp_assignments": [],
+          "total_vpp_code_count": 0
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:24 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "382",
+      "Connection",
+      "Close"
+    ]
+  },
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users/id/4",
+    "body": "",
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 4,
+        "name": "Maira Fillman",
+        "full_name": "",
+        "email": "maira.fillman@gmail.com",
+        "email_address": "maira.fillman@gmail.com",
+        "phone_number": "",
+        "position": "",
+        "enable_custom_photo_url": false,
+        "custom_photo_url": "",
+        "ldap_server": {
+          "id": -1,
+          "name": "None"
+        },
+        "extension_attributes": [],
+        "sites": [],
+        "links": {
+          "computers": [],
+          "peripherals": [],
+          "mobile_devices": [],
+          "vpp_assignments": [],
+          "total_vpp_code_count": 0
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 11 Apr 2019 15:05:24 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.std-echidnops5-tc-12; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "400",
+      "Connection",
+      "Close"
+    ]
+  }
+]

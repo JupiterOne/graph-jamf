@@ -1,7 +1,4 @@
-import {
-  GraphClient,
-  IntegrationRelationship,
-} from "@jupiterone/jupiter-managed-integration-sdk";
+import { GraphClient } from "@jupiterone/jupiter-managed-integration-sdk";
 import * as Entities from "./entities";
 
 export interface JupiterOneEntitiesData {
@@ -15,7 +12,7 @@ export interface JupiterOneDataModel {
 }
 
 export interface JupiterOneRelationshipsData {
-  userDeviceRelationships: IntegrationRelationship[];
+  userDeviceRelationships: Entities.UserDeviceRelationship[];
 }
 
 export default async function fetchEntitiesAndRelationships(
@@ -48,8 +45,12 @@ async function fetchEntities(
 export async function fetchRelationships(
   graph: GraphClient,
 ): Promise<JupiterOneRelationshipsData> {
-  const [] = await Promise.all([]);
+  const [userDeviceRelationships] = await Promise.all([
+    graph.findRelationshipsByType<Entities.UserDeviceRelationship>(
+      Entities.USER_DEVICE_RELATIONSHIP_TYPE,
+    ),
+  ]);
   return {
-    userDeviceRelationships: [],
+    userDeviceRelationships,
   };
 }

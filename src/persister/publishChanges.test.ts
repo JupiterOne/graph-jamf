@@ -37,7 +37,7 @@ describe("Convert data after fetching", () => {
       : nock.back.setMode("record");
   });
 
-  test("convert users", async () => {
+  test("convert full users profiles", async () => {
     const { nockDone } = await nock.back("full-user-profiles.json", {
       before: prepareScope,
     });
@@ -203,6 +203,43 @@ describe("Convert data after fetching", () => {
         udid: "ca44c96060a311e490b812df261f2c7e",
         username: "Heriberto Truby",
         wifiMacAddress: "54:EA:A8:3A:DC:E3",
+      },
+    ]);
+  });
+
+  test("convert 'user has mobile device' relationships", async () => {
+    const { nockDone } = await nock.back("user-has-mobile-device.json", {
+      before: prepareScope,
+    });
+
+    const { provider } = await initialize();
+
+    const jamfData = await fetchJamfData(provider);
+
+    nockDone();
+
+    const newData = convert(jamfData);
+    expect(newData.relationships.userDeviceRelationships).toEqual([
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_user_5",
+        _key: "jamf_user_5_has_jamf_mobile_device_35",
+        _toEntityKey: "jamf_mobile_device_35",
+        _type: "jamf_user_has_jamf_mobile_device",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_user_3",
+        _key: "jamf_user_3_has_jamf_mobile_device_28",
+        _toEntityKey: "jamf_mobile_device_28",
+        _type: "jamf_user_has_jamf_mobile_device",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_user_1",
+        _key: "jamf_user_1_has_jamf_mobile_device_16",
+        _toEntityKey: "jamf_mobile_device_16",
+        _type: "jamf_user_has_jamf_mobile_device",
       },
     ]);
   });

@@ -5,8 +5,11 @@ import {
   RelationshipOperation,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
-import { createUserEntities } from "../converters";
-import { createMobileDeviceEntities } from "../converters/MobileDeviceEntityConverter";
+import {
+  createMobileDeviceEntities,
+  createUserDeviceRelationships,
+  createUserEntities,
+} from "../converters";
 
 import {
   JupiterOneDataModel,
@@ -14,7 +17,7 @@ import {
   JupiterOneRelationshipsData,
 } from "../jupiterone";
 
-import { JamfDataModel } from "../jamf/JamfClient";
+import { JamfDataModel } from "../jamf";
 
 type EntitiesKeys = keyof JupiterOneEntitiesData;
 type RelationshipsKeys = keyof JupiterOneRelationshipsData;
@@ -103,6 +106,6 @@ export function convertRelationships(
   jamfDataModel: JamfDataModel,
 ): JupiterOneRelationshipsData {
   return {
-    userDeviceRelationships: [],
+    userDeviceRelationships: createUserDeviceRelationships(jamfDataModel.users),
   };
 }

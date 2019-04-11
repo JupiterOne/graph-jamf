@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "users": [
+      {
+        "_class": "Person",
+        "_key": "jamf_user_5",
+        "_type": "jamf_user",
+        "id": 5,
+        "username": "Heriberto Truby"
+      },
+      {
+        "_class": "Person",
+        "_key": "jamf_user_2",
+        "_type": "jamf_user",
+        "id": 2,
+        "username": "Lael Buresh"
+      },
+      {
+        "_class": "Person",
+        "_key": "jamf_user_4",
+        "_type": "jamf_user",
+        "id": 4,
+        "username": "Maira Fillman"
+      },
+      {
+        "_class": "Person",
+        "_key": "jamf_user_3",
+        "_type": "jamf_user",
+        "id": 3,
+        "username": "Rory Overbey"
+      },
+      {
+        "_class": "Person",
+        "_key": "jamf_user_1",
+        "_type": "jamf_user",
+        "id": 1,
+        "username": "Test"
+      }
+    ]
+  },
+  "relationships": {
+    "userDeviceRelationships": []
+  }
+}

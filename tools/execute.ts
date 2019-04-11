@@ -10,7 +10,9 @@ async function run(): Promise<void> {
   const logger = createLogger({ name: "local", level: TRACE });
 
   const integrationConfig = {
-    // providerApiToken: process.env.PROVIDER_LOCAL_EXECUTION_API_TOKEN
+    jamfHost: process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_HOST,
+    jamfName: process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_NAME,
+    jamfPassword: process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD,
   };
 
   const invocationArgs = {

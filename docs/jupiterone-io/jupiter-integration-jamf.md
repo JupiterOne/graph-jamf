@@ -4,8 +4,8 @@
 
 JupiterOne provides a managed integration with jamf. The integration connects
 directly to jamf APIs to obtain account metadata and analyze resource
-relationships. Customers authorize access by ... in their target jamf account
-and providing that credential to JupiterOne.
+relationships. Customers authorize access by Basic Authentication with their
+target jamf account and providing that credential to JupiterOne.
 
 ## Integration Instance Configuration
 
@@ -18,17 +18,17 @@ jamf provides [detailed instructions on creating credentials][1].
 
 The following entity resources are ingested when the integration runs:
 
-| Example Entity Resource | \_type : \_class of the Entity        |
-| ----------------------- | ------------------------------------- |
-| Account                 | `example_account` : `Account`         |
-| Application             | `example_application` : `Application` |
+| Entity Resource | \_type : \_class of the Entity  |
+| --------------- | ------------------------------- |
+| User            | `jamf_user` : `Person`          |
+| MobileDevice    | `jamf_mobile_device` : `Device` |
 
 ## Relationships
 
 The following relationships are created/mapped:
 
-| From              | Type    | To                    |
-| ----------------- | ------- | --------------------- |
-| `example_account` | **HAS** | `example_application` |
+| From        | Type    | To                   |
+| ----------- | ------- | -------------------- |
+| `jamf_user` | **HAS** | `jamf_mobile_device` |
 
-[1]: https://www.jamf.com
+[1]: https://developer.jamf.com/documentation#authentication

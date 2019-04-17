@@ -1,4 +1,4 @@
-import { User } from "../jamf/JamfClient";
+import { User } from "../jamf";
 import { USER_ENTITY_CLASS, USER_ENTITY_TYPE, UserEntity } from "../jupiterone";
 
 import generateKey from "../utils/generateKey";

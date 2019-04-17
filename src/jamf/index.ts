@@ -1,4 +1,16 @@
 import fetchJamfData from "./fetchJamfData";
-import JamfClient, { JamfDataModel, MobileDevice, User } from "./JamfClient";
+import JamfClient, {
+  Account,
+  JamfDataModel,
+  MobileDevice,
+  User,
+} from "./JamfClient";
 
-export { JamfClient, fetchJamfData, User, MobileDevice, JamfDataModel };
+export {
+  JamfClient,
+  fetchJamfData,
+  Account,
+  User,
+  MobileDevice,
+  JamfDataModel,
+};

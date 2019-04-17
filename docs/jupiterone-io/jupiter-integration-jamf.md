@@ -20,15 +20,17 @@ The following entity resources are ingested when the integration runs:
 
 | Entity Resource | \_type : \_class of the Entity  |
 | --------------- | ------------------------------- |
-| User            | `jamf_user` : `Person`          |
+| Account         | `jamf_account` : `Account`      |
+| User            | `jamf_user` : `User`            |
 | MobileDevice    | `jamf_mobile_device` : `Device` |
 
 ## Relationships
 
 The following relationships are created/mapped:
 
-| From        | Type    | To                   |
-| ----------- | ------- | -------------------- |
-| `jamf_user` | **HAS** | `jamf_mobile_device` |
+| From           | Type    | To                   |
+| -------------- | ------- | -------------------- |
+| `jamf_account` | **HAS** | `jamf_user`          |
+| `jamf_user`    | **HAS** | `jamf_mobile_device` |
 
 [1]: https://developer.jamf.com/documentation#authentication

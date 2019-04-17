@@ -1,5 +1,10 @@
 import fetch, { RequestInit } from "node-fetch";
 
+export interface Account {
+  id: string;
+  name: string;
+}
+
 export interface User {
   id: number;
   name: string;

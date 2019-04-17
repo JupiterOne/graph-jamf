@@ -2,6 +2,7 @@ import { GraphClient } from "@jupiterone/jupiter-managed-integration-sdk";
 import * as Entities from "./entities";
 
 export interface JupiterOneEntitiesData {
+  accounts: Entities.AccountEntity[];
   users: Entities.UserEntity[];
   mobileDevices: Entities.MobileDeviceEntity[];
 }
@@ -12,6 +13,7 @@ export interface JupiterOneDataModel {
 }
 
 export interface JupiterOneRelationshipsData {
+  accountUserRelationships: Entities.AccountUserRelationship[];
   userDeviceRelationships: Entities.UserDeviceRelationship[];
 }
 
@@ -29,7 +31,10 @@ export default async function fetchEntitiesAndRelationships(
 async function fetchEntities(
   graph: GraphClient,
 ): Promise<JupiterOneEntitiesData> {
-  const [users, mobileDevices] = await Promise.all([
+  const [accounts, users, mobileDevices] = await Promise.all([
+    graph.findEntitiesByType<Entities.AccountEntity>(
+      Entities.ACCOUNT_ENTITY_TYPE,
+    ),
     graph.findEntitiesByType<Entities.UserEntity>(Entities.USER_ENTITY_TYPE),
     graph.findEntitiesByType<Entities.MobileDeviceEntity>(
       Entities.MOBILE_DEVICE_ENTITY_TYPE,
@@ -37,6 +42,7 @@ async function fetchEntities(
   ]);
 
   return {
+    accounts,
     users,
     mobileDevices,
   };
@@ -45,12 +51,18 @@ async function fetchEntities(
 export async function fetchRelationships(
   graph: GraphClient,
 ): Promise<JupiterOneRelationshipsData> {
-  const [userDeviceRelationships] = await Promise.all([
-    graph.findRelationshipsByType<Entities.UserDeviceRelationship>(
-      Entities.USER_DEVICE_RELATIONSHIP_TYPE,
-    ),
-  ]);
+  const [accountUserRelationships, userDeviceRelationships] = await Promise.all(
+    [
+      graph.findRelationshipsByType<Entities.AccountUserRelationship>(
+        Entities.ACCOUNT_USER_RELATIONSHIP_TYPE,
+      ),
+      graph.findRelationshipsByType<Entities.UserDeviceRelationship>(
+        Entities.USER_DEVICE_RELATIONSHIP_TYPE,
+      ),
+    ],
+  );
   return {
+    accountUserRelationships,
     userDeviceRelationships,
   };
 }

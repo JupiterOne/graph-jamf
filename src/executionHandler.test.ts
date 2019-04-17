@@ -23,6 +23,10 @@ test("executionHandler", async () => {
       fetchMobileDevices: jest.fn().mockReturnValue([]),
       fetchUserById: jest.fn().mockReturnValue({}),
     },
+    account: {
+      id: "testId",
+      name: "testName",
+    },
   };
 
   (initializeContext as jest.Mock).mockReturnValue(executionContext);
@@ -38,7 +42,7 @@ test("executionHandler", async () => {
   expect(executionContext.provider.fetchUsers).toHaveBeenCalledTimes(1);
   expect(executionContext.provider.fetchMobileDevices).toHaveBeenCalledTimes(1);
   expect(executionContext.provider.fetchUserById).toHaveBeenCalledTimes(0);
-  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(2);
+  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(3);
   expect(
     executionContext.persister.publishPersisterOperations,
   ).toHaveBeenCalledTimes(1);

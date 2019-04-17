@@ -13,14 +13,16 @@ import publishChanges from "./persister/publishChanges";
 export default async function executionHandler(
   context: IntegrationExecutionContext<IntegrationInvocationEvent>,
 ): Promise<IntegrationExecutionResult> {
-  const { graph, persister, provider } = await initializeContext(context);
+  const { graph, persister, provider, account } = await initializeContext(
+    context,
+  );
 
   const oldData = await fetchEntitiesAndRelationships(graph);
   const jamfData = await fetchJamfData(provider);
 
   return {
     operations: summarizePersisterOperationsResults(
-      await publishChanges(persister, oldData, jamfData),
+      await publishChanges(persister, oldData, jamfData, account),
     ),
   };
 }

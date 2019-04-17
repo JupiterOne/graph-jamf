@@ -10,6 +10,8 @@ import {
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
+import { createAccountEntity } from "../converters/AccountEntityConverter";
+import { createAccountUserRelationships } from "../converters/AccountUserRelationshipsConverter";
 
 import {
   JupiterOneDataModel,
@@ -17,7 +19,7 @@ import {
   JupiterOneRelationshipsData,
 } from "../jupiterone";
 
-import { JamfDataModel } from "../jamf";
+import { Account, JamfDataModel } from "../jamf";
 
 type EntitiesKeys = keyof JupiterOneEntitiesData;
 type RelationshipsKeys = keyof JupiterOneRelationshipsData;
@@ -26,8 +28,9 @@ export default async function publishChanges(
   persister: PersisterClient,
   oldData: JupiterOneDataModel,
   jamfData: JamfDataModel,
+  account: Account,
 ) {
-  const newData = convert(jamfData);
+  const newData = convert(jamfData, account);
 
   const entities = createEntitiesOperations(
     oldData.entities,
@@ -86,17 +89,22 @@ function createRelationshipsOperations(
   }, defatultOperations);
 }
 
-export function convert(jamfDataModel: JamfDataModel): JupiterOneDataModel {
+export function convert(
+  jamfDataModel: JamfDataModel,
+  account: Account,
+): JupiterOneDataModel {
   return {
-    entities: convertEntities(jamfDataModel),
-    relationships: convertRelationships(jamfDataModel),
+    entities: convertEntities(jamfDataModel, account),
+    relationships: convertRelationships(jamfDataModel, account),
   };
 }
 
 export function convertEntities(
   jamfDataModel: JamfDataModel,
+  account: Account,
 ): JupiterOneEntitiesData {
   return {
+    accounts: [createAccountEntity(account)],
     users: createUserEntities(jamfDataModel.users),
     mobileDevices: createMobileDeviceEntities(jamfDataModel.mobileDevices),
   };
@@ -104,8 +112,13 @@ export function convertEntities(
 
 export function convertRelationships(
   jamfDataModel: JamfDataModel,
+  account: Account,
 ): JupiterOneRelationshipsData {
   return {
+    accountUserRelationships: createAccountUserRelationships(
+      account,
+      jamfDataModel.users,
+    ),
     userDeviceRelationships: createUserDeviceRelationships(jamfDataModel.users),
   };
 }

@@ -19,6 +19,8 @@ async function initialize() {
         jamfName: process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_NAME,
         jamfPassword: process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD,
       },
+      id: "account_xxx",
+      name: "test-name",
     },
   };
 
@@ -42,7 +44,7 @@ describe("Convert data after fetching", () => {
       before: prepareScope,
     });
 
-    const { provider } = await initialize();
+    const { provider, account } = await initialize();
 
     provider.fetchMobileDevices = jest.fn().mockReturnValue([]);
 
@@ -50,10 +52,10 @@ describe("Convert data after fetching", () => {
 
     nockDone();
 
-    const newData = convert(jamfData);
+    const newData = convert(jamfData, account);
     expect(newData.entities.users).toEqual([
       {
-        _class: "Person",
+        _class: "User",
         _key: "jamf_user_5",
         _type: "jamf_user",
         customPhotoUrl: "",
@@ -70,7 +72,7 @@ describe("Convert data after fetching", () => {
         username: "Heriberto Truby",
       },
       {
-        _class: "Person",
+        _class: "User",
         _key: "jamf_user_2",
         _type: "jamf_user",
         customPhotoUrl: "",
@@ -86,7 +88,7 @@ describe("Convert data after fetching", () => {
         username: "Lael Buresh",
       },
       {
-        _class: "Person",
+        _class: "User",
         _key: "jamf_user_4",
         _type: "jamf_user",
         customPhotoUrl: "",
@@ -102,7 +104,7 @@ describe("Convert data after fetching", () => {
         username: "Maira Fillman",
       },
       {
-        _class: "Person",
+        _class: "User",
         _key: "jamf_user_3",
         _type: "jamf_user",
         customPhotoUrl: "",
@@ -119,7 +121,7 @@ describe("Convert data after fetching", () => {
         username: "Rory Overbey",
       },
       {
-        _class: "Person",
+        _class: "User",
         _key: "jamf_user_1",
         _type: "jamf_user",
         customPhotoUrl: "",
@@ -143,7 +145,7 @@ describe("Convert data after fetching", () => {
       before: prepareScope,
     });
 
-    const { provider } = await initialize();
+    const { provider, account } = await initialize();
 
     provider.fetchUsers = jest.fn().mockReturnValue([]);
 
@@ -151,7 +153,7 @@ describe("Convert data after fetching", () => {
 
     nockDone();
 
-    const newData = convert(jamfData);
+    const newData = convert(jamfData, account);
     expect(newData.entities.mobileDevices).toEqual([
       {
         _class: "Device",
@@ -212,13 +214,13 @@ describe("Convert data after fetching", () => {
       before: prepareScope,
     });
 
-    const { provider } = await initialize();
+    const { provider, account } = await initialize();
 
     const jamfData = await fetchJamfData(provider);
 
     nockDone();
 
-    const newData = convert(jamfData);
+    const newData = convert(jamfData, account);
     expect(newData.relationships.userDeviceRelationships).toEqual([
       {
         _class: "HAS",
@@ -240,6 +242,57 @@ describe("Convert data after fetching", () => {
         _key: "jamf_user_1_has_jamf_mobile_device_16",
         _toEntityKey: "jamf_mobile_device_16",
         _type: "jamf_user_has_jamf_mobile_device",
+      },
+    ]);
+  });
+
+  test("convert 'user has mobile device' relationships", async () => {
+    const { nockDone } = await nock.back("account-has-users.json", {
+      before: prepareScope,
+    });
+
+    const { provider, account } = await initialize();
+
+    const jamfData = await fetchJamfData(provider);
+
+    nockDone();
+
+    const newData = convert(jamfData, account);
+    expect(newData.relationships.accountUserRelationships).toEqual([
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_account_account_xxx",
+        _key: "jamf_account_account_xxx_has_jamf_user_5",
+        _toEntityKey: "jamf_user_5",
+        _type: "jamf_account_has_jamf_user",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_account_account_xxx",
+        _key: "jamf_account_account_xxx_has_jamf_user_2",
+        _toEntityKey: "jamf_user_2",
+        _type: "jamf_account_has_jamf_user",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_account_account_xxx",
+        _key: "jamf_account_account_xxx_has_jamf_user_4",
+        _toEntityKey: "jamf_user_4",
+        _type: "jamf_account_has_jamf_user",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_account_account_xxx",
+        _key: "jamf_account_account_xxx_has_jamf_user_3",
+        _toEntityKey: "jamf_user_3",
+        _type: "jamf_account_has_jamf_user",
+      },
+      {
+        _class: "HAS",
+        _fromEntityKey: "jamf_account_account_xxx",
+        _key: "jamf_account_account_xxx_has_jamf_user_1",
+        _toEntityKey: "jamf_user_1",
+        _type: "jamf_account_has_jamf_user",
       },
     ]);
   });

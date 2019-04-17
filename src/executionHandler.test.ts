@@ -1,4 +1,5 @@
 import {
+  IntegrationActionName,
   IntegrationExecutionContext,
   IntegrationInvocationEvent,
 } from "@jupiterone/jupiter-managed-integration-sdk";
@@ -7,8 +8,10 @@ import initializeContext from "./initializeContext";
 
 jest.mock("./initializeContext");
 
-test("executionHandler", async () => {
-  const executionContext: any = {
+let executionContext: any;
+
+beforeEach(() => {
+  executionContext = {
     graph: {
       findEntitiesByType: jest.fn().mockResolvedValue([]),
       findRelationshipsByType: jest.fn().mockResolvedValue([]),
@@ -30,12 +33,20 @@ test("executionHandler", async () => {
   };
 
   (initializeContext as jest.Mock).mockReturnValue(executionContext);
+});
 
+test("executionHandler with INGEST action", async () => {
   const invocationContext = {
     instance: {
       config: {},
     },
+    event: {
+      action: {
+        name: IntegrationActionName.INGEST,
+      },
+    },
   } as IntegrationExecutionContext<IntegrationInvocationEvent>;
+
   await executionHandler(invocationContext);
 
   expect(initializeContext).toHaveBeenCalledWith(invocationContext);
@@ -46,4 +57,30 @@ test("executionHandler", async () => {
   expect(
     executionContext.persister.publishPersisterOperations,
   ).toHaveBeenCalledTimes(1);
+});
+
+test("executionHandler with unhandled action", async () => {
+  const invocationContext = {
+    instance: {
+      config: {},
+    },
+    event: {
+      action: {
+        name: IntegrationActionName.SCAN,
+      },
+    },
+  } as IntegrationExecutionContext<IntegrationInvocationEvent>;
+
+  await executionHandler(invocationContext);
+
+  expect(executionContext.provider.fetchUsers).not.toHaveBeenCalled();
+  expect(executionContext.provider.fetchMobileDevices).not.toHaveBeenCalled();
+  expect(executionContext.provider.fetchUserById).not.toHaveBeenCalled();
+  expect(executionContext.persister.processEntities).not.toHaveBeenCalled();
+  expect(
+    executionContext.persister.publishPersisterOperations,
+  ).not.toHaveBeenCalled();
+  expect(
+    executionContext.persister.publishPersisterOperations,
+  ).not.toHaveBeenCalled();
 });

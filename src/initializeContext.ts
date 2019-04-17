@@ -4,10 +4,11 @@ import {
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { Account, JamfClient } from "./jamf";
+import { JamfIntegrationContext } from "./types";
 
 export default async function initializeContext(
   context: IntegrationExecutionContext<IntegrationInvocationEvent>,
-) {
+): Promise<JamfIntegrationContext> {
   const { config } = context.instance;
 
   const provider = new JamfClient(
@@ -24,6 +25,7 @@ export default async function initializeContext(
   };
 
   return {
+    ...context,
     graph,
     persister,
     provider,

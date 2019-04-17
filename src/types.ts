@@ -5,11 +5,12 @@ import {
   PersisterClient,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
-import JamfClient from "./jamf/JamfClient";
+import JamfClient, { Account } from "./jamf/JamfClient";
 
-export interface JamfExecutionContext
+export interface JamfIntegrationContext
   extends IntegrationExecutionContext<IntegrationInvocationEvent> {
   graph: GraphClient;
   persister: PersisterClient;
   provider: JamfClient;
+  account: Account;
 }

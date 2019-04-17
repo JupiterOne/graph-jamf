@@ -1,4 +1,5 @@
 import {
+  IntegrationActionName,
   IntegrationExecutionContext,
   IntegrationExecutionResult,
   IntegrationInvocationEvent,
@@ -9,13 +10,23 @@ import initializeContext from "./initializeContext";
 import fetchJamfData from "./jamf/fetchJamfData";
 import fetchEntitiesAndRelationships from "./jupiterone/fetchEntitiesAndRelationships";
 import publishChanges from "./persister/publishChanges";
+import { JamfIntegrationContext } from "./types";
 
 export default async function executionHandler(
   context: IntegrationExecutionContext<IntegrationInvocationEvent>,
 ): Promise<IntegrationExecutionResult> {
-  const { graph, persister, provider, account } = await initializeContext(
-    context,
-  );
+  const actionFunction = ACTIONS[context.event.action.name];
+  if (actionFunction) {
+    return await actionFunction(await initializeContext(context));
+  } else {
+    return {};
+  }
+}
+
+async function synchronize(
+  context: JamfIntegrationContext,
+): Promise<IntegrationExecutionResult> {
+  const { graph, persister, provider, account } = context;
 
   const oldData = await fetchEntitiesAndRelationships(graph);
   const jamfData = await fetchJamfData(provider);
@@ -26,3 +37,15 @@ export default async function executionHandler(
     ),
   };
 }
+
+type ActionFunction = (
+  context: JamfIntegrationContext,
+) => Promise<IntegrationExecutionResult>;
+
+interface ActionMap {
+  [actionName: string]: ActionFunction | undefined;
+}
+
+const ACTIONS: ActionMap = {
+  [IntegrationActionName.INGEST]: synchronize,
+};

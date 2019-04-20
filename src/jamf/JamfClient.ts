@@ -1,104 +1,12 @@
 import fetch, { RequestInit } from "node-fetch";
-
-export interface Account {
-  id: string;
-  name: string;
-}
-
-export interface User {
-  id: number;
-  name: string;
-  full_name?: string;
-  email?: string;
-  email_address?: string;
-  phone_number?: string;
-  position?: string;
-  enable_custom_photo_url?: boolean;
-  custom_photo_url?: string;
-  ldap_server?: {
-    id: number;
-    name: string;
-  };
-  extension_attributes?: Array<{
-    extension_attribute: {
-      id: number;
-      name: string;
-      type: string;
-      value: string;
-    };
-  }>;
-  sites?: Array<{
-    site: {
-      id: number;
-      name: string;
-    };
-  }>;
-  links?: {
-    computers: {
-      computer: {
-        id: number;
-        name: string;
-      };
-    };
-    peripherals: {
-      peripheral: {
-        id: number;
-        name: string;
-      };
-    };
-    mobile_devices: {
-      mobile_device: {
-        id: number;
-        name: string;
-      };
-    };
-    vpp_assignments: {
-      vpp_assignment: {
-        id: number;
-        name: string;
-      };
-    };
-    total_vpp_code_count: number;
-  };
-}
-
-export interface MobileDevice {
-  id: number;
-  name: string;
-  device_name: string;
-  udid: string;
-  serial_number: string;
-  phone_number: string;
-  wifi_mac_address: string;
-  managed: boolean;
-  supervised: boolean;
-  model: string;
-  model_identifier: string;
-  model_display: string;
-  username: string;
-}
-
-interface UsersResponse {
-  users: User[];
-}
-
-interface UserResponse {
-  user: User;
-}
-
-interface MobileDevicesResponse {
-  mobile_devices: MobileDevice[];
-}
-
-export interface JamfDataModel {
-  users: User[];
-  mobileDevices: MobileDevice[];
-}
-
-enum Method {
-  GET = "get",
-  POST = "post",
-}
+import {
+  Method,
+  MobileDevice,
+  MobileDevicesResponse,
+  User,
+  UserResponse,
+  UsersResponse,
+} from "../types";
 
 export default class JamfClient {
   private readonly host: string;
@@ -112,43 +20,41 @@ export default class JamfClient {
   }
 
   public async fetchUsers(): Promise<User[]> {
-    const users: User[] = [];
-    const result = (await this.makeRequest(
+    const result = await this.makeRequest<UsersResponse>(
       `/users`,
       Method.GET,
       {},
-    )) as UsersResponse;
+    );
 
-    return [...users, ...result.users];
+    return result.users;
   }
 
   public async fetchUserById(id: number): Promise<User> {
-    const result = (await this.makeRequest(
+    const result = await this.makeRequest<UserResponse>(
       `/users/id/${id}`,
       Method.GET,
       {},
-    )) as UserResponse;
+    );
 
     return result.user;
   }
 
   public async fetchMobileDevices(): Promise<MobileDevice[]> {
-    const devices: MobileDevice[] = [];
-    const result = (await this.makeRequest(
+    const result = await this.makeRequest<MobileDevicesResponse>(
       "/mobiledevices",
       Method.GET,
       {},
-    )) as MobileDevicesResponse;
+    );
 
-    return [...devices, ...result.mobile_devices];
+    return result.mobile_devices;
   }
 
-  private async makeRequest(
+  private async makeRequest<T>(
     url: string,
     method: Method,
     params: {},
     headers?: {},
-  ): Promise<UsersResponse | MobileDevicesResponse | UserResponse> {
+  ): Promise<T> {
     const options: RequestInit = {
       method,
       headers: {

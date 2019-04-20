@@ -6,34 +6,45 @@ import {
   USER_ENTITY_TYPE,
   UserDeviceRelationship,
 } from "../jupiterone/entities";
-import generateKey from "../utils/generateKey";
+import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
 
-export function createUserDeviceRelationships(users: User[]) {
+export function createUserDeviceRelationships(
+  users: User[],
+): UserDeviceRelationship[] {
   const defaultValue: UserDeviceRelationship[] = [];
 
   return users.reduce((acc, user) => {
-    if (
-      !user.links ||
-      !user.links.mobile_devices ||
-      !user.links.mobile_devices.mobile_device
-    ) {
+    if (isMobileDevice(user)) {
       return acc;
     }
 
-    const parentKey = generateKey(USER_ENTITY_TYPE, user.id);
-    const childKey = generateKey(
+    const parentKey = generateEntityKey(USER_ENTITY_TYPE, user.id);
+    const childKey = generateEntityKey(
       MOBILE_DEVICE_ENTITY_TYPE,
-      user.links.mobile_devices.mobile_device.id,
+      user.links!.mobile_devices!.mobile_device!.id,
+    );
+    const relationKey = generateRelationKey(
+      parentKey,
+      USER_DEVICE_RELATIONSHIP_CLASS,
+      childKey,
     );
 
     const relationship: UserDeviceRelationship = {
       _class: USER_DEVICE_RELATIONSHIP_CLASS,
       _type: USER_DEVICE_RELATIONSHIP_TYPE,
       _fromEntityKey: parentKey,
-      _key: `${parentKey}_has_${childKey}`,
+      _key: relationKey,
       _toEntityKey: childKey,
     };
 
     return [...acc, relationship];
   }, defaultValue);
+}
+
+function isMobileDevice(user: User) {
+  return !(
+    user.links &&
+    user.links.mobile_devices &&
+    user.links.mobile_devices.mobile_device
+  );
 }

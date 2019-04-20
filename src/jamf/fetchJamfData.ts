@@ -1,4 +1,5 @@
-import JamfClient, { JamfDataModel, User } from "./JamfClient";
+import { JamfDataModel, User } from "../types";
+import JamfClient from "./JamfClient";
 
 export default async function fetchJamfData(
   client: JamfClient,

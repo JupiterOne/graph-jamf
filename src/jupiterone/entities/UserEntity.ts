@@ -14,9 +14,5 @@ export interface UserEntity extends EntityFromIntegration {
   enableCustomPhotoUrl?: boolean;
   customPhotoUrl?: string;
   ldapServer?: string;
-  computer?: string;
-  peripheral?: string;
-  mobileDevice?: string;
-  vppAssignment?: string;
   totalVppCodeCount?: number;
 }

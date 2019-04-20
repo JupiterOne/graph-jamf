@@ -1,18 +1,18 @@
-import { MobileDevice } from "../jamf/JamfClient";
 import {
   MOBILE_DEVICE_ENTITY_CLASS,
   MOBILE_DEVICE_ENTITY_TYPE,
   MobileDeviceEntity,
 } from "../jupiterone";
+import { MobileDevice } from "../types";
 
-import generateKey from "../utils/generateKey";
+import { generateEntityKey } from "../utils/generateKey";
 
 export function createMobileDeviceEntities(
   data: MobileDevice[],
 ): MobileDeviceEntity[] {
   return data.map(device => {
     return {
-      _key: generateKey(MOBILE_DEVICE_ENTITY_TYPE, device.id),
+      _key: generateEntityKey(MOBILE_DEVICE_ENTITY_TYPE, device.id),
       _type: MOBILE_DEVICE_ENTITY_TYPE,
       _class: MOBILE_DEVICE_ENTITY_CLASS,
       id: device.id,

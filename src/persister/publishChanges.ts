@@ -11,7 +11,7 @@ import {
   createUserEntities,
 } from "../converters";
 import { createAccountEntity } from "../converters/AccountEntityConverter";
-import { createAccountUserRelationships } from "../converters/AccountUserRelationshipsConverter";
+import { createAccountUserRelationships } from "../converters/AccountUserRelationshipConverter";
 
 import {
   JupiterOneDataModel,

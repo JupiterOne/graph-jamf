@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  integration:
+    image: jupiter-integration-jamf-app
+    build: .
+    container_name: jupiter-integration-jamf-app
+    volumes:
+      - .:/app:cached
+      - ~/.ssh:/root/.ssh
+      - ~/.bash_history:/root/.bash_history
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      GRAPH_DB_ENDPOINT: graph
+      JAMF_LOCAL_EXECUTION_ACCOUNT_HOST: 'YOUR JAMF PRO ACCOUNT HOST HERE'
+      JAMF_LOCAL_EXECUTION_ACCOUNT_NAME: 'YOUR JAMF PRO ACCOUNT NAME HERE'
+      JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD: 'YOUR JAMF PRO ACCOUNT PASSWORD HERE'
+    depends_on:
+      - graph
+  graph:
+    image: tinkerpop/gremlin-server:3.3
+    restart: unless-stopped
+    ports:
+      - "8182:8182"

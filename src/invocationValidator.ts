@@ -1,7 +1,11 @@
 import {
   IntegrationExecutionContext,
+  IntegrationInstanceAuthenticationError,
+  IntegrationInstanceConfigError,
   IntegrationInvocationEvent,
 } from "@jupiterone/jupiter-managed-integration-sdk";
+
+import { JamfClient } from "./jamf";
 
 /**
  * Performs validation of the execution before the execution handler function is
@@ -21,13 +25,22 @@ import {
 export default async function invocationValidator(
   executionContext: IntegrationExecutionContext<IntegrationInvocationEvent>,
 ) {
-  // const { config } = executionContext.instance;
-  // if (!config.providerAPIKey) {
-  //   throw new IntegrationInstanceConfigError('providerAPIKey missing in config');
-  // }
-  // try {
-  //   new ProviderClient(config.providerAPIKey).someEndpoint();
-  // } catch (err) {
-  //   throw new IntegrationInstanceAuthenticationError(err);
-  // }
+  const { config } = executionContext.instance;
+  if (!config.jamfHost || !config.jamfName || !config.jamfPassword) {
+    throw new IntegrationInstanceConfigError(
+      "config requires all of { jamfHost, jamfName, jamfPassword }",
+    );
+  }
+
+  const provider = new JamfClient(
+    config.jamfHost,
+    config.jamfName,
+    config.jamfPassword,
+  );
+
+  try {
+    await provider.fetchUsers();
+  } catch (err) {
+    throw new IntegrationInstanceAuthenticationError(err);
+  }
 }

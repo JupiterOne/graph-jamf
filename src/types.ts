@@ -1,42 +1,116 @@
 import {
-  EntityFromIntegration,
   GraphClient,
   IntegrationExecutionContext,
   IntegrationInvocationEvent,
   PersisterClient,
 } from "@jupiterone/jupiter-managed-integration-sdk";
-import ProviderClient from "./ProviderClient";
 
-export const ACCOUNT_ENTITY_TYPE = "provider_account";
-export const ACCOUNT_ENTITY_CLASS = "Account";
+import JamfClient from "./jamf/JamfClient";
 
-export const USER_ENTITY_TYPE = "provider_user";
-export const USER_ENTITY_CLASS = "User";
-export const ACCOUNT_USER_RELATIONSHIP_TYPE = "provider_account_user";
-
-export const DEVICE_ENTITY_TYPE = "provider_device";
-export const DEVICE_ENTITY_CLASS = "Device";
-export const ACCOUNT_DEVICE_RELATIONSHIP_TYPE = "provider_account_device";
-
-export const USER_DEVICE_RELATIONSHIP_TYPE = "provider_user_device";
-export const USER_DEVICE_RELATIONSHIP_CLASS = "HAS";
-
-export interface AccountEntity extends EntityFromIntegration {
-  accountId: string;
-}
-
-export interface UserEntity extends EntityFromIntegration {
-  userId: string;
-}
-
-export interface DeviceEntity extends EntityFromIntegration {
-  deviceId: string;
-  ownerId: string;
-}
-
-export interface ExampleExecutionContext
+export interface JamfIntegrationContext
   extends IntegrationExecutionContext<IntegrationInvocationEvent> {
   graph: GraphClient;
   persister: PersisterClient;
-  provider: ProviderClient;
+  provider: JamfClient;
+  account: Account;
+}
+
+export interface Account {
+  id: string;
+  name: string;
+}
+
+export interface User {
+  id: number;
+  name: string;
+  full_name?: string;
+  email?: string;
+  email_address?: string;
+  phone_number?: string;
+  position?: string;
+  enable_custom_photo_url?: boolean;
+  custom_photo_url?: string;
+  ldap_server?: {
+    id: number;
+    name: string;
+  };
+  extension_attributes?: Array<{
+    extension_attribute: {
+      id: number;
+      name: string;
+      type: string;
+      value: string;
+    };
+  }>;
+  sites?: Array<{
+    site: {
+      id: number;
+      name: string;
+    };
+  }>;
+  links?: {
+    computers: {
+      computer?: {
+        id: number;
+        name: string;
+      };
+    };
+    peripherals: {
+      peripheral?: {
+        id: number;
+        name: string;
+      };
+    };
+    mobile_devices: {
+      mobile_device?: {
+        id: number;
+        name: string;
+      };
+    };
+    vpp_assignments: {
+      vpp_assignment?: {
+        id: number;
+        name: string;
+      };
+    };
+    total_vpp_code_count: number;
+  };
+}
+
+export interface MobileDevice {
+  id: number;
+  name: string;
+  device_name: string;
+  udid: string;
+  serial_number: string;
+  phone_number: string;
+  wifi_mac_address: string;
+  managed: boolean;
+  supervised: boolean;
+  model: string;
+  model_identifier: string;
+  model_display: string;
+  username: string;
+}
+
+export interface UsersResponse {
+  users: User[];
+}
+
+export interface UserResponse {
+  user: User;
+}
+
+export interface MobileDevicesResponse {
+  mobile_devices: MobileDevice[];
+}
+
+export interface JamfDataModel {
+  users: User[];
+  mobileDevices: MobileDevice[];
+}
+
+export enum Method {
+  GET = "get",
+  POST = "post",
 }

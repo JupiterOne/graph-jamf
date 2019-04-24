@@ -1,19 +1,16 @@
-import {
-  IntegrationExecutionContext,
-  IntegrationInvocationEvent,
-} from "@jupiterone/jupiter-managed-integration-sdk";
+import { IntegrationExecutionContext } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { Account, JamfClient } from "./jamf";
 import { JamfIntegrationContext } from "./types";
 
 export default async function initializeContext(
-  context: IntegrationExecutionContext<IntegrationInvocationEvent>,
+  context: IntegrationExecutionContext,
 ): Promise<JamfIntegrationContext> {
   const { config } = context.instance;
 
   const provider = new JamfClient(
     config.jamfHost,
-    config.jamfName,
+    config.jamfUsername,
     config.jamfPassword,
   );
 

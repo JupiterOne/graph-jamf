@@ -10,12 +10,12 @@ import {
 
 export default class JamfClient {
   private readonly host: string;
-  private readonly login: string;
+  private readonly username: string;
   private readonly password: string;
 
-  constructor(host: string, login: string, password: string) {
+  constructor(host: string, username: string, password: string) {
     this.host = host;
-    this.login = login;
+    this.username = username;
     this.password = password;
   }
 
@@ -61,7 +61,7 @@ export default class JamfClient {
         "Content-Type": "application/json",
         Accept: "application/json",
         Authorization: `Basic ${Buffer.from(
-          this.login + ":" + this.password,
+          this.username + ":" + this.password,
         ).toString("base64")}`,
         "Accept-Encoding": "identity",
         ...headers,

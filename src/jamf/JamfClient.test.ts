@@ -2,22 +2,22 @@ import nock from "nock";
 import { fetchJamfData } from "./index";
 import JamfClient from "./JamfClient";
 
-const JAMF_LOCAL_EXECUTION_ACCOUNT_HOST =
-  process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_HOST || "example.jamfcloud.com";
-const JAMF_LOCAL_EXECUTION_ACCOUNT_NAME =
-  process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_NAME || "name";
-const JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD =
-  process.env.JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD || "password";
+const JAMF_LOCAL_EXECUTION_HOST =
+  process.env.JAMF_LOCAL_EXECUTION_HOST || "example.jamfcloud.com";
+const JAMF_LOCAL_EXECUTION_USERNAME =
+  process.env.JAMF_LOCAL_EXECUTION_USERNAME || "name";
+const JAMF_LOCAL_EXECUTION_PASSWORD =
+  process.env.JAMF_LOCAL_EXECUTION_PASSWORD || "password";
 
 function prepareScope(def: nock.NockDefinition) {
-  def.scope = `https://${JAMF_LOCAL_EXECUTION_ACCOUNT_HOST}`;
+  def.scope = `https://${JAMF_LOCAL_EXECUTION_HOST}`;
 }
 
 function getClient() {
   return new JamfClient(
-    JAMF_LOCAL_EXECUTION_ACCOUNT_HOST,
-    JAMF_LOCAL_EXECUTION_ACCOUNT_NAME,
-    JAMF_LOCAL_EXECUTION_ACCOUNT_PASSWORD,
+    JAMF_LOCAL_EXECUTION_HOST,
+    JAMF_LOCAL_EXECUTION_USERNAME,
+    JAMF_LOCAL_EXECUTION_PASSWORD,
   );
 }
 

@@ -8,7 +8,7 @@ test("creates jamf client", async () => {
     instance: {
       config: {
         jamfHost: "",
-        jamfName: "",
+        jamfUsername: "",
         jamfPassword: "",
       },
     },

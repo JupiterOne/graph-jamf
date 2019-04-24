@@ -22,7 +22,7 @@ it("auth error", async () => {
     instance: {
       config: {
         jamfHost: "XXX",
-        jamfName: "YYY",
+        jamfUsername: "YYY",
         jamfPassword: "ZZZ",
       },
     },

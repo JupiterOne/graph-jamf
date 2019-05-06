@@ -6,12 +6,14 @@ import {
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import {
+  createAccountEntity,
+  createAccountUserRelationships,
+  createComputerEntities,
   createMobileDeviceEntities,
+  createUserComputerRelationships,
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
-import { createAccountEntity } from "../converters/AccountEntityConverter";
-import { createAccountUserRelationships } from "../converters/AccountUserRelationshipConverter";
 
 import {
   JupiterOneDataModel,
@@ -107,6 +109,7 @@ export function convertEntities(
     accounts: [createAccountEntity(account)],
     users: createUserEntities(jamfDataModel.users),
     mobileDevices: createMobileDeviceEntities(jamfDataModel.mobileDevices),
+    computers: createComputerEntities(jamfDataModel.computers),
   };
 }
 
@@ -120,5 +123,8 @@ export function convertRelationships(
       jamfDataModel.users,
     ),
     userDeviceRelationships: createUserDeviceRelationships(jamfDataModel.users),
+    userComputerRelationships: createUserComputerRelationships(
+      jamfDataModel.users,
+    ),
   };
 }

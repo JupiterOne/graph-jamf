@@ -1,5 +1,7 @@
 import fetch, { RequestInit } from "node-fetch";
 import {
+  Computer,
+  ComputerResponse,
   Method,
   MobileDevice,
   MobileDevicesResponse,
@@ -47,6 +49,16 @@ export default class JamfClient {
     );
 
     return result.mobile_devices;
+  }
+
+  public async fetchComputers(): Promise<Computer[]> {
+    const result = await this.makeRequest<ComputerResponse>(
+      "/computers/subset/basic",
+      Method.GET,
+      {},
+    );
+
+    return result.computers;
   }
 
   private async makeRequest<T>(

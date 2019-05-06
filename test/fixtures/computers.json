@@ -1,0 +1,49 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/computers/subset/basic",
+    "body": "",
+    "status": 200,
+    "response": {
+      "computers": [
+        {
+          "id": 1,
+          "name": "PlayerOne’s MacBook",
+          "managed": true,
+          "username": "player.one",
+          "model": "MacBookPro13,3",
+          "department": "",
+          "building": "",
+          "mac_address": "AA:BB:CC:11:22:33",
+          "udid": "8195CA16-7FFE-5855-A3DD-53FD768FA558",
+          "serial_number": "SERIAL123",
+          "report_date_utc": "2019-05-06T13:33:08.196+0000",
+          "report_date_epoch": 1557149588196
+        }
+      ]
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Mon, 06 May 2019 14:44:45 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "351",
+      "Connection",
+      "Close"
+    ]
+  }
+]

@@ -47,32 +47,39 @@ export interface User {
     };
   }>;
   links?: {
-    computers: {
-      computer?: {
-        id: number;
-        name: string;
-      };
-    };
-    peripherals: {
-      peripheral?: {
-        id: number;
-        name: string;
-      };
-    };
-    mobile_devices: {
-      mobile_device?: {
-        id: number;
-        name: string;
-      };
-    };
-    vpp_assignments: {
-      vpp_assignment?: {
-        id: number;
-        name: string;
-      };
-    };
+    computers: Array<{
+      id: number;
+      name: string;
+    }>;
+    peripherals: Array<{
+      id: number;
+      name: string;
+    }>;
+    mobile_devices: Array<{
+      id: number;
+      name: string;
+    }>;
+    vpp_assignments: Array<{
+      id: number;
+      name: string;
+    }>;
     total_vpp_code_count: number;
   };
+}
+
+export interface Computer {
+  id: number;
+  name: string;
+  managed: boolean;
+  username: string;
+  model: string;
+  department: string;
+  building: string;
+  mac_address: string;
+  udid: string;
+  serial_number: string;
+  report_date_utc: string;
+  report_date_epoch: number;
 }
 
 export interface MobileDevice {
@@ -99,6 +106,10 @@ export interface UserResponse {
   user: User;
 }
 
+export interface ComputerResponse {
+  computers: Computer[];
+}
+
 export interface MobileDevicesResponse {
   mobile_devices: MobileDevice[];
 }
@@ -106,6 +117,7 @@ export interface MobileDevicesResponse {
 export interface JamfDataModel {
   users: User[];
   mobileDevices: MobileDevice[];
+  computers: Computer[];
 }
 
 export enum Method {

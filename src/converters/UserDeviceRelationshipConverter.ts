@@ -18,26 +18,27 @@ export function createUserDeviceRelationships(
       return acc;
     }
 
-    const parentKey = generateEntityKey(USER_ENTITY_TYPE, user.id);
-    const childKey = generateEntityKey(
-      MOBILE_DEVICE_ENTITY_TYPE,
-      user.links!.mobile_devices!.mobile_device!.id,
-    );
-    const relationKey = generateRelationKey(
-      parentKey,
-      USER_DEVICE_RELATIONSHIP_CLASS,
-      childKey,
-    );
+    const relationships = user.links!.mobile_devices!.map(device => {
+      const parentKey = generateEntityKey(USER_ENTITY_TYPE, user.id);
+      const childKey = generateEntityKey(MOBILE_DEVICE_ENTITY_TYPE, device.id);
+      const relationKey = generateRelationKey(
+        parentKey,
+        USER_DEVICE_RELATIONSHIP_CLASS,
+        childKey,
+      );
 
-    const relationship: UserDeviceRelationship = {
-      _class: USER_DEVICE_RELATIONSHIP_CLASS,
-      _type: USER_DEVICE_RELATIONSHIP_TYPE,
-      _fromEntityKey: parentKey,
-      _key: relationKey,
-      _toEntityKey: childKey,
-    };
+      const relationship: UserDeviceRelationship = {
+        _class: USER_DEVICE_RELATIONSHIP_CLASS,
+        _type: USER_DEVICE_RELATIONSHIP_TYPE,
+        _fromEntityKey: parentKey,
+        _key: relationKey,
+        _toEntityKey: childKey,
+      };
 
-    return [...acc, relationship];
+      return relationship;
+    });
+
+    return acc.concat(relationships);
   }, defaultValue);
 }
 
@@ -45,6 +46,6 @@ function isMobileDevice(user: User) {
   return !(
     user.links &&
     user.links.mobile_devices &&
-    user.links.mobile_devices.mobile_device
+    user.links.mobile_devices.length > 0
   );
 }

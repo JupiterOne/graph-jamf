@@ -19,7 +19,6 @@ export function createUserEntities(data: User[]): UserEntity[] {
       enableCustomPhotoUrl: user.enable_custom_photo_url,
       customPhotoUrl: user.custom_photo_url,
       ldapServer: user.ldap_server && user.ldap_server.name,
-      mobileDevice: user.links && user.links.mobile_devices.mobile_device,
       totalVppCodeCount: user.links && user.links.total_vpp_code_count,
     };
   });

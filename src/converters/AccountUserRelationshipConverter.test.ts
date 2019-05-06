@@ -11,8 +11,8 @@ const users: User[] = [
     id: 5,
     name: "Heriberto Truby",
     full_name: "",
-    email: "heriberto.truby@gmail.com",
-    email_address: "heriberto.truby@gmail.com",
+    email: "testing123@example.com",
+    email_address: "testing123@example.com",
     phone_number: "",
     position: "",
     enable_custom_photo_url: false,
@@ -24,15 +24,15 @@ const users: User[] = [
     extension_attributes: [],
     sites: [],
     links: {
-      computers: {},
-      peripherals: {},
-      mobile_devices: {
-        mobile_device: {
+      computers: [],
+      peripherals: [],
+      mobile_devices: [
+        {
           id: 35,
           name: "Update 1-3",
         },
-      },
-      vpp_assignments: {},
+      ],
+      vpp_assignments: [],
       total_vpp_code_count: 0,
     },
   },

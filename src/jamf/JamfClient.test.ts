@@ -65,6 +65,18 @@ describe("JamfClient fetch ok data", () => {
     expect(response).not.toEqual([]);
   });
 
+  test("fetch computers", async () => {
+    const { nockDone } = await nock.back("computers.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchComputers();
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+
   test("fetch all data", async () => {
     const { nockDone } = await nock.back("all-data.json", {
       before: prepareScope,

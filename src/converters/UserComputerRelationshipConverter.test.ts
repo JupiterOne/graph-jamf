@@ -1,5 +1,5 @@
 import { User } from "../types";
-import { createUserDeviceRelationships } from "./UserDeviceRelationshipConverter";
+import { createUserComputerRelationships } from "./UserComputerRelationshipConverter";
 
 const users: User[] = [
   {
@@ -19,7 +19,16 @@ const users: User[] = [
     extension_attributes: [],
     sites: [],
     links: {
-      computers: [],
+      computers: [
+        {
+          id: 35,
+          name: "Update 1-3",
+        },
+        {
+          id: 36,
+          name: "Update 1-4",
+        },
+      ],
       peripherals: [],
       mobile_devices: [
         {
@@ -62,22 +71,22 @@ const users: User[] = [
 ];
 
 test("convert user device relationships", () => {
-  const relationships = createUserDeviceRelationships(users);
+  const relationships = createUserComputerRelationships(users);
 
   expect(relationships).toEqual([
     {
       _class: "HAS",
       _fromEntityKey: "jamf_user_5",
-      _key: "jamf_user_5_has_jamf_mobile_device_35",
-      _toEntityKey: "jamf_mobile_device_35",
-      _type: "jamf_user_has_jamf_mobile_device",
+      _key: "jamf_user_5_has_jamf_computer_35",
+      _toEntityKey: "jamf_computer_35",
+      _type: "jamf_user_has_jamf_computer",
     },
     {
       _class: "HAS",
       _fromEntityKey: "jamf_user_5",
-      _key: "jamf_user_5_has_jamf_mobile_device_36",
-      _toEntityKey: "jamf_mobile_device_36",
-      _type: "jamf_user_has_jamf_mobile_device",
+      _key: "jamf_user_5_has_jamf_computer_36",
+      _toEntityKey: "jamf_computer_36",
+      _type: "jamf_user_has_jamf_computer",
     },
   ]);
 });

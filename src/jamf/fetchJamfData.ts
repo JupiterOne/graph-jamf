@@ -4,14 +4,15 @@ import JamfClient from "./JamfClient";
 export default async function fetchJamfData(
   client: JamfClient,
 ): Promise<JamfDataModel> {
-  const [users, mobileDevices] = await Promise.all([
+  const [users, mobileDevices, computers] = await Promise.all([
     client.fetchUsers(),
     client.fetchMobileDevices(),
+    client.fetchComputers(),
   ]);
 
   const usersFullProfiles: User[] = await Promise.all(
     users.map(user => client.fetchUserById(user.id)),
   );
 
-  return { users: usersFullProfiles, mobileDevices };
+  return { users: usersFullProfiles, mobileDevices, computers };
 }

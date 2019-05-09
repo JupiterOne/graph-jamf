@@ -1,0 +1,31 @@
+[
+  {
+    "scope": "https://example.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/users",
+    "body": "",
+    "status": 500,
+    "response": "<html>\n<head>\n   <title>Status Page</title>\n</head>\n<body style=\"font-family: sans-serif;\">\n<p style=\"font-size: 1.2em;font-weight: bold;margin: 1em 0px;\">Internal Server Error</p>\n<p>Retry the request or contact Jamf support if the error is persistent.\n</p>\n</body>\n</html>\n",
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/html;charset=UTF-8",
+      "Date",
+      "Thu, 09 May 2019 19:10:44 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison4-tc-17; path=/;HttpOnly;Secure;",
+      "WWW-Authenticate",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "424",
+      "Connection",
+      "Close"
+    ]
+  }
+]

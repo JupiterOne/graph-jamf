@@ -85,13 +85,13 @@ export default class JamfClient {
       options,
     );
 
-    if (response.status === 401) {
+    if (response.status === 200) {
+      return response.json();
+    } else {
       const err = new Error(response.statusText) as any;
-      err.code = "AccessDenied";
+      err.code = "UnexpectedStatusCode";
       err.statusCode = response.status;
       throw err;
     }
-
-    return response.json();
   }
 }

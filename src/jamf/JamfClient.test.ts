@@ -13,24 +13,46 @@ function prepareScope(def: nock.NockDefinition) {
   def.scope = `https://${JAMF_LOCAL_EXECUTION_HOST}`;
 }
 
-describe("JamfClient unauthorized", () => {
-  function getClient() {
-    return new JamfClient(
-      JAMF_LOCAL_EXECUTION_HOST,
-      JAMF_LOCAL_EXECUTION_USERNAME,
-      "bad-password",
-    );
-  }
+function getClient(
+  config: {
+    host?: string;
+    username?: string;
+    password?: string;
+  } = {},
+) {
+  return new JamfClient(
+    config.host || JAMF_LOCAL_EXECUTION_HOST,
+    config.username || JAMF_LOCAL_EXECUTION_USERNAME,
+    config.password || JAMF_LOCAL_EXECUTION_PASSWORD,
+  );
+}
 
-  beforeAll(() => {
-    nock.back.fixtures = `${__dirname}/../../test/fixtures/`;
-    process.env.CI
-      ? nock.back.setMode("lockdown")
-      : nock.back.setMode("record");
+beforeAll(() => {
+  nock.back.fixtures = `${__dirname}/../../test/fixtures/`;
+  process.env.CI ? nock.back.setMode("lockdown") : nock.back.setMode("record");
+});
+
+describe("JamfClient fetch err", () => {
+  test("unauthorized", async () => {
+    const { nockDone } = await nock.back("users-unauthorized.json", {
+      before: prepareScope,
+    });
+
+    expect.assertions(3);
+
+    try {
+      await getClient({ password: "bad-password" }).fetchUsers();
+    } catch (err) {
+      expect(err.message).toEqual("Unauthorized");
+      expect(err.code).toEqual("UnexpectedStatusCode");
+      expect(err.statusCode).toEqual(401);
+    }
+
+    nockDone();
   });
 
-  test("fetch users", async () => {
-    const { nockDone } = await nock.back("users-unauthorized.json", {
+  test("underpriviledged", async () => {
+    const { nockDone } = await nock.back("users-forbidden.json", {
       before: prepareScope,
     });
 
@@ -39,9 +61,27 @@ describe("JamfClient unauthorized", () => {
     try {
       await getClient().fetchUsers();
     } catch (err) {
-      expect(err.message).toEqual("Unauthorized");
-      expect(err.code).toEqual("AccessDenied");
-      expect(err.statusCode).toEqual(401);
+      expect(err.message).toEqual("Forbidden");
+      expect(err.code).toEqual("UnexpectedStatusCode");
+      expect(err.statusCode).toEqual(403);
+    }
+
+    nockDone();
+  });
+
+  test("not ok", async () => {
+    const { nockDone } = await nock.back("users-server-error.json", {
+      before: prepareScope,
+    });
+
+    expect.assertions(3);
+
+    try {
+      await getClient().fetchUsers();
+    } catch (err) {
+      expect(err.message).toEqual("Internal Server Error");
+      expect(err.code).toEqual("UnexpectedStatusCode");
+      expect(err.statusCode).toEqual(500);
     }
 
     nockDone();
@@ -49,21 +89,6 @@ describe("JamfClient unauthorized", () => {
 });
 
 describe("JamfClient fetch ok data", () => {
-  function getClient() {
-    return new JamfClient(
-      JAMF_LOCAL_EXECUTION_HOST,
-      JAMF_LOCAL_EXECUTION_USERNAME,
-      JAMF_LOCAL_EXECUTION_PASSWORD,
-    );
-  }
-
-  beforeAll(() => {
-    nock.back.fixtures = `${__dirname}/../../test/fixtures/`;
-    process.env.CI
-      ? nock.back.setMode("lockdown")
-      : nock.back.setMode("record");
-  });
-
   test("fetch users", async () => {
     const { nockDone } = await nock.back("users.json", {
       before: prepareScope,

@@ -85,6 +85,13 @@ export default class JamfClient {
       options,
     );
 
+    if (response.status === 401) {
+      const err = new Error(response.statusText) as any;
+      err.code = "AccessDenied";
+      err.statusCode = response.status;
+      throw err;
+    }
+
     return response.json();
   }
 }

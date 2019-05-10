@@ -1,4 +1,4 @@
-import fetch, { RequestInit } from "node-fetch";
+import fetch, { RequestInit, Response } from "node-fetch";
 import {
   Computer,
   ComputerResponse,
@@ -80,10 +80,26 @@ export default class JamfClient {
       },
     };
 
-    const response = await fetch(
-      `https://${this.host}/JSSResource${url}`,
-      options,
-    );
+    let response: Response;
+    try {
+      response = await fetch(`https://${this.host}/JSSResource${url}`, options);
+    } catch (err) {
+      if (err.code === "ETIMEDOUT") {
+        const error = new Error(
+          `Timed out trying to connect to ${this.host} (${err.code})`,
+        ) as any;
+        error.code = err.code;
+        throw error;
+      } else if (err.code === "ESOCKETTIMEDOUT") {
+        const error = new Error(
+          `Established connection to ${this.host} timed out (${err.code})`,
+        ) as any;
+        error.code = err.code;
+        throw error;
+      } else {
+        throw err;
+      }
+    }
 
     if (response.status === 200) {
       return response.json();

@@ -86,6 +86,42 @@ describe("JamfClient fetch err", () => {
 
     nockDone();
   });
+
+  test("connection timeout", async () => {
+    nock(`https://${JAMF_LOCAL_EXECUTION_HOST}`)
+      .get("/JSSResource/users")
+      .replyWithError({ code: "ETIMEDOUT" });
+
+    expect.assertions(3);
+
+    try {
+      await getClient().fetchUsers();
+    } catch (err) {
+      expect(err.message).toEqual(
+        `Timed out trying to connect to ${JAMF_LOCAL_EXECUTION_HOST} (ETIMEDOUT)`,
+      );
+      expect(err.code).toEqual("ETIMEDOUT");
+      expect(err.statusCode).toBeUndefined();
+    }
+  });
+
+  test("socket timeout", async () => {
+    nock(`https://${JAMF_LOCAL_EXECUTION_HOST}`)
+      .get("/JSSResource/users")
+      .replyWithError({ code: "ESOCKETTIMEDOUT" });
+
+    expect.assertions(3);
+
+    try {
+      await getClient().fetchUsers();
+    } catch (err) {
+      expect(err.message).toEqual(
+        `Established connection to ${JAMF_LOCAL_EXECUTION_HOST} timed out (ESOCKETTIMEDOUT)`,
+      );
+      expect(err.code).toEqual("ESOCKETTIMEDOUT");
+      expect(err.statusCode).toBeUndefined();
+    }
+  });
 });
 
 describe("JamfClient fetch ok data", () => {

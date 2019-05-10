@@ -28,6 +28,7 @@ test("convert computer entity", () => {
       _type: "jamf_computer",
       building: "",
       department: "",
+      displayName: "PlayerOne’s MacBook",
       id: 1,
       macAddress: "AA:BB:CC:11:22:33",
       managed: true,

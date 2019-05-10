@@ -10,6 +10,7 @@ export function createUserEntities(data: User[]): UserEntity[] {
       _type: USER_ENTITY_TYPE,
       _class: USER_ENTITY_CLASS,
       id: user.id,
+      displayName: user.name,
       username: user.name,
       fullName: user.full_name,
       email: user.email,

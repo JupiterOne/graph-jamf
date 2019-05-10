@@ -14,6 +14,7 @@ export function createComputerEntities(data: Computer[]): ComputerEntity[] {
       _type: COMPUTER_ENTITY_TYPE,
       _class: COMPUTER_ENTITY_CLASS,
       id: device.id,
+      displayName: device.name,
       name: device.name,
       managed: device.managed,
       username: device.username,

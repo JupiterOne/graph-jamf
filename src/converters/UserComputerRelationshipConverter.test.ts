@@ -77,16 +77,16 @@ test("convert user device relationships", () => {
     {
       _class: "HAS",
       _fromEntityKey: "device_user_5",
-      _key: "device_user_5_has_jamf_computer_35",
-      _toEntityKey: "jamf_computer_35",
-      _type: "device_user_has_jamf_computer",
+      _key: "device_user_5_has_user_endpoint_35",
+      _toEntityKey: "user_endpoint_35",
+      _type: "device_user_has_user_endpoint",
     },
     {
       _class: "HAS",
       _fromEntityKey: "device_user_5",
-      _key: "device_user_5_has_jamf_computer_36",
-      _toEntityKey: "jamf_computer_36",
-      _type: "device_user_has_jamf_computer",
+      _key: "device_user_5_has_user_endpoint_36",
+      _toEntityKey: "user_endpoint_36",
+      _type: "device_user_has_user_endpoint",
     },
   ]);
 });

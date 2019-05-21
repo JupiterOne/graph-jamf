@@ -23,9 +23,9 @@ test("convert computer entity", () => {
 
   expect(entities).toEqual([
     {
-      _class: "Device",
-      _key: "jamf_computer_1",
-      _type: "jamf_computer",
+      _class: ["Host", "Device"],
+      _key: "user_endpoint_1",
+      _type: "user_endpoint",
       building: "",
       department: "",
       displayName: "PlayerOne’s MacBook",

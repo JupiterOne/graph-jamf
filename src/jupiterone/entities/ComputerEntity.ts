@@ -1,7 +1,7 @@
 import { EntityFromIntegration } from "@jupiterone/jupiter-managed-integration-sdk";
 
-export const COMPUTER_ENTITY_TYPE = "jamf_computer";
-export const COMPUTER_ENTITY_CLASS = "Device";
+export const COMPUTER_ENTITY_TYPE = "user_endpoint";
+export const COMPUTER_ENTITY_CLASS = ["Host", "Device"];
 
 export interface ComputerEntity extends EntityFromIntegration {
   id: number;

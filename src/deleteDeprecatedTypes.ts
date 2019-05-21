@@ -8,7 +8,7 @@ export default async function deleteDeprecatedTypes(
   graph: GraphClient,
   persister: PersisterClient,
 ): Promise<PersisterOperationsResult> {
-  const deprecatedEntityTypes = ["jamf_user"];
+  const deprecatedEntityTypes = ["jamf_user", "jamf_computer"];
 
   const deprecatedRelationshipTypes = [
     "jamf_account_has_jamf_user",

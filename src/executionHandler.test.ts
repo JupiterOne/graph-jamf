@@ -54,10 +54,10 @@ test("executionHandler with INGEST action", async () => {
   expect(executionContext.provider.fetchMobileDevices).toHaveBeenCalledTimes(1);
   expect(executionContext.provider.fetchComputers).toHaveBeenCalledTimes(1);
   expect(executionContext.provider.fetchUserById).toHaveBeenCalledTimes(0);
-  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(4);
+  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(5);
   expect(
     executionContext.persister.publishPersisterOperations,
-  ).toHaveBeenCalledTimes(1);
+  ).toHaveBeenCalledTimes(2);
 });
 
 test("executionHandler with unhandled action", async () => {

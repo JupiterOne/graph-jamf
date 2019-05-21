@@ -4,6 +4,7 @@ import {
   IntegrationExecutionResult,
   summarizePersisterOperationsResults,
 } from "@jupiterone/jupiter-managed-integration-sdk";
+import deleteDeprecatedTypes from "./deleteDeprecatedTypes";
 
 import initializeContext from "./initializeContext";
 import fetchJamfData from "./jamf/fetchJamfData";
@@ -33,6 +34,7 @@ async function synchronize(
   return {
     operations: summarizePersisterOperationsResults(
       await publishChanges(persister, oldData, jamfData, account),
+      await deleteDeprecatedTypes(graph, persister),
     ),
   };
 }

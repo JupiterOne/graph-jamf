@@ -45,9 +45,9 @@ test("convert account user relationships", () => {
     {
       _class: "HAS",
       _fromEntityKey: "jamf_account_TestId",
-      _key: "jamf_account_TestId_has_jamf_user_5",
-      _toEntityKey: "jamf_user_5",
-      _type: "jamf_account_has_jamf_user",
+      _key: "jamf_account_TestId_has_device_user_5",
+      _toEntityKey: "device_user_5",
+      _type: "jamf_account_has_device_user",
     },
   ]);
 });

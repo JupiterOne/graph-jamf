@@ -76,17 +76,17 @@ test("convert user device relationships", () => {
   expect(relationships).toEqual([
     {
       _class: "HAS",
-      _fromEntityKey: "jamf_user_5",
-      _key: "jamf_user_5_has_jamf_computer_35",
+      _fromEntityKey: "device_user_5",
+      _key: "device_user_5_has_jamf_computer_35",
       _toEntityKey: "jamf_computer_35",
-      _type: "jamf_user_has_jamf_computer",
+      _type: "device_user_has_jamf_computer",
     },
     {
       _class: "HAS",
-      _fromEntityKey: "jamf_user_5",
-      _key: "jamf_user_5_has_jamf_computer_36",
+      _fromEntityKey: "device_user_5",
+      _key: "device_user_5_has_jamf_computer_36",
       _toEntityKey: "jamf_computer_36",
-      _type: "jamf_user_has_jamf_computer",
+      _type: "device_user_has_jamf_computer",
     },
   ]);
 });

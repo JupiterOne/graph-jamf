@@ -45,8 +45,8 @@ describe("convert user entity", () => {
     expect(entities).toEqual([
       {
         _class: "User",
-        _key: "jamf_user_5",
-        _type: "jamf_user",
+        _key: "device_user_5",
+        _type: "device_user",
         customPhotoUrl: "",
         displayName: "Heriberto Truby",
         email: "testing123@example.com",
@@ -96,8 +96,8 @@ describe("convert user entity", () => {
     expect(entities).toEqual([
       {
         _class: "User",
-        _key: "jamf_user_5",
-        _type: "jamf_user",
+        _key: "device_user_5",
+        _type: "device_user",
         customPhotoUrl: "",
         displayName: "Heriberto Truby",
         email: "testing123@example.com",

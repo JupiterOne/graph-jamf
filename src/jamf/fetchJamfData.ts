@@ -8,11 +8,15 @@ export default async function fetchJamfData(
     client.fetchUsers(),
     client.fetchMobileDevices(),
     client.fetchComputers(),
+    client.fetchAccounts(),
   ]);
 
   const usersFullProfiles: User[] = await Promise.all(
     users.map(user => client.fetchUserById(user.id)),
   );
+
+  await client.fetchAccountUserById(6);
+  await client.fetchAccountGroupById(1);
 
   return { users: usersFullProfiles, mobileDevices, computers };
 }

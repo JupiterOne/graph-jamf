@@ -21,6 +21,32 @@ export default class JamfClient {
     this.password = password;
   }
 
+  public async fetchAccounts(): Promise<any> {
+    const result = await this.makeRequest<any>(`/accounts`, Method.GET, {});
+
+    return result.users;
+  }
+
+  public async fetchAccountUserById(id: number): Promise<any> {
+    const result = await this.makeRequest<any>(
+      `/accounts/userid/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.users;
+  }
+
+  public async fetchAccountGroupById(id: number): Promise<any> {
+    const result = await this.makeRequest<any>(
+      `/accounts/groupid/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.users;
+  }
+
   public async fetchUsers(): Promise<User[]> {
     const result = await this.makeRequest<UsersResponse>(
       `/users`,

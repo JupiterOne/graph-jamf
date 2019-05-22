@@ -3,6 +3,8 @@ import * as Entities from "./entities";
 
 export interface JupiterOneEntitiesData {
   accounts: Entities.AccountEntity[];
+  admins: Entities.AdminEntity[];
+  groups: Entities.GroupEntity[];
   users: Entities.UserEntity[];
   mobileDevices: Entities.MobileDeviceEntity[];
   computers: Entities.ComputerEntity[];
@@ -14,7 +16,10 @@ export interface JupiterOneDataModel {
 }
 
 export interface JupiterOneRelationshipsData {
+  accountAdminRelationships: Entities.AccountAdminRelationship[];
+  accountGroupRelationships: Entities.AccountGroupRelationship[];
   accountUserRelationships: Entities.AccountUserRelationship[];
+  groupAdminRelationships: Entities.GroupAdminRelationship[];
   userDeviceRelationships: Entities.UserDeviceRelationship[];
   userComputerRelationships: Entities.UserComputerRelationship[];
 }
@@ -33,10 +38,19 @@ export default async function fetchEntitiesAndRelationships(
 async function fetchEntities(
   graph: GraphClient,
 ): Promise<JupiterOneEntitiesData> {
-  const [accounts, users, mobileDevices, computers] = await Promise.all([
+  const [
+    accounts,
+    admins,
+    groups,
+    users,
+    mobileDevices,
+    computers,
+  ] = await Promise.all([
     graph.findEntitiesByType<Entities.AccountEntity>(
       Entities.ACCOUNT_ENTITY_TYPE,
     ),
+    graph.findEntitiesByType<Entities.AdminEntity>(Entities.ADMIN_ENTITY_TYPE),
+    graph.findEntitiesByType<Entities.GroupEntity>(Entities.GROUP_ENTITY_TYPE),
     graph.findEntitiesByType<Entities.UserEntity>(Entities.USER_ENTITY_TYPE),
     graph.findEntitiesByType<Entities.MobileDeviceEntity>(
       Entities.MOBILE_DEVICE_ENTITY_TYPE,
@@ -48,6 +62,8 @@ async function fetchEntities(
 
   return {
     accounts,
+    admins,
+    groups,
     users,
     mobileDevices,
     computers,
@@ -58,10 +74,22 @@ export async function fetchRelationships(
   graph: GraphClient,
 ): Promise<JupiterOneRelationshipsData> {
   const [
+    accountAdminRelationships,
+    accountGroupRelationships,
+    groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
   ] = await Promise.all([
+    graph.findRelationshipsByType<Entities.AccountAdminRelationship>(
+      Entities.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
+    ),
+    graph.findRelationshipsByType<Entities.AccountGroupRelationship>(
+      Entities.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
+    ),
+    graph.findRelationshipsByType<Entities.GroupAdminRelationship>(
+      Entities.GROUP_ADMIN_RELATIONSHIP_TYPE,
+    ),
     graph.findRelationshipsByType<Entities.AccountUserRelationship>(
       Entities.ACCOUNT_USER_RELATIONSHIP_TYPE,
     ),
@@ -73,6 +101,9 @@ export async function fetchRelationships(
     ),
   ]);
   return {
+    accountAdminRelationships,
+    accountGroupRelationships,
+    groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,

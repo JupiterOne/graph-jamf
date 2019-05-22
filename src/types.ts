@@ -18,6 +18,61 @@ export interface Account {
   name: string;
 }
 
+export interface AdminsAndGroups {
+  users: Admin[];
+  groups: Group[];
+}
+
+export interface Admin {
+  id: number;
+  name: string;
+  directory_user?: boolean;
+  full_name?: string;
+  email?: string;
+  email_address?: string;
+  password_sha256?: string;
+  enabled?: string;
+  force_password_change?: boolean;
+  access_level?: string;
+  privilege_set?: string;
+  privileges?: Privileges;
+  groups?: {
+    group: {
+      id: number;
+      name: string;
+      site: { id: number; name: string };
+      privileges: {
+        jss_objects?: any;
+        jss_settings?: any;
+        recon?: any;
+        casper_admin?: any;
+        casper_remote?: any;
+        casper_imaging?: any;
+      };
+    };
+  };
+}
+
+export interface Group {
+  id: number;
+  name: string;
+  site: { id: number; name: string };
+  access_level?: string;
+  privilege_set?: string;
+  privileges?: Privileges;
+  members?: Array<{ id: number; name: string }>;
+}
+
+export interface Privileges {
+  jss_objects: string[];
+  jss_settings?: string[];
+  jss_actions?: string[];
+  recon: string[];
+  casper_admin?: string[];
+  casper_remote: string[];
+  casper_imaging: string[];
+}
+
 export interface User {
   id: number;
   name: string;
@@ -98,6 +153,18 @@ export interface MobileDevice {
   username: string;
 }
 
+export interface AccountsResponse {
+  accounts: AdminsAndGroups;
+}
+
+export interface AdminResponse {
+  account: Admin;
+}
+
+export interface GroupResponse {
+  group: Group;
+}
+
 export interface UsersResponse {
   users: User[];
 }
@@ -118,6 +185,8 @@ export interface JamfDataModel {
   users: User[];
   mobileDevices: MobileDevice[];
   computers: Computer[];
+  admins: Admin[];
+  groups: Group[];
 }
 
 export enum Method {

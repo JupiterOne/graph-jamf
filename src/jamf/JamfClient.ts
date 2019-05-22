@@ -1,7 +1,13 @@
 import fetch, { RequestInit, Response } from "node-fetch";
 import {
+  AccountsResponse,
+  Admin,
+  AdminResponse,
+  AdminsAndGroups,
   Computer,
   ComputerResponse,
+  Group,
+  GroupResponse,
   Method,
   MobileDevice,
   MobileDevicesResponse,
@@ -21,30 +27,35 @@ export default class JamfClient {
     this.password = password;
   }
 
-  public async fetchAccounts(): Promise<any> {
-    const result = await this.makeRequest<any>(`/accounts`, Method.GET, {});
+  public async fetchAccounts(): Promise<AdminsAndGroups> {
+    const result = await this.makeRequest<AccountsResponse>(
+      `/accounts`,
+      Method.GET,
+      {},
+    );
+    const { users, groups } = result.accounts;
 
-    return result.users;
+    return { users, groups };
   }
 
-  public async fetchAccountUserById(id: number): Promise<any> {
-    const result = await this.makeRequest<any>(
+  public async fetchAccountUserById(id: number): Promise<Admin> {
+    const result = await this.makeRequest<AdminResponse>(
       `/accounts/userid/${id}`,
       Method.GET,
       {},
     );
 
-    return result.users;
+    return result.account;
   }
 
-  public async fetchAccountGroupById(id: number): Promise<any> {
-    const result = await this.makeRequest<any>(
+  public async fetchAccountGroupById(id: number): Promise<Group> {
+    const result = await this.makeRequest<GroupResponse>(
       `/accounts/groupid/${id}`,
       Method.GET,
       {},
     );
 
-    return result.users;
+    return result.group;
   }
 
   public async fetchUsers(): Promise<User[]> {

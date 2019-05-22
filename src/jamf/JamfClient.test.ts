@@ -125,6 +125,40 @@ describe("JamfClient fetch err", () => {
 });
 
 describe("JamfClient fetch ok data", () => {
+  test("fetch admin users and groups", async () => {
+    const { nockDone } = await nock.back("admins-groups.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchAccounts();
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+  test("fetch full admin user", async () => {
+    const { nockDone } = await nock.back("admin-full.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchAccountUserById(6);
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+  test("fetch full admin group", async () => {
+    const { nockDone } = await nock.back("group-full.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchAccountGroupById(3);
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+
   test("fetch users", async () => {
     const { nockDone } = await nock.back("users.json", {
       before: prepareScope,

@@ -1,0 +1,66 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/accounts/userid/6",
+    "body": "",
+    "status": 200,
+    "response": {
+      "account": {
+        "id": 6,
+        "name": "Test Account",
+        "directory_user": false,
+        "full_name": "Test Account Full",
+        "email": "test@test.com",
+        "email_address": "test@test.com",
+        "password_sha256": "testshashatest",
+        "enabled": "Enabled",
+        "force_password_change": false,
+        "access_level": "Group Access",
+        "privilege_set": "Custom",
+        "groups": {
+          "group": {
+            "id": 3,
+            "name": "Not all groups have members inside in api",
+            "site": {
+              "id": -1,
+              "name": "None"
+            },
+            "privileges": {
+              "jss_objects": {
+                "privilege": "Read eBooks"
+              },
+              "jss_settings": {},
+              "recon": {},
+              "casper_admin": {},
+              "casper_remote": {},
+              "casper_imaging": {}
+            }
+          }
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Wed, 22 May 2019 12:48:55 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "596",
+      "Connection",
+      "Close"
+    ]
+  }
+]

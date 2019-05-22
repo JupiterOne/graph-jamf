@@ -1,0 +1,97 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/accounts/groupid/3",
+    "body": "",
+    "status": 200,
+    "response": {
+      "group": {
+        "id": 3,
+        "name": "Not all groups have members inside in api",
+        "access_level": "Site Access",
+        "privilege_set": "Custom",
+        "site": {
+          "id": 1,
+          "name": "Test site"
+        },
+        "privileges": {
+          "jss_objects": [
+            "Read Advanced Computer Searches",
+            "Read Mobile Device Applications",
+            "Read Computer Enrollment Invitations",
+            "Read VPP Administrator Accounts",
+            "Read Network Integration",
+            "Read Restricted Software",
+            "Read Static Mobile Device Groups",
+            "Read Mobile Devices",
+            "Read PreStages",
+            "Read macOS Configuration Profiles",
+            "Read Policies",
+            "Read VPP Assignment",
+            "Read VPP Invitations",
+            "Read Personal Device Configurations",
+            "Read Mobile Device Enrollment Invitations",
+            "Read Smart User Groups",
+            "Read Managed Preference Profiles",
+            "Read Computers",
+            "Read Mac Applications",
+            "Read User",
+            "Read Licensed Software",
+            "Read Personal Device Profiles",
+            "Read Advanced Mobile Device Searches",
+            "Read Advanced User Content Searches",
+            "Read Computer PreStage Enrollments",
+            "Read Mobile Device Managed App Configurations",
+            "Read Patch Management Software Titles",
+            "Read Static User Groups",
+            "Read Static Computer Groups",
+            "Read Classes",
+            "Read Self Service Bookmarks",
+            "Read Advanced User Searches",
+            "Read Mobile Device PreStage Enrollments",
+            "Read Device Enrollment Program Instances",
+            "Read iOS Configuration Profiles",
+            "Read Patch Policies",
+            "Read Enrollment Profiles",
+            "Read Smart Computer Groups",
+            "Read Smart Mobile Device Groups",
+            "Read eBooks"
+          ],
+          "jss_actions": [],
+          "recon": [],
+          "casper_remote": [],
+          "casper_imaging": []
+        },
+        "members": [
+          {
+            "id": 6,
+            "name": "Test Account"
+          }
+        ]
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Wed, 22 May 2019 12:46:22 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "1495",
+      "Connection",
+      "Close"
+    ]
+  }
+]

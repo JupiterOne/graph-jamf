@@ -1,10 +1,10 @@
-import { JamfDataModel, User } from "../types";
+import { Admin, Group, JamfDataModel, User } from "../types";
 import JamfClient from "./JamfClient";
 
 export default async function fetchJamfData(
   client: JamfClient,
 ): Promise<JamfDataModel> {
-  const [users, mobileDevices, computers] = await Promise.all([
+  const [users, mobileDevices, computers, accounts] = await Promise.all([
     client.fetchUsers(),
     client.fetchMobileDevices(),
     client.fetchComputers(),
@@ -15,8 +15,19 @@ export default async function fetchJamfData(
     users.map(user => client.fetchUserById(user.id)),
   );
 
-  await client.fetchAccountUserById(6);
-  await client.fetchAccountGroupById(1);
+  const adminsFullProfiles: Admin[] = await Promise.all(
+    accounts.users.map(admin => client.fetchAccountUserById(admin.id)),
+  );
 
-  return { users: usersFullProfiles, mobileDevices, computers };
+  const groupsFullProfiles: Group[] = await Promise.all(
+    accounts.groups.map(group => client.fetchAccountGroupById(group.id)),
+  );
+
+  return {
+    users: usersFullProfiles,
+    mobileDevices,
+    computers,
+    admins: adminsFullProfiles,
+    groups: groupsFullProfiles,
+  };
 }

@@ -1,12 +1,15 @@
-import { User } from "../jamf";
+import { User } from "../../jamf";
 import {
   COMPUTER_ENTITY_TYPE,
   USER_COMPUTER_RELATIONSHIP_CLASS,
   USER_COMPUTER_RELATIONSHIP_TYPE,
   USER_ENTITY_TYPE,
   UserComputerRelationship,
-} from "../jupiterone/entities";
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createUserComputerRelationships(
   users: User[],

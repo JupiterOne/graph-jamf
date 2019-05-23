@@ -4,7 +4,11 @@ import {
   Admin,
   AdminResponse,
   AdminsAndGroups,
+  ApplicationDetail,
+  ApplicationDetailResponse,
   Computer,
+  ComputerDetail,
+  ComputerDetailResponse,
   ComputerResponse,
   Group,
   GroupResponse,
@@ -96,6 +100,28 @@ export default class JamfClient {
     );
 
     return result.computers;
+  }
+
+  public async fetchComputerById(id: number): Promise<ComputerDetail> {
+    const result = await this.makeRequest<ComputerDetailResponse>(
+      `/computers/id/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer;
+  }
+
+  public async fetchComputerApplicationByName(
+    name: string,
+  ): Promise<ApplicationDetail> {
+    const result = await this.makeRequest<ApplicationDetailResponse>(
+      `/computerapplications/application/${name}`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer_applications;
   }
 
   private async makeRequest<T>(

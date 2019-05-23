@@ -1,4 +1,4 @@
-import { Computer } from "../types";
+import { Computer } from "../../types";
 import { createComputerEntities } from "./ComputerEntityConverter";
 
 test("convert computer entity", () => {

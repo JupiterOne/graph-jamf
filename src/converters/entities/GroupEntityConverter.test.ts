@@ -1,4 +1,4 @@
-import { Group } from "../types";
+import { Group } from "../../types";
 import { createGroupEntities } from "./GroupEntityConverter";
 
 test("convert group entity", () => {

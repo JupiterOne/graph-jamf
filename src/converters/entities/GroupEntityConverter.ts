@@ -2,9 +2,9 @@ import {
   GROUP_ENTITY_CLASS,
   GROUP_ENTITY_TYPE,
   GroupEntity,
-} from "../jupiterone/entities";
-import { Group } from "../types";
-import { generateEntityKey } from "../utils/generateKey";
+} from "../../jupiterone/entities";
+import { Group } from "../../types";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createGroupEntities(data: Group[]): GroupEntity[] {
   return data.map(item => ({

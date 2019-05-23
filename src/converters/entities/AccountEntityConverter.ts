@@ -1,11 +1,11 @@
-import { Account } from "../jamf";
+import { Account } from "../../jamf";
 import {
   ACCOUNT_ENTITY_CLASS,
   ACCOUNT_ENTITY_TYPE,
   AccountEntity,
-} from "../jupiterone/entities";
+} from "../../jupiterone";
 
-import { generateEntityKey } from "../utils/generateKey";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createAccountEntity(account: Account): AccountEntity {
   return {

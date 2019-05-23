@@ -1,7 +1,12 @@
-import { Group } from "../types";
-import { createGroupAdminRelationships } from "./GroupAdminRelationshipConverter";
+import { Account, Group } from "../../types";
+import { createAccountGroupRelationships } from "./AccountGroupRelationshipConverter";
 
-test("convert group admin relationships", () => {
+test("convert account group relationships", () => {
+  const account: Account = {
+    id: "TestId",
+    name: "TestName",
+  };
+
   const groups: Group[] = [
     {
       id: 1,
@@ -48,43 +53,29 @@ test("convert group admin relationships", () => {
       },
       members: [{ id: 6, name: "Test Account" }],
     },
-    {
-      id: 4,
-      name: "Not all groups have members inside in api",
-      access_level: "Site Access",
-      privilege_set: "Custom",
-      site: { id: 1, name: "Test site" },
-      privileges: {
-        jss_objects: ["Test Privileges"],
-        jss_actions: [],
-        recon: [],
-        casper_remote: [],
-        casper_imaging: [],
-      },
-    },
   ];
 
-  expect(createGroupAdminRelationships(groups)).toEqual([
+  expect(createAccountGroupRelationships(account, groups)).toEqual([
     {
       _class: "HAS",
-      _fromEntityKey: "jamf_group_1",
-      _key: "jamf_group_1_jamf_group_has_jamf_user_jamf_user_6",
-      _toEntityKey: "jamf_user_6",
-      _type: "jamf_group_has_jamf_user",
+      _fromEntityKey: "jamf_account_TestId",
+      _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_1",
+      _toEntityKey: "jamf_group_1",
+      _type: "jamf_account_has_jamf_group",
     },
     {
       _class: "HAS",
-      _fromEntityKey: "jamf_group_2",
-      _key: "jamf_group_2_jamf_group_has_jamf_user_jamf_user_6",
-      _toEntityKey: "jamf_user_6",
-      _type: "jamf_group_has_jamf_user",
+      _fromEntityKey: "jamf_account_TestId",
+      _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_2",
+      _toEntityKey: "jamf_group_2",
+      _type: "jamf_account_has_jamf_group",
     },
     {
       _class: "HAS",
-      _fromEntityKey: "jamf_group_3",
-      _key: "jamf_group_3_jamf_group_has_jamf_user_jamf_user_6",
-      _toEntityKey: "jamf_user_6",
-      _type: "jamf_group_has_jamf_user",
+      _fromEntityKey: "jamf_account_TestId",
+      _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_3",
+      _toEntityKey: "jamf_group_3",
+      _type: "jamf_account_has_jamf_group",
     },
   ]);
 });

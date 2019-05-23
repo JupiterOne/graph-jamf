@@ -1,4 +1,4 @@
-import { Account, User } from "../types";
+import { Account, User } from "../../types";
 import { createAccountUserRelationships } from "./AccountUserRelationshipConverter";
 
 const account: Account = {

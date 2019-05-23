@@ -4,9 +4,12 @@ import {
   ACCOUNT_GROUP_RELATIONSHIP_TYPE,
   AccountGroupRelationship,
   GROUP_ENTITY_TYPE,
-} from "../jupiterone/entities";
-import { Account, Group } from "../types";
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import { Account, Group } from "../../types";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createAccountGroupRelationships(
   account: Account,

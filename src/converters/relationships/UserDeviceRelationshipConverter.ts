@@ -1,12 +1,15 @@
-import { User } from "../jamf";
+import { User } from "../../jamf";
 import {
   MOBILE_DEVICE_ENTITY_TYPE,
   USER_DEVICE_RELATIONSHIP_CLASS,
   USER_DEVICE_RELATIONSHIP_TYPE,
   USER_ENTITY_TYPE,
   UserDeviceRelationship,
-} from "../jupiterone/entities";
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createUserDeviceRelationships(
   users: User[],

@@ -2,10 +2,10 @@ import {
   COMPUTER_ENTITY_CLASS,
   COMPUTER_ENTITY_TYPE,
   ComputerEntity,
-} from "../jupiterone";
-import { Computer } from "../types";
+} from "../../jupiterone";
+import { Computer } from "../../types";
 
-import { generateEntityKey } from "../utils/generateKey";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createComputerEntities(data: Computer[]): ComputerEntity[] {
   return data.map(device => {

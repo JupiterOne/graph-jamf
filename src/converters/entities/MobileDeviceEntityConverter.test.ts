@@ -1,4 +1,4 @@
-import { MobileDevice } from "../types";
+import { MobileDevice } from "../../types";
 import { createMobileDeviceEntities } from "./MobileDeviceEntityConverter";
 
 test("convert mobile device entity", () => {

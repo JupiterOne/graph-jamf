@@ -4,9 +4,12 @@ import {
   ACCOUNT_ENTITY_TYPE,
   AccountAdminRelationship,
   ADMIN_ENTITY_TYPE,
-} from "../jupiterone/entities";
-import { Account, Admin } from "../types";
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import { Account, Admin } from "../../types";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createAccountAdminRelationships(
   account: Account,

@@ -1,22 +1,29 @@
-export { createUserEntities } from "./UserEntityConverter";
-export { createMobileDeviceEntities } from "./MobileDeviceEntityConverter";
+export { createUserEntities } from "./entities/UserEntityConverter";
+export { createAdminEntities } from "./entities/AdminEntityConverter";
+export { createGroupEntities } from "./entities/GroupEntityConverter";
+export {
+  createMobileDeviceEntities,
+} from "./entities/MobileDeviceEntityConverter";
 export {
   createUserDeviceRelationships,
-} from "./UserDeviceRelationshipConverter";
-export { createAccountEntity } from "./AccountEntityConverter";
+} from "./relationships/UserDeviceRelationshipConverter";
+export { createAccountEntity } from "./entities/AccountEntityConverter";
 export {
   createAccountAdminRelationships,
-} from "./AccountAdminRelationshipConverter";
+} from "./relationships/AccountAdminRelationshipConverter";
 export {
   createAccountGroupRelationships,
-} from "./AccountGroupRelationshipConverter";
+} from "./relationships/AccountGroupRelationshipConverter";
 export {
   createGroupAdminRelationships,
-} from "./GroupAdminRelationshipConverter";
+} from "./relationships/GroupAdminRelationshipConverter";
 export {
   createAccountUserRelationships,
-} from "./AccountUserRelationshipConverter";
-export { createComputerEntities } from "./ComputerEntityConverter";
+} from "./relationships/AccountUserRelationshipConverter";
+export { createComputerEntities } from "./entities/ComputerEntityConverter";
 export {
   createUserComputerRelationships,
-} from "./UserComputerRelationshipConverter";
+} from "./relationships/UserComputerRelationshipConverter";
+export {
+  createComputerApplicationRelationship,
+} from "./relationships/ComputerApplicationRelationshipConverter";

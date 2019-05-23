@@ -1,6 +1,7 @@
 import {
   EntityFromIntegration,
   EntityOperation,
+  IntegrationRelationship,
   PersisterClient,
   RelationshipOperation,
 } from "@jupiterone/jupiter-managed-integration-sdk";
@@ -10,15 +11,16 @@ import {
   createAccountEntity,
   createAccountGroupRelationships,
   createAccountUserRelationships,
+  createAdminEntities,
+  createComputerApplicationRelationship,
   createComputerEntities,
   createGroupAdminRelationships,
+  createGroupEntities,
   createMobileDeviceEntities,
   createUserComputerRelationships,
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
-import { createAdminEntities } from "../converters/AdminEntityConverter";
-import { createGroupEntities } from "../converters/GroupEntityConverter";
 
 import {
   JupiterOneDataModel,
@@ -91,7 +93,10 @@ function createRelationshipsOperations(
 
     return [
       ...operations,
-      ...persister.processRelationships(oldRelationhips, newRelationhips),
+      ...persister.processRelationships<IntegrationRelationship>(
+        oldRelationhips,
+        newRelationhips,
+      ),
     ];
   }, defatultOperations);
 }
@@ -143,6 +148,9 @@ export function convertRelationships(
     userDeviceRelationships: createUserDeviceRelationships(jamfDataModel.users),
     userComputerRelationships: createUserComputerRelationships(
       jamfDataModel.users,
+    ),
+    computerApplicationRelationships: createComputerApplicationRelationship(
+      jamfDataModel.computerDetails,
     ),
   };
 }

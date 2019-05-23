@@ -1,7 +1,11 @@
-import { User } from "../jamf";
-import { USER_ENTITY_CLASS, USER_ENTITY_TYPE, UserEntity } from "../jupiterone";
+import { User } from "../../jamf";
+import {
+  USER_ENTITY_CLASS,
+  USER_ENTITY_TYPE,
+  UserEntity,
+} from "../../jupiterone";
 
-import { generateEntityKey } from "../utils/generateKey";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createUserEntities(data: User[]): UserEntity[] {
   return data.map(user => {

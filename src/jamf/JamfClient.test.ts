@@ -1,5 +1,4 @@
 import nock from "nock";
-import { fetchJamfData } from "./index";
 import JamfClient from "./JamfClient";
 
 const JAMF_LOCAL_EXECUTION_HOST =
@@ -207,13 +206,26 @@ describe("JamfClient fetch ok data", () => {
     expect(response).not.toEqual([]);
   });
 
-  test("fetch all data", async () => {
-    const { nockDone } = await nock.back("all-data.json", {
+  test("fetch computers detail info", async () => {
+    const { nockDone } = await nock.back("computer-detail-info.json", {
       before: prepareScope,
     });
 
-    const client = getClient();
-    const response = await fetchJamfData(client);
+    const response = await getClient().fetchComputerById(1);
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+
+  test("fetch computer application", async () => {
+    const { nockDone } = await nock.back("application.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchComputerApplicationByName(
+      "Insomnia.app",
+    );
 
     nockDone();
 

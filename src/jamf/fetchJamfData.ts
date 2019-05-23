@@ -23,10 +23,15 @@ export default async function fetchJamfData(
     accounts.groups.map(group => client.fetchAccountGroupById(group.id)),
   );
 
+  const computerDetails = await Promise.all(
+    computers.map(item => client.fetchComputerById(item.id)),
+  );
+
   return {
     users: usersFullProfiles,
     mobileDevices,
     computers,
+    computerDetails,
     admins: adminsFullProfiles,
     groups: groupsFullProfiles,
   };

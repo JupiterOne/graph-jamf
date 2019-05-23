@@ -1,13 +1,16 @@
-import { Account, User } from "../jamf";
+import { Account, User } from "../../jamf";
 import {
   ACCOUNT_ENTITY_TYPE,
   ACCOUNT_USER_RELATIONSHIP_CLASS,
   ACCOUNT_USER_RELATIONSHIP_TYPE,
   AccountUserRelationship,
   USER_ENTITY_TYPE,
-} from "../jupiterone";
+} from "../../jupiterone";
 
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createAccountUserRelationships(
   account: Account,

@@ -1,5 +1,6 @@
 import { GraphClient } from "@jupiterone/jupiter-managed-integration-sdk";
 import * as Entities from "./entities";
+import * as Relationships from "./relationships";
 
 export interface JupiterOneEntitiesData {
   accounts: Entities.AccountEntity[];
@@ -16,12 +17,13 @@ export interface JupiterOneDataModel {
 }
 
 export interface JupiterOneRelationshipsData {
-  accountAdminRelationships: Entities.AccountAdminRelationship[];
-  accountGroupRelationships: Entities.AccountGroupRelationship[];
-  accountUserRelationships: Entities.AccountUserRelationship[];
-  groupAdminRelationships: Entities.GroupAdminRelationship[];
-  userDeviceRelationships: Entities.UserDeviceRelationship[];
-  userComputerRelationships: Entities.UserComputerRelationship[];
+  accountAdminRelationships: Relationships.AccountAdminRelationship[];
+  accountGroupRelationships: Relationships.AccountGroupRelationship[];
+  accountUserRelationships: Relationships.AccountUserRelationship[];
+  groupAdminRelationships: Relationships.GroupAdminRelationship[];
+  userDeviceRelationships: Relationships.UserDeviceRelationship[];
+  userComputerRelationships: Relationships.UserComputerRelationship[];
+  computerApplicationRelationships: Relationships.ComputerApplicationRelationship[];
 }
 
 export default async function fetchEntitiesAndRelationships(
@@ -80,25 +82,29 @@ export async function fetchRelationships(
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
+    computerApplicationRelationships,
   ] = await Promise.all([
-    graph.findRelationshipsByType<Entities.AccountAdminRelationship>(
-      Entities.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.AccountAdminRelationship>(
+      Relationships.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
     ),
-    graph.findRelationshipsByType<Entities.AccountGroupRelationship>(
-      Entities.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.AccountGroupRelationship>(
+      Relationships.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
     ),
-    graph.findRelationshipsByType<Entities.GroupAdminRelationship>(
-      Entities.GROUP_ADMIN_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.GroupAdminRelationship>(
+      Relationships.GROUP_ADMIN_RELATIONSHIP_TYPE,
     ),
-    graph.findRelationshipsByType<Entities.AccountUserRelationship>(
-      Entities.ACCOUNT_USER_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.AccountUserRelationship>(
+      Relationships.ACCOUNT_USER_RELATIONSHIP_TYPE,
     ),
-    graph.findRelationshipsByType<Entities.UserDeviceRelationship>(
-      Entities.USER_DEVICE_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.UserDeviceRelationship>(
+      Relationships.USER_DEVICE_RELATIONSHIP_TYPE,
     ),
-    graph.findRelationshipsByType<Entities.UserComputerRelationship>(
-      Entities.USER_COMPUTER_RELATIONSHIP_TYPE,
+    graph.findRelationshipsByType<Relationships.UserComputerRelationship>(
+      Relationships.USER_COMPUTER_RELATIONSHIP_TYPE,
     ),
+    graph.findRelationshipsByType<
+      Relationships.ComputerApplicationRelationship
+    >(Relationships.COMPUTER_APPLICATION_RELATIONSHIP_TYPE),
   ]);
   return {
     accountAdminRelationships,
@@ -107,5 +113,6 @@ export async function fetchRelationships(
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
+    computerApplicationRelationships,
   };
 }

@@ -2,10 +2,10 @@ import {
   MOBILE_DEVICE_ENTITY_CLASS,
   MOBILE_DEVICE_ENTITY_TYPE,
   MobileDeviceEntity,
-} from "../jupiterone";
-import { MobileDevice } from "../types";
+} from "../../jupiterone";
+import { MobileDevice } from "../../types";
 
-import { generateEntityKey } from "../utils/generateKey";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createMobileDeviceEntities(
   data: MobileDevice[],

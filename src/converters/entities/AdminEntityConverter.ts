@@ -2,9 +2,9 @@ import {
   ADMIN_ENTITY_CLASS,
   ADMIN_ENTITY_TYPE,
   AdminEntity,
-} from "../jupiterone/entities";
-import { Admin } from "../types";
-import { generateEntityKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import { Admin } from "../../types";
+import { generateEntityKey } from "../../utils/generateKey";
 
 export function createAdminEntities(data: Admin[]): AdminEntity[] {
   return data.map(item => ({

@@ -1,0 +1,1630 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/computers/id/1",
+    "body": "",
+    "status": 200,
+    "response": {
+      "computer": {
+        "general": {
+          "id": 1,
+          "name": "Jhon’s AcmaCorp MacBook",
+          "mac_address": "11:22:33:44:55:66",
+          "alt_mac_address": "11:22:33:44:55:66",
+          "ip_address": "11.22.33.4",
+          "last_reported_ip": "111.22.333.444",
+          "serial_number": "123T123ESTT1",
+          "udid": "1234TE12-3STT-1234-E1ST-23TE412ST341",
+          "jamf_version": "10.12.0-t1555503901",
+          "platform": "Mac",
+          "barcode_1": "",
+          "barcode_2": "",
+          "asset_tag": "",
+          "remote_management": {
+            "managed": true,
+            "management_username": "macOS",
+            "management_password_sha256": "12341te2st3t412341e23stt41e2s341tt23est4tes12t34123te4st1t0e1234"
+          },
+          "mdm_capable": true,
+          "mdm_capable_users": {
+            "mdm_capable_user": "jhon.doe"
+          },
+          "management_status": {
+            "enrolled_via_dep": false,
+            "user_approved_enrollment": true,
+            "user_approved_mdm": true
+          },
+          "report_date": "2019-05-20 14:53:27",
+          "report_date_epoch": 1558364007680,
+          "report_date_utc": "2019-05-20T14:53:27.680+0000",
+          "last_contact_time": "2019-05-23 11:25:05",
+          "last_contact_time_epoch": 1558610705298,
+          "last_contact_time_utc": "2019-05-23T11:25:05.298+0000",
+          "initial_entry_date": "2019-04-22",
+          "initial_entry_date_epoch": 1555937998405,
+          "initial_entry_date_utc": "2019-04-22T12:59:58.405+0000",
+          "last_cloud_backup_date_epoch": 0,
+          "last_cloud_backup_date_utc": "",
+          "last_enrolled_date_epoch": 1555938179240,
+          "last_enrolled_date_utc": "2019-04-22T13:02:59.240+0000",
+          "distribution_point": "",
+          "sus": "",
+          "netboot_server": "",
+          "site": {
+            "id": 1,
+            "name": "Test site"
+          },
+          "itunes_store_account_is_active": true
+        },
+        "location": {
+          "username": "jhon.doe",
+          "realname": "Jhon Doe",
+          "real_name": "Jhon Doe",
+          "email_address": "jhon.doe@acmacorp.com",
+          "position": "CISO",
+          "phone": "1111111111",
+          "phone_number": "1111111111",
+          "department": "",
+          "building": "",
+          "room": ""
+        },
+        "purchasing": {
+          "is_purchased": true,
+          "is_leased": false,
+          "po_number": "",
+          "vendor": "",
+          "applecare_id": "",
+          "purchase_price": "",
+          "purchasing_account": "",
+          "po_date": "",
+          "po_date_epoch": 0,
+          "po_date_utc": "",
+          "warranty_expires": "",
+          "warranty_expires_epoch": 0,
+          "warranty_expires_utc": "",
+          "lease_expires": "",
+          "lease_expires_epoch": 0,
+          "lease_expires_utc": "",
+          "life_expectancy": 0,
+          "purchasing_contact": "",
+          "os_applecare_id": "",
+          "os_maintenance_expires": "",
+          "attachments": []
+        },
+        "peripherals": [],
+        "hardware": {
+          "make": "Apple",
+          "model": "15-inch Retina MacBook Pro with TouchID (Late 2016)",
+          "model_identifier": "MacBookPro13,3",
+          "os_name": "Mac OS X",
+          "os_version": "10.13.6",
+          "os_build": "17G6030",
+          "master_password_set": false,
+          "active_directory_status": "Not Bound",
+          "service_pack": "",
+          "processor_type": "Intel Core i7",
+          "processor_architecture": "x86_64",
+          "processor_speed": 2900,
+          "processor_speed_mhz": 2900,
+          "number_processors": 1,
+          "number_cores": 4,
+          "total_ram": 16384,
+          "total_ram_mb": 16384,
+          "boot_rom": "254.0.0.0.0",
+          "bus_speed": 0,
+          "bus_speed_mhz": 0,
+          "battery_capacity": 83,
+          "cache_size": 8192,
+          "cache_size_kb": 8192,
+          "available_ram_slots": 0,
+          "optical_drive": "",
+          "nic_speed": "n/a",
+          "smc_version": "2.38f7",
+          "ble_capable": true,
+          "sip_status": "Enabled",
+          "gatekeeper_status": "App Store and identified developers",
+          "xprotect_version": "2103",
+          "institutional_recovery_key": "Not Present",
+          "disk_encryption_configuration": "",
+          "filevault2_users": ["jhon.doe"],
+          "storage": [
+            {
+              "disk": "disk0",
+              "model": "APPLE SSD SM1024L",
+              "revision": "CXS6AA0Q",
+              "serial_number": "C02706400ADGVFW1H",
+              "size": 1048576,
+              "drive_capacity_mb": 1048576,
+              "connection_type": "NO",
+              "smart_status": "",
+              "partition": {
+                "name": "Macintosh HD (Boot Partition)",
+                "size": 953904,
+                "type": "boot",
+                "partition_capacity_mb": 953904,
+                "percentage_full": 66,
+                "filevault_status": "Encrypted",
+                "filevault_percent": 100,
+                "filevault2_status": "Encrypted",
+                "filevault2_percent": 100,
+                "boot_drive_available_mb": 356516,
+                "lvgUUID": "",
+                "lvUUID": "",
+                "pvUUID": ""
+              }
+            }
+          ],
+          "mapped_printers": [
+            {
+              "name": "Test",
+              "uri": "dnssd://Test._pdl-datastream._tcp.local./?bidi",
+              "type": "Test type",
+              "location": ""
+            }
+          ]
+        },
+        "certificates": [
+          {
+            "common_name": "test",
+            "identity": false,
+            "expires_utc": "2017-06-22T11:55:56.000+0000",
+            "expires_epoch": 1498132556000,
+            "name": "jhon.doe"
+          }
+        ],
+        "software": {
+          "unix_executables": [],
+          "licensed_software": [],
+          "installed_by_casper": [],
+          "installed_by_installer_swu": [
+            "com.adobe.acrobat.AcrobatDCUpd1700920058",
+            "com.adobe.acrobat.AcrobatDCUpd1701220095",
+            "com.adobe.acrobat.AcrobatDCUpd1701220098",
+            "com.adobe.acrobat.AcrobatDCUpd1800920044",
+            "com.adobe.acrobat.AcrobatDCUpd1800920050",
+            "com.adobe.acrobat.AcrobatDCUpd1801120035",
+            "com.adobe.acrobat.AcrobatDCUpd1801120038",
+            "com.adobe.acrobat.AcrobatDCUpd1801120040",
+            "com.adobe.acrobat.AcrobatDCUpd1801120055",
+            "com.adobe.acrobat.AcrobatDCUpd1801120058",
+            "com.adobe.acrobat.AcrobatDCUpd1801120063",
+            "com.adobe.acrobat.AcrobatDCUpd1900820071",
+            "com.adobe.acrobat.AcrobatDCUpd1900820074",
+            "com.adobe.acrobat.AcrobatDCUpd1900820080",
+            "com.adobe.acrobat.AcrobatDCUpd1901020064",
+            "com.adobe.acrobat.AcrobatDCUpd1901020069",
+            "com.adobe.acrobat.AcrobatDCUpd1901020091",
+            "com.adobe.acrobat.AcrobatDCUpd1901020098",
+            "com.adobe.acrobat.AcrobatDCUpd1901020099",
+            "com.adobe.acrobat.AcrobatDCUpd1901220034",
+            "com.adobe.acrobat.AcroRdrDCUpd1701220095_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1701220098_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1800920044_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1800920050_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120036_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120038_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120040_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120055_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120058_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1801120063_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1900820071_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1900820074_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1900820080_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901020064_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901020069_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901020091_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901020098_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901020099_MUI",
+            "com.adobe.acrobat.AcroRdrDCUpd1901220034_MUI",
+            "com.adobe.acrobat.DC.reader.app.pkg.MUI",
+            "com.adobe.acrobat.DC.reader.appsupport.pkg.MUI",
+            "com.adobe.acrobat.DC.reader.browser.pkg.MUI",
+            "com.adobe.acrobat.DC.viewer.app.pkg.MUI",
+            "com.adobe.acrobat.DC.viewer.appsupport.pkg.MUI",
+            "com.adobe.acrobat.DC.viewer.browser.pkg.MUI",
+            "com.adobe.acrobat.DC.viewer.print_automator.pkg.MUI",
+            "com.adobe.acrobat.DC.viewer.print_pdf_services.pkg.MUI",
+            "com.adobe.AcroServicesUpdater",
+            "com.adobe.armdc.app.pkg",
+            "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
+            "com.adobe.RdrServicesUpdater",
+            "com.agilebits.onepassword-osx",
+            "com.amazon.Kindle",
+            "com.amazon.workspaces",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1315",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1317",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1320",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1328",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1330",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1332",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1333",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1339",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1345",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1346",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1347",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1348",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1351",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1353",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1355",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1356",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1359",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1364",
+            "com.apple.pkg.ChineseWordlistUpdate.14U1365",
+            "com.apple.pkg.ChineseWordlistUpdate.16U1223",
+            "com.apple.pkg.ChineseWordlistUpdate.16U1232",
+            "com.apple.pkg.CLTools_Executables",
+            "com.apple.pkg.CLTools_SDK_macOS1013",
+            "com.apple.pkg.CLTools_SDK_macOS1014",
+            "com.apple.pkg.CLTools_SDK_macOSSDK",
+            "com.apple.pkg.CLTools_SDK_OSX1012",
+            "com.apple.pkg.Core",
+            "com.apple.pkg.CoreADI",
+            "com.apple.pkg.CoreFP",
+            "com.apple.pkg.CustomVoice_en_US_nicky",
+            "com.apple.pkg.CustomVoiceUpdate_en_US_nicky.16U1181",
+            "com.apple.pkg.DevSDK",
+            "com.apple.pkg.DevSDK_macOS1013_Public",
+            "com.apple.pkg.EFIAllowListAll.16U1533",
+            "com.apple.pkg.EmbeddedOSFirmware",
+            "com.apple.pkg.GarageBand_AppStore",
+            "com.apple.pkg.GatekeeperConfigData.14U2309",
+            "com.apple.pkg.GatekeeperConfigData.14U2322",
+            "com.apple.pkg.GatekeeperConfigData.14U2323",
+            "com.apple.pkg.GatekeeperConfigData.16U1118",
+            "com.apple.pkg.GatekeeperConfigData.16U1126",
+            "com.apple.pkg.GatekeeperConfigData.16U1132",
+            "com.apple.pkg.GatekeeperConfigData.16U1136",
+            "com.apple.pkg.GatekeeperConfigData.16U1138",
+            "com.apple.pkg.GatekeeperConfigData.16U1168",
+            "com.apple.pkg.GatekeeperConfigData.16U1193",
+            "com.apple.pkg.GatekeeperConfigData.16U1204",
+            "com.apple.pkg.GatekeeperConfigData.16U1216",
+            "com.apple.pkg.GatekeeperConfigData.16U1225",
+            "com.apple.pkg.GatekeeperConfigData.16U1230",
+            "com.apple.pkg.GatekeeperConfigData.16U1249",
+            "com.apple.pkg.GatekeeperConfigData.16U1253",
+            "com.apple.pkg.GatekeeperConfigData.16U1259",
+            "com.apple.pkg.GatekeeperConfigData.16U1265",
+            "com.apple.pkg.GatekeeperConfigData.16U1295",
+            "com.apple.pkg.GatekeeperConfigData.16U1300",
+            "com.apple.pkg.GatekeeperConfigData.16U1602",
+            "com.apple.pkg.GatekeeperConfigData.16U1634",
+            "com.apple.pkg.GatekeeperConfigData.16U1642",
+            "com.apple.pkg.GatekeeperConfigData.16U1655",
+            "com.apple.pkg.GatekeeperConfigData.16U1662",
+            "com.apple.pkg.GatekeeperConfigData.16U1672",
+            "com.apple.pkg.GatekeeperConfigData.16U1679",
+            "com.apple.pkg.GatekeeperConfigData.16U1699",
+            "com.apple.pkg.GatekeeperConfigData.16U1720",
+            "com.apple.pkg.GatekeeperConfigData.16U1738",
+            "com.apple.pkg.iMovie_AppStore",
+            "com.apple.pkg.InstallAssistantAuto",
+            "com.apple.pkg.iTunesAccess",
+            "com.apple.pkg.iTunesX",
+            "com.apple.pkg.iTunesX.12.7.4.patch",
+            "com.apple.pkg.Keynote7",
+            "com.apple.pkg.Keynote8",
+            "com.apple.pkg.Keynote9",
+            "com.apple.pkg.MAContent10_AssetPack_0048_AlchemyPadsDigitalHolyGhost",
+            "com.apple.pkg.MAContent10_AssetPack_0310_UB_DrumMachineDesignerGB",
+            "com.apple.pkg.MAContent10_AssetPack_0312_UB_UltrabeatKitsGBLogic",
+            "com.apple.pkg.MAContent10_AssetPack_0314_AppleLoopsHipHop1",
+            "com.apple.pkg.MAContent10_AssetPack_0315_AppleLoopsElectroHouse1",
+            "com.apple.pkg.MAContent10_AssetPack_0316_AppleLoopsDubstep1",
+            "com.apple.pkg.MAContent10_AssetPack_0317_AppleLoopsModernRnB1",
+            "com.apple.pkg.MAContent10_AssetPack_0320_AppleLoopsChillwave1",
+            "com.apple.pkg.MAContent10_AssetPack_0321_AppleLoopsIndieDisco",
+            "com.apple.pkg.MAContent10_AssetPack_0322_AppleLoopsDiscoFunk1",
+            "com.apple.pkg.MAContent10_AssetPack_0323_AppleLoopsVintageBreaks",
+            "com.apple.pkg.MAContent10_AssetPack_0324_AppleLoopsBluesGarage",
+            "com.apple.pkg.MAContent10_AssetPack_0325_AppleLoopsGarageBand1",
+            "com.apple.pkg.MAContent10_AssetPack_0354_EXS_PianoSteinway",
+            "com.apple.pkg.MAContent10_AssetPack_0357_EXS_BassAcousticUprightJazz",
+            "com.apple.pkg.MAContent10_AssetPack_0358_EXS_BassElectricFingerStyle",
+            "com.apple.pkg.MAContent10_AssetPack_0371_EXS_GuitarsAcoustic",
+            "com.apple.pkg.MAContent10_AssetPack_0375_EXS_GuitarsVintageStrat",
+            "com.apple.pkg.MAContent10_AssetPack_0482_EXS_OrchWoodwindAltoSax",
+            "com.apple.pkg.MAContent10_AssetPack_0484_EXS_OrchWoodwindClarinetSolo",
+            "com.apple.pkg.MAContent10_AssetPack_0487_EXS_OrchWoodwindFluteSolo",
+            "com.apple.pkg.MAContent10_AssetPack_0491_EXS_OrchBrass",
+            "com.apple.pkg.MAContent10_AssetPack_0509_EXS_StringsEnsemble",
+            "com.apple.pkg.MAContent10_AssetPack_0536_DrummerClapsCowbell",
+            "com.apple.pkg.MAContent10_AssetPack_0537_DrummerShaker",
+            "com.apple.pkg.MAContent10_AssetPack_0538_DrummerSticks",
+            "com.apple.pkg.MAContent10_AssetPack_0539_DrummerTambourine",
+            "com.apple.pkg.MAContent10_AssetPack_0540_PlugInSettingsGB",
+            "com.apple.pkg.MAContent10_AssetPack_0541_PlugInSettingsGBLogic",
+            "com.apple.pkg.MAContent10_AssetPack_0554_AppleLoopsDiscoFunk2",
+            "com.apple.pkg.MAContent10_AssetPack_0560_LTPBasicPiano1",
+            "com.apple.pkg.MAContent10_AssetPack_0593_DrummerSoCalGBLogic",
+            "com.apple.pkg.MAContent10_AssetPack_0597_LTPChordTrainer",
+            "com.apple.pkg.MAContent10_AssetPack_0598_LTPBasicGuitar1",
+            "com.apple.pkg.MAContent10_AssetPack_0599_GBLogicAlchemyEssentials",
+            "com.apple.pkg.macOSBrain",
+            "com.apple.pkg.macOSInstallerNotification_GM.16U1619",
+            "com.apple.pkg.MobileAssets",
+            "com.apple.pkg.MobileDevice",
+            "com.apple.pkg.MobileDeviceDevelopment",
+            "com.apple.pkg.MRT.14U2301",
+            "com.apple.pkg.MRT.14U2319",
+            "com.apple.pkg.MRT.14U2321",
+            "com.apple.pkg.MRTConfigData.16U4001",
+            "com.apple.pkg.MRTConfigData.16U4003",
+            "com.apple.pkg.MRTConfigData.16U4005",
+            "com.apple.pkg.MRTConfigData.16U4038",
+            "com.apple.pkg.MRTConfigData.16U4046",
+            "com.apple.pkg.MRTConfigData.16U4048",
+            "com.apple.pkg.MRTConfigData.16U4050",
+            "com.apple.pkg.MRTConfigData.16U4053",
+            "com.apple.pkg.Numbers4",
+            "com.apple.pkg.Numbers5",
+            "com.apple.pkg.Numbers6",
+            "com.apple.pkg.OSX_10_13_IncompatibleAppList.16U1254",
+            "com.apple.pkg.OSXSDK10.12",
+            "com.apple.pkg.OSXSDK10.13",
+            "com.apple.pkg.Pages6",
+            "com.apple.pkg.Pages7",
+            "com.apple.pkg.Pages8",
+            "com.apple.pkg.RemoteDesktopClient",
+            "com.apple.pkg.Safari12.0.2HighSierraAuto",
+            "com.apple.pkg.Safari12.0.3HighSierraAuto",
+            "com.apple.pkg.Safari12.1.1HighSierraAuto",
+            "com.apple.pkg.Safari12.1HighSierraAuto",
+            "com.apple.pkg.SecureBoot",
+            "com.apple.pkg.update.os.10.13.1Supplemental.17B1003",
+            "com.apple.pkg.update.os.Combo10.13.6Auto.17G65",
+            "com.apple.pkg.update.os.SecUpd2018-003HighSierra.17G4015",
+            "com.apple.pkg.update.os.SecUpd2019-002HighSierra.17G6030",
+            "com.apple.pkg.Xcode",
+            "com.apple.pkg.XcodeCustomerContent",
+            "com.apple.pkg.XcodeSystemResources",
+            "com.apple.pkg.XProtectPlistConfigData.14U4056",
+            "com.apple.pkg.XProtectPlistConfigData.14U4057",
+            "com.apple.pkg.XProtectPlistConfigData.14U4058",
+            "com.apple.pkg.XProtectPlistConfigData.16U4004",
+            "com.apple.pkg.XProtectPlistConfigData.16U4009",
+            "com.apple.pkg.XProtectPlistConfigData.16U4011",
+            "com.apple.pkg.XProtectPlistConfigData.16U4016",
+            "com.apple.pkg.XProtectPlistConfigData.16U4033",
+            "com.apple.pkg.XProtectPlistConfigData.16U4039",
+            "com.apple.pkg.XProtectPlistConfigData.16U4040",
+            "com.apple.pkg.XProtectPlistConfigData.16U4051",
+            "com.apple.pkg.XProtectPlistConfigData.16U4052",
+            "com.apple.update.fullbundleupdate.17G4015",
+            "com.apple.update.fullbundleupdate.17G6030",
+            "com.apple.update.fullbundleupdate.17G65",
+            "com.carbonblack.defense",
+            "com.dashlane.Dashlane",
+            "com.fasthatchapps.gifgrabberosx",
+            "com.getchef.pkg.chef",
+            "com.helloresolven.GIF-Brewery-3",
+            "com.if.Amphetamine",
+            "com.jamfsoftware.osxenrollment",
+            "com.lastpass.LastPass",
+            "com.michelf.sim-daltonism",
+            "com.microsoft.OneDrive",
+            "com.microsoft.package.Fonts",
+            "com.microsoft.package.Frameworks",
+            "com.microsoft.package.Microsoft_AutoUpdate.app",
+            "com.microsoft.package.Microsoft_Excel.app",
+            "com.microsoft.package.Microsoft_OneNote.app",
+            "com.microsoft.package.Microsoft_Outlook.app",
+            "com.microsoft.package.Microsoft_PowerPoint.app",
+            "com.microsoft.package.Microsoft_Word.app",
+            "com.microsoft.package.Proofing_Tools",
+            "com.microsoft.pkg.licensing",
+            "com.microsoft.rdc.mac",
+            "com.ms.data.pkg",
+            "com.ms.NPCleanHistory.pkg",
+            "com.ms.NPClientBinding.pkg",
+            "com.ms.NPSafeInput.pkg",
+            "com.ms.NPSafeSubmit.pkg",
+            "com.oracle.jdk8u131",
+            "com.oracle.jre",
+            "com.pritunl.pkg.Pritunl",
+            "com.skitch.skitch",
+            "com.tenablesecurity.Nessus.Preferences",
+            "com.tendyron.pkg.ICBCUKeyTool",
+            "com.threatguard.HSRToolkit",
+            "com.tinyspeck.slackmacgap",
+            "com.unsplash.Wallpapers",
+            "com.yubico.pam_yubico",
+            "com.yubico.ykman",
+            "com.yubico.YKPersonalization",
+            "nbr.mac.webex.com",
+            "org.python.Python.PythonApplications-3.6",
+            "org.python.Python.PythonDocumentation-3.6",
+            "org.python.Python.PythonFramework-3.6",
+            "org.python.Python.PythonUnixTools-3.6",
+            "org.tug.mactex.basictex2017",
+            "org.virtualbox.pkg.vboxkexts",
+            "org.virtualbox.pkg.virtualbox",
+            "org.virtualbox.pkg.virtualboxcli",
+            "org.wireshark.ChmodBPF.pkg",
+            "org.wireshark.cli.pkg",
+            "org.wireshark.Wireshark.pkg",
+            "playback.mac.webex.com",
+            "SkypeForBusiness.Client.Plugin",
+            "test.treasuredatainc.pkg.td-agent",
+            "ZoomMacOutlookPlugin.pkg"
+          ],
+          "cached_by_casper": [],
+          "available_software_updates": [],
+          "available_updates": {},
+          "running_services": [
+            "Adobe_Genuine_Software_Integrity_Service",
+            "com.adobe.acc.installer.v2",
+            "com.adobe.ARMDC.Communicator",
+            "com.adobe.ARMDC.SMJobBlessHelper",
+            "com.apple.accessibility.heard",
+            "com.apple.accessoryd",
+            "com.apple.AccountPolicyHelper",
+            "com.apple.adid",
+            "com.apple.afpfs_afpLoad",
+            "com.apple.afpfs_checkafp",
+            "com.apple.AirPlayXPCHelper",
+            "com.apple.airport.wps",
+            "com.apple.airportd",
+            "com.apple.akd",
+            "com.apple.alf",
+            "com.apple.AmbientDisplayAgent",
+            "com.apple.analyticsd",
+            "com.apple.apfsd",
+            "com.apple.appleseed.fbahelperd",
+            "com.apple.applessdstatistics",
+            "com.apple.apsd",
+            "com.apple.aslmanager",
+            "com.apple.AssetCache.builtin",
+            "com.apple.AssetCacheLocatorService",
+            "com.apple.AssetCacheManagerService",
+            "com.apple.AssetCacheTetheratorService",
+            "com.apple.audio.AudioComponentRegistrar",
+            "com.apple.audio.coreaudiod",
+            "com.apple.audio.systemsoundserverd",
+            "com.apple.auditd",
+            "com.apple.authd",
+            "com.apple.autofsd",
+            "com.apple.automountd",
+            "com.apple.avbdeviced",
+            "com.apple.avbloader",
+            "com.apple.awacsd",
+            "com.apple.awdd",
+            "com.apple.backupd",
+            "com.apple.backupd-helper",
+            "com.apple.biokitaggdd",
+            "com.apple.biometrickitd",
+            "com.apple.bluetoothaudiod",
+            "com.apple.bluetoothd",
+            "com.apple.bluetoothReporter",
+            "com.apple.bnepd",
+            "com.apple.bootinstalld",
+            "com.apple.bosreporter",
+            "com.apple.boswatcher",
+            "com.apple.bridgeOSUpdateProxy",
+            "com.apple.bsd.dirhelper",
+            "com.apple.captiveagent",
+            "com.apple.cfnetwork.cfnetworkagent",
+            "com.apple.cfprefsd.xpc.daemon",
+            "com.apple.cmio.AppleCameraAssistant",
+            "com.apple.cmio.AVCAssistant",
+            "com.apple.cmio.IIDCVideoAssistant",
+            "com.apple.cmio.iOSScreenCaptureAssistant",
+            "com.apple.cmio.registerassistantservice",
+            "com.apple.cmio.VDCAssistant",
+            "com.apple.CodeSigningHelper",
+            "com.apple.colorsync.displayservices",
+            "com.apple.colorsyncd",
+            "com.apple.CommCenterRootHelper",
+            "com.apple.commerced",
+            "com.apple.configd",
+            "com.apple.configureLocalKDC",
+            "com.apple.CoreAuthentication.daemon",
+            "com.apple.corebrightnessd",
+            "com.apple.corecaptured",
+            "com.apple.coreduetd",
+            "com.apple.CoreRAID",
+            "com.apple.coreservices.appleevents",
+            "com.apple.coreservices.launchservicesd",
+            "com.apple.coreservices.sharedfilelistd",
+            "com.apple.coreservicesd",
+            "com.apple.corestorage.corestoraged",
+            "com.apple.corestorage.corestoragehelperd",
+            "com.apple.coresymbolicationd",
+            "com.apple.CrashReporterSupportHelper",
+            "com.apple.CryptoTokenKit.ahp",
+            "com.apple.CSCSupportd",
+            "com.apple.csrutil.report",
+            "com.apple.ctkd",
+            "com.apple.cvmsServ",
+            "com.apple.dasd",
+            "com.apple.DataDetectorsSourceAccess",
+            "com.apple.defragx",
+            "com.apple.DesktopServicesHelper",
+            "com.apple.DesktopServicesHelper.02CDD883-B44A-4E93-91D3-6F96CB861E0C",
+            "com.apple.DesktopServicesHelper.050A2AA0-21A3-43BA-8367-97557645C275",
+            "com.apple.DesktopServicesHelper.177A8B12-FB97-4033-854A-EA644D19D0ED",
+            "com.apple.DesktopServicesHelper.189E3B98-B9CC-450C-A6A1-AF9CCA13829C",
+            "com.apple.DesktopServicesHelper.1917457C-8088-4F25-B536-52469B2EE3F3",
+            "com.apple.DesktopServicesHelper.1BA49AC5-97BF-4848-9F41-14028BAFDD9E",
+            "com.apple.DesktopServicesHelper.23C1579A-5D4A-4C94-8DB3-BDD656F484D9",
+            "com.apple.DesktopServicesHelper.36E69990-0C58-4EAB-A8A7-15FB67BDE95C",
+            "com.apple.DesktopServicesHelper.3ED5ADCC-ACE2-498C-8346-C34F1C701342",
+            "com.apple.DesktopServicesHelper.491CB903-AC7C-43B8-8628-0D6B1D9687F0",
+            "com.apple.DesktopServicesHelper.49755CC2-F8DC-4DB9-B3DE-2FC32228DDC0",
+            "com.apple.DesktopServicesHelper.642EC610-6EBF-418F-8CC1-4FD353F648EF",
+            "com.apple.DesktopServicesHelper.7EB93CCE-6363-4613-B61A-EBCE3A1D2541",
+            "com.apple.DesktopServicesHelper.A5561021-E45B-4BBA-B3EB-F2EB9D2CFE35",
+            "com.apple.DesktopServicesHelper.A70AB4D3-D67C-4799-AEAB-06FD546B8849",
+            "com.apple.DesktopServicesHelper.ADF7E347-F235-4FD1-859F-FAD0C170F4B5",
+            "com.apple.DesktopServicesHelper.C48DB786-5FF8-4622-8268-9260FF1622BC",
+            "com.apple.DesktopServicesHelper.D49BC3C9-957E-428D-BF32-049C3A4664EB",
+            "com.apple.DesktopServicesHelper.D6242873-14CD-4293-980E-30B399DA26C6",
+            "com.apple.DesktopServicesHelper.D8726A46-945F-445E-ADEC-0980E5BADA8E",
+            "com.apple.DesktopServicesHelper.D9D01FDC-B9E9-466B-90B4-2296A2E453D5",
+            "com.apple.DesktopServicesHelper.DBC2FDAA-D195-4AF1-8E6C-B065D04D8995",
+            "com.apple.DesktopServicesHelper.DCE09779-9A16-421B-82B5-A2951CA91D27",
+            "com.apple.DesktopServicesHelper.F019442E-F661-47D4-96EC-45C4ECA9EF1C",
+            "com.apple.DesktopServicesHelper.FE76A01B-FAA7-439F-91F3-411F49DDAD86",
+            "com.apple.diagnosticd",
+            "com.apple.diagnosticextensions.osx.bluetooth.helper",
+            "com.apple.diagnosticextensions.osx.getmobilityinfo.helper",
+            "com.apple.diagnosticextensions.osx.spotlight.helper",
+            "com.apple.diagnosticextensions.osx.timemachine.helper",
+            "com.apple.diagnosticextensions.osx.wifi.helper",
+            "com.apple.diskarbitrationd",
+            "com.apple.diskmanagementd",
+            "com.apple.diskmanagementstartup",
+            "com.apple.displaypolicyd",
+            "com.apple.distnoted.xpc.daemon",
+            "com.apple.dmd",
+            "com.apple.dpaudiothru",
+            "com.apple.dpd",
+            "com.apple.dprivacyd",
+            "com.apple.driver.eficheck",
+            "com.apple.driver.ethcheck",
+            "com.apple.dspluginhelperd",
+            "com.apple.DumpGPURestart",
+            "com.apple.DumpPanic",
+            "com.apple.dvdplayback.setregion",
+            "com.apple.dynamic_pager",
+            "com.apple.eapolcfg_auth",
+            "com.apple.efilogin-helper",
+            "com.apple.EmbeddedOSInstallService",
+            "com.apple.emond",
+            "com.apple.emond.aslmanager",
+            "com.apple.eoshostd",
+            "com.apple.familycontrols",
+            "com.apple.FileCoordination",
+            "com.apple.findmymacd",
+            "com.apple.findmymacmessenger",
+            "com.apple.fontd",
+            "com.apple.fontmover",
+            "com.apple.FontWorker",
+            "com.apple.fpsd",
+            "com.apple.fseventsd",
+            "com.apple.GameController.gamecontrollerd",
+            "com.apple.gkreport",
+            "com.apple.GSSCred",
+            "com.apple.gssd",
+            "com.apple.gssd.DE000000-A086-0100-0000-000000000000",
+            "com.apple.hdiejectd",
+            "com.apple.hidd",
+            "com.apple.iBooksX-SecureUserDefaults",
+            "com.apple.icloud.findmydeviced",
+            "com.apple.iconservices.iconservicesagent",
+            "com.apple.iconservices.iconservicesd",
+            "com.apple.IFCStart",
+            "com.apple.ifdreader",
+            "com.apple.installandsetup.systemmigrationd",
+            "com.apple.installd",
+            "com.apple.InstallerDiagnostics.installerdiagd",
+            "com.apple.InstallerProgress",
+            "com.apple.internal.aupbregistrarservice",
+            "com.apple.IOAccelMemoryInfoCollector",
+            "com.apple.IOBluetoothUSBDFU",
+            "com.apple.iokit.ioserviceauthorized",
+            "com.apple.ionodecache",
+            "com.apple.kcproxy",
+            "com.apple.Kerberos.digest-service",
+            "com.apple.Kerberos.kadmind",
+            "com.apple.Kerberos.kcm",
+            "com.apple.Kerberos.kdc",
+            "com.apple.Kerberos.kpasswdd",
+            "com.apple.KernelEventAgent",
+            "com.apple.kextd",
+            "com.apple.kuncd",
+            "com.apple.library-repair.agent",
+            "com.apple.Localization.SetDefaultsService",
+            "com.apple.locationd",
+            "com.apple.lockd",
+            "com.apple.logd",
+            "com.apple.logind",
+            "com.apple.loginwindow",
+            "com.apple.logkextloadsd",
+            "com.apple.lsd",
+            "com.apple.ManagedClient",
+            "com.apple.ManagedClient.cloudconfigurationd",
+            "com.apple.ManagedClient.enroll",
+            "com.apple.mbsystemadministration",
+            "com.apple.mbusertrampoline",
+            "com.apple.mdmclient.daemon",
+            "com.apple.mdmclient.daemon.runatboot",
+            "com.apple.mDNSResponder.reloaded",
+            "com.apple.mDNSResponderHelper.reloaded",
+            "com.apple.mediaremoted",
+            "com.apple.metadata.mds",
+            "com.apple.metadata.mds.index",
+            "com.apple.metadata.mds.scan",
+            "com.apple.metadata.mds.spindump",
+            "com.apple.mobile.keybagd",
+            "com.apple.MobileAccessoryUpdater",
+            "com.apple.mobileassetd",
+            "com.apple.MobileFileIntegrity",
+            "com.apple.MRTd",
+            "com.apple.msrpc.lsarpc",
+            "com.apple.msrpc.mdssvc",
+            "com.apple.msrpc.netlogon",
+            "com.apple.msrpc.srvsvc",
+            "com.apple.msrpc.wkssvc",
+            "com.apple.multiversed",
+            "com.apple.nehelper",
+            "com.apple.nesessionmanager",
+            "com.apple.netauth.sys.auth",
+            "com.apple.netauth.sys.gui",
+            "com.apple.netbiosd",
+            "com.apple.NetworkSharing",
+            "com.apple.newsyslog",
+            "com.apple.nfcd",
+            "com.apple.nfrestore_service",
+            "com.apple.nfsconf",
+            "com.apple.nfsd",
+            "com.apple.nis.ypbind",
+            "com.apple.nlcd",
+            "com.apple.noticeboard.state",
+            "com.apple.notifyd",
+            "com.apple.nsurlsessiond_privileged",
+            "com.apple.nsurlstoraged",
+            "com.apple.ocspd",
+            "com.apple.opendirectoryd",
+            "com.apple.osanalytics.osanalyticshelper",
+            "com.apple.PCIELaneConfigTool",
+            "com.apple.PerformanceAnalysis.animationperfd",
+            "com.apple.periodic-daily",
+            "com.apple.periodic-monthly",
+            "com.apple.periodic-weekly",
+            "com.apple.pfctl",
+            "com.apple.pfd",
+            "com.apple.postfix.master",
+            "com.apple.postfix.newaliases",
+            "com.apple.powerd",
+            "com.apple.powerd.swd",
+            "com.apple.powerlogd",
+            "com.apple.preferences.timezone.admintool",
+            "com.apple.print.normalizerd",
+            "com.apple.printtool.daemon",
+            "com.apple.ProcessPanicReport",
+            "com.apple.racoon",
+            "com.apple.rapportd",
+            "com.apple.RemoteDesktop.PrivilegeProxy",
+            "com.apple.remotemanagementd",
+            "com.apple.RemotePairTool",
+            "com.apple.ReportCrash.Root",
+            "com.apple.ReportCrash.Root.Self",
+            "com.apple.ReportPanicService",
+            "com.apple.revisiond",
+            "com.apple.RFBEventHelper",
+            "com.apple.rootless.init",
+            "com.apple.rpcbind",
+            "com.apple.rpmuxd",
+            "com.apple.rtcreportingd",
+            "com.apple.SafeEjectGPUStartupDaemon",
+            "com.apple.sandboxd",
+            "com.apple.SCHelper",
+            "com.apple.scsid",
+            "com.apple.secinitd",
+            "com.apple.security.agent.login",
+            "com.apple.security.agent.login.00000000-0000-0000-0000-0000000186A8",
+            "com.apple.security.agent.login.00000000-0000-0000-0000-000000018BE8",
+            "com.apple.security.authhost",
+            "com.apple.security.authhost.00000000-0000-0000-0000-0000000186A8",
+            "com.apple.security.authhost.00000000-0000-0000-0000-000000018BE8",
+            "com.apple.security.syspolicy",
+            "com.apple.securityd",
+            "com.apple.securityd_service",
+            "com.apple.seld",
+            "com.apple.sessionlogoutd",
+            "com.apple.signpost.signpost_reporter",
+            "com.apple.signpost.signpost-notificationd",
+            "com.apple.siri.acousticsignature",
+            "com.apple.smb.preferences",
+            "com.apple.softwareupdate_download_service",
+            "com.apple.softwareupdated",
+            "com.apple.speech.speechsynthesisd",
+            "com.apple.spindump",
+            "com.apple.startupdiskhelper",
+            "com.apple.statd.notify",
+            "com.apple.storagekitd",
+            "com.apple.storeaccountd.daemon",
+            "com.apple.storeagent.daemon",
+            "com.apple.storeassetd.daemon",
+            "com.apple.storedownloadd.daemon",
+            "com.apple.storeinstalld",
+            "com.apple.storereceiptinstaller",
+            "com.apple.SubmitDiagInfo",
+            "com.apple.suhelperd",
+            "com.apple.symptomsd",
+            "com.apple.symptomsd-diag",
+            "com.apple.sysdiagnose",
+            "com.apple.sysdiagnose_helper",
+            "com.apple.syslogd",
+            "com.apple.sysmond",
+            "com.apple.system_installd",
+            "com.apple.systemadministration.writeconfig",
+            "com.apple.systemkeychain",
+            "com.apple.systempreferences.cacheAssistant",
+            "com.apple.systemstats.analysis",
+            "com.apple.systemstats.daily",
+            "com.apple.tailspind",
+            "com.apple.taskgated",
+            "com.apple.taskgated-helper",
+            "com.apple.tccd.system",
+            "com.apple.testmanagerd",
+            "com.apple.thermald",
+            "com.apple.timed",
+            "com.apple.timezoneupdates.tzd",
+            "com.apple.touchbarserver",
+            "com.apple.trustd",
+            "com.apple.TrustEvaluationAgent.system",
+            "com.apple.tzlinkd",
+            "com.apple.ucupdate.plist",
+            "com.apple.uninstalld",
+            "com.apple.unmountassistant.sysagent",
+            "com.apple.updateEFIDesktopPicture",
+            "com.apple.updateEFIDesktopPicture-apfs",
+            "com.apple.usbd",
+            "com.apple.usbmuxd",
+            "com.apple.UserEventAgent-System",
+            "com.apple.UserNotificationCenter",
+            "com.apple.var-db-dslocal-backup",
+            "com.apple.vsdbutil",
+            "com.apple.warmd",
+            "com.apple.watchdogd",
+            "com.apple.wifid",
+            "com.apple.wifiFirmwareLoader",
+            "com.apple.wifivelocityd",
+            "com.apple.WindowServer",
+            "com.apple.wirelessproxd",
+            "com.apple.WirelessRadioManager",
+            "com.apple.wwand",
+            "com.apple.xartstorageremoted",
+            "com.apple.xpc.roleaccountd",
+            "com.apple.xpc.smd",
+            "com.apple.xpc.uscwoap",
+            "com.carbonblack.defense.daemon",
+            "com.docker.vmnetd",
+            "com.jamf.management.daemon",
+            "com.microsoft.autoupdate.helper",
+            "com.microsoft.office.licensingV2.helper",
+            "com.microsoft.OneDriveStandaloneUpdaterDaemon",
+            "com.microsoft.OneDriveUpdaterDaemon",
+            "com.netflix.stethoscope-local.ShipIt",
+            "com.oracle.java.Helper-Tool",
+            "com.oracle.java.Java-Updater",
+            "com.pritunl.service",
+            "com.sparklabs.ViscosityHelper",
+            "com.tenablesecurity.nessusd",
+            "com.tendyron.launchd.monitor_ICBC",
+            "com.vix.cron",
+            "io.jupiterone.endpointcompliance.powerup.agent",
+            "keybase.Helper",
+            "org.cups.cupsd",
+            "org.wireshark.ChmodBPF"
+          ],
+          "applications": [
+            {
+              "name": "AAM Registration Notifier.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P6/AAM Registration Notifier.app",
+              "version": "7.0.0.485"
+            },
+            {
+              "name": "AAM Registration Notifier.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/LWA/AAM Registration Notifier.app",
+              "version": "3.0.64.0"
+            },
+            {
+              "name": "AAM Updates Notifier.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/UWA/AAM Updates Notifier.app",
+              "version": "9.0.0.281"
+            },
+            {
+              "name": "AAMLauncherUtil.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/core/AAMLauncherUtil.app",
+              "version": "10.0.0.49"
+            },
+            {
+              "name": "AASIapp.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P7/AASIapp.app",
+              "version": "10.0.0.252"
+            },
+            {
+              "name": "ACCFinderBundleLoader.app",
+              "path": "/Applications/Utilities/Adobe Sync/CoreSyncExtension/ACCFinderBundleLoader.app",
+              "version": "2.4.6.82"
+            },
+            {
+              "name": "Acrobat Distiller.app",
+              "path": "/Applications/Adobe Acrobat DC/Acrobat Distiller.app",
+              "version": "19.012.20034"
+            },
+            {
+              "name": "Activity Monitor.app",
+              "path": "/Applications/Utilities/Activity Monitor.app",
+              "version": "10.13"
+            },
+            {
+              "name": "Adobe Acrobat Reader DC.app",
+              "path": "/Applications/Adobe Acrobat Reader DC.app",
+              "version": "19.012.20034"
+            },
+            {
+              "name": "Adobe Acrobat.app",
+              "path": "/Applications/Adobe Acrobat DC/Adobe Acrobat.app",
+              "version": "19.012.20034"
+            },
+            {
+              "name": "Adobe Application Manager.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/core/Adobe Application Manager.app",
+              "version": "10.0.0.49"
+            },
+            {
+              "name": "Adobe Application Updater.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/AppsPanel/Updater/Adobe Application Updater.app",
+              "version": "4.6.0.384"
+            },
+            {
+              "name": "adobe_licensing_helper.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licensing_helper.app",
+              "version": "1.0.0.22"
+            },
+            {
+              "name": "adobe_lichelper.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_lichelper.app",
+              "version": "1.0.0.274"
+            },
+            {
+              "name": "adobe_licutil.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P6/adobe_licutil.app",
+              "version": "7.0.1.109"
+            },
+            {
+              "name": "adobe_licutil.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licutil.app",
+              "version": "10.0.0.274"
+            },
+            {
+              "name": "adobe_licutil.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/LWA/adobe_licutil.app",
+              "version": "Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)"
+            },
+            {
+              "name": "AdobeIPCBroker.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/IPC/AdobeIPCBroker.app",
+              "version": "5.4.0.57"
+            },
+            {
+              "name": "AirPort Utility.app",
+              "path": "/Applications/Utilities/AirPort Utility.app",
+              "version": "6.3.8"
+            },
+            {
+              "name": "Amphetamine.app",
+              "path": "/Applications/Amphetamine.app",
+              "version": "4.1.6"
+            },
+            {
+              "name": "App Store.app",
+              "path": "/Applications/App Store.app",
+              "version": "2.4"
+            },
+            {
+              "name": "Atom.app",
+              "path": "/Applications/Atom.app",
+              "version": "1.31.2"
+            },
+            {
+              "name": "Audio MIDI Setup.app",
+              "path": "/Applications/Utilities/Audio MIDI Setup.app",
+              "version": "3.2"
+            },
+            {
+              "name": "Automator.app",
+              "path": "/Applications/Automator.app",
+              "version": "2.8"
+            },
+            {
+              "name": "BlueJeans.app",
+              "path": "/Applications/BlueJeans.app",
+              "version": "2.10.0"
+            },
+            {
+              "name": "Bluetooth File Exchange.app",
+              "path": "/Applications/Utilities/Bluetooth File Exchange.app",
+              "version": "6.0.7"
+            },
+            {
+              "name": "Boot Camp Assistant.app",
+              "path": "/Applications/Utilities/Boot Camp Assistant.app",
+              "version": "6.1.0"
+            },
+            {
+              "name": "Calculator.app",
+              "path": "/Applications/Calculator.app",
+              "version": "10.13"
+            },
+            {
+              "name": "Calendar.app",
+              "path": "/Applications/Calendar.app",
+              "version": "10.0"
+            },
+            {
+              "name": "CCXProcess.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud Experience/CCXProcess.app",
+              "version": "2.3.0-30"
+            },
+            {
+              "name": "Chess.app",
+              "path": "/Applications/Chess.app",
+              "version": "3.15"
+            },
+            {
+              "name": "ColorSync Utility.app",
+              "path": "/Applications/Utilities/ColorSync Utility.app",
+              "version": "4.13.0"
+            },
+            {
+              "name": "Confer.app",
+              "path": "/Applications/Confer.app",
+              "version": "3.2.1.10"
+            },
+            {
+              "name": "Console.app",
+              "path": "/Applications/Utilities/Console.app",
+              "version": "1.0"
+            },
+            {
+              "name": "Contacts.app",
+              "path": "/Applications/Contacts.app",
+              "version": "11.0"
+            },
+            {
+              "name": "Core Sync.app",
+              "path": "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app",
+              "version": "3.0.3.6"
+            },
+            {
+              "name": "Creative Cloud Desktop App.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Desktop App.app",
+              "version": "4.6.0.384"
+            },
+            {
+              "name": "Creative Cloud Installer.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Installer.app",
+              "version": "4.6.0.384"
+            },
+            {
+              "name": "Creative Cloud Uninstaller.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Uninstaller.app",
+              "version": "4.6.0.384"
+            },
+            {
+              "name": "Creative Cloud.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app",
+              "version": "4.6.0.384"
+            },
+            {
+              "name": "Cytoscape Uninstaller.app",
+              "path": "/Applications/Cytoscape_v3.5.1/Cytoscape Uninstaller.app",
+              "version": "3.5.1"
+            },
+            {
+              "name": "Cytoscape.app",
+              "path": "/Applications/Cytoscape_v3.5.1/Cytoscape.app",
+              "version": "3.5.1"
+            },
+            {
+              "name": "Dashboard.app",
+              "path": "/Applications/Dashboard.app",
+              "version": "1.8"
+            },
+            {
+              "name": "Dashlane.app",
+              "path": "/Applications/Dashlane.app",
+              "version": "6.1909.0"
+            },
+            {
+              "name": "Dictionary.app",
+              "path": "/Applications/Dictionary.app",
+              "version": "2.2.2"
+            },
+            {
+              "name": "Digital Color Meter.app",
+              "path": "/Applications/Utilities/Digital Color Meter.app",
+              "version": "5.11"
+            },
+            {
+              "name": "Disk Utility.app",
+              "path": "/Applications/Utilities/Disk Utility.app",
+              "version": "17.0.3"
+            },
+            {
+              "name": "Docker.app",
+              "path": "/Applications/Docker.app",
+              "version": "2.0.0.0-mac81"
+            },
+            {
+              "name": "Dropbox.app",
+              "path": "/Applications/Dropbox.app",
+              "version": "72.4.136"
+            },
+            {
+              "name": "DVD Player.app",
+              "path": "/Applications/DVD Player.app",
+              "version": "5.8"
+            },
+            {
+              "name": "Epic Games Launcher.app",
+              "path": "/Applications/Epic Games Launcher.app",
+              "version": "9.12.4"
+            },
+            {
+              "name": "FaceTime.app",
+              "path": "/Applications/FaceTime.app",
+              "version": "4.0"
+            },
+            {
+              "name": "Font Book.app",
+              "path": "/Applications/Font Book.app",
+              "version": "8.0"
+            },
+            {
+              "name": "Gephi.app",
+              "path": "/Applications/Gephi.app",
+              "version": "0.9.1"
+            },
+            {
+              "name": "GIF Brewery 3.app",
+              "path": "/Applications/GIF Brewery 3.app",
+              "version": "3.9.5"
+            },
+            {
+              "name": "GIPHY CAPTURE.app",
+              "path": "/Applications/GIPHY CAPTURE.app",
+              "version": "4.1"
+            },
+            {
+              "name": "Google Chrome.app",
+              "path": "/Applications/Google Chrome.app",
+              "version": "74.0.3729.157"
+            },
+            {
+              "name": "Grab.app",
+              "path": "/Applications/Utilities/Grab.app",
+              "version": "1.10"
+            },
+            {
+              "name": "Grapher.app",
+              "path": "/Applications/Utilities/Grapher.app",
+              "version": "2.6"
+            },
+            {
+              "name": "HandBrake.app",
+              "path": "/Applications/HandBrake.app",
+              "version": "1.0.7"
+            },
+            {
+              "name": "HSRToolkit.app",
+              "path": "/Applications/HSRToolkit.app",
+              "version": "1"
+            },
+            {
+              "name": "iBooks.app",
+              "path": "/Applications/iBooks.app",
+              "version": "1.15"
+            },
+            {
+              "name": "IDLE.app",
+              "path": "/Applications/Python 3.6/IDLE.app",
+              "version": "3.6.1"
+            },
+            {
+              "name": "Image Capture.app",
+              "path": "/Applications/Image Capture.app",
+              "version": "7.0"
+            },
+            {
+              "name": "Insomnia.app",
+              "path": "/Applications/Insomnia.app",
+              "version": "6.3.2"
+            },
+            {
+              "name": "Install macOS Mojave.app",
+              "path": "/Applications/Install macOS Mojave.app",
+              "version": "14.0.22"
+            },
+            {
+              "name": "Install.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/HDCore/Install.app",
+              "version": "4.3.0.256"
+            },
+            {
+              "name": "IntelliJ IDEA CE.app",
+              "path": "/Applications/IntelliJ IDEA CE.app",
+              "version": "2017.2"
+            },
+            {
+              "name": "iTunes.app",
+              "path": "/Applications/iTunes.app",
+              "version": "12.8.2"
+            },
+            {
+              "name": "Keybase.app",
+              "path": "/Applications/Keybase.app",
+              "version": "4.0.0-20190507193726+6614a49937"
+            },
+            {
+              "name": "Keychain Access.app",
+              "path": "/Applications/Utilities/Keychain Access.app",
+              "version": "10.0"
+            },
+            {
+              "name": "Keynote.app",
+              "path": "/Applications/Keynote.app",
+              "version": "9.0.2"
+            },
+            {
+              "name": "Kindle.app",
+              "path": "/Applications/Kindle.app",
+              "version": "1.25.2"
+            },
+            {
+              "name": "LastPass.app",
+              "path": "/Applications/LastPass.app",
+              "version": "4.4.0"
+            },
+            {
+              "name": "Launchpad.app",
+              "path": "/Applications/Launchpad.app",
+              "version": "1.0"
+            },
+            {
+              "name": "LiveSlides.app",
+              "path": "/Applications/LiveSlides.app",
+              "version": "2.10.1"
+            },
+            {
+              "name": "LogTransport2.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/UWA/LogTransport2.app",
+              "version": "2.1.2.1652"
+            },
+            {
+              "name": "Mail.app",
+              "path": "/Applications/Mail.app",
+              "version": "11.5"
+            },
+            {
+              "name": "Maps.app",
+              "path": "/Applications/Maps.app",
+              "version": "2.0"
+            },
+            {
+              "name": "Messages.app",
+              "path": "/Applications/Messages.app",
+              "version": "11.0"
+            },
+            {
+              "name": "Microsoft Excel.app",
+              "path": "/Applications/Microsoft Excel.app",
+              "version": "16.24.19041401"
+            },
+            {
+              "name": "Microsoft OneNote.app",
+              "path": "/Applications/Microsoft OneNote.app",
+              "version": "16.25.19051201"
+            },
+            {
+              "name": "Microsoft Outlook.app",
+              "path": "/Applications/Microsoft Outlook.app",
+              "version": "16.24.19041401"
+            },
+            {
+              "name": "Microsoft PowerPoint.app",
+              "path": "/Applications/Microsoft PowerPoint.app",
+              "version": "16.24.19041401"
+            },
+            {
+              "name": "Microsoft Word.app",
+              "path": "/Applications/Microsoft Word.app",
+              "version": "16.24.19041401"
+            },
+            {
+              "name": "Migration Assistant.app",
+              "path": "/Applications/Utilities/Migration Assistant.app",
+              "version": "10.13"
+            },
+            {
+              "name": "Mission Control.app",
+              "path": "/Applications/Mission Control.app",
+              "version": "1.2"
+            },
+            {
+              "name": "Neo4j Community Edition 3.1.3.app",
+              "path": "/Applications/Neo4j Community Edition 3.1.3.app",
+              "version": "3.1.3"
+            },
+            {
+              "name": "Notes.app",
+              "path": "/Applications/Notes.app",
+              "version": "4.5"
+            },
+            {
+              "name": "Noun Project.app",
+              "path": "/Applications/Noun Project.app",
+              "version": "2.2.1"
+            },
+            {
+              "name": "Numbers.app",
+              "path": "/Applications/Numbers.app",
+              "version": "6.0"
+            },
+            {
+              "name": "OneDrive.app",
+              "path": "/Applications/OneDrive.app",
+              "version": "19.043.0304"
+            },
+            {
+              "name": "Pages.app",
+              "path": "/Applications/Pages.app",
+              "version": "8.0"
+            },
+            {
+              "name": "PDF Expert.app",
+              "path": "/Applications/PDF Expert.app",
+              "version": "2.4.2"
+            },
+            {
+              "name": "Photo Booth.app",
+              "path": "/Applications/Photo Booth.app",
+              "version": "9.0"
+            },
+            {
+              "name": "Photos.app",
+              "path": "/Applications/Photos.app",
+              "version": "3.0"
+            },
+            {
+              "name": "PluginLauncher.app",
+              "path": "/Applications/ZoomOutlookPlugin/PluginLauncher.app",
+              "version": "4.6.48616"
+            },
+            {
+              "name": "Postman.app",
+              "path": "/Applications/Postman.app",
+              "version": "5.2.0"
+            },
+            {
+              "name": "Preview.app",
+              "path": "/Applications/Preview.app",
+              "version": "10.0"
+            },
+            {
+              "name": "Prezi Next.app",
+              "path": "/Applications/Prezi Next.app",
+              "version": "1.34.0"
+            },
+            {
+              "name": "Pritunl.app",
+              "path": "/Applications/Pritunl.app",
+              "version": "1.0.1953.32"
+            },
+            {
+              "name": "Python Launcher.app",
+              "path": "/Applications/Python 3.6/Python Launcher.app",
+              "version": "3.6.1"
+            },
+            {
+              "name": "QuickTime Player.app",
+              "path": "/Applications/QuickTime Player.app",
+              "version": "10.4"
+            },
+            {
+              "name": "Reminders.app",
+              "path": "/Applications/Reminders.app",
+              "version": "5.0"
+            },
+            {
+              "name": "RingCentral Meetings.app",
+              "path": "/Applications/RingCentral Meetings.app",
+              "version": "6.3.135305.1213"
+            },
+            {
+              "name": "Safari.app",
+              "path": "/Applications/Safari.app",
+              "version": "12.1.1"
+            },
+            {
+              "name": "Script Editor.app",
+              "path": "/Applications/Utilities/Script Editor.app",
+              "version": "2.10"
+            },
+            {
+              "name": "Setup.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/D6/Setup.app",
+              "version": "9.0.0.65"
+            },
+            {
+              "name": "Setup.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/DECore/Setup.app",
+              "version": "9.0.0.65"
+            },
+            {
+              "name": "Setup.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/DWA/Setup.app",
+              "version": "5.0.65.0"
+            },
+            {
+              "name": "Sim Daltonism.app",
+              "path": "/Applications/Sim Daltonism.app",
+              "version": "2.0.4"
+            },
+            {
+              "name": "Siri.app",
+              "path": "/Applications/Siri.app",
+              "version": "1.0"
+            },
+            {
+              "name": "Sketch.app",
+              "path": "/Applications/Sketch.app",
+              "version": "50.2"
+            },
+            {
+              "name": "Skitch.app",
+              "path": "/Applications/Skitch.app",
+              "version": "2.8.2"
+            },
+            {
+              "name": "Skype Meetings App.app",
+              "path": "/Applications/Skype Meetings App.app",
+              "version": "1.0.0.186"
+            },
+            {
+              "name": "Skype.app",
+              "path": "/Applications/Skype.app",
+              "version": "7.56"
+            },
+            {
+              "name": "Slack.app",
+              "path": "/Applications/Slack.app",
+              "version": "3.3.7"
+            },
+            {
+              "name": "Sonos.app",
+              "path": "/Applications/Sonos.app",
+              "version": "7.2"
+            },
+            {
+              "name": "Spectacle.app",
+              "path": "/Applications/Spectacle.app",
+              "version": "1.2"
+            },
+            {
+              "name": "Station.app",
+              "path": "/Applications/Station.app",
+              "version": "1.40.1"
+            },
+            {
+              "name": "Stethoscope.app",
+              "path": "/Applications/Stethoscope.app",
+              "version": "3.0.5"
+            },
+            {
+              "name": "Stickies.app",
+              "path": "/Applications/Stickies.app",
+              "version": "10.1"
+            },
+            {
+              "name": "Sublime Text.app",
+              "path": "/Applications/Sublime Text.app",
+              "version": "Build 3143"
+            },
+            {
+              "name": "System Information.app",
+              "path": "/Applications/Utilities/System Information.app",
+              "version": "10.12"
+            },
+            {
+              "name": "System Preferences.app",
+              "path": "/Applications/System Preferences.app",
+              "version": "14.0"
+            },
+            {
+              "name": "TDR_ICBC_UsbKeyTools.app",
+              "path": "/Applications/TDR_ICBC_UsbKeyTools.app",
+              "version": "1.0.0.4"
+            },
+            {
+              "name": "Terminal.app",
+              "path": "/Applications/Utilities/Terminal.app",
+              "version": "2.8.3"
+            },
+            {
+              "name": "TextEdit.app",
+              "path": "/Applications/TextEdit.app",
+              "version": "1.13"
+            },
+            {
+              "name": "Time Machine.app",
+              "path": "/Applications/Time Machine.app",
+              "version": "1.3"
+            },
+            {
+              "name": "Uninstall Product.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE6/resources/uninstall/Uninstall Product.app",
+              "version": "9.0.0.65"
+            },
+            {
+              "name": "Uninstall Product.app",
+              "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE5/resources/uninstall/Uninstall Product.app",
+              "version": "5.0.65.0"
+            },
+            {
+              "name": "Uninstall.app",
+              "path": "/Applications/ZoomOutlookPlugin/Uninstall.app",
+              "version": "4.6.48616"
+            },
+            {
+              "name": "Uninstaller.app",
+              "path": "/Applications/Utilities/Adobe Creative Cloud/HDCore/Uninstaller.app",
+              "version": "4.3.0.256"
+            },
+            {
+              "name": "Unsplash Wallpapers.app",
+              "path": "/Applications/Unsplash Wallpapers.app",
+              "version": "1.2"
+            },
+            {
+              "name": "VirtualBox.app",
+              "path": "/Applications/VirtualBox.app",
+              "version": "5.2.8"
+            },
+            {
+              "name": "Viscosity.app",
+              "path": "/Applications/Viscosity.app",
+              "version": "1.7.6"
+            },
+            {
+              "name": "Visual Studio Code.app",
+              "path": "/Applications/Visual Studio Code.app",
+              "version": "1.33.1"
+            },
+            {
+              "name": "VoiceOver Utility.app",
+              "path": "/Applications/Utilities/VoiceOver Utility.app",
+              "version": "8"
+            },
+            {
+              "name": "Wavebox.app",
+              "path": "/Applications/Wavebox.app",
+              "version": "3.1.8"
+            },
+            {
+              "name": "Wireshark.app",
+              "path": "/Applications/Wireshark.app",
+              "version": "2.4.5"
+            },
+            {
+              "name": "WordPress.com.app",
+              "path": "/Applications/WordPress.com.app",
+              "version": "2.8.0"
+            },
+            {
+              "name": "WorkSpaces.app",
+              "path": "/Applications/WorkSpaces.app",
+              "version": "2.4.4"
+            },
+            {
+              "name": "Xcode.app",
+              "path": "/Applications/Xcode.app",
+              "version": "10.1"
+            },
+            {
+              "name": "YubiKey Manager.app",
+              "path": "/Applications/YubiKey Manager.app",
+              "version": "1.0"
+            },
+            {
+              "name": "YubiKey Personalization Tool.app",
+              "path": "/Applications/YubiKey Personalization Tool.app",
+              "version": "3.1.24"
+            },
+            {
+              "name": "zoom.us.app",
+              "path": "/Applications/zoom.us.app",
+              "version": "4.1.34801.1116"
+            }
+          ],
+          "fonts": [],
+          "plugins": []
+        },
+        "extension_attributes": [],
+        "groups_accounts": {
+          "computer_group_memberships": ["All Managed Clients"],
+          "local_accounts": [
+            {
+              "name": "jhon.doe",
+              "realname": "Jhon Doe",
+              "uid": "501",
+              "home": "/Users/jhon",
+              "home_size": "-1MB",
+              "home_size_mb": -1,
+              "administrator": true,
+              "filevault_enabled": true
+            },
+            {
+              "name": "macOS",
+              "realname": "macOS",
+              "uid": "502",
+              "home": "/Users/macOS",
+              "home_size": "-1MB",
+              "home_size_mb": -1,
+              "administrator": true,
+              "filevault_enabled": false
+            }
+          ],
+          "user_inventories": {
+            "disable_automatic_login": true,
+            "user": {
+              "username": "macOS",
+              "password_history_depth": "",
+              "password_min_length": "",
+              "password_max_age": "",
+              "password_min_complex_characters": "",
+              "password_require_alphanumeric": "false"
+            }
+          }
+        },
+        "iphones": [],
+        "configuration_profiles": [
+          {
+            "id": -2,
+            "name": "",
+            "uuid": "",
+            "is_removable": false
+          }
+        ]
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Thu, 23 May 2019 11:40:16 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "47443",
+      "Connection",
+      "Close"
+    ]
+  }
+]

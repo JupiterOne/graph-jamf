@@ -4,9 +4,12 @@ import {
   GROUP_ADMIN_RELATIONSHIP_TYPE,
   GROUP_ENTITY_TYPE,
   GroupAdminRelationship,
-} from "../jupiterone/entities";
-import { Group } from "../types";
-import { generateEntityKey, generateRelationKey } from "../utils/generateKey";
+} from "../../jupiterone";
+import { Group } from "../../types";
+import {
+  generateEntityKey,
+  generateRelationKey,
+} from "../../utils/generateKey";
 
 export function createGroupAdminRelationships(
   groups: Group[],

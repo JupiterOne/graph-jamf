@@ -18,7 +18,6 @@ export function createAdminEntities(data: Admin[]): AdminEntity[] {
     fullName: item.full_name!,
     email: item.email!,
     emailAddress: item.email_address!,
-    passwordSha256: item.password_sha256!,
     enabled: item.enabled!,
     forcePasswordChange: item.force_password_change!,
     accessLevel: item.access_level!,

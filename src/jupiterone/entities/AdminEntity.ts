@@ -10,7 +10,6 @@ export interface AdminEntity extends EntityFromIntegration {
   fullName: string;
   email: string;
   emailAddress: string;
-  passwordSha256: string;
   enabled: string;
   forcePasswordChange: boolean;
   accessLevel: string;

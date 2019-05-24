@@ -15,8 +15,6 @@ test("convert account admin relationships", () => {
       full_name: "Test Account Full",
       email: "test@test.com",
       email_address: "test@test.com",
-      password_sha256:
-        "testshashatest",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Group Access",
@@ -44,8 +42,6 @@ test("convert account admin relationships", () => {
       full_name: "",
       email: "",
       email_address: "",
-      password_sha256:
-        "meshayousha",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -67,8 +63,6 @@ test("convert account admin relationships", () => {
       full_name: "User D",
       email: "user.d@example.com",
       email_address: "user.d@example.com",
-      password_sha256:
-        "notyoursha",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -90,8 +84,6 @@ test("convert account admin relationships", () => {
       full_name: "",
       email: "user.b@example.com",
       email_address: "user.b@example.com",
-      password_sha256:
-        "yoshayahbaby",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -113,8 +105,6 @@ test("convert account admin relationships", () => {
       full_name: "User A",
       email: "user.a@example.com",
       email_address: "user.a@example.com",
-      password_sha256:
-        "abc123shayahbaby",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -136,8 +126,6 @@ test("convert account admin relationships", () => {
       full_name: "JupiterOne",
       email: "",
       email_address: "",
-      password_sha256:
-        "j1testingsha",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",

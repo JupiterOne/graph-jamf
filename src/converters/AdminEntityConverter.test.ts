@@ -10,8 +10,6 @@ test("convert admin entity", () => {
       full_name: "Test Account Full",
       email: "test@test.com",
       email_address: "test@test.com",
-      password_sha256:
-        "testshashatest",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Group Access",
@@ -62,8 +60,6 @@ test("convert admin entity", () => {
       full_name: "User D",
       email: "user.d@example.com",
       email_address: "user.d@example.com",
-      password_sha256:
-        "notyoursha",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -85,8 +81,6 @@ test("convert admin entity", () => {
       full_name: "",
       email: "user.b@example.com",
       email_address: "user.b@example.com",
-      password_sha256:
-        "yoshayahbaby",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -108,8 +102,6 @@ test("convert admin entity", () => {
       full_name: "User A",
       email: "user.a@example.com",
       email_address: "user.a@example.com",
-      password_sha256:
-        "abc123shayahbaby",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -131,8 +123,6 @@ test("convert admin entity", () => {
       full_name: "JupiterOne",
       email: "",
       email_address: "",
-      password_sha256:
-        "j1testingsha",
       enabled: "Enabled",
       force_password_change: false,
       access_level: "Full Access",
@@ -164,8 +154,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "Test Account Full",
       name: "Test Account",
-      passwordSha256:
-        "testshashatest",
       privilegeSet: "Custom",
     },
     {
@@ -182,8 +170,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "",
       name: "jupiterone-dev",
-      passwordSha256:
-        "meshayousha",
       privilegeSet: "Auditor",
     },
     {
@@ -200,8 +186,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "User D",
       name: "user.d",
-      passwordSha256:
-        "notyoursha",
       privilegeSet: "Administrator",
     },
     {
@@ -218,8 +202,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "",
       name: "user.b",
-      passwordSha256:
-        "yoshayahbaby",
       privilegeSet: "Administrator",
     },
     {
@@ -236,8 +218,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "User A",
       name: "user.a",
-      passwordSha256:
-        "abc123shayahbaby",
       privilegeSet: "Administrator",
     },
     {
@@ -254,8 +234,6 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "JupiterOne",
       name: "jupiterone-underpriv",
-      passwordSha256:
-        "j1testingsha",
       privilegeSet: "Custom",
     },
   ]);

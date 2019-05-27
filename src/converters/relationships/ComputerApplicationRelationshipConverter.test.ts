@@ -1634,7 +1634,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_AAM Registration Notifier.app_7.0.0.485",
+        "user_endpoint_1_installed_mac_app_AAM Registration Notifier.app_7.0.0.485",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1654,7 +1654,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_AAM Registration Notifier.app_3.0.64.0",
+        "user_endpoint_1_installed_mac_app_AAM Registration Notifier.app_3.0.64.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1674,7 +1674,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_AAM Updates Notifier.app_9.0.0.281",
+        "user_endpoint_1_installed_mac_app_AAM Updates Notifier.app_9.0.0.281",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1693,8 +1693,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_AAMLauncherUtil.app_10.0.0.49",
+      _key: "user_endpoint_1_installed_mac_app_AAMLauncherUtil.app_10.0.0.49",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1713,7 +1712,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_AASIapp.app_10.0.0.252",
+      _key: "user_endpoint_1_installed_mac_app_AASIapp.app_10.0.0.252",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1733,7 +1732,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_ACCFinderBundleLoader.app_2.4.6.82",
+        "user_endpoint_1_installed_mac_app_ACCFinderBundleLoader.app_2.4.6.82",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1753,7 +1752,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Acrobat Distiller.app_19.012.20034",
+        "user_endpoint_1_installed_mac_app_Acrobat Distiller.app_19.012.20034",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1771,7 +1770,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Activity Monitor.app_10.13",
+      _key: "user_endpoint_1_installed_mac_app_Activity Monitor.app_10.13",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1790,7 +1789,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Adobe Acrobat Reader DC.app_19.012.20034",
+        "user_endpoint_1_installed_mac_app_Adobe Acrobat Reader DC.app_19.012.20034",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1808,8 +1807,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Adobe Acrobat.app_19.012.20034",
+      _key: "user_endpoint_1_installed_mac_app_Adobe Acrobat.app_19.012.20034",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1828,7 +1826,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Adobe Application Manager.app_10.0.0.49",
+        "user_endpoint_1_installed_mac_app_Adobe Application Manager.app_10.0.0.49",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1848,7 +1846,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Adobe Application Updater.app_4.6.0.384",
+        "user_endpoint_1_installed_mac_app_Adobe Application Updater.app_4.6.0.384",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1868,7 +1866,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_adobe_licensing_helper.app_1.0.0.22",
+        "user_endpoint_1_installed_mac_app_adobe_licensing_helper.app_1.0.0.22",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1887,8 +1885,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_adobe_lichelper.app_1.0.0.274",
+      _key: "user_endpoint_1_installed_mac_app_adobe_lichelper.app_1.0.0.274",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1907,7 +1904,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_adobe_licutil.app_7.0.1.109",
+      _key: "user_endpoint_1_installed_mac_app_adobe_licutil.app_7.0.1.109",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1926,8 +1923,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_adobe_licutil.app_10.0.0.274",
+      _key: "user_endpoint_1_installed_mac_app_adobe_licutil.app_10.0.0.274",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1947,7 +1943,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
+        "user_endpoint_1_installed_mac_app_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1967,7 +1963,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_AdobeIPCBroker.app_5.4.0.57",
+      _key: "user_endpoint_1_installed_mac_app_AdobeIPCBroker.app_5.4.0.57",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -1986,7 +1982,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_AirPort Utility.app_6.3.8",
+      _key: "user_endpoint_1_installed_mac_app_AirPort Utility.app_6.3.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2004,7 +2000,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Amphetamine.app_4.1.6",
+      _key: "user_endpoint_1_installed_mac_app_Amphetamine.app_4.1.6",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2022,7 +2018,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_App Store.app_2.4",
+      _key: "user_endpoint_1_installed_mac_app_App Store.app_2.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2040,7 +2036,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Atom.app_1.31.2",
+      _key: "user_endpoint_1_installed_mac_app_Atom.app_1.31.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2058,7 +2054,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Audio MIDI Setup.app_3.2",
+      _key: "user_endpoint_1_installed_mac_app_Audio MIDI Setup.app_3.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2076,7 +2072,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Automator.app_2.8",
+      _key: "user_endpoint_1_installed_mac_app_Automator.app_2.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2094,7 +2090,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_BlueJeans.app_2.10.0",
+      _key: "user_endpoint_1_installed_mac_app_BlueJeans.app_2.10.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2113,7 +2109,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Bluetooth File Exchange.app_6.0.7",
+        "user_endpoint_1_installed_mac_app_Bluetooth File Exchange.app_6.0.7",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2131,8 +2127,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Boot Camp Assistant.app_6.1.0",
+      _key: "user_endpoint_1_installed_mac_app_Boot Camp Assistant.app_6.1.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2150,7 +2145,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Calculator.app_10.13",
+      _key: "user_endpoint_1_installed_mac_app_Calculator.app_10.13",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2168,7 +2163,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Calendar.app_10.0",
+      _key: "user_endpoint_1_installed_mac_app_Calendar.app_10.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2186,7 +2181,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_CCXProcess.app_2.3.0-30",
+      _key: "user_endpoint_1_installed_mac_app_CCXProcess.app_2.3.0-30",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2205,7 +2200,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Chess.app_3.15",
+      _key: "user_endpoint_1_installed_mac_app_Chess.app_3.15",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2223,8 +2218,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_ColorSync Utility.app_4.13.0",
+      _key: "user_endpoint_1_installed_mac_app_ColorSync Utility.app_4.13.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2242,7 +2236,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Confer.app_3.2.1.10",
+      _key: "user_endpoint_1_installed_mac_app_Confer.app_3.2.1.10",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2260,7 +2254,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Console.app_1.0",
+      _key: "user_endpoint_1_installed_mac_app_Console.app_1.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2278,7 +2272,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Contacts.app_11.0",
+      _key: "user_endpoint_1_installed_mac_app_Contacts.app_11.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2296,7 +2290,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Core Sync.app_3.0.3.6",
+      _key: "user_endpoint_1_installed_mac_app_Core Sync.app_3.0.3.6",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2315,7 +2309,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Creative Cloud Desktop App.app_4.6.0.384",
+        "user_endpoint_1_installed_mac_app_Creative Cloud Desktop App.app_4.6.0.384",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2335,7 +2329,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Creative Cloud Installer.app_4.6.0.384",
+        "user_endpoint_1_installed_mac_app_Creative Cloud Installer.app_4.6.0.384",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2355,7 +2349,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Creative Cloud Uninstaller.app_4.6.0.384",
+        "user_endpoint_1_installed_mac_app_Creative Cloud Uninstaller.app_4.6.0.384",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2374,8 +2368,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Creative Cloud.app_4.6.0.384",
+      _key: "user_endpoint_1_installed_mac_app_Creative Cloud.app_4.6.0.384",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2394,8 +2387,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Cytoscape Uninstaller.app_3.5.1",
+      _key: "user_endpoint_1_installed_mac_app_Cytoscape Uninstaller.app_3.5.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2413,7 +2405,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Cytoscape.app_3.5.1",
+      _key: "user_endpoint_1_installed_mac_app_Cytoscape.app_3.5.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2431,7 +2423,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Dashboard.app_1.8",
+      _key: "user_endpoint_1_installed_mac_app_Dashboard.app_1.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2449,7 +2441,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Dashlane.app_6.1909.0",
+      _key: "user_endpoint_1_installed_mac_app_Dashlane.app_6.1909.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2467,7 +2459,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Dictionary.app_2.2.2",
+      _key: "user_endpoint_1_installed_mac_app_Dictionary.app_2.2.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2485,8 +2477,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Digital Color Meter.app_5.11",
+      _key: "user_endpoint_1_installed_mac_app_Digital Color Meter.app_5.11",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2504,7 +2495,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Disk Utility.app_17.0.3",
+      _key: "user_endpoint_1_installed_mac_app_Disk Utility.app_17.0.3",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2522,7 +2513,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Docker.app_2.0.0.0-mac81",
+      _key: "user_endpoint_1_installed_mac_app_Docker.app_2.0.0.0-mac81",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2540,7 +2531,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Dropbox.app_72.4.136",
+      _key: "user_endpoint_1_installed_mac_app_Dropbox.app_72.4.136",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2558,7 +2549,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_DVD Player.app_5.8",
+      _key: "user_endpoint_1_installed_mac_app_DVD Player.app_5.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2576,8 +2567,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Epic Games Launcher.app_9.12.4",
+      _key: "user_endpoint_1_installed_mac_app_Epic Games Launcher.app_9.12.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2595,7 +2585,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_FaceTime.app_4.0",
+      _key: "user_endpoint_1_installed_mac_app_FaceTime.app_4.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2613,7 +2603,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Font Book.app_8.0",
+      _key: "user_endpoint_1_installed_mac_app_Font Book.app_8.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2631,7 +2621,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Gephi.app_0.9.1",
+      _key: "user_endpoint_1_installed_mac_app_Gephi.app_0.9.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2649,7 +2639,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_GIF Brewery 3.app_3.9.5",
+      _key: "user_endpoint_1_installed_mac_app_GIF Brewery 3.app_3.9.5",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2667,7 +2657,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_GIPHY CAPTURE.app_4.1",
+      _key: "user_endpoint_1_installed_mac_app_GIPHY CAPTURE.app_4.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2685,8 +2675,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Google Chrome.app_74.0.3729.157",
+      _key: "user_endpoint_1_installed_mac_app_Google Chrome.app_74.0.3729.157",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2704,7 +2693,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Grab.app_1.10",
+      _key: "user_endpoint_1_installed_mac_app_Grab.app_1.10",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2722,7 +2711,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Grapher.app_2.6",
+      _key: "user_endpoint_1_installed_mac_app_Grapher.app_2.6",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2740,7 +2729,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_HandBrake.app_1.0.7",
+      _key: "user_endpoint_1_installed_mac_app_HandBrake.app_1.0.7",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2758,7 +2747,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_HSRToolkit.app_1",
+      _key: "user_endpoint_1_installed_mac_app_HSRToolkit.app_1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2776,7 +2765,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_iBooks.app_1.15",
+      _key: "user_endpoint_1_installed_mac_app_iBooks.app_1.15",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2794,7 +2783,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_IDLE.app_3.6.1",
+      _key: "user_endpoint_1_installed_mac_app_IDLE.app_3.6.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2812,7 +2801,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Image Capture.app_7.0",
+      _key: "user_endpoint_1_installed_mac_app_Image Capture.app_7.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2830,7 +2819,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Insomnia.app_6.3.2",
+      _key: "user_endpoint_1_installed_mac_app_Insomnia.app_6.3.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2849,7 +2838,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Install macOS Mojave.app_14.0.22",
+        "user_endpoint_1_installed_mac_app_Install macOS Mojave.app_14.0.22",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2867,7 +2856,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Install.app_4.3.0.256",
+      _key: "user_endpoint_1_installed_mac_app_Install.app_4.3.0.256",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2886,7 +2875,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_IntelliJ IDEA CE.app_2017.2",
+      _key: "user_endpoint_1_installed_mac_app_IntelliJ IDEA CE.app_2017.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2904,7 +2893,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_iTunes.app_12.8.2",
+      _key: "user_endpoint_1_installed_mac_app_iTunes.app_12.8.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2923,7 +2912,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Keybase.app_4.0.0-20190507193726+6614a49937",
+        "user_endpoint_1_installed_mac_app_Keybase.app_4.0.0-20190507193726+6614a49937",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2941,7 +2930,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Keychain Access.app_10.0",
+      _key: "user_endpoint_1_installed_mac_app_Keychain Access.app_10.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2959,7 +2948,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Keynote.app_9.0.2",
+      _key: "user_endpoint_1_installed_mac_app_Keynote.app_9.0.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2977,7 +2966,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Kindle.app_1.25.2",
+      _key: "user_endpoint_1_installed_mac_app_Kindle.app_1.25.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -2995,7 +2984,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_LastPass.app_4.4.0",
+      _key: "user_endpoint_1_installed_mac_app_LastPass.app_4.4.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3013,7 +3002,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Launchpad.app_1.0",
+      _key: "user_endpoint_1_installed_mac_app_Launchpad.app_1.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3031,7 +3020,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_LiveSlides.app_2.10.1",
+      _key: "user_endpoint_1_installed_mac_app_LiveSlides.app_2.10.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3049,8 +3038,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_LogTransport2.app_2.1.2.1652",
+      _key: "user_endpoint_1_installed_mac_app_LogTransport2.app_2.1.2.1652",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3069,7 +3057,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Mail.app_11.5",
+      _key: "user_endpoint_1_installed_mac_app_Mail.app_11.5",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3087,7 +3075,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Maps.app_2.0",
+      _key: "user_endpoint_1_installed_mac_app_Maps.app_2.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3105,7 +3093,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Messages.app_11.0",
+      _key: "user_endpoint_1_installed_mac_app_Messages.app_11.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3124,7 +3112,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Microsoft Excel.app_16.24.19041401",
+        "user_endpoint_1_installed_mac_app_Microsoft Excel.app_16.24.19041401",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3143,7 +3131,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Microsoft OneNote.app_16.25.19051201",
+        "user_endpoint_1_installed_mac_app_Microsoft OneNote.app_16.25.19051201",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3162,7 +3150,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Microsoft Outlook.app_16.24.19041401",
+        "user_endpoint_1_installed_mac_app_Microsoft Outlook.app_16.24.19041401",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3181,7 +3169,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Microsoft PowerPoint.app_16.24.19041401",
+        "user_endpoint_1_installed_mac_app_Microsoft PowerPoint.app_16.24.19041401",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3200,7 +3188,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Microsoft Word.app_16.24.19041401",
+        "user_endpoint_1_installed_mac_app_Microsoft Word.app_16.24.19041401",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3218,8 +3206,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Migration Assistant.app_10.13",
+      _key: "user_endpoint_1_installed_mac_app_Migration Assistant.app_10.13",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3237,7 +3224,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Mission Control.app_1.2",
+      _key: "user_endpoint_1_installed_mac_app_Mission Control.app_1.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3256,7 +3243,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Neo4j Community Edition 3.1.3.app_3.1.3",
+        "user_endpoint_1_installed_mac_app_Neo4j Community Edition 3.1.3.app_3.1.3",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3274,7 +3261,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Notes.app_4.5",
+      _key: "user_endpoint_1_installed_mac_app_Notes.app_4.5",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3292,7 +3279,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Noun Project.app_2.2.1",
+      _key: "user_endpoint_1_installed_mac_app_Noun Project.app_2.2.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3310,7 +3297,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Numbers.app_6.0",
+      _key: "user_endpoint_1_installed_mac_app_Numbers.app_6.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3328,7 +3315,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_OneDrive.app_19.043.0304",
+      _key: "user_endpoint_1_installed_mac_app_OneDrive.app_19.043.0304",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3346,7 +3333,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Pages.app_8.0",
+      _key: "user_endpoint_1_installed_mac_app_Pages.app_8.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3364,7 +3351,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_PDF Expert.app_2.4.2",
+      _key: "user_endpoint_1_installed_mac_app_PDF Expert.app_2.4.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3382,7 +3369,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Photo Booth.app_9.0",
+      _key: "user_endpoint_1_installed_mac_app_Photo Booth.app_9.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3400,7 +3387,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Photos.app_3.0",
+      _key: "user_endpoint_1_installed_mac_app_Photos.app_3.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3418,8 +3405,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_PluginLauncher.app_4.6.48616",
+      _key: "user_endpoint_1_installed_mac_app_PluginLauncher.app_4.6.48616",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3437,7 +3423,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Postman.app_5.2.0",
+      _key: "user_endpoint_1_installed_mac_app_Postman.app_5.2.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3455,7 +3441,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Preview.app_10.0",
+      _key: "user_endpoint_1_installed_mac_app_Preview.app_10.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3473,7 +3459,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Prezi Next.app_1.34.0",
+      _key: "user_endpoint_1_installed_mac_app_Prezi Next.app_1.34.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3491,7 +3477,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Pritunl.app_1.0.1953.32",
+      _key: "user_endpoint_1_installed_mac_app_Pritunl.app_1.0.1953.32",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3509,7 +3495,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Python Launcher.app_3.6.1",
+      _key: "user_endpoint_1_installed_mac_app_Python Launcher.app_3.6.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3527,7 +3513,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_QuickTime Player.app_10.4",
+      _key: "user_endpoint_1_installed_mac_app_QuickTime Player.app_10.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3545,7 +3531,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Reminders.app_5.0",
+      _key: "user_endpoint_1_installed_mac_app_Reminders.app_5.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3564,7 +3550,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_RingCentral Meetings.app_6.3.135305.1213",
+        "user_endpoint_1_installed_mac_app_RingCentral Meetings.app_6.3.135305.1213",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3582,7 +3568,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Safari.app_12.1.1",
+      _key: "user_endpoint_1_installed_mac_app_Safari.app_12.1.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3600,7 +3586,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Script Editor.app_2.10",
+      _key: "user_endpoint_1_installed_mac_app_Script Editor.app_2.10",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3618,7 +3604,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Setup.app_9.0.0.65",
+      _key: "user_endpoint_1_installed_mac_app_Setup.app_9.0.0.65",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3637,7 +3623,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Setup.app_9.0.0.65",
+      _key: "user_endpoint_1_installed_mac_app_Setup.app_9.0.0.65",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3656,7 +3642,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Setup.app_5.0.65.0",
+      _key: "user_endpoint_1_installed_mac_app_Setup.app_5.0.65.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3675,7 +3661,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Sim Daltonism.app_2.0.4",
+      _key: "user_endpoint_1_installed_mac_app_Sim Daltonism.app_2.0.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3693,7 +3679,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Siri.app_1.0",
+      _key: "user_endpoint_1_installed_mac_app_Siri.app_1.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3711,7 +3697,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Sketch.app_50.2",
+      _key: "user_endpoint_1_installed_mac_app_Sketch.app_50.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3729,7 +3715,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Skitch.app_2.8.2",
+      _key: "user_endpoint_1_installed_mac_app_Skitch.app_2.8.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3748,7 +3734,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_Skype Meetings App.app_1.0.0.186",
+        "user_endpoint_1_installed_mac_app_Skype Meetings App.app_1.0.0.186",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3766,7 +3752,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Skype.app_7.56",
+      _key: "user_endpoint_1_installed_mac_app_Skype.app_7.56",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3784,7 +3770,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Slack.app_3.3.7",
+      _key: "user_endpoint_1_installed_mac_app_Slack.app_3.3.7",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3802,7 +3788,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Sonos.app_7.2",
+      _key: "user_endpoint_1_installed_mac_app_Sonos.app_7.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3820,7 +3806,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Spectacle.app_1.2",
+      _key: "user_endpoint_1_installed_mac_app_Spectacle.app_1.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3838,7 +3824,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Station.app_1.40.1",
+      _key: "user_endpoint_1_installed_mac_app_Station.app_1.40.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3856,7 +3842,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Stethoscope.app_3.0.5",
+      _key: "user_endpoint_1_installed_mac_app_Stethoscope.app_3.0.5",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3874,7 +3860,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Stickies.app_10.1",
+      _key: "user_endpoint_1_installed_mac_app_Stickies.app_10.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3892,7 +3878,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Sublime Text.app_Build 3143",
+      _key: "user_endpoint_1_installed_mac_app_Sublime Text.app_Build 3143",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3910,8 +3896,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_System Information.app_10.12",
+      _key: "user_endpoint_1_installed_mac_app_System Information.app_10.12",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3929,7 +3914,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_System Preferences.app_14.0",
+      _key: "user_endpoint_1_installed_mac_app_System Preferences.app_14.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3948,7 +3933,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
+        "user_endpoint_1_installed_mac_app_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3966,7 +3951,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Terminal.app_2.8.3",
+      _key: "user_endpoint_1_installed_mac_app_Terminal.app_2.8.3",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -3984,7 +3969,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_TextEdit.app_1.13",
+      _key: "user_endpoint_1_installed_mac_app_TextEdit.app_1.13",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4002,7 +3987,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Time Machine.app_1.3",
+      _key: "user_endpoint_1_installed_mac_app_Time Machine.app_1.3",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4020,8 +4005,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Uninstall Product.app_9.0.0.65",
+      _key: "user_endpoint_1_installed_mac_app_Uninstall Product.app_9.0.0.65",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4040,8 +4024,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Uninstall Product.app_5.0.65.0",
+      _key: "user_endpoint_1_installed_mac_app_Uninstall Product.app_5.0.65.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4060,7 +4043,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Uninstall.app_4.6.48616",
+      _key: "user_endpoint_1_installed_mac_app_Uninstall.app_4.6.48616",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4078,7 +4061,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Uninstaller.app_4.3.0.256",
+      _key: "user_endpoint_1_installed_mac_app_Uninstaller.app_4.3.0.256",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4097,7 +4080,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Unsplash Wallpapers.app_1.2",
+      _key: "user_endpoint_1_installed_mac_app_Unsplash Wallpapers.app_1.2",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4115,7 +4098,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_VirtualBox.app_5.2.8",
+      _key: "user_endpoint_1_installed_mac_app_VirtualBox.app_5.2.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4133,7 +4116,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Viscosity.app_1.7.6",
+      _key: "user_endpoint_1_installed_mac_app_Viscosity.app_1.7.6",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4151,8 +4134,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key:
-        "user_endpoint_1_installed_application_Visual Studio Code.app_1.33.1",
+      _key: "user_endpoint_1_installed_mac_app_Visual Studio Code.app_1.33.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4170,7 +4152,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_VoiceOver Utility.app_8",
+      _key: "user_endpoint_1_installed_mac_app_VoiceOver Utility.app_8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4188,7 +4170,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Wavebox.app_3.1.8",
+      _key: "user_endpoint_1_installed_mac_app_Wavebox.app_3.1.8",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4206,7 +4188,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Wireshark.app_2.4.5",
+      _key: "user_endpoint_1_installed_mac_app_Wireshark.app_2.4.5",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4224,7 +4206,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_WordPress.com.app_2.8.0",
+      _key: "user_endpoint_1_installed_mac_app_WordPress.com.app_2.8.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4242,7 +4224,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_WorkSpaces.app_2.4.4",
+      _key: "user_endpoint_1_installed_mac_app_WorkSpaces.app_2.4.4",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4260,7 +4242,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_Xcode.app_10.1",
+      _key: "user_endpoint_1_installed_mac_app_Xcode.app_10.1",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4278,7 +4260,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_YubiKey Manager.app_1.0",
+      _key: "user_endpoint_1_installed_mac_app_YubiKey Manager.app_1.0",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4297,7 +4279,7 @@ test("convert mapped computer application relationships", () => {
     {
       _class: "INSTALLED",
       _key:
-        "user_endpoint_1_installed_application_YubiKey Personalization Tool.app_3.1.24",
+        "user_endpoint_1_installed_mac_app_YubiKey Personalization Tool.app_3.1.24",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,
@@ -4315,7 +4297,7 @@ test("convert mapped computer application relationships", () => {
     },
     {
       _class: "INSTALLED",
-      _key: "user_endpoint_1_installed_application_zoom.us.app_4.1.34801.1116",
+      _key: "user_endpoint_1_installed_mac_app_zoom.us.app_4.1.34801.1116",
       _mapping: {
         relationshipDirection: "FORWARD",
         skipTargetCreation: false,

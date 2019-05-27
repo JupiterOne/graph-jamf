@@ -13,7 +13,7 @@ import {
   generateRelationKey,
 } from "../../utils/generateKey";
 
-export function createComputerApplicationRelationship(
+export function createComputerApplicationRelationships(
   computers: ComputerDetail[],
 ): ComputerApplicationRelationship[] {
   const defaultRelationships: ComputerApplicationRelationship[] = [];

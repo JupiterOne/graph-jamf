@@ -10,6 +10,10 @@ import {
   ComputerDetail,
   ComputerDetailResponse,
   ComputerResponse,
+  Configuration,
+  ConfigurationDetail,
+  ConfigurationDetailResponse,
+  ConfigurationResponse,
   Group,
   GroupResponse,
   Method,
@@ -122,6 +126,28 @@ export default class JamfClient {
     );
 
     return result.computer_applications;
+  }
+
+  public async fetchComputerConfigurations(): Promise<Configuration[]> {
+    const result = await this.makeRequest<ConfigurationResponse>(
+      `/computerconfigurations`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer_configurations;
+  }
+
+  public async fetchComputerConfigurationById(
+    id: number,
+  ): Promise<ConfigurationDetail> {
+    const result = await this.makeRequest<ConfigurationDetailResponse>(
+      `/computerconfigurations/id/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer_configuration;
   }
 
   private async makeRequest<T>(

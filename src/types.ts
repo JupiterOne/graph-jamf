@@ -122,21 +122,6 @@ export interface User {
   };
 }
 
-export interface Computer {
-  id: number;
-  name: string;
-  managed: boolean;
-  username: string;
-  model: string;
-  department: string;
-  building: string;
-  mac_address: string;
-  udid: string;
-  serial_number: string;
-  report_date_utc: string;
-  report_date_epoch: number;
-}
-
 export interface Application {
   name: string;
   path: string;
@@ -190,6 +175,21 @@ export interface Printer {
   uri: string;
   type: string;
   location: string;
+}
+
+export interface Computer {
+  id: number;
+  name: string;
+  managed: boolean;
+  username: string;
+  model: string;
+  department: string;
+  building: string;
+  mac_address: string;
+  udid: string;
+  serial_number: string;
+  report_date_utc: string;
+  report_date_epoch: number;
 }
 
 export interface ComputerDetail {
@@ -289,6 +289,39 @@ export interface ComputerDetail {
     storage: Storage[];
     mapped_printers: Printer[];
   };
+  configuration_profiles: Array<{
+    id: number;
+    name: string;
+    uuid: string;
+    is_removable: boolean;
+  }>;
+}
+
+export interface Configuration {
+  id: number;
+  name: string;
+}
+
+export interface ConfigurationDetail {
+  general: {
+    id: number;
+    name: string;
+    description: string;
+    type: string;
+  };
+  packages: any[];
+  scripts: any[];
+  printers: any[];
+  directory_bindings: any[];
+  management: {
+    username: string;
+    password_sha256: string;
+    create_account: boolean;
+    hide_account: boolean;
+    allow_ssh_for_management_only: boolean;
+  };
+  home_page: string;
+  partitions: any[];
 }
 
 export interface MobileDevice {
@@ -339,6 +372,14 @@ export interface ComputerDetailResponse {
   computer: ComputerDetail;
 }
 
+export interface ConfigurationResponse {
+  computer_configurations: Configuration[];
+}
+
+export interface ConfigurationDetailResponse {
+  computer_configuration: ConfigurationDetail;
+}
+
 export interface MobileDevicesResponse {
   mobile_devices: MobileDevice[];
 }
@@ -348,6 +389,7 @@ export interface JamfDataModel {
   mobileDevices: MobileDevice[];
   computers: Computer[];
   computerDetails: ComputerDetail[];
+  configurationDetails: ConfigurationDetail[];
   admins: Admin[];
   groups: Group[];
 }

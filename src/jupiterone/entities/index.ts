@@ -5,3 +5,4 @@ export * from "./GroupEntity";
 export * from "./UserEntity";
 export * from "./MobileDeviceEntity";
 export * from "./ComputerEntity";
+export * from "./ConfigurationEntity";

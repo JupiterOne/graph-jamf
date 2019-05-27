@@ -1,5 +1,8 @@
 export { createUserEntities } from "./entities/UserEntityConverter";
 export { createAdminEntities } from "./entities/AdminEntityConverter";
+export {
+  createConfigurationEntities,
+} from "./entities/ConfigurationEntityConverter";
 export { createGroupEntities } from "./entities/GroupEntityConverter";
 export {
   createMobileDeviceEntities,
@@ -25,5 +28,11 @@ export {
   createUserComputerRelationships,
 } from "./relationships/UserComputerRelationshipConverter";
 export {
-  createComputerApplicationRelationship,
+  createComputerApplicationRelationships,
 } from "./relationships/ComputerApplicationRelationshipConverter";
+export {
+  createAccountConfigurationRelationships,
+} from "./relationships/AccountConfigurationRelationsipConverter";
+export {
+  createComputerConfigurationRelationships,
+} from "./relationships/ComputerConfigurationRelationshipConverter";

@@ -1,0 +1,39 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/computerconfigurations",
+    "body": "",
+    "status": 200,
+    "response": {
+      "computer_configurations": [
+        {
+          "id": 1,
+          "name": "Test Configuration"
+        }
+      ]
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Mon, 27 May 2019 10:36:57 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "66",
+      "Connection",
+      "Close"
+    ]
+  }
+]

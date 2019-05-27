@@ -9,6 +9,7 @@ export interface JupiterOneEntitiesData {
   users: Entities.UserEntity[];
   mobileDevices: Entities.MobileDeviceEntity[];
   computers: Entities.ComputerEntity[];
+  configurations: Entities.ConfigurationEntity[];
 }
 
 export interface JupiterOneDataModel {
@@ -18,12 +19,14 @@ export interface JupiterOneDataModel {
 
 export interface JupiterOneRelationshipsData {
   accountAdminRelationships: Relationships.AccountAdminRelationship[];
+  accountConfigurationRelationships: Relationships.AccountConfigurationRelationship[];
   accountGroupRelationships: Relationships.AccountGroupRelationship[];
   accountUserRelationships: Relationships.AccountUserRelationship[];
   groupAdminRelationships: Relationships.GroupAdminRelationship[];
   userDeviceRelationships: Relationships.UserDeviceRelationship[];
   userComputerRelationships: Relationships.UserComputerRelationship[];
   computerApplicationRelationships: Relationships.ComputerApplicationRelationship[];
+  computerConfigurationRelationships: Relationships.ComputerConfigurationRelationship[];
 }
 
 export default async function fetchEntitiesAndRelationships(
@@ -47,6 +50,7 @@ async function fetchEntities(
     users,
     mobileDevices,
     computers,
+    configurations,
   ] = await Promise.all([
     graph.findEntitiesByType<Entities.AccountEntity>(
       Entities.ACCOUNT_ENTITY_TYPE,
@@ -60,6 +64,9 @@ async function fetchEntities(
     graph.findEntitiesByType<Entities.ComputerEntity>(
       Entities.COMPUTER_ENTITY_TYPE,
     ),
+    graph.findEntitiesByType<Entities.ConfigurationEntity>(
+      Entities.CONFIGURATION_ENTITY_TYPE,
+    ),
   ]);
 
   return {
@@ -69,6 +76,7 @@ async function fetchEntities(
     users,
     mobileDevices,
     computers,
+    configurations,
   };
 }
 
@@ -77,16 +85,21 @@ export async function fetchRelationships(
 ): Promise<JupiterOneRelationshipsData> {
   const [
     accountAdminRelationships,
+    accountConfigurationRelationships,
     accountGroupRelationships,
     groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
     computerApplicationRelationships,
+    computerConfigurationRelationships,
   ] = await Promise.all([
     graph.findRelationshipsByType<Relationships.AccountAdminRelationship>(
       Relationships.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
     ),
+    graph.findRelationshipsByType<
+      Relationships.AccountConfigurationRelationship
+    >(Relationships.ACCOUNT_CONFIGURATION_RELATIONSHIP_TYPE),
     graph.findRelationshipsByType<Relationships.AccountGroupRelationship>(
       Relationships.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
     ),
@@ -105,14 +118,19 @@ export async function fetchRelationships(
     graph.findRelationshipsByType<
       Relationships.ComputerApplicationRelationship
     >(Relationships.COMPUTER_APPLICATION_RELATIONSHIP_TYPE),
+    graph.findRelationshipsByType<
+      Relationships.ComputerConfigurationRelationship
+    >(Relationships.COMPUTER_CONFIGURATION_RELATIONSHIP_TYPE),
   ]);
   return {
     accountAdminRelationships,
+    accountConfigurationRelationships,
     accountGroupRelationships,
     groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
     computerApplicationRelationships,
+    computerConfigurationRelationships,
   };
 }

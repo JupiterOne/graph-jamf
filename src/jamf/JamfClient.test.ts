@@ -232,6 +232,30 @@ describe("JamfClient fetch ok data", () => {
     expect(response).not.toEqual([]);
   });
 
+  test("fetch computer configurations", async () => {
+    const { nockDone } = await nock.back("configurations.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchComputerConfigurations();
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+
+  test("fetch computer configuration detail info", async () => {
+    const { nockDone } = await nock.back("configuration-detail.json", {
+      before: prepareScope,
+    });
+
+    const response = await getClient().fetchComputerConfigurationById(1);
+
+    nockDone();
+
+    expect(response).not.toEqual([]);
+  });
+
   afterAll(() => {
     nock.restore();
   });

@@ -1,4 +1,4 @@
-import { createComputerApplicationRelationship } from "./ComputerApplicationRelationshipConverter";
+import { createComputerApplicationRelationships } from "./ComputerApplicationRelationshipConverter";
 
 test("convert mapped computer application relationships", () => {
   const computers: any[] = [
@@ -1630,7 +1630,7 @@ test("convert mapped computer application relationships", () => {
     },
   ];
 
-  expect(createComputerApplicationRelationship(computers)).toEqual([
+  expect(createComputerApplicationRelationships(computers)).toEqual([
     {
       _class: "INSTALLED",
       _key:

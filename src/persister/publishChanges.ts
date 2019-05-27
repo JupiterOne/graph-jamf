@@ -8,11 +8,13 @@ import {
 
 import {
   createAccountAdminRelationships,
+  createAccountConfigurationRelationships,
   createAccountEntity,
   createAccountGroupRelationships,
   createAccountUserRelationships,
   createAdminEntities,
-  createComputerApplicationRelationship,
+  createComputerApplicationRelationships,
+  createComputerConfigurationRelationships,
   createComputerEntities,
   createGroupAdminRelationships,
   createGroupEntities,
@@ -21,6 +23,7 @@ import {
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
+import { createConfigurationEntities } from "../converters/entities/ConfigurationEntityConverter";
 
 import {
   JupiterOneDataModel,
@@ -122,6 +125,9 @@ export function convertEntities(
     users: createUserEntities(jamfDataModel.users),
     mobileDevices: createMobileDeviceEntities(jamfDataModel.mobileDevices),
     computers: createComputerEntities(jamfDataModel.computers),
+    configurations: createConfigurationEntities(
+      jamfDataModel.configurationDetails,
+    ),
   };
 }
 
@@ -133,6 +139,10 @@ export function convertRelationships(
     accountAdminRelationships: createAccountAdminRelationships(
       account,
       jamfDataModel.admins,
+    ),
+    accountConfigurationRelationships: createAccountConfigurationRelationships(
+      account,
+      jamfDataModel.configurationDetails,
     ),
     accountGroupRelationships: createAccountGroupRelationships(
       account,
@@ -149,7 +159,10 @@ export function convertRelationships(
     userComputerRelationships: createUserComputerRelationships(
       jamfDataModel.users,
     ),
-    computerApplicationRelationships: createComputerApplicationRelationship(
+    computerApplicationRelationships: createComputerApplicationRelationships(
+      jamfDataModel.computerDetails,
+    ),
+    computerConfigurationRelationships: createComputerConfigurationRelationships(
       jamfDataModel.computerDetails,
     ),
   };

@@ -1,28 +1,30 @@
 import fetch, { RequestInit, Response } from "node-fetch";
 import {
-  AccountsResponse,
   Admin,
-  AdminResponse,
   AdminsAndGroups,
   ApplicationDetail,
-  ApplicationDetailResponse,
   Computer,
   ComputerDetail,
-  ComputerDetailResponse,
-  ComputerResponse,
   Configuration,
   ConfigurationDetail,
-  ConfigurationDetailResponse,
-  ConfigurationResponse,
   Group,
-  GroupResponse,
   Method,
   MobileDevice,
-  MobileDevicesResponse,
   User,
+} from "../types";
+import {
+  AccountsResponse,
+  AdminResponse,
+  ApplicationDetailResponse,
+  ComputerDetailResponse,
+  ComputerResponse,
+  ConfigurationDetailResponse,
+  ConfigurationResponse,
+  GroupResponse,
+  MobileDevicesResponse,
   UserResponse,
   UsersResponse,
-} from "../types";
+} from "./types";
 
 export default class JamfClient {
   private readonly host: string;

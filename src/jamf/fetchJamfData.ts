@@ -1,5 +1,6 @@
-import { Admin, Group, JamfDataModel, User } from "../types";
+import { Admin, Group, User } from "../types";
 import JamfClient from "./JamfClient";
+import { JamfDataModel } from "./types";
 
 export default async function fetchJamfData(
   client: JamfClient,

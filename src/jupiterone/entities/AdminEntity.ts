@@ -14,4 +14,5 @@ export interface AdminEntity extends EntityFromIntegration {
   forcePasswordChange: boolean;
   accessLevel: string;
   privilegeSet: string;
+  permissions?: string[];
 }

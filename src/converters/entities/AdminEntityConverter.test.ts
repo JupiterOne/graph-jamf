@@ -186,6 +186,7 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "User D",
       name: "user.d",
+      permissions: ["Administrator"],
       privilegeSet: "Administrator",
     },
     {
@@ -202,6 +203,7 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "",
       name: "user.b",
+      permissions: ["Administrator"],
       privilegeSet: "Administrator",
     },
     {
@@ -218,6 +220,7 @@ test("convert admin entity", () => {
       forcePasswordChange: false,
       fullName: "User A",
       name: "user.a",
+      permissions: ["Administrator"],
       privilegeSet: "Administrator",
     },
     {

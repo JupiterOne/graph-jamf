@@ -22,5 +22,7 @@ export function createAdminEntities(data: Admin[]): AdminEntity[] {
     forcePasswordChange: item.force_password_change!,
     accessLevel: item.access_level!,
     privilegeSet: item.privilege_set!,
+    permissions:
+      item.privilege_set === "Administrator" ? [item.privilege_set] : undefined,
   }));
 }

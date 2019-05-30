@@ -124,7 +124,10 @@ export function convertEntities(
     groups: createGroupEntities(jamfDataModel.groups),
     users: createUserEntities(jamfDataModel.users),
     mobileDevices: createMobileDeviceEntities(jamfDataModel.mobileDevices),
-    computers: createComputerEntities(jamfDataModel.computers),
+    computers: createComputerEntities(
+      jamfDataModel.computers,
+      jamfDataModel.computerDetails,
+    ),
     configurations: createConfigurationEntities(
       jamfDataModel.configurationDetails,
     ),

@@ -15,4 +15,5 @@ export interface UserEntity extends EntityFromIntegration {
   customPhotoUrl?: string;
   ldapServer?: string;
   totalVppCodeCount?: number;
+  os: string[];
 }

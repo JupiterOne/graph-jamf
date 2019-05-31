@@ -9,6 +9,15 @@ import { generateEntityKey } from "../../utils/generateKey";
 
 export function createUserEntities(data: User[]): UserEntity[] {
   return data.map(user => {
+    const os: string[] = [];
+    if (user.links) {
+      if (user.links.mobile_devices.length > 0) {
+        os.push("iOS");
+      }
+      if (user.links.computers.length > 0) {
+        os.push("macOS");
+      }
+    }
     return {
       _key: generateEntityKey(USER_ENTITY_TYPE, user.id),
       _type: USER_ENTITY_TYPE,
@@ -25,6 +34,7 @@ export function createUserEntities(data: User[]): UserEntity[] {
       customPhotoUrl: user.custom_photo_url,
       ldapServer: user.ldap_server && user.ldap_server.name,
       totalVppCodeCount: user.links && user.links.total_vpp_code_count,
+      os,
     };
   });
 }

@@ -26,15 +26,19 @@ import {
   UsersResponse,
 } from "./types";
 
+import PQueue from "p-queue";
+
 export default class JamfClient {
   private readonly host: string;
   private readonly username: string;
   private readonly password: string;
+  private readonly queue: PQueue;
 
   constructor(host: string, username: string, password: string) {
     this.host = host;
     this.username = username;
     this.password = password;
+    this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
   }
 
   public async fetchAccounts(): Promise<AdminsAndGroups> {
@@ -171,9 +175,14 @@ export default class JamfClient {
       },
     };
 
-    let response: Response;
+    let response: Response | undefined;
     try {
-      response = await fetch(`https://${this.host}/JSSResource${url}`, options);
+      await this.queue.add(async () => {
+        response = await fetch(
+          `https://${this.host}/JSSResource${url}`,
+          options,
+        );
+      });
     } catch (err) {
       if (err.code === "ETIMEDOUT") {
         const error = new Error(
@@ -190,6 +199,11 @@ export default class JamfClient {
       } else {
         throw err;
       }
+    }
+
+    /* istanbul ignore next line */
+    if (!response) {
+      throw new Error("Did not obtain a response!");
     }
 
     if (response.status === 200) {

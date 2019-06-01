@@ -28,7 +28,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "p-queue": "^5.0.0"
   },
   "peerDependencies": {
     "@jupiterone/jupiter-managed-integration-sdk": "^23.0.3"

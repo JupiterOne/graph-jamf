@@ -124,6 +124,30 @@ describe("JamfClient fetch err", () => {
 });
 
 describe("JamfClient fetch ok data", () => {
+  test("limits Jamf API call rate to 20 per second", async () => {
+    nock(`https://${JAMF_LOCAL_EXECUTION_HOST}`)
+      .persist()
+      .get("/JSSResource/users")
+      .reply(200, JSON.stringify({ users: [] }));
+
+    const client = getClient();
+    const start = Date.now();
+
+    await Promise.all([
+      client.fetchUsers(),
+      client.fetchUsers(),
+      client.fetchUsers(),
+      client.fetchUsers(),
+      client.fetchUsers(),
+    ]);
+
+    const finish = Date.now();
+    const time = finish - start;
+
+    expect(time).toBeGreaterThanOrEqual(200);
+    expect(time).toBeLessThan(300);
+  });
+
   test("fetch admin users and groups", async () => {
     const { nockDone } = await nock.back("admins-groups.json", {
       before: prepareScope,
@@ -135,6 +159,7 @@ describe("JamfClient fetch ok data", () => {
 
     expect(response).not.toEqual([]);
   });
+
   test("fetch full admin user", async () => {
     const { nockDone } = await nock.back("admin-full.json", {
       before: prepareScope,
@@ -146,6 +171,7 @@ describe("JamfClient fetch ok data", () => {
 
     expect(response).not.toEqual([]);
   });
+
   test("fetch full admin group", async () => {
     const { nockDone } = await nock.back("group-full.json", {
       before: prepareScope,

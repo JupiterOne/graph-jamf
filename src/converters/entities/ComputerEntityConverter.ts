@@ -30,7 +30,7 @@ export function createComputerEntities(
       serialNumber: device.serial_number,
       reportDateUtc: device.report_date_utc,
       reportDateEpoch: device.report_date_epoch,
-      disks: [],
+      disks: "",
       encrypted: false,
     };
 
@@ -45,26 +45,7 @@ export function createComputerEntities(
     const disks: StorageEntity[] = detailInfoItem.hardware.storage.map(
       item => ({
         disk: item.disk,
-        model: item.model,
-        revision: item.revision,
-        serialNumber: item.serial_number,
-        size: item.size,
-        driveCapacityMb: item.drive_capacity_mb,
-        connectionType: item.connection_type,
-        smartStatus: item.smart_status,
         partitionName: item.partition.name,
-        partitionSsize: item.partition.size,
-        partitionType: item.partition.type,
-        partitionCapacityMb: item.partition.partition_capacity_mb,
-        partitionPercentageFull: item.partition.percentage_full,
-        partitionFilevaultStatus: item.partition.filevault_status,
-        partitionFilevaultPercent: item.partition.filevault_percent,
-        partitionFilevault2Status: item.partition.filevault2_status,
-        partitionFilevault2Percent: item.partition.filevault2_percent,
-        partitionBootDriveAvailableMb: item.partition.boot_drive_available_mb,
-        partitionLvgUUID: item.partition.lvgUUID,
-        partitionLvUUID: item.partition.lvUUID,
-        partitionPvUUID: item.partition.pvUUID,
       }),
     );
 
@@ -77,7 +58,7 @@ export function createComputerEntities(
 
     return {
       ...baseComputerEntity,
-      disks,
+      disks: JSON.stringify(disks),
       encrypted,
     };
   });

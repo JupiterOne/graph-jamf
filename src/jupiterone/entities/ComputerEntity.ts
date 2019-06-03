@@ -16,30 +16,11 @@ export interface ComputerEntity extends EntityFromIntegration {
   serialNumber: string;
   reportDateUtc: string;
   reportDateEpoch: number;
-  disks: StorageEntity[];
+  disks: string;
   encrypted: boolean;
 }
 
 export interface StorageEntity {
   disk: string;
-  model: string;
-  revision: string;
-  serialNumber: string;
-  size: number;
-  driveCapacityMb: number;
-  connectionType: string;
-  smartStatus: string;
   partitionName: string;
-  partitionSsize: number;
-  partitionType: string;
-  partitionCapacityMb: number;
-  partitionPercentageFull: number;
-  partitionFilevaultStatus: string;
-  partitionFilevaultPercent: number;
-  partitionFilevault2Status: string;
-  partitionFilevault2Percent: number;
-  partitionBootDriveAvailableMb: number;
-  partitionLvgUUID: string;
-  partitionLvUUID: string;
-  partitionPvUUID: string;
 }

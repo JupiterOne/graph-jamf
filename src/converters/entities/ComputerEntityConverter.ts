@@ -45,7 +45,7 @@ export function createComputerEntities(
     const disks: StorageEntity[] = detailInfoItem.hardware.storage.map(
       item => ({
         disk: item.disk,
-        partitionName: item.partition.name,
+        partitionName: item.partition && item.partition.name,
       }),
     );
 
@@ -54,7 +54,9 @@ export function createComputerEntities(
     );
 
     const encrypted =
-      !!primaryDisk && primaryDisk.partition.filevault_status === "Encrypted";
+      !!primaryDisk &&
+      !!primaryDisk.partition &&
+      primaryDisk.partition.filevault_status === "Encrypted";
 
     return {
       ...baseComputerEntity,

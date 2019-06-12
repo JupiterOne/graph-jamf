@@ -22,5 +22,5 @@ export interface ComputerEntity extends EntityFromIntegration {
 
 export interface StorageEntity {
   disk: string;
-  partitionName: string;
+  partitionName?: string;
 }

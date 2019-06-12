@@ -183,6 +183,16 @@ test("convert computer entity", () => {
               pvUUID: "",
             },
           },
+          {
+            disk: "disk1",
+            model: "APPLE SSD SM1024L",
+            revision: "CXS6AA0Q",
+            serial_number: "C02706400ADGVFW1H",
+            size: 1048576,
+            drive_capacity_mb: 1048576,
+            connection_type: "NO",
+            smart_status: "",
+          },
         ],
         mapped_printers: [
           {
@@ -276,7 +286,7 @@ test("convert computer entity", () => {
       building: "",
       department: "",
       disks:
-        '[{"disk":"disk0","partitionName":"Macintosh HD (Boot Partition)"}]',
+        '[{"disk":"disk0","partitionName":"Macintosh HD (Boot Partition)"},{"disk":"disk1"}]',
       displayName: "PlayerOne’s MacBook",
       encrypted: true,
       id: 1,

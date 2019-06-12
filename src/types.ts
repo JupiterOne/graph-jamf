@@ -153,7 +153,7 @@ export interface Storage {
   drive_capacity_mb: number;
   connection_type: string;
   smart_status: string;
-  partition: {
+  partition?: {
     name: string;
     size: number;
     type: string;

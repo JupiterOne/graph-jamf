@@ -13,7 +13,7 @@ export function createComputerEntities(
   detailData: ComputerDetail[],
 ): ComputerEntity[] {
   return data.map(device => {
-    const baseComputerEntity = {
+    const baseComputerEntity: ComputerEntity = {
       _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
       _type: COMPUTER_ENTITY_TYPE,
       _class: COMPUTER_ENTITY_CLASS,
@@ -33,7 +33,7 @@ export function createComputerEntities(
       disks: "",
       encrypted: false,
       gatekeeperEnabled: false,
-      gatekeeperStatus: "",
+      systemIntegrityProtectionEnabled: false,
     };
 
     const detailInfoItem = detailData.find(
@@ -66,12 +66,16 @@ export function createComputerEntities(
       (gatekeeperStatus === "App Store and identified developers" ||
         gatekeeperStatus === "App Store");
 
+    const systemIntegrityProtectionEnabled =
+      detailInfoItem.hardware.sip_status === "Enabled";
+
     return {
       ...baseComputerEntity,
       disks: JSON.stringify(disks),
       encrypted,
       gatekeeperEnabled,
       gatekeeperStatus,
+      systemIntegrityProtectionEnabled,
     };
   });
 }

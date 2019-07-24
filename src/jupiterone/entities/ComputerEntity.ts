@@ -19,7 +19,8 @@ export interface ComputerEntity extends EntityFromIntegration {
   disks: string;
   encrypted: boolean;
   gatekeeperEnabled: boolean;
-  gatekeeperStatus: string;
+  gatekeeperStatus?: string;
+  systemIntegrityProtectionEnabled: boolean;
 }
 
 export interface StorageEntity {

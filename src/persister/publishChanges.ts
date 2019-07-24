@@ -8,22 +8,22 @@ import {
 
 import {
   createAccountAdminRelationships,
-  createAccountConfigurationRelationships,
   createAccountEntity,
   createAccountGroupRelationships,
+  createAccountOSXConfigurationRelationships,
   createAccountUserRelationships,
   createAdminEntities,
   createComputerApplicationRelationships,
-  createComputerConfigurationRelationships,
   createComputerEntities,
+  createComputersOSXConfigurationsRelationships,
   createGroupAdminRelationships,
   createGroupEntities,
   createMobileDeviceEntities,
+  createOSXConfigurationEntities,
   createUserComputerRelationships,
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
-import { createConfigurationEntities } from "../converters/entities/ConfigurationEntityConverter";
 
 import {
   JupiterOneDataModel,
@@ -63,7 +63,7 @@ function createEntitiesOperations(
   newData: JupiterOneEntitiesData,
   persister: PersisterClient,
 ): EntityOperation[] {
-  const defatultOperations: EntityOperation[] = [];
+  const defaultOperations: EntityOperation[] = [];
   const entities: EntitiesKeys[] = Object.keys(oldData) as EntitiesKeys[];
 
   return entities.reduce((operations, entityName) => {
@@ -77,7 +77,7 @@ function createEntitiesOperations(
         newEntities,
       ),
     ];
-  }, defatultOperations);
+  }, defaultOperations);
 }
 
 function createRelationshipsOperations(
@@ -128,8 +128,8 @@ export function convertEntities(
       jamfDataModel.computers,
       jamfDataModel.computerDetails,
     ),
-    configurations: createConfigurationEntities(
-      jamfDataModel.configurationDetails,
+    osxConfigurations: createOSXConfigurationEntities(
+      jamfDataModel.osxConfigurationDetails,
     ),
   };
 }
@@ -143,9 +143,9 @@ export function convertRelationships(
       account,
       jamfDataModel.admins,
     ),
-    accountConfigurationRelationships: createAccountConfigurationRelationships(
+    accountOSXConfigurationRelationships: createAccountOSXConfigurationRelationships(
       account,
-      jamfDataModel.configurationDetails,
+      jamfDataModel.osxConfigurationDetails,
     ),
     accountGroupRelationships: createAccountGroupRelationships(
       account,
@@ -165,7 +165,7 @@ export function convertRelationships(
     computerApplicationRelationships: createComputerApplicationRelationships(
       jamfDataModel.computerDetails,
     ),
-    computerConfigurationRelationships: createComputerConfigurationRelationships(
+    computerOSXConfigurationRelationships: createComputersOSXConfigurationsRelationships(
       jamfDataModel.computerDetails,
     ),
   };

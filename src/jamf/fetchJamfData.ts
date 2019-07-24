@@ -28,11 +28,11 @@ export default async function fetchJamfData(
     computers.map(item => client.fetchComputerById(item.id)),
   );
 
-  const configurations = await client.fetchComputerConfigurations();
+  const osxConfigurations = await client.fetchOSXConfigurationProfiles();
 
-  const configurationDetails = await Promise.all(
-    configurations.map((item: any) =>
-      client.fetchComputerConfigurationById(item.id),
+  const osxConfigurationDetails = await Promise.all(
+    osxConfigurations.map(item =>
+      client.fetchOSXConfigurationProfileById(item.id),
     ),
   );
 
@@ -41,7 +41,7 @@ export default async function fetchJamfData(
     mobileDevices,
     computers,
     computerDetails,
-    configurationDetails,
+    osxConfigurationDetails,
     admins: adminsFullProfiles,
     groups: groupsFullProfiles,
   };

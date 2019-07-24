@@ -30,7 +30,8 @@
   "dependencies": {
     "@jupiterone/jupiter-managed-integration-sdk": "^24.0.3",
     "node-fetch": "^2.3.0",
-    "p-queue": "^5.0.0"
+    "p-queue": "^5.0.0",
+    "plist": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -45,6 +46,7 @@
     "@types/nock": "^9.3.1",
     "@types/node": "^10.12.20",
     "@types/node-fetch": "^2.1.6",
+    "@types/plist": "^3.0.2",
     "bunyan": "^1.8.12",
     "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",

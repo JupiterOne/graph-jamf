@@ -18,6 +18,8 @@ export interface ComputerEntity extends EntityFromIntegration {
   reportDateEpoch: number;
   disks: string;
   encrypted: boolean;
+  gatekeeperEnabled: boolean;
+  gatekeeperStatus: string;
 }
 
 export interface StorageEntity {

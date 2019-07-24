@@ -9,7 +9,7 @@ export interface JupiterOneEntitiesData {
   users: Entities.UserEntity[];
   mobileDevices: Entities.MobileDeviceEntity[];
   computers: Entities.ComputerEntity[];
-  configurations: Entities.ConfigurationEntity[];
+  osxConfigurations: Entities.OSXConfigurationEntity[];
 }
 
 export interface JupiterOneDataModel {
@@ -19,14 +19,14 @@ export interface JupiterOneDataModel {
 
 export interface JupiterOneRelationshipsData {
   accountAdminRelationships: Relationships.AccountAdminRelationship[];
-  accountConfigurationRelationships: Relationships.AccountConfigurationRelationship[];
+  accountOSXConfigurationRelationships: Relationships.AccountOSXConfigurationRelationship[];
   accountGroupRelationships: Relationships.AccountGroupRelationship[];
   accountUserRelationships: Relationships.AccountUserRelationship[];
   groupAdminRelationships: Relationships.GroupAdminRelationship[];
   userDeviceRelationships: Relationships.UserDeviceRelationship[];
   userComputerRelationships: Relationships.UserComputerRelationship[];
   computerApplicationRelationships: Relationships.ComputerApplicationRelationship[];
-  computerConfigurationRelationships: Relationships.ComputerConfigurationRelationship[];
+  computerOSXConfigurationRelationships: Relationships.ComputerOSXConfigurationRelationship[];
 }
 
 export default async function fetchEntitiesAndRelationships(
@@ -50,7 +50,7 @@ async function fetchEntities(
     users,
     mobileDevices,
     computers,
-    configurations,
+    osxConfigurations,
   ] = await Promise.all([
     graph.findEntitiesByType<Entities.AccountEntity>(
       Entities.ACCOUNT_ENTITY_TYPE,
@@ -64,8 +64,8 @@ async function fetchEntities(
     graph.findEntitiesByType<Entities.ComputerEntity>(
       Entities.COMPUTER_ENTITY_TYPE,
     ),
-    graph.findEntitiesByType<Entities.ConfigurationEntity>(
-      Entities.CONFIGURATION_ENTITY_TYPE,
+    graph.findEntitiesByType<Entities.OSXConfigurationEntity>(
+      Entities.OSX_CONFIGURATION_ENTITY_TYPE,
     ),
   ]);
 
@@ -76,7 +76,7 @@ async function fetchEntities(
     users,
     mobileDevices,
     computers,
-    configurations,
+    osxConfigurations,
   };
 }
 
@@ -85,21 +85,21 @@ export async function fetchRelationships(
 ): Promise<JupiterOneRelationshipsData> {
   const [
     accountAdminRelationships,
-    accountConfigurationRelationships,
+    accountOSXConfigurationRelationships,
     accountGroupRelationships,
     groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
     computerApplicationRelationships,
-    computerConfigurationRelationships,
+    computerOSXConfigurationRelationships,
   ] = await Promise.all([
     graph.findRelationshipsByType<Relationships.AccountAdminRelationship>(
       Relationships.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
     ),
     graph.findRelationshipsByType<
-      Relationships.AccountConfigurationRelationship
-    >(Relationships.ACCOUNT_CONFIGURATION_RELATIONSHIP_TYPE),
+      Relationships.AccountOSXConfigurationRelationship
+    >(Relationships.ACCOUNT_OSX_CONFIGURATION_RELATIONSHIP_TYPE),
     graph.findRelationshipsByType<Relationships.AccountGroupRelationship>(
       Relationships.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
     ),
@@ -119,18 +119,18 @@ export async function fetchRelationships(
       Relationships.ComputerApplicationRelationship
     >(Relationships.COMPUTER_APPLICATION_RELATIONSHIP_TYPE),
     graph.findRelationshipsByType<
-      Relationships.ComputerConfigurationRelationship
-    >(Relationships.COMPUTER_CONFIGURATION_RELATIONSHIP_TYPE),
+      Relationships.ComputerOSXConfigurationRelationship
+    >(Relationships.COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_TYPE),
   ]);
   return {
     accountAdminRelationships,
-    accountConfigurationRelationships,
+    accountOSXConfigurationRelationships,
     accountGroupRelationships,
     groupAdminRelationships,
     accountUserRelationships,
     userDeviceRelationships,
     userComputerRelationships,
     computerApplicationRelationships,
-    computerConfigurationRelationships,
+    computerOSXConfigurationRelationships,
   };
 }

@@ -32,6 +32,8 @@ export function createComputerEntities(
       reportDateEpoch: device.report_date_epoch,
       disks: "",
       encrypted: false,
+      gatekeeperEnabled: false,
+      gatekeeperStatus: "",
     };
 
     const detailInfoItem = detailData.find(
@@ -58,10 +60,18 @@ export function createComputerEntities(
       !!primaryDisk.partition &&
       primaryDisk.partition.filevault_status === "Encrypted";
 
+    const gatekeeperStatus = detailInfoItem.hardware.gatekeeper_status;
+    const gatekeeperEnabled =
+      !!gatekeeperStatus &&
+      (gatekeeperStatus === "App Store and identified developers" ||
+        gatekeeperStatus === "App Store");
+
     return {
       ...baseComputerEntity,
       disks: JSON.stringify(disks),
       encrypted,
+      gatekeeperEnabled,
+      gatekeeperStatus,
     };
   });
 }

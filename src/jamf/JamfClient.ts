@@ -6,10 +6,10 @@ import {
   Computer,
   ComputerDetail,
   Configuration,
-  ConfigurationDetail,
   Group,
   Method,
   MobileDevice,
+  OSXConfigurationDetail,
   User,
 } from "../types";
 import {
@@ -18,10 +18,10 @@ import {
   ApplicationDetailResponse,
   ComputerDetailResponse,
   ComputerResponse,
-  ConfigurationDetailResponse,
-  ConfigurationResponse,
   GroupResponse,
   MobileDevicesResponse,
+  OSXConfigurationDetailResponse,
+  OSXConfigurationResponse,
   UserResponse,
   UsersResponse,
 } from "./types";
@@ -134,26 +134,26 @@ export default class JamfClient {
     return result.computer_applications;
   }
 
-  public async fetchComputerConfigurations(): Promise<Configuration[]> {
-    const result = await this.makeRequest<ConfigurationResponse>(
-      `/computerconfigurations`,
+  public async fetchOSXConfigurationProfiles(): Promise<Configuration[]> {
+    const result = await this.makeRequest<OSXConfigurationResponse>(
+      `/osxconfigurationprofiles`,
       Method.GET,
       {},
     );
 
-    return result.computer_configurations;
+    return result.os_x_configuration_profiles;
   }
 
-  public async fetchComputerConfigurationById(
+  public async fetchOSXConfigurationProfileById(
     id: number,
-  ): Promise<ConfigurationDetail> {
-    const result = await this.makeRequest<ConfigurationDetailResponse>(
-      `/computerconfigurations/id/${id}`,
+  ): Promise<OSXConfigurationDetail> {
+    const result = await this.makeRequest<OSXConfigurationDetailResponse>(
+      `/osxconfigurationprofiles/id/${id}`,
       Method.GET,
       {},
     );
 
-    return result.computer_configuration;
+    return result.os_x_configuration_profile;
   }
 
   private async makeRequest<T>(

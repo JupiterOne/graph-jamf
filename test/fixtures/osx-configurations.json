@@ -2,14 +2,18 @@
   {
     "scope": "https://jupiteronedev.jamfcloud.com:443",
     "method": "GET",
-    "path": "/JSSResource/computerconfigurations",
+    "path": "/JSSResource/osxconfigurationprofiles",
     "body": "",
     "status": 200,
     "response": {
-      "computer_configurations": [
+      "os_x_configuration_profiles": [
         {
           "id": 1,
-          "name": "Test Configuration"
+          "name": "Test Profile"
+        },
+        {
+          "id": 2,
+          "name": "Isaac's Test Configuration"
         }
       ]
     },
@@ -21,7 +25,7 @@
       "Content-Type",
       "text/plain;charset=UTF-8",
       "Date",
-      "Mon, 27 May 2019 10:36:57 GMT",
+      "Tue, 23 Jul 2019 20:39:15 GMT",
       "Server",
       "Jamf Cloud Node",
       "Set-Cookie",
@@ -31,7 +35,7 @@
       "X-FRAME-OPTIONS",
       "SAMEORIGIN",
       "Content-Length",
-      "66",
+      "109",
       "Connection",
       "Close"
     ]

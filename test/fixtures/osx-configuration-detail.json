@@ -1,0 +1,94 @@
+[
+  {
+    "scope": "https://jupiteronedev.jamfcloud.com:443",
+    "method": "GET",
+    "path": "/JSSResource/osxconfigurationprofiles/id/2",
+    "body": "",
+    "status": 200,
+    "response": {
+      "os_x_configuration_profile": {
+        "general": {
+          "id": 2,
+          "name": "Isaac's Test Configuration",
+          "description": "",
+          "site": {
+            "id": -1,
+            "name": "None"
+          },
+          "category": {
+            "id": -1,
+            "name": "No category assigned"
+          },
+          "distribution_method": "Make Available in Self Service",
+          "user_removable": true,
+          "level": "computer",
+          "uuid": "99537B91-E619-44DD-A4FB-E80E5622C3B7",
+          "redeploy_on_update": "Newly Assigned",
+          "payloads": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1\"><dict><key>PayloadUUID</key><string>99537B91-E619-44DD-A4FB-E80E5622C3B7</string><key>PayloadType</key><string>Configuration</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>99537B91-E619-44DD-A4FB-E80E5622C3B7</string><key>PayloadDisplayName</key><string>Isaac's Test Configuration</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>PayloadRemovalDisallowed</key><true/><key>PayloadScope</key><string>System</string><key>PayloadContent</key><array><dict><key>PayloadUUID</key><string>3F06D9A5-74CD-444A-95CF-C6BA44DC3E88</string><key>PayloadType</key><string>com.apple.MCX</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>3F06D9A5-74CD-444A-95CF-C6BA44DC3E88</string><key>PayloadDisplayName</key><string>MCX</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>DisableGuestAccount</key><false/><key>EnableGuestAccount</key><true/><key>DestroyFVKeyOnStandby</key><false/><key>dontAllowFDEDisable</key><false/></dict><dict><key>PayloadUUID</key><string>DD038AB6-3075-48EA-ACC7-1F05A8C124B5</string><key>PayloadType</key><string>com.apple.SubmitDiagInfo</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>DD038AB6-3075-48EA-ACC7-1F05A8C124B5</string><key>PayloadDisplayName</key><string>Security And Privacy</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>AutoSubmit</key><true/></dict><dict><key>PayloadUUID</key><string>C2842E79-AC7F-46F0-9844-FBE57AA1A726</string><key>PayloadType</key><string>com.apple.applicationaccess</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>C2842E79-AC7F-46F0-9844-FBE57AA1A726</string><key>PayloadDisplayName</key><string>Restrictions</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>allowDiagnosticSubmission</key><true/><key>allowAutoUnlock</key><true/></dict><dict><key>PayloadUUID</key><string>A5BB2304-1191-40B8-A15C-69E1757D0F5B</string><key>PayloadType</key><string>com.apple.security.firewall</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>A5BB2304-1191-40B8-A15C-69E1757D0F5B</string><key>PayloadDisplayName</key><string>Firewall</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>EnableFirewall</key><true/><key>BlockAllIncoming</key><true/><key>EnableStealthMode</key><true/><key>Applications</key><array/></dict><dict><key>PayloadUUID</key><string>E29F040C-1058-4F3F-BB53-327A95EAE7AB</string><key>PayloadType</key><string>com.apple.screensaver</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>E29F040C-1058-4F3F-BB53-327A95EAE7AB</string><key>PayloadDisplayName</key><string>Login Window:  Screen Saver Preferences</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>loginWindowIdleTime</key><integer>1200</integer><key>idleTime</key><integer>1200</integer><key>loginWindowModulePath</key><string>/System/Library/Screen Savers/Flurry.saver</string></dict><dict><key>PayloadUUID</key><string>0D5E4FFE-CC8B-4256-A09B-6A12A3E91566</string><key>PayloadType</key><string>com.apple.systempolicy.control</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>0D5E4FFE-CC8B-4256-A09B-6A12A3E91566</string><key>PayloadDisplayName</key><string>SystemPolicyControl</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>AllowIdentifiedDevelopers</key><true/><key>EnableAssessment</key><true/></dict><dict><key>PayloadUUID</key><string>F3F99866-65AE-48E6-9206-35235380BE7C</string><key>PayloadType</key><string>com.apple.systempolicy.managed</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>F3F99866-65AE-48E6-9206-35235380BE7C</string><key>PayloadDisplayName</key><string>SystemPolicyManaged</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>DisableOverride</key><true/></dict><dict><key>PayloadUUID</key><string>59D558B7-87CF-4104-8BF7-17935C160995</string><key>PayloadType</key><string>com.apple.loginwindow</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>59D558B7-87CF-4104-8BF7-17935C160995</string><key>PayloadDisplayName</key><string>Login Window</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>SHOWFULLNAME</key><false/><key>HideLocalUsers</key><false/><key>HideMobileAccounts</key><false/><key>IncludeNetworkUser</key><false/><key>HideAdminUsers</key><false/><key>SHOWOTHERUSERS_MANAGED</key><true/><key>ShutDownDisabled</key><true/><key>UseComputerNameForComputerRecordName</key><false/><key>EnableExternalAccounts</key><true/><key>DisableConsoleAccess</key><false/><key>AdminMayDisableMCX</key><false/><key>LocalUserLoginEnabled</key><true/><key>LocalUsersHaveWorkgroups</key><false/><key>FlattenUserWorkgroups</key><false/><key>CombineUserWorkgroups</key><true/><key>AlwaysShowWorkgroupDialog</key><false/><key>RetriesUntilHint</key><integer>3</integer><key>AllowList</key><array/><key>DenyList</key><array/></dict><dict><key>PayloadUUID</key><string>FC671CBD-F7A3-41C9-A8D1-AF469B54945D</string><key>PayloadType</key><string>com.apple.preference.security</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>FC671CBD-F7A3-41C9-A8D1-AF469B54945D</string><key>PayloadDisplayName</key><string>PreferenceSecurity</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/></dict><dict><key>PayloadUUID</key><string>6B980C30-A3CF-4489-B25F-EB0D5C75F091</string><key>PayloadType</key><string>.GlobalPreferences</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>6B980C30-A3CF-4489-B25F-EB0D5C75F091</string><key>PayloadDisplayName</key><string>Login Window:  Global Preferences</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>MultipleSessionEnabled</key><false/><key>com.apple.autologout.AutoLogOutDelay</key><integer>1800</integer><key>com.apple.logout.AutoLogOutDelay</key><integer>1800</integer></dict><dict><key>PayloadUUID</key><string>6E203F26-152C-4E43-B5EE-E9D0C8FCDAB8</string><key>PayloadType</key><string>com.apple.mcxloginscripts</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>6E203F26-152C-4E43-B5EE-E9D0C8FCDAB8</string><key>PayloadDisplayName</key><string>Login Window:  Scripts</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>skipLoginHook</key><false/><key>skipLogoutHook</key><false/></dict><dict><key>PayloadUUID</key><string>C2CC6597-435A-4910-8AAD-F96C42522879</string><key>PayloadType</key><string>com.apple.SetupAssistant.managed</string><key>PayloadOrganization</key><string>JupiterOne</string><key>PayloadIdentifier</key><string>C2CC6597-435A-4910-8AAD-F96C42522879</string><key>PayloadDisplayName</key><string>Login Window: Setup Assistant</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>SkipCloudSetup</key><false/><key>SkipSiriSetup</key><false/></dict></array></dict></plist>"
+        },
+        "scope": {
+          "all_computers": false,
+          "all_jss_users": false,
+          "computers": [],
+          "buildings": [],
+          "departments": [],
+          "computer_groups": [],
+          "jss_users": [],
+          "jss_user_groups": {},
+          "limitations": {
+            "users": [],
+            "user_groups": [],
+            "network_segments": [],
+            "ibeacons": []
+          },
+          "exclusions": {
+            "computers": [],
+            "buildings": [],
+            "departments": [],
+            "computer_groups": [],
+            "users": [],
+            "user_groups": [],
+            "network_segments": [],
+            "ibeacons": [],
+            "jss_users": [],
+            "jss_user_groups": []
+          }
+        },
+        "self_service": {
+          "self_service_display_name": "Isaac's Test Configuration",
+          "install_button_text": "Install",
+          "self_service_description": "",
+          "force_users_to_view_description": false,
+          "security": {
+            "removal_disallowed": "Never"
+          },
+          "self_service_icon": {},
+          "feature_on_main_page": false,
+          "self_service_categories": []
+        }
+      }
+    },
+    "rawHeaders": [
+      "Accept-Ranges",
+      "bytes",
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0",
+      "Content-Type",
+      "text/plain;charset=UTF-8",
+      "Date",
+      "Tue, 23 Jul 2019 20:46:40 GMT",
+      "Server",
+      "Jamf Cloud Node",
+      "Set-Cookie",
+      "APBALANCEID=aws.use1-std-ellison5-tc-14; path=/;HttpOnly;Secure;",
+      "Vary",
+      "Accept-Charset,Accept-Encoding,Accept-Language,Accept",
+      "X-FRAME-OPTIONS",
+      "SAMEORIGIN",
+      "Content-Length",
+      "9229",
+      "Connection",
+      "Close"
+    ]
+  }
+]

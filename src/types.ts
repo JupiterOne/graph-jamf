@@ -18,6 +18,15 @@ export interface Account {
   name: string;
 }
 
+export interface Site {
+  id: number;
+  name: string;
+}
+
+export type Category = Site;
+
+export type Plist = string;
+
 export interface AdminsAndGroups {
   users: Admin[];
   groups: Group[];
@@ -40,7 +49,7 @@ export interface Admin {
     group: {
       id: number;
       name: string;
-      site: { id: number; name: string };
+      site: Site;
       privileges: {
         jss_objects?: any;
         jss_settings?: any;
@@ -56,7 +65,7 @@ export interface Admin {
 export interface Group {
   id: number;
   name: string;
-  site: { id: number; name: string };
+  site: Site;
   access_level?: string;
   privilege_set?: string;
   privileges?: Privileges;
@@ -96,10 +105,7 @@ export interface User {
     };
   }>;
   sites?: Array<{
-    site: {
-      id: number;
-      name: string;
-    };
+    site: Site;
   }>;
   links?: {
     computers: Array<{
@@ -210,7 +216,6 @@ export interface ComputerDetail {
     remote_management: {
       managed: boolean;
       management_username: string;
-      management_password_sha256: string;
     };
     mdm_capable: boolean;
     mdm_capable_users: { mdm_capable_user: string };
@@ -235,7 +240,7 @@ export interface ComputerDetail {
     distribution_point: string;
     sus: string;
     netboot_server: string;
-    site: { id: number; name: string };
+    site: Site;
     itunes_store_account_is_active: boolean;
   };
   software: {
@@ -302,26 +307,23 @@ export interface Configuration {
   name: string;
 }
 
-export interface ConfigurationDetail {
+export interface OSXConfigurationDetail {
   general: {
     id: number;
     name: string;
     description: string;
-    type: string;
+    site: Site;
+    category: Category;
+    distribution_method: string;
+    user_removable: boolean;
+    level: string;
+    redeploy_on_update: string;
+    payloads: Plist;
   };
-  packages: any[];
-  scripts: any[];
-  printers: any[];
-  directory_bindings: any[];
-  management: {
-    username: string;
-    password_sha256: string;
-    create_account: boolean;
-    hide_account: boolean;
-    allow_ssh_for_management_only: boolean;
+  scope: {
+    all_computers: boolean;
+    all_jss_users: boolean;
   };
-  home_page: string;
-  partitions: any[];
 }
 
 export interface MobileDevice {

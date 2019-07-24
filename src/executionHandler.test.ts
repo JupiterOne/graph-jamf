@@ -28,8 +28,8 @@ beforeEach(() => {
       fetchUserById: jest.fn().mockReturnValue({}),
       fetchMobileDevices: jest.fn().mockReturnValue([]),
       fetchComputers: jest.fn().mockReturnValue([]),
-      fetchComputerConfigurations: jest.fn().mockReturnValue([]),
-      fetchComputerConfigurationById: jest.fn().mockReturnValue({}),
+      fetchOSXConfigurationProfiles: jest.fn().mockReturnValue([]),
+      fetchOSXConfigurationProfileById: jest.fn().mockReturnValue({}),
     },
     account: {
       id: "testId",
@@ -67,10 +67,10 @@ test("executionHandler with INGEST action", async () => {
   expect(executionContext.provider.fetchMobileDevices).toHaveBeenCalledTimes(1);
   expect(executionContext.provider.fetchComputers).toHaveBeenCalledTimes(1);
   expect(
-    executionContext.provider.fetchComputerConfigurations,
+    executionContext.provider.fetchOSXConfigurationProfiles,
   ).toHaveBeenCalledTimes(1);
   expect(
-    executionContext.provider.fetchComputerConfigurationById,
+    executionContext.provider.fetchOSXConfigurationProfileById,
   ).toHaveBeenCalledTimes(0);
   expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(7);
   expect(

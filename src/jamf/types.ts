@@ -5,9 +5,9 @@ import {
   Computer,
   ComputerDetail,
   Configuration,
-  ConfigurationDetail,
   Group,
   MobileDevice,
+  OSXConfigurationDetail,
   User,
 } from "../types";
 
@@ -43,12 +43,12 @@ export interface ComputerDetailResponse {
   computer: ComputerDetail;
 }
 
-export interface ConfigurationResponse {
-  computer_configurations: Configuration[];
+export interface OSXConfigurationResponse {
+  os_x_configuration_profiles: Configuration[];
 }
 
-export interface ConfigurationDetailResponse {
-  computer_configuration: ConfigurationDetail;
+export interface OSXConfigurationDetailResponse {
+  os_x_configuration_profile: OSXConfigurationDetail;
 }
 
 export interface MobileDevicesResponse {
@@ -60,7 +60,7 @@ export interface JamfDataModel {
   mobileDevices: MobileDevice[];
   computers: Computer[];
   computerDetails: ComputerDetail[];
-  configurationDetails: ConfigurationDetail[];
+  osxConfigurationDetails: OSXConfigurationDetail[];
   admins: Admin[];
   groups: Group[];
 }

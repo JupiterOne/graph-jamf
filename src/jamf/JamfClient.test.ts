@@ -258,12 +258,12 @@ describe("JamfClient fetch ok data", () => {
     expect(response).not.toEqual([]);
   });
 
-  test("fetch computer configurations", async () => {
-    const { nockDone } = await nock.back("configurations.json", {
+  test("fetch osx configuration profiles", async () => {
+    const { nockDone } = await nock.back("osx-configurations.json", {
       before: prepareScope,
     });
 
-    const response = await getClient().fetchComputerConfigurations();
+    const response = await getClient().fetchOSXConfigurationProfiles();
 
     nockDone();
 
@@ -271,11 +271,11 @@ describe("JamfClient fetch ok data", () => {
   });
 
   test("fetch computer configuration detail info", async () => {
-    const { nockDone } = await nock.back("configuration-detail.json", {
+    const { nockDone } = await nock.back("osx-configuration-detail.json", {
       before: prepareScope,
     });
 
-    const response = await getClient().fetchComputerConfigurationById(1);
+    const response = await getClient().fetchOSXConfigurationProfileById(2);
 
     nockDone();
 

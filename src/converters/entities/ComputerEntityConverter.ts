@@ -2,7 +2,6 @@ import {
   COMPUTER_ENTITY_CLASS,
   COMPUTER_ENTITY_TYPE,
   ComputerEntity,
-  StorageEntity,
 } from "../../jupiterone";
 import { Computer, ComputerDetail } from "../../types";
 
@@ -30,7 +29,6 @@ export function createComputerEntities(
       serialNumber: device.serial_number,
       reportDateUtc: device.report_date_utc,
       reportDateEpoch: device.report_date_epoch,
-      disks: "",
       encrypted: false,
       gatekeeperEnabled: false,
       systemIntegrityProtectionEnabled: false,
@@ -44,15 +42,8 @@ export function createComputerEntities(
       return baseComputerEntity;
     }
 
-    const disks: StorageEntity[] = detailInfoItem.hardware.storage.map(
-      item => ({
-        disk: item.disk,
-        partitionName: item.partition && item.partition.name,
-      }),
-    );
-
     const primaryDisk = detailInfoItem.hardware.storage.find(
-      item => item.disk === "disk0",
+      disk => !!disk.partition && disk.partition.type === "boot",
     );
 
     const encrypted =
@@ -71,7 +62,6 @@ export function createComputerEntities(
 
     return {
       ...baseComputerEntity,
-      disks: JSON.stringify(disks),
       encrypted,
       gatekeeperEnabled,
       gatekeeperStatus,

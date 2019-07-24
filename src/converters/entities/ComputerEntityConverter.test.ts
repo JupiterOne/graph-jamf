@@ -277,8 +277,6 @@ const playerOne = {
   _type: "user_endpoint",
   building: "",
   department: "",
-  disks:
-    '[{"disk":"disk0","partitionName":"Macintosh HD (Boot Partition)"},{"disk":"disk1"}]',
   displayName: "PlayerOne’s MacBook",
   encrypted: true,
   gatekeeperEnabled: true,
@@ -315,7 +313,6 @@ const playerTwo = {
   serialNumber: "5EGTF1C02T70",
   udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
   username: "player.one",
-  disks: "",
   encrypted: false,
 };
 

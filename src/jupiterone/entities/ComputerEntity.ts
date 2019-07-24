@@ -16,14 +16,8 @@ export interface ComputerEntity extends EntityFromIntegration {
   serialNumber: string;
   reportDateUtc: string;
   reportDateEpoch: number;
-  disks: string;
   encrypted: boolean;
   gatekeeperEnabled: boolean;
   gatekeeperStatus?: string;
   systemIntegrityProtectionEnabled: boolean;
-}
-
-export interface StorageEntity {
-  disk: string;
-  partitionName?: string;
 }

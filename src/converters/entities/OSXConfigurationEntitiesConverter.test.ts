@@ -1,4 +1,5 @@
 import plist from "plist";
+import { OSXConfigurationEntity } from "../../jupiterone";
 import { createOSXConfigurationEntities } from "./OSXConfigurationEntitiesConverter";
 
 const payloadsPlist = {
@@ -27,10 +28,23 @@ const payloadsPlist = {
       EnableStealthMode: true,
       Applications: [],
     },
+    {
+      PayloadUUID: "E29F040C-1058-4F3F-BB53-327A95EAE7AB",
+      PayloadType: "com.apple.screensaver",
+      PayloadOrganization: "JupiterOne",
+      PayloadIdentifier: "E29F040C-1058-4F3F-BB53-327A95EAE7AB",
+      PayloadDisplayName: "Login Window:  Screen Saver Preferences",
+      PayloadDescription: "",
+      PayloadVersion: 1,
+      PayloadEnabled: true,
+      loginWindowIdleTime: 600,
+      idleTime: 600,
+      loginWindowModulePath: "/System/Library/Screen Savers/Flurry.saver",
+    },
   ],
 };
 
-const expectedEntity = {
+const expectedEntity: OSXConfigurationEntity = {
   _class: "Configuration",
   _key: "jamf_osx_configuration_profile_1",
   _type: "jamf_osx_configuration_profile",
@@ -45,7 +59,10 @@ const expectedEntity = {
   id: 1,
   level: "computer",
   name: "My OSX Configuration Profile",
-  redeployOnUpdate: true,
+  redeployOnUpdate: "Newly Assigned",
+  screensaverIdleTime: 600,
+  screensaverLockEnabled: true,
+  screensaverModulePath: "/System/Library/Screen Savers/Flurry.saver",
   siteName: "My Site",
   userRemovable: false,
 };
@@ -65,7 +82,7 @@ function configurationDetail(payloadsPlistString: string): any {
       distribution_method: "Make Available in Self Service",
       user_removable: false,
       level: "computer",
-      redeploy_on_update: true,
+      redeploy_on_update: "Newly Assigned",
       payloads: payloadsPlistString,
     },
     scope: {
@@ -76,7 +93,7 @@ function configurationDetail(payloadsPlistString: string): any {
 }
 
 test("convert osx configuration entity", () => {
-  const payloadsPlistString = plist.build(payloadsPlist);
+  const payloadsPlistString = plist.build(payloadsPlist as any);
 
   expect(
     createOSXConfigurationEntities([
@@ -86,16 +103,19 @@ test("convert osx configuration entity", () => {
   ).toEqual([expectedEntity, expectedEntity]);
 });
 
-test("convert osx configuration entity without firewall payload", () => {
+test("convert osx configuration entity without payloads", () => {
   const payloadsPlistString = plist.build({
     ...payloadsPlist,
     PayloadContent: [],
   });
-  const expectedEntityFirewallOff = {
+  const expectedEntityNoPayloads = {
     ...expectedEntity,
     firewallEnabled: false,
-    firewallBlockAllIncoming: false,
-    firewallStealthModeEnabled: false,
+    firewallBlockAllIncoming: undefined,
+    firewallStealthModeEnabled: undefined,
+    screensaverLockEnabled: false,
+    screensaverIdleTime: undefined,
+    screensaverModulePath: undefined,
   };
 
   expect(
@@ -103,5 +123,5 @@ test("convert osx configuration entity without firewall payload", () => {
       configurationDetail(payloadsPlistString),
       configurationDetail(payloadsPlistString),
     ]),
-  ).toEqual([expectedEntityFirewallOff, expectedEntityFirewallOff]);
+  ).toEqual([expectedEntityNoPayloads, expectedEntityNoPayloads]);
 });

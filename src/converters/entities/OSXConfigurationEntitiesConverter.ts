@@ -24,16 +24,18 @@ interface OSXConfigurationFirewallPayload extends OSXConfigurationPayloadItem {
   BlockAllIncoming: boolean;
 }
 
+interface OSXConfigurationScreensaverPayload
+  extends OSXConfigurationPayloadItem {
+  loginWindowIdleTime: number;
+  loginWindowModulePath: string;
+}
+
 function createOSXConfigurationEntity(
   data: OSXConfigurationDetail,
 ): OSXConfigurationEntity {
   const payload = (plist.parse(
     data.general.payloads,
   ) as unknown) as OSXConfigurationPayload;
-
-  const firewallPayload = payload.PayloadContent.find(item => {
-    return item.PayloadType === "com.apple.security.firewall";
-  }) as OSXConfigurationFirewallPayload;
 
   const baseOSXConfigurationEntity: OSXConfigurationEntity = {
     _key: generateEntityKey(OSX_CONFIGURATION_ENTITY_TYPE, data.general.id),
@@ -51,9 +53,12 @@ function createOSXConfigurationEntity(
     allComputers: data.scope.all_computers,
     allJSSUsers: data.scope.all_jss_users,
     firewallEnabled: false,
-    firewallStealthModeEnabled: false,
-    firewallBlockAllIncoming: false,
+    screensaverLockEnabled: false,
   };
+
+  const firewallPayload = payload.PayloadContent.find(item => {
+    return item.PayloadType === "com.apple.security.firewall";
+  }) as OSXConfigurationFirewallPayload;
 
   if (firewallPayload && firewallPayload.PayloadEnabled) {
     baseOSXConfigurationEntity.firewallEnabled = firewallPayload.EnableFirewall;
@@ -61,6 +66,18 @@ function createOSXConfigurationEntity(
       firewallPayload.EnableStealthMode;
     baseOSXConfigurationEntity.firewallBlockAllIncoming =
       firewallPayload.BlockAllIncoming;
+  }
+
+  const screensaverPayload = payload.PayloadContent.find(item => {
+    return item.PayloadType === "com.apple.screensaver";
+  }) as OSXConfigurationScreensaverPayload;
+
+  if (screensaverPayload && screensaverPayload.PayloadEnabled) {
+    baseOSXConfigurationEntity.screensaverLockEnabled = true;
+    baseOSXConfigurationEntity.screensaverIdleTime =
+      screensaverPayload.loginWindowIdleTime;
+    baseOSXConfigurationEntity.screensaverModulePath =
+      screensaverPayload.loginWindowModulePath;
   }
 
   return baseOSXConfigurationEntity;

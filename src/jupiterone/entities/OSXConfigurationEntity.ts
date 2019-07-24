@@ -16,6 +16,9 @@ export interface OSXConfigurationEntity extends EntityFromIntegration {
   allComputers: boolean;
   allJSSUsers: boolean;
   firewallEnabled: boolean;
-  firewallBlockAllIncoming: boolean;
-  firewallStealthModeEnabled: boolean;
+  firewallBlockAllIncoming?: boolean;
+  firewallStealthModeEnabled?: boolean;
+  screensaverLockEnabled: boolean;
+  screensaverIdleTime?: number;
+  screensaverModulePath?: string;
 }

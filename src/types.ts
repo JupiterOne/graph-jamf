@@ -25,7 +25,7 @@ export interface Site {
 
 export type Category = Site;
 
-export type Plist = string;
+export type PListDocument = string;
 
 export interface AdminsAndGroups {
   users: Admin[];
@@ -318,7 +318,7 @@ export interface OSXConfigurationDetail {
     user_removable: boolean;
     level: string;
     redeploy_on_update: string;
-    payloads: Plist;
+    payloads: PListDocument;
   };
   scope: {
     all_computers: boolean;

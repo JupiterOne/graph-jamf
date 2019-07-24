@@ -52,10 +52,10 @@ export function createComputerEntities(
       primaryDisk.partition.filevault_status === "Encrypted";
 
     const gatekeeperStatus = detailInfoItem.hardware.gatekeeper_status;
+    // gatekeeperStatus can be one of three things: "App Store", "App Store and
+    // identified developers", or "Anywhere"
     const gatekeeperEnabled =
-      !!gatekeeperStatus &&
-      (gatekeeperStatus === "App Store and identified developers" ||
-        gatekeeperStatus === "App Store");
+      !!gatekeeperStatus && /^App Store/.test(gatekeeperStatus);
 
     const systemIntegrityProtectionEnabled =
       detailInfoItem.hardware.sip_status === "Enabled";

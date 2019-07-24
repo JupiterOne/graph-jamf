@@ -72,10 +72,13 @@ test("executionHandler with INGEST action", async () => {
   expect(
     executionContext.provider.fetchOSXConfigurationProfileById,
   ).toHaveBeenCalledTimes(0);
-  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(7);
+  // +1 due to deleting deprecated entities
+  expect(executionContext.persister.processEntities).toHaveBeenCalledTimes(
+    7 + 1,
+  );
   expect(
     executionContext.persister.publishPersisterOperations,
-  ).toHaveBeenCalledTimes(1);
+  ).toHaveBeenCalledTimes(1 + 1);
 });
 
 test("executionHandler with unhandled action", async () => {

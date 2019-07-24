@@ -1,7 +1,10 @@
 import {
+  GraphClient,
   IntegrationActionName,
   IntegrationExecutionContext,
   IntegrationExecutionResult,
+  PersisterClient,
+  PersisterOperationsResult,
   summarizePersisterOperationsResults,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
@@ -22,6 +25,22 @@ export default async function executionHandler(
   }
 }
 
+async function removeDeprecatedEntities(
+  graph: GraphClient,
+  persister: PersisterClient,
+): Promise<PersisterOperationsResult> {
+  const results = await Promise.all(
+    ["jamf_configuration_profile"].map(async t => {
+      const entitiesToDelete = await graph.findEntitiesByType(t);
+      return persister.publishPersisterOperations([
+        persister.processEntities(entitiesToDelete, []),
+        [],
+      ]);
+    }),
+  );
+  return summarizePersisterOperationsResults(...results);
+}
+
 async function synchronize(
   context: JamfIntegrationContext,
 ): Promise<IntegrationExecutionResult> {
@@ -32,6 +51,7 @@ async function synchronize(
 
   return {
     operations: summarizePersisterOperationsResults(
+      await removeDeprecatedEntities(graph, persister),
       await publishChanges(persister, oldData, jamfData, account),
     ),
   };

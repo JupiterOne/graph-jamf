@@ -1,6 +1,7 @@
-import { Admin, Group, User } from "../types";
+import { Admin, Group, OSXConfigurationDetailParsed, User } from "../types";
+import { toOSXConfigurationDetailParsed } from "../utils/toOSXConfigurationParsed";
 import JamfClient from "./JamfClient";
-import { JamfDataModel } from "./types";
+import { DataByID, JamfDataModel } from "./types";
 
 export default async function fetchJamfData(
   client: JamfClient,
@@ -30,10 +31,16 @@ export default async function fetchJamfData(
 
   const osxConfigurations = await client.fetchOSXConfigurationProfiles();
 
+  const osxConfigurationDetailsById: DataByID<
+    OSXConfigurationDetailParsed
+  > = {};
   const osxConfigurationDetails = await Promise.all(
-    osxConfigurations.map(item =>
-      client.fetchOSXConfigurationProfileById(item.id),
-    ),
+    osxConfigurations.map(async item => {
+      const details = await client.fetchOSXConfigurationProfileById(item.id);
+      const detailsParsed = toOSXConfigurationDetailParsed(details);
+      osxConfigurationDetailsById[item.id] = detailsParsed;
+      return detailsParsed;
+    }),
   );
 
   return {
@@ -44,5 +51,7 @@ export default async function fetchJamfData(
     osxConfigurationDetails,
     admins: adminsFullProfiles,
     groups: groupsFullProfiles,
+
+    osxConfigurationDetailsById,
   };
 }

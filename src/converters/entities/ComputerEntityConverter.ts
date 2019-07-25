@@ -3,69 +3,185 @@ import {
   COMPUTER_ENTITY_TYPE,
   ComputerEntity,
 } from "../../jupiterone";
-import { Computer, ComputerDetail } from "../../types";
+import {
+  Computer,
+  ComputerDetail,
+  OSXConfigurationDetailParsed,
+  OSXConfigurationPayloadItem,
+} from "../../types";
 
+import { DataByID } from "../../jamf/types";
 import { generateEntityKey } from "../../utils/generateKey";
 
 export function createComputerEntities(
   data: Computer[],
   detailData: ComputerDetail[],
+  osxConfigurationDetailsById: DataByID<OSXConfigurationDetailParsed>,
 ): ComputerEntity[] {
   return data.map(device => {
-    const baseComputerEntity: ComputerEntity = {
-      _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
-      _type: COMPUTER_ENTITY_TYPE,
-      _class: COMPUTER_ENTITY_CLASS,
-      id: device.id,
-      displayName: device.name,
-      name: device.name,
-      managed: device.managed,
-      username: device.username,
-      model: device.model,
-      department: device.department,
-      building: device.building,
-      macAddress: device.mac_address,
-      udid: device.udid,
-      serialNumber: device.serial_number,
-      reportDateUtc: device.report_date_utc,
-      reportDateEpoch: device.report_date_epoch,
-      encrypted: false,
-      gatekeeperEnabled: false,
-      systemIntegrityProtectionEnabled: false,
-    };
-
-    const detailInfoItem = detailData.find(
-      item => item.general.id === device.id,
+    return createComputerEntity(
+      device,
+      osxConfigurationDetailsById,
+      detailData.find(item => item.general.id === device.id),
     );
-
-    if (!detailInfoItem) {
-      return baseComputerEntity;
-    }
-
-    const primaryDisk = detailInfoItem.hardware.storage.find(
-      disk => !!disk.partition && disk.partition.type === "boot",
-    );
-
-    const encrypted =
-      !!primaryDisk &&
-      !!primaryDisk.partition &&
-      primaryDisk.partition.filevault_status === "Encrypted";
-
-    const gatekeeperStatus = detailInfoItem.hardware.gatekeeper_status;
-    // gatekeeperStatus can be one of three things: "App Store", "App Store and
-    // identified developers", or "Anywhere"
-    const gatekeeperEnabled =
-      !!gatekeeperStatus && /^App Store/.test(gatekeeperStatus);
-
-    const systemIntegrityProtectionEnabled =
-      detailInfoItem.hardware.sip_status === "Enabled";
-
-    return {
-      ...baseComputerEntity,
-      encrypted,
-      gatekeeperEnabled,
-      gatekeeperStatus,
-      systemIntegrityProtectionEnabled,
-    };
   });
+}
+
+function createComputerEntity(
+  device: Computer,
+  osxConfigurationDetailsById: DataByID<OSXConfigurationDetailParsed>,
+  detailData?: ComputerDetail,
+): ComputerEntity {
+  const computer: ComputerEntity = {
+    _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
+    _type: COMPUTER_ENTITY_TYPE,
+    _class: COMPUTER_ENTITY_CLASS,
+    id: device.id,
+    displayName: device.name,
+    name: device.name,
+    managed: device.managed,
+    username: device.username,
+    model: device.model,
+    department: device.department,
+    building: device.building,
+    macAddress: device.mac_address,
+    udid: device.udid,
+    serialNumber: device.serial_number,
+    reportDateUtc: device.report_date_utc,
+    reportDateEpoch: device.report_date_epoch,
+    encrypted: false,
+    gatekeeperEnabled: false,
+    systemIntegrityProtectionEnabled: false,
+    firewallEnabled: false,
+    screensaverLockEnabled: false,
+  };
+
+  if (detailData) {
+    computer.encrypted = encrypted(detailData);
+    computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
+    computer.gatekeeperEnabled = gatekeeperEnabled(detailData);
+    computer.systemIntegrityProtectionEnabled = systemIntegrityProtectionEnabled(
+      detailData,
+    );
+
+    const configurationProfiles = detailData.configuration_profiles
+      .map(profile => osxConfigurationDetailsById[profile.id])
+      .filter(profile => profile);
+
+    if (configurationProfiles.length > 0) {
+      const collapseFirewallBoolean = collapsePayloadBoolean.bind(
+        null,
+        configurationProfiles,
+        "com.apple.security.firewall",
+      );
+
+      computer.firewallEnabled = collapseFirewallBoolean("EnableFirewall");
+      computer.firewallStealthModeEnabled = collapseFirewallBoolean(
+        "EnableStealthMode",
+      );
+      computer.firewallBlockAllIncoming = collapseFirewallBoolean(
+        "BlockAllIncoming",
+      );
+      computer.screensaverLockEnabled = collapsePayloadBoolean(
+        configurationProfiles,
+        "com.apple.screensaver",
+        "PayloadEnabled",
+      );
+      computer.screensaverIdleTime = collapsePayloadNumber(
+        configurationProfiles,
+        "com.apple.screensaver",
+        "loginWindowIdleTime",
+      );
+    }
+  }
+
+  return computer;
+}
+
+function encrypted(detailData: ComputerDetail) {
+  const primaryDisk = detailData.hardware.storage.find(
+    disk => !!disk.partition && disk.partition.type === "boot",
+  );
+
+  return (
+    !!primaryDisk &&
+    !!primaryDisk.partition &&
+    primaryDisk.partition.filevault_status === "Encrypted"
+  );
+}
+
+function gatekeeperEnabled(detailData: ComputerDetail) {
+  // gatekeeperStatus can be one of three things: "App Store", "App Store and
+  // identified developers", or "Anywhere"
+  return (
+    !!detailData.hardware.gatekeeper_status &&
+    /^App Store/.test(detailData.hardware.gatekeeper_status)
+  );
+}
+
+function systemIntegrityProtectionEnabled(detailData: ComputerDetail) {
+  return detailData.hardware.sip_status === "Enabled";
+}
+
+function collapsePayloadBoolean(
+  configurationProfiles: OSXConfigurationDetailParsed[],
+  payloadType: string,
+  property: string,
+): boolean {
+  return collapsePayloadValue(
+    configurationProfiles,
+    payloadType,
+    false,
+    payload => {
+      if (payload && payload.PayloadEnabled && payload[property]) {
+        return true;
+      }
+    },
+  );
+}
+
+// This method assumes that lower = more restrictive.
+function collapsePayloadNumber(
+  configurationProfiles: OSXConfigurationDetailParsed[],
+  payloadType: string,
+  property: string,
+): number | undefined {
+  return collapsePayloadValue(
+    configurationProfiles,
+    payloadType,
+    undefined,
+    (payload, value) => {
+      if (
+        payload &&
+        payload.PayloadEnabled &&
+        payload[property] &&
+        typeof payload[property] === "number"
+      ) {
+        if (!value) {
+          return payload[property];
+        } else {
+          return payload[property] < value ? payload[property] : value;
+        }
+      }
+    },
+  );
+}
+
+function collapsePayloadValue(
+  configurationProfiles: OSXConfigurationDetailParsed[],
+  payloadType: string,
+  initialValue: any,
+  getNewValue: (payload: OSXConfigurationPayloadItem, currentValue: any) => any,
+): any {
+  let value = initialValue;
+
+  for (const profile of configurationProfiles) {
+    const payload = profile.parsedPayload.PayloadContent.find(item => {
+      return item.PayloadType === payloadType;
+    }) as OSXConfigurationPayloadItem;
+
+    value = getNewValue(payload, value) || value;
+  }
+
+  return value;
 }

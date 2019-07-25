@@ -1,5 +1,92 @@
+import { ComputerEntity } from "../../jupiterone";
 import { Computer } from "../../types";
 import { createComputerEntities } from "./ComputerEntityConverter";
+
+function OSXConfigurationProfileDetails(
+  id: number,
+  name: string,
+  firewallPayloadOverrides: any = {},
+  screensaverPayloadOverrides: any = {},
+) {
+  return {
+    general: {
+      id,
+      name,
+      description: "",
+      site: {
+        id: -1,
+        name: "None",
+      },
+      category: {
+        id: -1,
+        name: "No category assigned",
+      },
+      distribution_method: "Make Available in Self Service",
+      user_removable: false,
+      level: "computer",
+      redeploy_on_update: "Newly Assigned",
+      payloads: "a very long plist payload",
+    },
+    scope: {
+      all_computers: false,
+      all_jss_users: false,
+    },
+    parsedPayload: {
+      PayloadDisplayName: "Test Configuration",
+      PayloadContent: [
+        {
+          PayloadUUID: "A5BB2304-1191-40B8-A15C-69E1757D0F5B",
+          PayloadType: "com.apple.security.firewall",
+          PayloadOrganization: "JupiterOne",
+          PayloadIdentifier: "A5BB2304-1191-40B8-A15C-69E1757D0F5B",
+          PayloadDisplayName: "Firewall",
+          PayloadDescription: "",
+          PayloadVersion: 1,
+          PayloadEnabled: true,
+          EnableFirewall: true,
+          BlockAllIncoming: true,
+          EnableStealthMode: true,
+          Applications: [],
+          ...firewallPayloadOverrides,
+        },
+        {
+          PayloadUUID: "E29F040C-1058-4F3F-BB53-327A95EAE7AB",
+          PayloadType: "com.apple.screensaver",
+          PayloadOrganization: "JupiterOne",
+          PayloadIdentifier: "E29F040C-1058-4F3F-BB53-327A95EAE7AB",
+          PayloadDisplayName: "Login Window:  Screen Saver Preferences",
+          PayloadDescription: "",
+          PayloadVersion: 1,
+          PayloadEnabled: true,
+          loginWindowIdleTime: 1200,
+          idleTime: 1200,
+          loginWindowModulePath: "/System/Library/Screen Savers/Flurry.saver",
+          ...screensaverPayloadOverrides,
+        },
+      ],
+    },
+  };
+}
+
+const osxConfigurationDetailsById = {
+  1: OSXConfigurationProfileDetails(1, "Test Configuration"),
+  2: OSXConfigurationProfileDetails(
+    2,
+    "Other Configuration",
+    { BlockAllIncoming: false, EnableStealthMode: false },
+    { loginWindowIdleTime: 600 },
+  ),
+  3: OSXConfigurationProfileDetails(
+    3,
+    "The Third",
+    {
+      EnableFirewall: false,
+      BlockAllIncoming: false,
+      EnableStealthMode: false,
+    },
+    { loginWindowIdleTime: 1600 },
+  ),
+};
 
 const computers: Computer[] = [
   {
@@ -268,10 +355,22 @@ const playerOneDetails: any = {
       uuid: "test_uuid",
       is_removable: false,
     },
+    {
+      id: 2,
+      name: "OtherName",
+      uuid: "other_uuid",
+      is_removable: false,
+    },
+    {
+      id: 3,
+      name: "The Third",
+      uuid: "third",
+      is_removable: false,
+    },
   ],
 };
 
-const playerOne = {
+const playerOne: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_1",
   _type: "user_endpoint",
@@ -281,6 +380,11 @@ const playerOne = {
   encrypted: true,
   gatekeeperEnabled: true,
   gatekeeperStatus: "App Store and identified developers",
+  firewallEnabled: true,
+  firewallBlockAllIncoming: true,
+  firewallStealthModeEnabled: true,
+  screensaverLockEnabled: true,
+  screensaverIdleTime: 600,
   systemIntegrityProtectionEnabled: true,
   id: 1,
   macAddress: "78:4F:43:7F:7D:CB",
@@ -294,7 +398,7 @@ const playerOne = {
   username: "player.one",
 };
 
-const playerTwo = {
+const playerTwo: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_2",
   _type: "user_endpoint",
@@ -302,6 +406,8 @@ const playerTwo = {
   department: "",
   displayName: "PlayerOne’s MacBook",
   gatekeeperEnabled: false,
+  firewallEnabled: false,
+  screensaverLockEnabled: false,
   systemIntegrityProtectionEnabled: false,
   id: 2,
   macAddress: "78:4F:43:7F:7D:CB",
@@ -316,8 +422,12 @@ const playerTwo = {
   encrypted: false,
 };
 
-test("convert computer entity with app store and identified developers gatekeeper", () => {
-  const entities = createComputerEntities(computers, [playerOneDetails]);
+test("convert computer entity", () => {
+  const entities = createComputerEntities(
+    computers,
+    [playerOneDetails],
+    osxConfigurationDetailsById,
+  );
   expect(entities).toEqual([playerOne, playerTwo]);
 });
 
@@ -334,9 +444,44 @@ test("convert computer entity with app store gatekeeper", () => {
   const entities = createComputerEntities(
     computers,
     computerDetailsAppStoreGatekeeper,
+    osxConfigurationDetailsById,
   );
   expect(entities).toEqual([
     { ...playerOne, gatekeeperStatus: "App Store" },
     playerTwo,
   ]);
+});
+
+test("convert computer entity without configuration profiles", () => {
+  const entities = createComputerEntities(computers, [playerOneDetails], {});
+  expect(entities).toEqual([
+    {
+      ...playerOne,
+      firewallEnabled: false,
+      firewallBlockAllIncoming: undefined,
+      firewallStealthModeEnabled: undefined,
+      screensaverLockEnabled: false,
+      screensaverIdleTime: undefined,
+      screensaverModulePath: undefined,
+    },
+    playerTwo,
+  ]);
+});
+
+describe("collapsing number values", () => {
+  test("sets to undefined if can't collapse", () => {
+    const osxConfigurationProfileClone = OSXConfigurationProfileDetails(
+      1,
+      "Test Configuration",
+    );
+    (osxConfigurationProfileClone.parsedPayload
+      .PayloadContent[1] as any).loginWindowIdleTime = "NaN";
+    const entities = createComputerEntities(computers, [playerOneDetails], {
+      1: osxConfigurationProfileClone,
+    });
+    expect(entities).toEqual([
+      { ...playerOne, screensaverIdleTime: undefined },
+      playerTwo,
+    ]);
+  });
 });

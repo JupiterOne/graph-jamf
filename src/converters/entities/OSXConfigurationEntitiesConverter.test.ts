@@ -2,7 +2,7 @@ import plist from "plist";
 import { OSXConfigurationEntity } from "../../jupiterone";
 import { createOSXConfigurationEntities } from "./OSXConfigurationEntitiesConverter";
 
-const payloadsPlist = {
+const sourcePayloadsPlist = {
   PayloadUUID: "99537B91-E619-44DD-A4FB-E80E5622C3B7",
   PayloadType: "Configuration",
   PayloadOrganization: "JupiterOne",
@@ -62,12 +62,13 @@ const expectedEntity: OSXConfigurationEntity = {
   redeployOnUpdate: "Newly Assigned",
   screensaverIdleTime: 600,
   screensaverLockEnabled: true,
-  screensaverModulePath: "/System/Library/Screen Savers/Flurry.saver",
   siteName: "My Site",
   userRemovable: false,
 };
 
-function configurationDetail(payloadsPlistString: string): any {
+function configurationDetail(payloadsPlist: any): any {
+  const payloadsPlistString = plist.build(payloadsPlist);
+
   return {
     general: {
       id: 1,
@@ -89,25 +90,24 @@ function configurationDetail(payloadsPlistString: string): any {
       all_computers: false,
       all_jss_users: false,
     },
+    parsedPayload: payloadsPlist,
   };
 }
 
 test("convert osx configuration entity", () => {
-  const payloadsPlistString = plist.build(payloadsPlist as any);
-
   expect(
     createOSXConfigurationEntities([
-      configurationDetail(payloadsPlistString),
-      configurationDetail(payloadsPlistString),
+      configurationDetail(sourcePayloadsPlist),
+      configurationDetail(sourcePayloadsPlist),
     ]),
   ).toEqual([expectedEntity, expectedEntity]);
 });
 
 test("convert osx configuration entity without payloads", () => {
-  const payloadsPlistString = plist.build({
-    ...payloadsPlist,
+  const payloadsPlist = {
+    ...sourcePayloadsPlist,
     PayloadContent: [],
-  });
+  };
   const expectedEntityNoPayloads = {
     ...expectedEntity,
     firewallEnabled: false,
@@ -120,8 +120,8 @@ test("convert osx configuration entity without payloads", () => {
 
   expect(
     createOSXConfigurationEntities([
-      configurationDetail(payloadsPlistString),
-      configurationDetail(payloadsPlistString),
+      configurationDetail(payloadsPlist),
+      configurationDetail(payloadsPlist),
     ]),
   ).toEqual([expectedEntityNoPayloads, expectedEntityNoPayloads]);
 });

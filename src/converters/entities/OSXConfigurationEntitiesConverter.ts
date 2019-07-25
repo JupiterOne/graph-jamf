@@ -1,42 +1,18 @@
-import plist from "plist";
 import {
   OSX_CONFIGURATION_ENTITY_CLASS,
   OSX_CONFIGURATION_ENTITY_TYPE,
   OSXConfigurationEntity,
 } from "../../jupiterone/entities/OSXConfigurationEntity";
-import { OSXConfigurationDetail } from "../../types";
+import {
+  OSXConfigurationDetailParsed,
+  OSXConfigurationFirewallPayload,
+  OSXConfigurationScreensaverPayload,
+} from "../../types";
 import { generateEntityKey } from "../../utils/generateKey";
 
-interface OSXConfigurationPayload {
-  PayloadDisplayName: string;
-  PayloadContent: OSXConfigurationPayloadItem[];
-}
-
-interface OSXConfigurationPayloadItem {
-  PayloadType: string;
-  PayloadEnabled: boolean;
-  [key: string]: string | number | boolean;
-}
-
-interface OSXConfigurationFirewallPayload extends OSXConfigurationPayloadItem {
-  EnableFirewall: boolean;
-  EnableStealthMode: boolean;
-  BlockAllIncoming: boolean;
-}
-
-interface OSXConfigurationScreensaverPayload
-  extends OSXConfigurationPayloadItem {
-  loginWindowIdleTime: number;
-  loginWindowModulePath: string;
-}
-
 function createOSXConfigurationEntity(
-  data: OSXConfigurationDetail,
+  data: OSXConfigurationDetailParsed,
 ): OSXConfigurationEntity {
-  const payload = (plist.parse(
-    data.general.payloads,
-  ) as unknown) as OSXConfigurationPayload;
-
   const baseOSXConfigurationEntity: OSXConfigurationEntity = {
     _key: generateEntityKey(OSX_CONFIGURATION_ENTITY_TYPE, data.general.id),
     _class: OSX_CONFIGURATION_ENTITY_CLASS,
@@ -56,7 +32,7 @@ function createOSXConfigurationEntity(
     screensaverLockEnabled: false,
   };
 
-  const firewallPayload = payload.PayloadContent.find(item => {
+  const firewallPayload = data.parsedPayload.PayloadContent.find(item => {
     return item.PayloadType === "com.apple.security.firewall";
   }) as OSXConfigurationFirewallPayload;
 
@@ -68,7 +44,7 @@ function createOSXConfigurationEntity(
       firewallPayload.BlockAllIncoming;
   }
 
-  const screensaverPayload = payload.PayloadContent.find(item => {
+  const screensaverPayload = data.parsedPayload.PayloadContent.find(item => {
     return item.PayloadType === "com.apple.screensaver";
   }) as OSXConfigurationScreensaverPayload;
 
@@ -76,15 +52,13 @@ function createOSXConfigurationEntity(
     baseOSXConfigurationEntity.screensaverLockEnabled = true;
     baseOSXConfigurationEntity.screensaverIdleTime =
       screensaverPayload.loginWindowIdleTime;
-    baseOSXConfigurationEntity.screensaverModulePath =
-      screensaverPayload.loginWindowModulePath;
   }
 
   return baseOSXConfigurationEntity;
 }
 
 export function createOSXConfigurationEntities(
-  details: OSXConfigurationDetail[],
+  details: OSXConfigurationDetailParsed[],
 ): OSXConfigurationEntity[] {
   return details.reduce((entities: OSXConfigurationEntity[], configuration) => {
     return [...entities, createOSXConfigurationEntity(configuration)];

@@ -8,6 +8,7 @@ import {
   Group,
   MobileDevice,
   OSXConfigurationDetail,
+  OSXConfigurationDetailParsed,
   User,
 } from "../types";
 
@@ -60,7 +61,13 @@ export interface JamfDataModel {
   mobileDevices: MobileDevice[];
   computers: Computer[];
   computerDetails: ComputerDetail[];
-  osxConfigurationDetails: OSXConfigurationDetail[];
+  osxConfigurationDetails: OSXConfigurationDetailParsed[];
   admins: Admin[];
   groups: Group[];
+
+  osxConfigurationDetailsById: DataByID<OSXConfigurationDetailParsed>;
+}
+
+export interface DataByID<T> {
+  [id: number]: T;
 }

@@ -127,6 +127,7 @@ export function convertEntities(
     computers: createComputerEntities(
       jamfDataModel.computers,
       jamfDataModel.computerDetails,
+      jamfDataModel.osxConfigurationDetailsById,
     ),
     osxConfigurations: createOSXConfigurationEntities(
       jamfDataModel.osxConfigurationDetails,

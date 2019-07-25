@@ -326,6 +326,33 @@ export interface OSXConfigurationDetail {
   };
 }
 
+export interface OSXConfigurationPayload {
+  PayloadDisplayName: string;
+  PayloadContent: OSXConfigurationPayloadItem[];
+}
+
+export interface OSXConfigurationPayloadItem {
+  PayloadType: string;
+  PayloadEnabled: boolean;
+  [key: string]: any;
+}
+
+export interface OSXConfigurationFirewallPayload
+  extends OSXConfigurationPayloadItem {
+  EnableFirewall: boolean;
+  EnableStealthMode: boolean;
+  BlockAllIncoming: boolean;
+}
+
+export interface OSXConfigurationScreensaverPayload
+  extends OSXConfigurationPayloadItem {
+  loginWindowIdleTime: number;
+}
+
+export interface OSXConfigurationDetailParsed extends OSXConfigurationDetail {
+  parsedPayload: OSXConfigurationPayload;
+}
+
 export interface MobileDevice {
   id: number;
   name: string;

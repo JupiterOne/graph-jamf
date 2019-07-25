@@ -20,9 +20,9 @@ export interface ComputerEntity extends EntityFromIntegration {
   gatekeeperEnabled: boolean;
   gatekeeperStatus?: string;
   systemIntegrityProtectionEnabled: boolean;
-  firewallEnabled: boolean;
+  firewallEnabled?: boolean;
   firewallBlockAllIncoming?: boolean;
   firewallStealthModeEnabled?: boolean;
-  screensaverLockEnabled: boolean;
+  screensaverLockEnabled?: boolean;
   screensaverIdleTime?: number;
 }

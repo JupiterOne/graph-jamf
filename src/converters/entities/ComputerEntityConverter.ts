@@ -52,8 +52,6 @@ function createComputerEntity(
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
-    firewallEnabled: false,
-    screensaverLockEnabled: false,
   };
 
   if (detailData) {

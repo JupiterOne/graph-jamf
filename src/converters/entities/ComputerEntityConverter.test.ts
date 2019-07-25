@@ -406,8 +406,6 @@ const playerTwo: ComputerEntity = {
   department: "",
   displayName: "PlayerOne’s MacBook",
   gatekeeperEnabled: false,
-  firewallEnabled: false,
-  screensaverLockEnabled: false,
   systemIntegrityProtectionEnabled: false,
   id: 2,
   macAddress: "78:4F:43:7F:7D:CB",
@@ -457,10 +455,10 @@ test("convert computer entity without configuration profiles", () => {
   expect(entities).toEqual([
     {
       ...playerOne,
-      firewallEnabled: false,
+      firewallEnabled: undefined,
       firewallBlockAllIncoming: undefined,
       firewallStealthModeEnabled: undefined,
-      screensaverLockEnabled: false,
+      screensaverLockEnabled: undefined,
       screensaverIdleTime: undefined,
       screensaverModulePath: undefined,
     },

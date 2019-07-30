@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - '8'
   - '10'
-  - '11'
 
 notifications:
   email:
@@ -15,7 +14,7 @@ deploy:
   provider: npm
   email: npm@jupiterone.io
   api_key:
-    secure: "N0S3GLHTpmK0QyMbP7g7idL+plJHabtZ7/nKFcFobErOkcLVKh1LS2nlQFcDEH3HGkozAnXtVgFfGzPPAsE21XzZ2pfelTv/ov2hXJz9XXb0OxIdnS0IrlRXYVjz7shOeCaOd6pVe3/ao8HX8PVJlvBEDwc9kNzb4VlX4Mo6IKyov78MY6wGOM3aLXNF4WNtnCpf6GuKuRrhx5HdD9yUbgCJDCIO/W6hJUFioXZdlIwXwW10fVeiERs10v9+ymQOX0no7SwBrAkuhX3/50M/19VcCgG3hrSA7XKxoDSeAtS8OQBb9veHkHaGM1hbU6eritkTLiZs7ZhSC4lfHaiKhc8TY1l1SSqrU5u8Z7NrEDb8ibUIh/h4GqOyQzHt+e9BzCIlre76dKAAC0TN0Nvm/JahY18RPTnCERCulNvtvP/k/YWJl3TAS3WTbW4yq0VXu8F+SHNwCJGTDlyLetp2kioSGedx6Siw0/ZiURQ4iYC5jgRgtHUss1z2vuXMDMdBE9uLQxMe+h6+NxiH9eHuIBX6e8oU++UMKZ2BBO7H3hrAnmSu9Lrg5HqHImX81crTdk4I0L0iI2PyJ82v3soyrlxYcij6ik8HLXw+q9WCjXW5OFeMsolg2h54Rb4+PFvlSBm93+prradDV+W7zVpU4I2D3ImWIhBTT2ET2/Ewsl4="
+    secure: "fmYX8jb/vflyzGkHc2gpfTVzrXaXhktkFHP33+ECowzniuppHwpTPdwMON6czcxmsRge1uKv1fw61U+uRyzBsXV9v/yuot3c7bakga13tKTNpKHt/XV7TIKHtOtr0IffCOeQ8oREBIyHdc/8rCOSQJmtnj67N55a745PTgYaZlpU1nIsdAL3/miiTOR5s+6Ro0eCOUFKprKFAHFoEBbykm3EbokK4gH0DAfw/seacQtxLWQnTpIeTqw3TVhPf7rc3tnc2syThaHNR13kA/75W/GqxYtncBwyRM2dXU2itXAZ2GgOzPhDmDmpPCz+QC0VlU4q/6KcRlKJywEc7JDF648mj+iROYgM/A1pjAbKN1ZxOZQ2qTTf0Y3X6v4V2w4Hbchiw3X/IOu/Rf7QinUD4G4TwmxVTEK0imC1X/oEPf9Cqchd7fZHWJwOEqTAzaVNCPMsm6X1brzXbMlAoDKGup8R4Q6lIYU26ud/p8q2T/REZGgmT0NGpHVxM8s33iC9fSBdr3dm2PuOtrPcuUJGj96RgsOFD1VpZYD4+GineCsPYn+EgkcrTde+ScGTWXgJMesz2Oy01WIlLmmU8RsodrVDS/XfNBH8nKiuj2YVXPKna7wdy7vd6rwu8zK9rOV25YS2TnjqZjhhbSYf0xjMpeQnHS7IgqMC+abWsyTiUWw="
   skip_cleanup: true
   on:
     tags: true

@@ -19,5 +19,5 @@ deploy:
   on:
     tags: true
     branch: master
-    repo: JupiterOne/jupiter-integration-jamf
+    repo: JupiterOne/graph-jamf
     node: '8'

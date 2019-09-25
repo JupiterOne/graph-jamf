@@ -1,6 +1,6 @@
 # JupiterOne Managed Integration for jamf
 
-[![Build Status](https://travis-ci.org/JupiterOne/jupiter-integration-jamf.svg?branch=master)](https://travis-ci.org/JupterOne/jupiter-integration-jamf)
+[![Build Status](https://travis-ci.org/JupiterOne/graph-jamf.svg?branch=master)](https://travis-ci.org/JupterOne/graph-jamf)
 
 A JupiterOne integration ingests information such as configurations and other
 metadata about digital and physical assets belonging to an organization. The

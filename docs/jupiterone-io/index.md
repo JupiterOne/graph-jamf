@@ -1,4 +1,4 @@
-# jamf
+# Jamf
 
 ## Overview
 

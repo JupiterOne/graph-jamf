@@ -2,9 +2,9 @@ version: '3.7'
 
 services:
   integration:
-    image: jupiter-integration-jamf-app
+    image: graph-jamf-app
     build: .
-    container_name: jupiter-integration-jamf-app
+    container_name: graph-jamf-app
     volumes:
       - .:/app:cached
       - ~/.ssh:/root/.ssh

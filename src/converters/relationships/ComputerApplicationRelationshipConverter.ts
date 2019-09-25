@@ -39,9 +39,10 @@ export function createComputerApplicationRelationships(
             relationshipDirection: RelationshipDirection.FORWARD,
             sourceEntityKey: parentKey,
             skipTargetCreation: false,
-            targetFilterKeys: [["_class", "name"]],
+            targetFilterKeys: [["_type", "name"]],
             targetEntity: {
               _class: APPLICATION_ENTITY_CLASS,
+              _type: APPLICATION_ENTITY_TYPE,
               displayName: application.name,
               name: application.name,
               path: application.path,

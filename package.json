@@ -1,7 +1,7 @@
 {
   "name": "@jupiterone/graph-jamf",
   "version": "0.7.1",
-  "description": "A JupiterOne managed integration for https://www.jamf.com.",
+  "description": "A graph conversion tool for https://www.jamf.com.",
   "main": "dist/index.js",
   "repository": "https://github.com/JupiterOne/graph-jamf",
   "license": "SEE LICENSE IN LICENSE",

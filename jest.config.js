@@ -5,6 +5,10 @@ module.exports = {
     "^.+\\.ts?$": "ts-jest",
   },
   testMatch: ["<rootDir>/src/**/*.test.{js,ts}"],
+  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts"],
+  testEnvironment: "node",
+  clearMocks: true,
+  setupFiles: ["dotenv/config"],
   collectCoverageFrom: [
     "src/**/*.ts",
     "!src/index.ts",
@@ -12,9 +16,6 @@ module.exports = {
     "!src/jamf/fetchJamfData.ts",
     "!src/utils/toOSXConfigurationParsed.ts",
   ],
-  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts"],
-  testEnvironment: "node",
-  clearMocks: true,
   collectCoverage: true,
   coverageThreshold: {
     global: {

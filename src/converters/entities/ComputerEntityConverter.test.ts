@@ -450,6 +450,81 @@ test("convert computer entity with app store gatekeeper", () => {
   ]);
 });
 
+test("convert computer entity storage array with single device", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...playerOneDetails.hardware,
+        storage: [
+          {
+            device: {
+              ...playerOneDetails.hardware.storage[0],
+            },
+          },
+        ],
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([playerOne, playerTwo]);
+});
+
+test("convert computer entity storage with single device", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...playerOneDetails.hardware,
+        storage: {
+          device: {
+            ...playerOneDetails.hardware.storage[0],
+          },
+        },
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([playerOne, playerTwo]);
+});
+
+test("convert computer entity storage with multiple partitions", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...playerOneDetails.hardware,
+        storage: {
+          device: {
+            ...playerOneDetails.hardware.storage[0],
+            partition: [
+              {
+                ...playerOneDetails.hardware.storage[0].partition,
+                type: "other",
+              },
+              playerOneDetails.hardware.storage[0].partition,
+            ],
+          },
+        },
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([playerOne, playerTwo]);
+});
+
 test("convert computer entity without configuration profiles", () => {
   const entities = createComputerEntities(computers, [playerOneDetails], {});
   expect(entities).toEqual([

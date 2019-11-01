@@ -1,3 +1,4 @@
+import { DataByID } from "../../jamf/types";
 import {
   COMPUTER_ENTITY_CLASS,
   COMPUTER_ENTITY_TYPE,
@@ -6,11 +7,10 @@ import {
 import {
   Computer,
   ComputerDetail,
+  DiskPartition,
   OSXConfigurationDetailParsed,
   OSXConfigurationPayloadItem,
 } from "../../types";
-
-import { DataByID } from "../../jamf/types";
 import { generateEntityKey } from "../../utils/generateKey";
 
 export function createComputerEntities(
@@ -97,15 +97,27 @@ function createComputerEntity(
 }
 
 function encrypted(detailData: ComputerDetail) {
-  const primaryDisk = detailData.hardware.storage.find(
-    disk => !!disk.partition && disk.partition.type === "boot",
-  );
+  const bootPartition = primaryDiskBootPartition(detailData);
+  return !!bootPartition && bootPartition.filevault_status === "Encrypted";
+}
 
-  return (
-    !!primaryDisk &&
-    !!primaryDisk.partition &&
-    primaryDisk.partition.filevault_status === "Encrypted"
-  );
+function primaryDiskBootPartition(
+  detailData: ComputerDetail,
+): DiskPartition | undefined {
+  const storage = detailData.hardware.storage;
+  const storageList = Array.isArray(storage) ? storage : [storage];
+
+  for (const s of storageList) {
+    const device = "device" in s ? (s as any).device : s;
+    const partitionList = Array.isArray(device.partition)
+      ? device.partition
+      : [device.partition];
+    for (const p of partitionList) {
+      if (p.type === "boot") {
+        return p;
+      }
+    }
+  }
 }
 
 function gatekeeperEnabled(detailData: ComputerDetail) {

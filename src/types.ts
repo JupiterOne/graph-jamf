@@ -150,6 +150,22 @@ export interface ApplicationDetail {
   unique_computers: ApplicationComputer[];
 }
 
+export interface DiskPartition {
+  name: string;
+  size: number;
+  type: string;
+  partition_capacity_mb: number;
+  percentage_full: number;
+  filevault_status: string;
+  filevault_percent: number;
+  filevault2_status: string;
+  filevault2_percent: number;
+  boot_drive_available_mb: number;
+  lvgUUID: string;
+  lvUUID: string;
+  pvUUID: string;
+}
+
 export interface Storage {
   disk: string;
   model: string;
@@ -159,21 +175,7 @@ export interface Storage {
   drive_capacity_mb: number;
   connection_type: string;
   smart_status: string;
-  partition?: {
-    name: string;
-    size: number;
-    type: string;
-    partition_capacity_mb: number;
-    percentage_full: number;
-    filevault_status: string;
-    filevault_percent: number;
-    filevault2_status: string;
-    filevault2_percent: number;
-    boot_drive_available_mb: number;
-    lvgUUID: string;
-    lvUUID: string;
-    pvUUID: string;
-  };
+  partition?: DiskPartition;
 }
 
 export interface Printer {

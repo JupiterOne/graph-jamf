@@ -374,6 +374,10 @@ const playerOne: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_1",
   _type: "user_endpoint",
+  _rawData: [
+    { name: "default", rawData: computers[0] },
+    { name: "detail", rawData: playerOneDetails },
+  ],
   building: "",
   department: "",
   displayName: "PlayerOne’s MacBook",
@@ -402,6 +406,7 @@ const playerTwo: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_2",
   _type: "user_endpoint",
+  _rawData: [{ name: "default", rawData: computers[1] }],
   building: "",
   department: "",
   displayName: "PlayerOne’s MacBook",
@@ -445,7 +450,7 @@ test("convert computer entity with app store gatekeeper", () => {
     osxConfigurationDetailsById,
   );
   expect(entities).toEqual([
-    { ...playerOne, gatekeeperStatus: "App Store" },
+    expect.objectContaining({ gatekeeperStatus: "App Store" }),
     playerTwo,
   ]);
 });
@@ -471,7 +476,10 @@ test("convert computer entity storage array with single device", () => {
     details,
     osxConfigurationDetailsById,
   );
-  expect(entities).toEqual([playerOne, playerTwo]);
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: true }),
+    playerTwo,
+  ]);
 });
 
 test("convert computer entity storage with single device", () => {
@@ -493,7 +501,10 @@ test("convert computer entity storage with single device", () => {
     details,
     osxConfigurationDetailsById,
   );
-  expect(entities).toEqual([playerOne, playerTwo]);
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: true }),
+    playerTwo,
+  ]);
 });
 
 test("convert computer entity storage with multiple partitions", () => {
@@ -522,7 +533,10 @@ test("convert computer entity storage with multiple partitions", () => {
     details,
     osxConfigurationDetailsById,
   );
-  expect(entities).toEqual([playerOne, playerTwo]);
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: true }),
+    playerTwo,
+  ]);
 });
 
 test("convert computer entity without configuration profiles", () => {

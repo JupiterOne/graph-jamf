@@ -95,12 +95,14 @@ function configurationDetail(payloadsPlist: any): any {
 }
 
 test("convert osx configuration entity", () => {
-  expect(
-    createOSXConfigurationEntities([
-      configurationDetail(sourcePayloadsPlist),
-      configurationDetail(sourcePayloadsPlist),
-    ]),
-  ).toEqual([expectedEntity, expectedEntity]);
+  const configs = [
+    configurationDetail(sourcePayloadsPlist),
+    configurationDetail(sourcePayloadsPlist),
+  ];
+  expect(createOSXConfigurationEntities(configs)).toEqual([
+    { ...expectedEntity, _rawData: [{ name: "default", rawData: configs[0] }] },
+    { ...expectedEntity, _rawData: [{ name: "default", rawData: configs[1] }] },
+  ]);
 });
 
 test("convert osx configuration entity without payloads", () => {
@@ -118,10 +120,18 @@ test("convert osx configuration entity without payloads", () => {
     screensaverModulePath: undefined,
   };
 
-  expect(
-    createOSXConfigurationEntities([
-      configurationDetail(payloadsPlist),
-      configurationDetail(payloadsPlist),
-    ]),
-  ).toEqual([expectedEntityNoPayloads, expectedEntityNoPayloads]);
+  const configs = [
+    configurationDetail(payloadsPlist),
+    configurationDetail(payloadsPlist),
+  ];
+  expect(createOSXConfigurationEntities(configs)).toEqual([
+    {
+      ...expectedEntityNoPayloads,
+      _rawData: [{ name: "default", rawData: configs[0] }],
+    },
+    {
+      ...expectedEntityNoPayloads,
+      _rawData: [{ name: "default", rawData: configs[1] }],
+    },
+  ]);
 });

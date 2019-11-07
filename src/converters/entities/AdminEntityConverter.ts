@@ -11,6 +11,7 @@ export function createAdminEntities(data: Admin[]): AdminEntity[] {
     _key: generateEntityKey(ADMIN_ENTITY_TYPE, item.id),
     _type: ADMIN_ENTITY_TYPE,
     _class: ADMIN_ENTITY_CLASS,
+    _rawData: [{ name: "default", rawData: item }],
     displayName: item.name,
     name: item.name,
     admin: true,

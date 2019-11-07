@@ -1,3 +1,5 @@
+import { setRawData } from "@jupiterone/jupiter-managed-integration-sdk";
+
 import { DataByID } from "../../jamf/types";
 import {
   COMPUTER_ENTITY_CLASS,
@@ -36,6 +38,7 @@ function createComputerEntity(
     _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
     _type: COMPUTER_ENTITY_TYPE,
     _class: COMPUTER_ENTITY_CLASS,
+    _rawData: [{ name: "default", rawData: device }],
     id: device.id,
     displayName: device.name,
     name: device.name,
@@ -55,6 +58,8 @@ function createComputerEntity(
   };
 
   if (detailData) {
+    setRawData(computer, { name: "detail", rawData: detailData });
+
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);

@@ -103,7 +103,13 @@ function createComputerEntity(
 
 function encrypted(detailData: ComputerDetail) {
   const bootPartition = primaryDiskBootPartition(detailData);
-  return !!bootPartition && bootPartition.filevault_status === "Encrypted";
+  return (
+    !!bootPartition &&
+    ((bootPartition.filevault_status === "Encrypted" &&
+      bootPartition.filevault_percent === 100) ||
+      (bootPartition.filevault2_status === "Encrypted" &&
+        bootPartition.filevault2_percent === 100))
+  );
 }
 
 function primaryDiskBootPartition(
@@ -117,9 +123,18 @@ function primaryDiskBootPartition(
     const partitionList = Array.isArray(device.partition)
       ? device.partition
       : [device.partition];
-    for (const p of partitionList) {
-      if (p.type === "boot") {
-        return p;
+
+    // If there is only one disk and one partition, returns it as the primary
+    // regardless of the type property value
+    if (storageList.length === 1 && partitionList.length === 1) {
+      return partitionList[0];
+    }
+    // Otherwise check for type
+    else {
+      for (const p of partitionList) {
+        if (p.type === "boot") {
+          return p;
+        }
       }
     }
   }

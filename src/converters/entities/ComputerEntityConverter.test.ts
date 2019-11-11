@@ -370,6 +370,154 @@ const playerOneDetails: any = {
   ],
 };
 
+const singleDiskPartition: any = {
+  hardware: {
+    make: "Apple",
+    model: "15-inch Retina MacBook Pro with TouchID (Late 2016)",
+    model_identifier: "MacBookPro13,3",
+    os_name: "Mac OS X",
+    os_version: "10.13.6",
+    os_build: "17G6030",
+    master_password_set: false,
+    active_directory_status: "Not Bound",
+    service_pack: "",
+    processor_type: "Intel Core i7",
+    processor_architecture: "x86_64",
+    processor_speed: 2900,
+    processor_speed_mhz: 2900,
+    number_processors: 1,
+    number_cores: 4,
+    total_ram: 16384,
+    total_ram_mb: 16384,
+    boot_rom: "254.0.0.0.0",
+    bus_speed: 0,
+    bus_speed_mhz: 0,
+    battery_capacity: 83,
+    cache_size: 8192,
+    cache_size_kb: 8192,
+    available_ram_slots: 0,
+    optical_drive: "",
+    nic_speed: "n/a",
+    smc_version: "2.38f7",
+    ble_capable: true,
+    sip_status: "Enabled",
+    gatekeeper_status: "App Store and identified developers",
+    xprotect_version: "2103",
+    institutional_recovery_key: "Not Present",
+    disk_encryption_configuration: "",
+    filevault2_users: ["jhon.doe"],
+    storage: [
+      {
+        disk: "disk0",
+        model: "APPLE SSD SM1024L",
+        revision: "CXS6AA0Q",
+        serial_number: "C02706400ADGVFW1H",
+        size: 1048576,
+        drive_capacity_mb: 1048576,
+        connection_type: "NO",
+        smart_status: "",
+        partition: {
+          name: "Macintosh HD (Boot Partition)",
+          size: 953904,
+          type: "other",
+          partition_capacity_mb: 953904,
+          percentage_full: 66,
+          filevault_status: "Encrypted",
+          filevault_percent: 100,
+          filevault2_status: "Encrypted",
+          filevault2_percent: 100,
+          boot_drive_available_mb: 356516,
+          lvgUUID: "",
+          lvUUID: "",
+          pvUUID: "",
+        },
+      },
+    ],
+    mapped_printers: [
+      {
+        name: "Test",
+        uri: "dnssd://Test._pdl-datastream._tcp.local./?bidi",
+        type: "Test type",
+        location: "",
+      },
+    ],
+  },
+};
+
+const faultVaultInProgress: any = {
+  hardware: {
+    make: "Apple",
+    model: "15-inch Retina MacBook Pro with TouchID (Late 2016)",
+    model_identifier: "MacBookPro13,3",
+    os_name: "Mac OS X",
+    os_version: "10.13.6",
+    os_build: "17G6030",
+    master_password_set: false,
+    active_directory_status: "Not Bound",
+    service_pack: "",
+    processor_type: "Intel Core i7",
+    processor_architecture: "x86_64",
+    processor_speed: 2900,
+    processor_speed_mhz: 2900,
+    number_processors: 1,
+    number_cores: 4,
+    total_ram: 16384,
+    total_ram_mb: 16384,
+    boot_rom: "254.0.0.0.0",
+    bus_speed: 0,
+    bus_speed_mhz: 0,
+    battery_capacity: 83,
+    cache_size: 8192,
+    cache_size_kb: 8192,
+    available_ram_slots: 0,
+    optical_drive: "",
+    nic_speed: "n/a",
+    smc_version: "2.38f7",
+    ble_capable: true,
+    sip_status: "Enabled",
+    gatekeeper_status: "App Store and identified developers",
+    xprotect_version: "2103",
+    institutional_recovery_key: "Not Present",
+    disk_encryption_configuration: "",
+    filevault2_users: ["jhon.doe"],
+    storage: [
+      {
+        disk: "disk0",
+        model: "APPLE SSD SM1024L",
+        revision: "CXS6AA0Q",
+        serial_number: "C02706400ADGVFW1H",
+        size: 1048576,
+        drive_capacity_mb: 1048576,
+        connection_type: "NO",
+        smart_status: "",
+        partition: {
+          name: "Macintosh HD (Boot Partition)",
+          size: 953904,
+          type: "other",
+          partition_capacity_mb: 953904,
+          percentage_full: 66,
+          filevault_status: "Encrypted",
+          filevault_percent: 99,
+          filevault2_status: "Encrypted",
+          filevault2_percent: 99,
+          boot_drive_available_mb: 356516,
+          lvgUUID: "",
+          lvUUID: "",
+          pvUUID: "",
+        },
+      },
+    ],
+    mapped_printers: [
+      {
+        name: "Test",
+        uri: "dnssd://Test._pdl-datastream._tcp.local./?bidi",
+        type: "Test type",
+        location: "",
+      },
+    ],
+  },
+};
+
 const playerOne: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_1",
@@ -503,6 +651,46 @@ test("convert computer entity storage with single device", () => {
   );
   expect(entities).toEqual([
     expect.objectContaining({ encrypted: true }),
+    playerTwo,
+  ]);
+});
+
+test("convert computer entity storage with single device and single partition not labeled as 'boot'", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...singleDiskPartition.hardware,
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: true }),
+    playerTwo,
+  ]);
+});
+
+test("convert computer entity storage fault vault encryption not 100% complete", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...faultVaultInProgress.hardware,
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: false }),
     playerTwo,
   ]);
 });

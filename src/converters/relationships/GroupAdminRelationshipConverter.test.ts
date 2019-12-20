@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { Group } from "../../types";
 import { createGroupAdminRelationships } from "./GroupAdminRelationshipConverter";
 
@@ -71,6 +73,7 @@ test("convert group admin relationships", () => {
       _key: "jamf_group_1_jamf_group_has_jamf_user_jamf_user_6",
       _toEntityKey: "jamf_user_6",
       _type: "jamf_group_has_jamf_user",
+      _scope: "jamf_group_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -78,6 +81,7 @@ test("convert group admin relationships", () => {
       _key: "jamf_group_2_jamf_group_has_jamf_user_jamf_user_6",
       _toEntityKey: "jamf_user_6",
       _type: "jamf_group_has_jamf_user",
+      _scope: "jamf_group_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -85,6 +89,7 @@ test("convert group admin relationships", () => {
       _key: "jamf_group_3_jamf_group_has_jamf_user_jamf_user_6",
       _toEntityKey: "jamf_user_6",
       _type: "jamf_group_has_jamf_user",
+      _scope: "jamf_group_has_jamf_user",
     },
   ]);
 });

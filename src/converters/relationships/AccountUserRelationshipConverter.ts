@@ -32,6 +32,7 @@ export function createAccountUserRelationships(
       _fromEntityKey: parentKey,
       _key: relationKey,
       _type: ACCOUNT_USER_RELATIONSHIP_TYPE,
+      _scope: ACCOUNT_USER_RELATIONSHIP_TYPE,
       _toEntityKey: childKey,
     };
 

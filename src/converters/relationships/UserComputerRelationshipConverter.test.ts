@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { User } from "../../types";
 import { createUserComputerRelationships } from "./UserComputerRelationshipConverter";
 
@@ -80,6 +82,7 @@ test("convert user device relationships", () => {
       _key: "device_user_5_has_user_endpoint_35",
       _toEntityKey: "user_endpoint_35",
       _type: "device_user_has_user_endpoint",
+      _scope: "device_user_has_user_endpoint",
     },
     {
       _class: "HAS",
@@ -87,6 +90,7 @@ test("convert user device relationships", () => {
       _key: "device_user_5_has_user_endpoint_36",
       _toEntityKey: "user_endpoint_36",
       _type: "device_user_has_user_endpoint",
+      _scope: "device_user_has_user_endpoint",
     },
   ]);
 });

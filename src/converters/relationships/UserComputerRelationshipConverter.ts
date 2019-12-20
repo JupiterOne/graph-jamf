@@ -21,7 +21,8 @@ export function createUserComputerRelationships(
       return acc;
     }
 
-    const relationships = user.links!.computers!.map(device => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const relationships = user.links!.computers.map(device => {
       const parentKey = generateEntityKey(USER_ENTITY_TYPE, user.id);
       const childKey = generateEntityKey(COMPUTER_ENTITY_TYPE, device.id);
       const relationKey = generateRelationKey(
@@ -33,6 +34,7 @@ export function createUserComputerRelationships(
       const relationship: UserComputerRelationship = {
         _class: USER_COMPUTER_RELATIONSHIP_CLASS,
         _type: USER_COMPUTER_RELATIONSHIP_TYPE,
+        _scope: USER_COMPUTER_RELATIONSHIP_TYPE,
         _fromEntityKey: parentKey,
         _key: relationKey,
         _toEntityKey: childKey,
@@ -45,7 +47,7 @@ export function createUserComputerRelationships(
   }, defaultValue);
 }
 
-function isComputer(user: User) {
+function isComputer(user: User): boolean {
   return !(
     user.links &&
     user.links.computers &&

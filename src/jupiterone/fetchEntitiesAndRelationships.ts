@@ -77,7 +77,7 @@ async function fetchEntities(
     mobileDevices,
     computers,
     osxConfigurations,
-  };
+  } as any; // TS 3.7.2 bug https://github.com/microsoft/TypeScript/issues/33752
 }
 
 export async function fetchRelationships(

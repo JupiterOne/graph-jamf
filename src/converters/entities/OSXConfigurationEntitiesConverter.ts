@@ -17,6 +17,7 @@ function createOSXConfigurationEntity(
     _key: generateEntityKey(OSX_CONFIGURATION_ENTITY_TYPE, data.general.id),
     _class: OSX_CONFIGURATION_ENTITY_CLASS,
     _type: OSX_CONFIGURATION_ENTITY_TYPE,
+    _scope: OSX_CONFIGURATION_ENTITY_TYPE,
     _rawData: [{ name: "default", rawData: data }],
     id: data.general.id,
     name: data.general.name,

@@ -19,7 +19,7 @@ export default async function executionHandler(
 ): Promise<IntegrationExecutionResult> {
   const actionFunction = ACTIONS[context.event.action.name];
   if (actionFunction) {
-    return await actionFunction(await initializeContext(context));
+    return await actionFunction(initializeContext(context));
   } else {
     return {};
   }

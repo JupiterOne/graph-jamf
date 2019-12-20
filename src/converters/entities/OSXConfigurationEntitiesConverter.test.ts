@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import plist from "plist";
 import { OSXConfigurationEntity } from "../../jupiterone";
 import { createOSXConfigurationEntities } from "./OSXConfigurationEntitiesConverter";
@@ -48,6 +50,7 @@ const expectedEntity: OSXConfigurationEntity = {
   _class: "Configuration",
   _key: "jamf_osx_configuration_profile_1",
   _type: "jamf_osx_configuration_profile",
+  _scope: "jamf_osx_configuration_profile",
   allComputers: false,
   allJSSUsers: false,
   categoryName: "My Category",

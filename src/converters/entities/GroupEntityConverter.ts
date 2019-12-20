@@ -10,6 +10,7 @@ export function createGroupEntities(data: Group[]): GroupEntity[] {
   return data.map(item => ({
     _key: generateEntityKey(GROUP_ENTITY_TYPE, item.id),
     _type: GROUP_ENTITY_TYPE,
+    _scope: GROUP_ENTITY_TYPE,
     _class: GROUP_ENTITY_CLASS,
     _rawData: [{ name: "default", rawData: item }],
     displayName: item.name,

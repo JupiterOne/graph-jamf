@@ -3,7 +3,7 @@ import initializeContext from "./initializeContext";
 
 jest.mock("./jamf");
 
-test("creates jamf client", async () => {
+test("creates jamf client", () => {
   const options = {
     instance: {
       config: {
@@ -16,7 +16,7 @@ test("creates jamf client", async () => {
 
   const executionContext = createTestIntegrationExecutionContext(options);
 
-  const integrationContext = await initializeContext(executionContext);
+  const integrationContext = initializeContext(executionContext);
   expect(integrationContext.graph).toBeDefined();
   expect(integrationContext.persister).toBeDefined();
   expect(integrationContext.provider).toBeDefined();

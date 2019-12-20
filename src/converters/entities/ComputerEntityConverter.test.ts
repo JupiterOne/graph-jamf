@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { ComputerEntity } from "../../jupiterone";
 import { Computer } from "../../types";
 import { createComputerEntities } from "./ComputerEntityConverter";
@@ -7,7 +10,7 @@ function OSXConfigurationProfileDetails(
   name: string,
   firewallPayloadOverrides: any = {},
   screensaverPayloadOverrides: any = {},
-) {
+): any {
   return {
     general: {
       id,
@@ -522,6 +525,7 @@ const playerOne: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_1",
   _type: "user_endpoint",
+  _scope: "user_endpoint",
   _rawData: [
     { name: "default", rawData: computers[0] },
     { name: "detail", rawData: playerOneDetails },
@@ -554,6 +558,7 @@ const playerTwo: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_2",
   _type: "user_endpoint",
+  _scope: "user_endpoint",
   _rawData: [{ name: "default", rawData: computers[1] }],
   building: "",
   department: "",
@@ -749,8 +754,8 @@ describe("collapsing number values", () => {
       1,
       "Test Configuration",
     );
-    (osxConfigurationProfileClone.parsedPayload
-      .PayloadContent[1] as any).loginWindowIdleTime = "NaN";
+    osxConfigurationProfileClone.parsedPayload.PayloadContent[1].loginWindowIdleTime =
+      "NaN";
     const entities = createComputerEntities(computers, [playerOneDetails], {
       1: osxConfigurationProfileClone,
     });

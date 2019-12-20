@@ -8,7 +8,7 @@ const JAMF_LOCAL_EXECUTION_USERNAME =
 const JAMF_LOCAL_EXECUTION_PASSWORD =
   process.env.JAMF_LOCAL_EXECUTION_PASSWORD || "password";
 
-function prepareScope(def: nock.NockDefinition) {
+function prepareScope(def: nock.Definition): void {
   def.scope = `https://${JAMF_LOCAL_EXECUTION_HOST}`;
 }
 
@@ -18,7 +18,7 @@ function getClient(
     username?: string;
     password?: string;
   } = {},
-) {
+): JamfClient {
   return new JamfClient(
     config.host || JAMF_LOCAL_EXECUTION_HOST,
     config.username || JAMF_LOCAL_EXECUTION_USERNAME,

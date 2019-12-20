@@ -31,9 +31,7 @@ export default async function fetchJamfData(
 
   const osxConfigurations = await client.fetchOSXConfigurationProfiles();
 
-  const osxConfigurationDetailsById: DataByID<
-    OSXConfigurationDetailParsed
-  > = {};
+  const osxConfigurationDetailsById: DataByID<OSXConfigurationDetailParsed> = {};
   const osxConfigurationDetails = await Promise.all(
     osxConfigurations.map(async item => {
       const details = await client.fetchOSXConfigurationProfileById(item.id);

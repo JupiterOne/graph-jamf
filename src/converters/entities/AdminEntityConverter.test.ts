@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { Admin } from "../../types";
 import { createAdminEntities } from "./AdminEntityConverter";
 
@@ -143,6 +145,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_6",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[0] }],
       accessLevel: "Group Access",
       admin: true,
@@ -160,6 +163,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_4",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[1] }],
       accessLevel: "Full Access",
       admin: true,
@@ -177,6 +181,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_2",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[2] }],
       accessLevel: "Full Access",
       admin: true,
@@ -195,6 +200,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_1",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[3] }],
       accessLevel: "Full Access",
       admin: true,
@@ -213,6 +219,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_3",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[4] }],
       accessLevel: "Full Access",
       admin: true,
@@ -231,6 +238,7 @@ test("convert admin entity", () => {
       _class: "User",
       _key: "jamf_user_5",
       _type: "jamf_user",
+      _scope: "jamf_user",
       _rawData: [{ name: "default", rawData: admins[5] }],
       accessLevel: "Full Access",
       admin: true,

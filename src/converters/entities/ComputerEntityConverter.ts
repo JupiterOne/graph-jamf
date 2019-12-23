@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { setRawData } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { DataByID } from "../../jamf/types";
@@ -37,6 +39,7 @@ function createComputerEntity(
   const computer: ComputerEntity = {
     _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
     _type: COMPUTER_ENTITY_TYPE,
+    _scope: COMPUTER_ENTITY_TYPE,
     _class: COMPUTER_ENTITY_CLASS,
     _rawData: [{ name: "default", rawData: device }],
     id: device.id,
@@ -101,7 +104,7 @@ function createComputerEntity(
   return computer;
 }
 
-function encrypted(detailData: ComputerDetail) {
+function encrypted(detailData: ComputerDetail): boolean {
   const bootPartition = primaryDiskBootPartition(detailData);
   return (
     !!bootPartition &&
@@ -118,8 +121,8 @@ function primaryDiskBootPartition(
   const storage = detailData.hardware.storage;
   const storageList = Array.isArray(storage) ? storage : [storage];
 
-  for (const s of storageList) {
-    const device = "device" in s ? (s as any).device : s;
+  for (const storage of storageList) {
+    const device = "device" in storage ? (storage as any).device : storage;
     const partitionList = Array.isArray(device.partition)
       ? device.partition
       : [device.partition];
@@ -140,16 +143,16 @@ function primaryDiskBootPartition(
   }
 }
 
-function gatekeeperEnabled(detailData: ComputerDetail) {
+function gatekeeperEnabled(detailData: ComputerDetail): boolean {
   // gatekeeperStatus can be one of three things: "App Store", "App Store and
   // identified developers", or "Anywhere"
   return (
     !!detailData.hardware.gatekeeper_status &&
-    /^App Store/.test(detailData.hardware.gatekeeper_status)
+    detailData.hardware.gatekeeper_status.startsWith("App Store")
   );
 }
 
-function systemIntegrityProtectionEnabled(detailData: ComputerDetail) {
+function systemIntegrityProtectionEnabled(detailData: ComputerDetail): boolean {
   return detailData.hardware.sip_status === "Enabled";
 }
 

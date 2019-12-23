@@ -20,6 +20,7 @@
       "Set-Cookie",
       "APBALANCEID=aws.use1-std-ellison4-tc-17; path=/;HttpOnly;Secure;",
       "WWW-Authenticate",
+      "",
       "X-FRAME-OPTIONS",
       "SAMEORIGIN",
       "Content-Length",

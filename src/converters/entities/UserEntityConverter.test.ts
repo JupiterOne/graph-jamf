@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { User } from "../../types";
 import { createUserEntities } from "./UserEntityConverter";
 
@@ -47,6 +49,7 @@ describe("convert user entity", () => {
         _class: "User",
         _key: "device_user_5",
         _type: "device_user",
+        _scope: "device_user",
         _rawData: [{ name: "default", rawData: users[0] }],
         customPhotoUrl: "",
         displayName: "Heriberto Truby",
@@ -100,6 +103,7 @@ describe("convert user entity", () => {
         _class: "User",
         _key: "device_user_5",
         _type: "device_user",
+        _scope: "device_user",
         _rawData: [{ name: "default", rawData: users[0] }],
         customPhotoUrl: "",
         displayName: "Heriberto Truby",
@@ -146,6 +150,7 @@ describe("convert user entity", () => {
         _class: "User",
         _key: "device_user_5",
         _type: "device_user",
+        _scope: "device_user",
         _rawData: [{ name: "default", rawData: users[0] }],
         customPhotoUrl: "",
         displayName: "Heriberto Truby",

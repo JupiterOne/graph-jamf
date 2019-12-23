@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { User } from "../../types";
 import { createUserDeviceRelationships } from "./UserDeviceRelationshipConverter";
 
@@ -71,6 +73,7 @@ test("convert user device relationships", () => {
       _key: "device_user_5_has_jamf_mobile_device_35",
       _toEntityKey: "jamf_mobile_device_35",
       _type: "device_user_has_jamf_mobile_device",
+      _scope: "device_user_has_jamf_mobile_device",
     },
     {
       _class: "HAS",
@@ -78,6 +81,7 @@ test("convert user device relationships", () => {
       _key: "device_user_5_has_jamf_mobile_device_36",
       _toEntityKey: "jamf_mobile_device_36",
       _type: "device_user_has_jamf_mobile_device",
+      _scope: "device_user_has_jamf_mobile_device",
     },
   ]);
 });

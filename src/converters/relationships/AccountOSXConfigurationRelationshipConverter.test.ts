@@ -22,6 +22,7 @@ test("convert account configurations relationships", () => {
       _key: "jamf_account_TestId_has_jamf_osx_configuration_profile_1",
       _toEntityKey: "jamf_osx_configuration_profile_1",
       _type: "jamf_account_has_jamf_osx_configuration_profile",
+      _scope: "jamf_account_has_jamf_osx_configuration_profile",
     },
   ]);
 });

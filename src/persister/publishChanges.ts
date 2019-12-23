@@ -3,6 +3,7 @@ import {
   EntityOperation,
   IntegrationRelationship,
   PersisterClient,
+  PersisterOperationsResult,
   RelationshipOperation,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
@@ -24,14 +25,12 @@ import {
   createUserDeviceRelationships,
   createUserEntities,
 } from "../converters";
-
+import { Account, JamfDataModel } from "../jamf";
 import {
   JupiterOneDataModel,
   JupiterOneEntitiesData,
   JupiterOneRelationshipsData,
 } from "../jupiterone";
-
-import { Account, JamfDataModel } from "../jamf";
 
 type EntitiesKeys = keyof JupiterOneEntitiesData;
 type RelationshipsKeys = keyof JupiterOneRelationshipsData;
@@ -41,7 +40,7 @@ export default async function publishChanges(
   oldData: JupiterOneDataModel,
   jamfData: JamfDataModel,
   account: Account,
-) {
+): Promise<PersisterOperationsResult> {
   const newData = convert(jamfData, account);
 
   const entities = createEntitiesOperations(

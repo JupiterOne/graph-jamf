@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { MobileDevice } from "../../types";
 import { createMobileDeviceEntities } from "./MobileDeviceEntityConverter";
 
@@ -57,6 +59,7 @@ test("convert mobile device entity", () => {
       _class: "Device",
       _key: "jamf_mobile_device_16",
       _type: "jamf_mobile_device",
+      _scope: "jamf_mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[0] }],
       deviceName: "Update 1-1",
       id: 16,
@@ -75,6 +78,7 @@ test("convert mobile device entity", () => {
       _class: "Device",
       _key: "jamf_mobile_device_28",
       _type: "jamf_mobile_device",
+      _scope: "jamf_mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[1] }],
       deviceName: "Update 1-2",
       id: 28,
@@ -93,6 +97,7 @@ test("convert mobile device entity", () => {
       _class: "Device",
       _key: "jamf_mobile_device_35",
       _type: "jamf_mobile_device",
+      _scope: "jamf_mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[2] }],
       deviceName: "Update 1-3",
       id: 35,

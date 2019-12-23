@@ -21,6 +21,7 @@ export function createUserEntities(data: User[]): UserEntity[] {
     return {
       _key: generateEntityKey(USER_ENTITY_TYPE, user.id),
       _type: USER_ENTITY_TYPE,
+      _scope: USER_ENTITY_TYPE,
       _class: USER_ENTITY_CLASS,
       _rawData: [{ name: "default", rawData: user }],
       id: user.id,

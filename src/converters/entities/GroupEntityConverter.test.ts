@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { Group } from "../../types";
 import { createGroupEntities } from "./GroupEntityConverter";
 
@@ -55,6 +57,7 @@ test("convert group entity", () => {
       _class: "UserGroup",
       _key: "jamf_group_1",
       _type: "jamf_group",
+      _scope: "jamf_group",
       _rawData: [{ name: "default", rawData: groups[0] }],
       accessLevel: "Site Access",
       displayName: "Test Group",
@@ -65,6 +68,7 @@ test("convert group entity", () => {
       _class: "UserGroup",
       _key: "jamf_group_2",
       _type: "jamf_group",
+      _scope: "jamf_group",
       _rawData: [{ name: "default", rawData: groups[1] }],
       accessLevel: "Site Access",
       displayName: "Another Test Group",
@@ -75,6 +79,7 @@ test("convert group entity", () => {
       _class: "UserGroup",
       _key: "jamf_group_3",
       _type: "jamf_group",
+      _scope: "jamf_group",
       _rawData: [{ name: "default", rawData: groups[2] }],
       accessLevel: "Site Access",
       displayName: "Not all groups have members inside in api",

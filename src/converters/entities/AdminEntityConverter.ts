@@ -10,6 +10,7 @@ export function createAdminEntities(data: Admin[]): AdminEntity[] {
   return data.map(item => ({
     _key: generateEntityKey(ADMIN_ENTITY_TYPE, item.id),
     _type: ADMIN_ENTITY_TYPE,
+    _scope: ADMIN_ENTITY_TYPE,
     _class: ADMIN_ENTITY_CLASS,
     _rawData: [{ name: "default", rawData: item }],
     displayName: item.name,

@@ -36,6 +36,7 @@ function createComputerOSXConfigurationRelationships(
         _class: COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_CLASS,
         _key: relationshipKey,
         _type: COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_TYPE,
+        _scope: COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_TYPE,
         _fromEntityKey: computerKey,
         _toEntityKey: osxConfigurationKey,
       };

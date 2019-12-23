@@ -34,6 +34,7 @@ export function createComputerApplicationRelationships(
           _class: COMPUTER_APPLICATION_RELATIONSHIP_CLASS,
           _key: relationKey,
           _type: COMPUTER_APPLICATION_RELATIONSHIP_TYPE,
+          _scope: COMPUTER_APPLICATION_RELATIONSHIP_TYPE,
           version: application.version,
           _mapping: {
             relationshipDirection: RelationshipDirection.FORWARD,

@@ -31,6 +31,7 @@ export function createAccountGroupRelationships(
       _fromEntityKey: parentKey,
       _key: relationKey,
       _type: ACCOUNT_GROUP_RELATIONSHIP_TYPE,
+      _scope: ACCOUNT_GROUP_RELATIONSHIP_TYPE,
       _toEntityKey: childKey,
     };
 

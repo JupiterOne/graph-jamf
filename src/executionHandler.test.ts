@@ -1,25 +1,29 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/unbound-method */
 import {
   IntegrationActionName,
   IntegrationExecutionContext,
 } from "@jupiterone/jupiter-managed-integration-sdk";
+
 import executionHandler from "./executionHandler";
 import initializeContext from "./initializeContext";
+import { JamfIntegrationContext } from "./types";
 
 jest.mock("./initializeContext");
 
-let executionContext: any;
+let executionContext: JamfIntegrationContext;
 
 beforeEach(() => {
   executionContext = {
     graph: {
       findEntitiesByType: jest.fn().mockResolvedValue([]),
       findRelationshipsByType: jest.fn().mockResolvedValue([]),
-    },
+    } as any,
     persister: {
       processEntities: jest.fn().mockReturnValue([]),
       processRelationships: jest.fn().mockReturnValue([]),
       publishPersisterOperations: jest.fn().mockResolvedValue({}),
-    },
+    } as any,
     provider: {
       fetchAccounts: jest.fn().mockReturnValue({ users: [], groups: [] }),
       fetchAccountUserById: jest.fn().mockReturnValue([]),
@@ -30,12 +34,12 @@ beforeEach(() => {
       fetchComputers: jest.fn().mockReturnValue([]),
       fetchOSXConfigurationProfiles: jest.fn().mockReturnValue([]),
       fetchOSXConfigurationProfileById: jest.fn().mockReturnValue({}),
-    },
+    } as any,
     account: {
       id: "testId",
       name: "testName",
     },
-  };
+  } as any;
 
   (initializeContext as jest.Mock).mockReturnValue(executionContext);
 });

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import { createComputerApplicationRelationships } from "./ComputerApplicationRelationshipConverter";
 
 test("convert mapped computer application relationships", () => {
@@ -1650,6 +1652,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "7.0.0.485",
     },
     {
@@ -1671,6 +1674,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.0.64.0",
     },
     {
@@ -1692,6 +1696,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0.0.281",
     },
     {
@@ -1712,6 +1717,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0.0.49",
     },
     {
@@ -1732,6 +1738,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0.0.252",
     },
     {
@@ -1753,6 +1760,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.4.6.82",
     },
     {
@@ -1773,6 +1781,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "19.012.20034",
     },
     {
@@ -1792,6 +1801,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.13",
     },
     {
@@ -1812,6 +1822,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "19.012.20034",
     },
     {
@@ -1832,6 +1843,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "19.012.20034",
     },
     {
@@ -1853,6 +1865,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0.0.49",
     },
     {
@@ -1874,6 +1887,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.0.384",
     },
     {
@@ -1895,6 +1909,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.0.22",
     },
     {
@@ -1915,6 +1930,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.0.274",
     },
     {
@@ -1935,6 +1951,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "7.0.1.109",
     },
     {
@@ -1955,6 +1972,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0.0.274",
     },
     {
@@ -1976,6 +1994,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version:
         "Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
     },
@@ -1997,6 +2016,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.4.0.57",
     },
     {
@@ -2016,6 +2036,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.3.8",
     },
     {
@@ -2035,6 +2056,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.1.6",
     },
     {
@@ -2054,6 +2076,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.4",
     },
     {
@@ -2073,6 +2096,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.31.2",
     },
     {
@@ -2092,6 +2116,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.2",
     },
     {
@@ -2111,6 +2136,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.8",
     },
     {
@@ -2130,6 +2156,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.10.0",
     },
     {
@@ -2150,6 +2177,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.0.7",
     },
     {
@@ -2169,6 +2197,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.1.0",
     },
     {
@@ -2188,6 +2217,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.13",
     },
     {
@@ -2207,6 +2237,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0",
     },
     {
@@ -2227,6 +2258,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.3.0-30",
     },
     {
@@ -2246,6 +2278,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.15",
     },
     {
@@ -2265,6 +2298,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.13.0",
     },
     {
@@ -2284,6 +2318,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.2.1.10",
     },
     {
@@ -2303,6 +2338,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0",
     },
     {
@@ -2322,6 +2358,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "11.0",
     },
     {
@@ -2341,6 +2378,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.0.3.6",
     },
     {
@@ -2362,6 +2400,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.0.384",
     },
     {
@@ -2383,6 +2422,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.0.384",
     },
     {
@@ -2404,6 +2444,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.0.384",
     },
     {
@@ -2424,6 +2465,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.0.384",
     },
     {
@@ -2444,6 +2486,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.5.1",
     },
     {
@@ -2463,6 +2506,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.5.1",
     },
     {
@@ -2482,6 +2526,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.8",
     },
     {
@@ -2501,6 +2546,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.1909.0",
     },
     {
@@ -2520,6 +2566,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.2.2",
     },
     {
@@ -2539,6 +2586,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.11",
     },
     {
@@ -2558,6 +2606,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "17.0.3",
     },
     {
@@ -2577,6 +2626,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.0.0.0-mac81",
     },
     {
@@ -2596,6 +2646,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "72.4.136",
     },
     {
@@ -2615,6 +2666,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.8",
     },
     {
@@ -2635,6 +2687,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.12.4",
     },
     {
@@ -2654,6 +2707,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.0",
     },
     {
@@ -2673,6 +2727,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "8.0",
     },
     {
@@ -2692,6 +2747,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "0.9.1",
     },
     {
@@ -2711,6 +2767,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.9.5",
     },
     {
@@ -2730,6 +2787,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.1",
     },
     {
@@ -2750,6 +2808,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "74.0.3729.157",
     },
     {
@@ -2769,6 +2828,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.10",
     },
     {
@@ -2788,6 +2848,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.6",
     },
     {
@@ -2807,6 +2868,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.7",
     },
     {
@@ -2826,6 +2888,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1",
     },
     {
@@ -2845,6 +2908,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.15",
     },
     {
@@ -2864,6 +2928,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.6.1",
     },
     {
@@ -2883,6 +2948,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "7.0",
     },
     {
@@ -2902,6 +2968,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.3.2",
     },
     {
@@ -2922,6 +2989,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "14.0.22",
     },
     {
@@ -2942,6 +3010,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.3.0.256",
     },
     {
@@ -2961,6 +3030,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2017.2",
     },
     {
@@ -2980,6 +3050,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "12.8.2",
     },
     {
@@ -3000,6 +3071,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.0.0-20190507193726+6614a49937",
     },
     {
@@ -3019,6 +3091,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0",
     },
     {
@@ -3038,6 +3111,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0.2",
     },
     {
@@ -3057,6 +3131,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.25.2",
     },
     {
@@ -3076,6 +3151,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.4.0",
     },
     {
@@ -3095,6 +3171,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0",
     },
     {
@@ -3114,6 +3191,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.10.1",
     },
     {
@@ -3134,6 +3212,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.1.2.1652",
     },
     {
@@ -3153,6 +3232,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "11.5",
     },
     {
@@ -3172,6 +3252,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.0",
     },
     {
@@ -3191,6 +3272,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "11.0",
     },
     {
@@ -3211,6 +3293,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "16.24.19041401",
     },
     {
@@ -3231,6 +3314,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "16.25.19051201",
     },
     {
@@ -3251,6 +3335,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "16.24.19041401",
     },
     {
@@ -3271,6 +3356,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "16.24.19041401",
     },
     {
@@ -3291,6 +3377,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "16.24.19041401",
     },
     {
@@ -3310,6 +3397,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.13",
     },
     {
@@ -3329,6 +3417,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.2",
     },
     {
@@ -3349,6 +3438,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.1.3",
     },
     {
@@ -3368,6 +3458,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.5",
     },
     {
@@ -3387,6 +3478,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.2.1",
     },
     {
@@ -3406,6 +3498,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.0",
     },
     {
@@ -3425,6 +3518,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "19.043.0304",
     },
     {
@@ -3444,6 +3538,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "8.0",
     },
     {
@@ -3463,6 +3558,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.4.2",
     },
     {
@@ -3482,6 +3578,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0",
     },
     {
@@ -3501,6 +3598,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.0",
     },
     {
@@ -3520,6 +3618,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.48616",
     },
     {
@@ -3539,6 +3638,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.2.0",
     },
     {
@@ -3558,6 +3658,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.0",
     },
     {
@@ -3577,6 +3678,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.34.0",
     },
     {
@@ -3596,6 +3698,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.1953.32",
     },
     {
@@ -3615,6 +3718,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.6.1",
     },
     {
@@ -3634,6 +3738,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.4",
     },
     {
@@ -3653,6 +3758,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.0",
     },
     {
@@ -3673,6 +3779,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "6.3.135305.1213",
     },
     {
@@ -3692,6 +3799,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "12.1.1",
     },
     {
@@ -3711,6 +3819,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.10",
     },
     {
@@ -3731,6 +3840,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0.0.65",
     },
     {
@@ -3751,6 +3861,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0.0.65",
     },
     {
@@ -3771,6 +3882,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.0.65.0",
     },
     {
@@ -3790,6 +3902,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.0.4",
     },
     {
@@ -3809,6 +3922,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0",
     },
     {
@@ -3828,6 +3942,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "50.2",
     },
     {
@@ -3847,6 +3962,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.8.2",
     },
     {
@@ -3867,6 +3983,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.0.186",
     },
     {
@@ -3886,6 +4003,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "7.56",
     },
     {
@@ -3905,6 +4023,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.3.7",
     },
     {
@@ -3924,6 +4043,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "7.2",
     },
     {
@@ -3943,6 +4063,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.2",
     },
     {
@@ -3962,6 +4083,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.40.1",
     },
     {
@@ -3981,6 +4103,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.0.5",
     },
     {
@@ -4000,6 +4123,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.1",
     },
     {
@@ -4019,6 +4143,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "Build 3143",
     },
     {
@@ -4038,6 +4163,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.12",
     },
     {
@@ -4057,6 +4183,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "14.0",
     },
     {
@@ -4077,6 +4204,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0.0.4",
     },
     {
@@ -4096,6 +4224,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.8.3",
     },
     {
@@ -4115,6 +4244,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.13",
     },
     {
@@ -4134,6 +4264,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.3",
     },
     {
@@ -4155,6 +4286,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "9.0.0.65",
     },
     {
@@ -4176,6 +4308,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.0.65.0",
     },
     {
@@ -4195,6 +4328,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.6.48616",
     },
     {
@@ -4215,6 +4349,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.3.0.256",
     },
     {
@@ -4234,6 +4369,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.2",
     },
     {
@@ -4253,6 +4389,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "5.2.8",
     },
     {
@@ -4272,6 +4409,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.7.6",
     },
     {
@@ -4291,6 +4429,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.33.1",
     },
     {
@@ -4310,6 +4449,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "8",
     },
     {
@@ -4329,6 +4469,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.1.8",
     },
     {
@@ -4348,6 +4489,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.4.5",
     },
     {
@@ -4367,6 +4509,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.8.0",
     },
     {
@@ -4386,6 +4529,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "2.4.4",
     },
     {
@@ -4405,6 +4549,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "10.1",
     },
     {
@@ -4424,6 +4569,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "1.0",
     },
     {
@@ -4444,6 +4590,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "3.1.24",
     },
     {
@@ -4463,6 +4610,7 @@ test("convert mapped computer application relationships", () => {
         targetFilterKeys: [["_type", "name"]],
       },
       _type: "user_endpoint_installed_application",
+      _scope: "user_endpoint_installed_application",
       version: "4.1.34801.1116",
     },
   ]);

@@ -21,7 +21,8 @@ export function createUserDeviceRelationships(
       return acc;
     }
 
-    const relationships = user.links!.mobile_devices!.map(device => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const relationships = user.links!.mobile_devices.map(device => {
       const parentKey = generateEntityKey(USER_ENTITY_TYPE, user.id);
       const childKey = generateEntityKey(MOBILE_DEVICE_ENTITY_TYPE, device.id);
       const relationKey = generateRelationKey(
@@ -33,6 +34,7 @@ export function createUserDeviceRelationships(
       const relationship: UserDeviceRelationship = {
         _class: USER_DEVICE_RELATIONSHIP_CLASS,
         _type: USER_DEVICE_RELATIONSHIP_TYPE,
+        _scope: USER_DEVICE_RELATIONSHIP_TYPE,
         _fromEntityKey: parentKey,
         _key: relationKey,
         _toEntityKey: childKey,
@@ -45,7 +47,7 @@ export function createUserDeviceRelationships(
   }, defaultValue);
 }
 
-function isMobileDevice(user: User) {
+function isMobileDevice(user: User): boolean {
   return !(
     user.links &&
     user.links.mobile_devices &&

@@ -1,4 +1,9 @@
-import { GraphClient } from "@jupiterone/jupiter-managed-integration-sdk";
+import {
+  GraphClient,
+  IntegrationError,
+  IntegrationRelationship,
+} from "@jupiterone/jupiter-managed-integration-sdk";
+
 import * as Entities from "./entities";
 import * as Relationships from "./relationships";
 
@@ -83,45 +88,42 @@ async function fetchEntities(
 export async function fetchRelationships(
   graph: GraphClient,
 ): Promise<JupiterOneRelationshipsData> {
-  const [
-    accountAdminRelationships,
-    accountOSXConfigurationRelationships,
-    accountGroupRelationships,
-    groupAdminRelationships,
-    accountUserRelationships,
-    userDeviceRelationships,
-    userComputerRelationships,
-    computerApplicationRelationships,
-    computerOSXConfigurationRelationships,
-  ] = await Promise.all([
-    graph.findRelationshipsByType<Relationships.AccountAdminRelationship>(
-      Relationships.ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<
-      Relationships.AccountOSXConfigurationRelationship
-    >(Relationships.ACCOUNT_OSX_CONFIGURATION_RELATIONSHIP_TYPE),
-    graph.findRelationshipsByType<Relationships.AccountGroupRelationship>(
-      Relationships.ACCOUNT_GROUP_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<Relationships.GroupAdminRelationship>(
-      Relationships.GROUP_ADMIN_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<Relationships.AccountUserRelationship>(
-      Relationships.ACCOUNT_USER_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<Relationships.UserDeviceRelationship>(
-      Relationships.USER_DEVICE_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<Relationships.UserComputerRelationship>(
-      Relationships.USER_COMPUTER_RELATIONSHIP_TYPE,
-    ),
-    graph.findRelationshipsByType<
-      Relationships.ComputerApplicationRelationship
-    >(Relationships.COMPUTER_APPLICATION_RELATIONSHIP_TYPE),
-    graph.findRelationshipsByType<
-      Relationships.ComputerOSXConfigurationRelationship
-    >(Relationships.COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_TYPE),
-  ]);
+  const accountAdminRelationships = await findRelationshipsByType<
+    Relationships.AccountAdminRelationship
+  >(graph, Relationships.ACCOUNT_ADMIN_RELATIONSHIP_TYPE);
+
+  const accountOSXConfigurationRelationships = await findRelationshipsByType<
+    Relationships.AccountOSXConfigurationRelationship
+  >(graph, Relationships.ACCOUNT_OSX_CONFIGURATION_RELATIONSHIP_TYPE);
+
+  const accountGroupRelationships = await findRelationshipsByType<
+    Relationships.AccountGroupRelationship
+  >(graph, Relationships.ACCOUNT_GROUP_RELATIONSHIP_TYPE);
+
+  const groupAdminRelationships = await findRelationshipsByType<
+    Relationships.GroupAdminRelationship
+  >(graph, Relationships.GROUP_ADMIN_RELATIONSHIP_TYPE);
+
+  const accountUserRelationships = await findRelationshipsByType<
+    Relationships.AccountUserRelationship
+  >(graph, Relationships.ACCOUNT_USER_RELATIONSHIP_TYPE);
+
+  const userDeviceRelationships = await findRelationshipsByType<
+    Relationships.UserDeviceRelationship
+  >(graph, Relationships.USER_DEVICE_RELATIONSHIP_TYPE);
+
+  const userComputerRelationships = await findRelationshipsByType<
+    Relationships.UserComputerRelationship
+  >(graph, Relationships.USER_COMPUTER_RELATIONSHIP_TYPE);
+
+  const computerApplicationRelationships = await findRelationshipsByType<
+    Relationships.ComputerApplicationRelationship
+  >(graph, Relationships.COMPUTER_APPLICATION_RELATIONSHIP_TYPE);
+
+  const computerOSXConfigurationRelationships = await findRelationshipsByType<
+    Relationships.ComputerOSXConfigurationRelationship
+  >(graph, Relationships.COMPUTER_OSX_CONFIGURATION_RELATIONSHIP_TYPE);
+
   return {
     accountAdminRelationships,
     accountOSXConfigurationRelationships,
@@ -133,4 +135,20 @@ export async function fetchRelationships(
     computerApplicationRelationships,
     computerOSXConfigurationRelationships,
   };
+}
+
+async function findRelationshipsByType<T extends IntegrationRelationship>(
+  graph: GraphClient,
+  type: string,
+): Promise<T[]> {
+  try {
+    const relationships = await graph.findRelationshipsByType<T>(type);
+    return relationships;
+  } catch (err) {
+    /* istanbul ignore next line */
+    throw new IntegrationError(
+      `Failed to fetch relationships from graph (type=${type})`,
+      err,
+    );
+  }
 }

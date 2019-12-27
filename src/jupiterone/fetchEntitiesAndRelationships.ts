@@ -145,6 +145,7 @@ async function findRelationshipsByType<T extends IntegrationRelationship>(
     const relationships = await graph.findRelationshipsByType<T>(type);
     return relationships;
   } catch (err) {
+    /* istanbul ignore next line */
     throw new IntegrationError(
       `Failed to fetch relationships from graph (type=${type})`,
       err,

@@ -635,6 +635,52 @@ test("convert computer entity storage array with single device", () => {
   ]);
 });
 
+test("convert computer entity storage with multiple devices having no partition", () => {
+  const details = [
+    {
+      ...playerOneDetails,
+      hardware: {
+        ...playerOneDetails.hardware,
+        storage: [
+          {
+            device: {
+              disk: "disk0",
+              model: "APPLE SSD SM1024L",
+              revision: "CXS6AA0Q",
+              serial_number: "C02706400ADGVFW1H",
+              size: 1048576,
+              drive_capacity_mb: 1048576,
+              connection_type: "NO",
+              smart_status: "",
+            },
+          },
+          {
+            device: {
+              disk: "disk1",
+              model: "APPLE SSD SM1024L",
+              revision: "CXS6AA0Q",
+              serial_number: "C02706400ADGVFW1H",
+              size: 1048576,
+              drive_capacity_mb: 1048576,
+              connection_type: "NO",
+              smart_status: "",
+            },
+          },
+        ],
+      },
+    },
+  ];
+  const entities = createComputerEntities(
+    computers,
+    details,
+    osxConfigurationDetailsById,
+  );
+  expect(entities).toEqual([
+    expect.objectContaining({ encrypted: false }),
+    playerTwo,
+  ]);
+});
+
 test("convert computer entity storage with single device", () => {
   const details = [
     {

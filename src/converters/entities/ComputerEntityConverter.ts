@@ -115,17 +115,22 @@ function encrypted(detailData: ComputerDetail): boolean {
   );
 }
 
+function itemArray(item: any): Array<any> {
+  if (item) {
+    return Array.isArray(item) ? item : [item];
+  } else {
+    return [];
+  }
+}
+
 function primaryDiskBootPartition(
   detailData: ComputerDetail,
 ): DiskPartition | undefined {
-  const storage = detailData.hardware.storage;
-  const storageList = Array.isArray(storage) ? storage : [storage];
+  const storageList = itemArray(detailData.hardware.storage);
 
   for (const storage of storageList) {
-    const device = "device" in storage ? (storage as any).device : storage;
-    const partitionList = Array.isArray(device.partition)
-      ? device.partition
-      : [device.partition];
+    const device = "device" in storage ? storage.device : storage;
+    const partitionList = itemArray(device.partition);
 
     // If there is only one disk and one partition, returns it as the primary
     // regardless of the type property value

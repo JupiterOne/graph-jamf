@@ -89,7 +89,11 @@ describe("JamfClient fetch err", () => {
   test("connection timeout", async () => {
     nock(`https://${JAMF_LOCAL_EXECUTION_HOST}`)
       .get("/JSSResource/users")
-      .replyWithError({ code: "ETIMEDOUT" });
+      .times(3)
+      .replyWithError({
+        message: "socket timeout simulation",
+        code: "ETIMEDOUT",
+      });
 
     expect.assertions(3);
 
@@ -107,7 +111,11 @@ describe("JamfClient fetch err", () => {
   test("socket timeout", async () => {
     nock(`https://${JAMF_LOCAL_EXECUTION_HOST}`)
       .get("/JSSResource/users")
-      .replyWithError({ code: "ESOCKETTIMEDOUT" });
+      .times(3)
+      .replyWithError({
+        message: "socket timeout simulation",
+        code: "ESOCKETTIMEDOUT",
+      });
 
     expect.assertions(3);
 

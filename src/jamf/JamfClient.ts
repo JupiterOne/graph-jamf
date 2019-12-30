@@ -1,4 +1,8 @@
 import fetch, { RequestInit, Response } from "node-fetch";
+import PQueue from "p-queue";
+
+import { retry } from "@lifeomic/attempt";
+
 import {
   Admin,
   AdminsAndGroups,
@@ -25,8 +29,6 @@ import {
   UserResponse,
   UsersResponse,
 } from "./types";
-
-import PQueue from "p-queue";
 
 export default class JamfClient {
   private readonly host: string;
@@ -175,31 +177,37 @@ export default class JamfClient {
       },
     };
 
-    let response: Response | undefined;
-    try {
-      await this.queue.add(async () => {
-        response = await fetch(
-          `https://${this.host}/JSSResource${url}`,
-          options,
-        );
-      });
-    } catch (err) {
-      if (err.code === "ETIMEDOUT") {
-        const error = new Error(
-          `Timed out trying to connect to ${this.host} (${err.code})`,
-        ) as any;
-        error.code = err.code;
-        throw error;
-      } else if (err.code === "ESOCKETTIMEDOUT") {
-        const error = new Error(
-          `Established connection to ${this.host} timed out (${err.code})`,
-        ) as any;
-        error.code = err.code;
-        throw error;
-      } else {
-        throw err;
-      }
-    }
+    // The goal here is to retry and ensure the final error includes information
+    // about the host we could not connect to, since users define the host and
+    // may mis-type the value.
+    const request = (): Promise<Response | undefined> =>
+      retry(
+        async () => {
+          try {
+            return await fetch(
+              `https://${this.host}/JSSResource${url}`,
+              options,
+            );
+          } catch (err) {
+            if (err.code === "ETIMEDOUT") {
+              throw Object.assign(new Error(), {
+                message: `Timed out trying to connect to ${this.host} (${err.code})`,
+                code: err.code,
+              });
+            } else if (err.code === "ESOCKETTIMEDOUT") {
+              throw Object.assign(new Error(), {
+                message: `Established connection to ${this.host} timed out (${err.code})`,
+                code: err.code,
+              });
+            } else {
+              throw err;
+            }
+          }
+        },
+        { maxAttempts: 3 },
+      );
+
+    const response = await this.queue.add(request);
 
     /* istanbul ignore next line */
     if (!response) {
@@ -209,10 +217,11 @@ export default class JamfClient {
     if (response.status === 200) {
       return response.json();
     } else {
-      const err = new Error(response.statusText) as any;
-      err.code = "UnexpectedStatusCode";
-      err.statusCode = response.status;
-      throw err;
+      throw Object.assign(new Error(), {
+        message: response.statusText,
+        code: "UnexpectedStatusCode",
+        statusCode: response.status,
+      });
     }
   }
 }

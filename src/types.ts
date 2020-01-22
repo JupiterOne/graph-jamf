@@ -368,7 +368,7 @@ export interface MobileDevice {
   model: string;
   model_identifier: string;
   model_display: string;
-  username: string;
+  username: string | undefined;
 }
 
 export enum Method {

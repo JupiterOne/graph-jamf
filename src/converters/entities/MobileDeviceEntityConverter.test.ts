@@ -18,7 +18,7 @@ test("convert mobile device entity", () => {
       model: "iPhone 5S (GSM)",
       model_identifier: "iPhone6,1",
       model_display: "iPhone 5S (GSM)",
-      username: "Test",
+      username: undefined,
     },
     {
       id: 28,
@@ -62,7 +62,7 @@ test("convert mobile device entity", () => {
       _scope: "jamf_mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[0] }],
       deviceName: "Update 1-1",
-      displayName: "Test's iPhone 5S (GSM)",
+      displayName: "Unknown User's iPhone 5S (GSM)",
       id: 16,
       managed: true,
       model: "iPhone 5S (GSM)",
@@ -72,7 +72,7 @@ test("convert mobile device entity", () => {
       serialNumber: "CA44C68660A3",
       supervised: false,
       udid: "ca44c66860a311e490b812df261f2c7e",
-      username: "Test",
+      username: undefined,
       wifiMacAddress: "0C:3E:9F:49:99:67",
     },
     {

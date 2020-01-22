@@ -16,6 +16,7 @@ export interface ComputerEntity extends EntityFromIntegration {
   serialNumber: string;
   reportDateUtc: string;
   reportDateEpoch: number;
+  lastReportedOn: number;
   encrypted: boolean;
   gatekeeperEnabled: boolean;
   gatekeeperStatus?: string;

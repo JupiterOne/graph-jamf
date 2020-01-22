@@ -21,6 +21,7 @@ function createOSXConfigurationEntity(
     _rawData: [{ name: "default", rawData: data }],
     id: data.general.id,
     name: data.general.name,
+    displayName: data.general.name,
     description: data.general.description,
     siteName: data.general.site.name,
     categoryName: data.general.category.name,

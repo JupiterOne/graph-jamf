@@ -62,6 +62,7 @@ const expectedEntity: OSXConfigurationEntity = {
   id: 1,
   level: "computer",
   name: "My OSX Configuration Profile",
+  displayName: "My OSX Configuration Profile",
   redeployOnUpdate: "Newly Assigned",
   screensaverIdleTime: 600,
   screensaverLockEnabled: true,

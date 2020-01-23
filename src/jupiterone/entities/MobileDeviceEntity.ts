@@ -15,5 +15,5 @@ export interface MobileDeviceEntity extends EntityFromIntegration {
   model: string;
   modelIdentifier: string;
   modelDisplay: string;
-  username: string;
+  username: string | undefined;
 }

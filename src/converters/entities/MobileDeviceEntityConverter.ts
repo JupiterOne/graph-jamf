@@ -19,6 +19,7 @@ export function createMobileDeviceEntities(
       _rawData: [{ name: "default", rawData: device }],
       id: device.id,
       deviceName: device.device_name,
+      displayName: `${device.username || "Unknown User"}'s ${device.model}`,
       udid: device.udid,
       serialNumber: device.serial_number,
       phoneNumber: device.phone_number,

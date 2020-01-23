@@ -55,6 +55,7 @@ function createComputerEntity(
     serialNumber: device.serial_number,
     reportDateUtc: device.report_date_utc,
     reportDateEpoch: device.report_date_epoch,
+    lastReportedOn: device.report_date_epoch,
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,

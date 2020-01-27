@@ -553,6 +553,7 @@ const playerOne: ComputerEntity = {
   serialNumber: "5EGTF1C02T70",
   udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
   username: "player.one",
+  email: "jhon.doe@acmacorp.com",
 };
 
 const playerTwo: ComputerEntity = {
@@ -794,6 +795,15 @@ test("convert computer entity without configuration profiles", () => {
     },
     playerTwo,
   ]);
+});
+
+test("convert computer entity without device username", () => {
+  const computer = {
+    ...computers[0],
+    username: "",
+  };
+  const entities = createComputerEntities([computer], [playerOneDetails], {});
+  expect(entities[0].username).toEqual("jhon.doe");
 });
 
 describe("collapsing number values", () => {

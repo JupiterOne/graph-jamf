@@ -64,6 +64,11 @@ function createComputerEntity(
   if (detailData) {
     setRawData(computer, { name: "detail", rawData: detailData });
 
+    if (!device.username || device.username.length === 0) {
+      computer.username = detailData.location.username;
+    }
+
+    computer.email = detailData.location.email_address;
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);

@@ -8,6 +8,7 @@ export interface ComputerEntity extends EntityFromIntegration {
   name: string;
   managed: boolean;
   username: string;
+  email?: string;
   model: string;
   department: string;
   building: string;

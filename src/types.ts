@@ -245,6 +245,18 @@ export interface ComputerDetail {
     site: Site;
     itunes_store_account_is_active: boolean;
   };
+  location: {
+    username: string;
+    realname: string;
+    real_name: string;
+    email_address: string;
+    position: string;
+    phone: string;
+    phone_number: string;
+    department: string;
+    building: string;
+    room: string;
+  };
   software: {
     unix_executables: any[];
     licensed_software: any[];

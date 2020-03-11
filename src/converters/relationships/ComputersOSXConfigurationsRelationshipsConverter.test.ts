@@ -40,7 +40,6 @@ test("convert computer osx configurations relationships", () => {
       _key: "user_endpoint_1_uses_jamf_osx_configuration_profile_2001",
       _toEntityKey: "jamf_osx_configuration_profile_2001",
       _type: "user_endpoint_uses_jamf_osx_configuration_profile",
-      _scope: "user_endpoint_uses_jamf_osx_configuration_profile",
     },
     {
       _class: "USES",
@@ -48,7 +47,6 @@ test("convert computer osx configurations relationships", () => {
       _key: "user_endpoint_1_uses_jamf_osx_configuration_profile_911",
       _toEntityKey: "jamf_osx_configuration_profile_911",
       _type: "user_endpoint_uses_jamf_osx_configuration_profile",
-      _scope: "user_endpoint_uses_jamf_osx_configuration_profile",
     },
     {
       _class: "USES",
@@ -56,7 +54,6 @@ test("convert computer osx configurations relationships", () => {
       _key: "user_endpoint_2_uses_jamf_osx_configuration_profile_2001",
       _toEntityKey: "jamf_osx_configuration_profile_2001",
       _type: "user_endpoint_uses_jamf_osx_configuration_profile",
-      _scope: "user_endpoint_uses_jamf_osx_configuration_profile",
     },
     {
       _class: "USES",
@@ -64,7 +61,6 @@ test("convert computer osx configurations relationships", () => {
       _key: "user_endpoint_2_uses_jamf_osx_configuration_profile_911",
       _toEntityKey: "jamf_osx_configuration_profile_911",
       _type: "user_endpoint_uses_jamf_osx_configuration_profile",
-      _scope: "user_endpoint_uses_jamf_osx_configuration_profile",
     },
   ]);
 });

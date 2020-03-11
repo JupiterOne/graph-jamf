@@ -34,7 +34,6 @@ export function createUserComputerRelationships(
       const relationship: UserComputerRelationship = {
         _class: USER_COMPUTER_RELATIONSHIP_CLASS,
         _type: USER_COMPUTER_RELATIONSHIP_TYPE,
-        _scope: USER_COMPUTER_RELATIONSHIP_TYPE,
         _fromEntityKey: parentKey,
         _key: relationKey,
         _toEntityKey: childKey,

@@ -31,7 +31,6 @@ export function createGroupAdminRelationships(
       const relationship: GroupAdminRelationship = {
         _class: GROUP_ADMIN_RELATIONSHIP_CLASS,
         _type: GROUP_ADMIN_RELATIONSHIP_TYPE,
-        _scope: GROUP_ADMIN_RELATIONSHIP_TYPE,
         _fromEntityKey: parentKey,
         _key: relationKey,
         _toEntityKey: childKey,

@@ -151,7 +151,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_6",
       _toEntityKey: "jamf_user_6",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -159,7 +158,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_4",
       _toEntityKey: "jamf_user_4",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -167,7 +165,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_2",
       _toEntityKey: "jamf_user_2",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -175,7 +172,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_1",
       _toEntityKey: "jamf_user_1",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -183,7 +179,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_3",
       _toEntityKey: "jamf_user_3",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
     {
       _class: "HAS",
@@ -191,7 +186,6 @@ test("convert account admin relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_user_jamf_user_5",
       _toEntityKey: "jamf_user_5",
       _type: "jamf_account_has_jamf_user",
-      _scope: "jamf_account_has_jamf_user",
     },
   ]);
 });

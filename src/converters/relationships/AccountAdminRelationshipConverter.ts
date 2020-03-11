@@ -31,7 +31,6 @@ export function createAccountAdminRelationships(
       _fromEntityKey: parentKey,
       _key: relationKey,
       _type: ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
-      _scope: ACCOUNT_ADMIN_RELATIONSHIP_TYPE,
       _toEntityKey: childKey,
     };
 

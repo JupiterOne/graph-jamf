@@ -64,7 +64,6 @@ test("convert account group relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_1",
       _toEntityKey: "jamf_group_1",
       _type: "jamf_account_has_jamf_group",
-      _scope: "jamf_account_has_jamf_group",
     },
     {
       _class: "HAS",
@@ -72,7 +71,6 @@ test("convert account group relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_2",
       _toEntityKey: "jamf_group_2",
       _type: "jamf_account_has_jamf_group",
-      _scope: "jamf_account_has_jamf_group",
     },
     {
       _class: "HAS",
@@ -80,7 +78,6 @@ test("convert account group relationships", () => {
       _key: "jamf_account_TestId_jamf_account_has_jamf_group_jamf_group_3",
       _toEntityKey: "jamf_group_3",
       _type: "jamf_account_has_jamf_group",
-      _scope: "jamf_account_has_jamf_group",
     },
   ]);
 });

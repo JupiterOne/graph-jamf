@@ -34,7 +34,6 @@ export function createAccountOSXConfigurationRelationships(
       _fromEntityKey: parentKey,
       _key: relationKey,
       _type: ACCOUNT_OSX_CONFIGURATION_RELATIONSHIP_TYPE,
-      _scope: ACCOUNT_OSX_CONFIGURATION_RELATIONSHIP_TYPE,
       _toEntityKey: childKey,
     };
 

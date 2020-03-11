@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { setRawData } from "@jupiterone/jupiter-managed-integration-sdk";
+import {
+  setRawData,
+  convertProperties,
+} from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { DataByID } from "../../jamf/types";
 import {
@@ -39,7 +42,6 @@ function createComputerEntity(
   const computer: ComputerEntity = {
     _key: generateEntityKey(COMPUTER_ENTITY_TYPE, device.id),
     _type: COMPUTER_ENTITY_TYPE,
-    _scope: COMPUTER_ENTITY_TYPE,
     _class: COMPUTER_ENTITY_CLASS,
     _rawData: [{ name: "default", rawData: device }],
     id: device.id,
@@ -63,6 +65,10 @@ function createComputerEntity(
 
   if (detailData) {
     setRawData(computer, { name: "detail", rawData: detailData });
+
+    Object.assign(computer, {
+      ...convertProperties(detailData.general),
+    });
 
     if (!device.username || device.username.length === 0) {
       computer.username = detailData.location.username;

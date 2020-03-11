@@ -4,6 +4,7 @@
 import { ComputerEntity } from "../../jupiterone";
 import { Computer } from "../../types";
 import { createComputerEntities } from "./ComputerEntityConverter";
+import { convertProperties } from "@jupiterone/jupiter-managed-integration-sdk";
 
 function OSXConfigurationProfileDetails(
   id: number,
@@ -101,22 +102,22 @@ const computers: Computer[] = [
     department: "",
     building: "",
     mac_address: "78:4F:43:7F:7D:CB",
-    udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
+    udid: "1234TE12-3STT-1234-E1ST-23TE412ST341",
     serial_number: "5EGTF1C02T70",
     report_date_utc: "2019-05-06T13:33:08.196+0000",
     report_date_epoch: 1557149588196,
   },
   {
     id: 2,
-    name: "PlayerOne’s MacBook",
+    name: "PlayerTwo’s MacBook",
     managed: true,
-    username: "player.one",
+    username: "player.two",
     model: "MacBookPro13,3",
     department: "",
     building: "",
     mac_address: "78:4F:43:7F:7D:CB",
     udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
-    serial_number: "5EGTF1C02T70",
+    serial_number: "5EGTF1C02T71",
     report_date_utc: "2019-05-06T13:33:08.196+0000",
     report_date_epoch: 1557149588196,
   },
@@ -125,12 +126,12 @@ const computers: Computer[] = [
 const playerOneDetails: any = {
   general: {
     id: 1,
-    name: "Jhon’s AcmaCorp MacBook",
-    mac_address: "11:22:33:44:55:66",
+    name: "PlayerOne’s MacBook",
+    mac_address: "78:4F:43:7F:7D:CB",
     alt_mac_address: "11:22:33:44:55:66",
     ip_address: "11.22.33.4",
-    last_reported_ip: "111.22.333.444",
-    serial_number: "123T123ESTT1",
+    last_reported_ip: "111.22.33.44",
+    serial_number: "5EGTF1C02T70",
     udid: "1234TE12-3STT-1234-E1ST-23TE412ST341",
     jamf_version: "10.12.0-t1555503901",
     platform: "Mac",
@@ -151,8 +152,8 @@ const playerOneDetails: any = {
       user_approved_mdm: true,
     },
     report_date: "2019-05-20 14:53:27",
-    report_date_epoch: 1558364007680,
-    report_date_utc: "2019-05-20T14:53:27.680+0000",
+    report_date_utc: "2019-05-06T13:33:08.196+0000",
+    report_date_epoch: 1557149588196,
     last_contact_time: "2019-05-23 11:25:05",
     last_contact_time_epoch: 1558610705298,
     last_contact_time_utc: "2019-05-23T11:25:05.298+0000",
@@ -522,10 +523,10 @@ const faultVaultInProgress: any = {
 };
 
 const playerOne: ComputerEntity = {
+  ...convertProperties(playerOneDetails.general),
   _class: ["Host", "Device"],
   _key: "user_endpoint_1",
   _type: "user_endpoint",
-  _scope: "user_endpoint",
   _rawData: [
     { name: "default", rawData: computers[0] },
     { name: "detail", rawData: playerOneDetails },
@@ -551,7 +552,7 @@ const playerOne: ComputerEntity = {
   reportDateUtc: "2019-05-06T13:33:08.196+0000",
   lastReportedOn: 1557149588196,
   serialNumber: "5EGTF1C02T70",
-  udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
+  udid: "1234TE12-3STT-1234-E1ST-23TE412ST341",
   username: "player.one",
   email: "jhon.doe@acmacorp.com",
 };
@@ -560,24 +561,23 @@ const playerTwo: ComputerEntity = {
   _class: ["Host", "Device"],
   _key: "user_endpoint_2",
   _type: "user_endpoint",
-  _scope: "user_endpoint",
   _rawData: [{ name: "default", rawData: computers[1] }],
   building: "",
   department: "",
-  displayName: "PlayerOne’s MacBook",
+  displayName: "PlayerTwo’s MacBook",
   gatekeeperEnabled: false,
   systemIntegrityProtectionEnabled: false,
   id: 2,
   macAddress: "78:4F:43:7F:7D:CB",
   managed: true,
   model: "MacBookPro13,3",
-  name: "PlayerOne’s MacBook",
+  name: "PlayerTwo’s MacBook",
   reportDateEpoch: 1557149588196,
   reportDateUtc: "2019-05-06T13:33:08.196+0000",
   lastReportedOn: 1557149588196,
-  serialNumber: "5EGTF1C02T70",
+  serialNumber: "5EGTF1C02T71",
   udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
-  username: "player.one",
+  username: "player.two",
   encrypted: false,
 };
 

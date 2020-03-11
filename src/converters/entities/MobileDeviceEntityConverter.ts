@@ -14,7 +14,6 @@ export function createMobileDeviceEntities(
     return {
       _key: generateEntityKey(MOBILE_DEVICE_ENTITY_TYPE, device.id),
       _type: MOBILE_DEVICE_ENTITY_TYPE,
-      _scope: MOBILE_DEVICE_ENTITY_TYPE,
       _class: MOBILE_DEVICE_ENTITY_CLASS,
       _rawData: [{ name: "default", rawData: device }],
       id: device.id,

@@ -34,7 +34,6 @@ export function createUserDeviceRelationships(
       const relationship: UserDeviceRelationship = {
         _class: USER_DEVICE_RELATIONSHIP_CLASS,
         _type: USER_DEVICE_RELATIONSHIP_TYPE,
-        _scope: USER_DEVICE_RELATIONSHIP_TYPE,
         _fromEntityKey: parentKey,
         _key: relationKey,
         _toEntityKey: childKey,

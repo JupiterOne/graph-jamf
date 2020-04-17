@@ -4,7 +4,7 @@ export const MOBILE_DEVICE_ENTITY_TYPE = "jamf_mobile_device";
 export const MOBILE_DEVICE_ENTITY_CLASS = "Device";
 
 export interface MobileDeviceEntity extends EntityFromIntegration {
-  id: number;
+  id: string;
   deviceName: string;
   udid: string;
   serialNumber: string;

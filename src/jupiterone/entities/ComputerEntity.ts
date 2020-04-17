@@ -4,7 +4,7 @@ export const COMPUTER_ENTITY_TYPE = "user_endpoint";
 export const COMPUTER_ENTITY_CLASS = ["Host", "Device"];
 
 export interface ComputerEntity extends EntityFromIntegration {
-  id: number;
+  id: string;
   name: string;
   managed: boolean;
   username: string;

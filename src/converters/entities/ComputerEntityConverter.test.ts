@@ -567,7 +567,7 @@ const playerTwo: ComputerEntity = {
   displayName: "PlayerTwo’s MacBook",
   gatekeeperEnabled: false,
   systemIntegrityProtectionEnabled: false,
-  id: 2,
+  id: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
   macAddress: "78:4F:43:7F:7D:CB",
   managed: true,
   model: "MacBookPro13,3",

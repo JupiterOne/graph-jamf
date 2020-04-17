@@ -4,7 +4,6 @@ export const USER_ENTITY_TYPE = "device_user";
 export const USER_ENTITY_CLASS = "User";
 
 export interface UserEntity extends EntityFromIntegration {
-  id: number;
   username: string;
   fullName?: string;
   email?: string;

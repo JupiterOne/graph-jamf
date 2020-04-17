@@ -44,7 +44,7 @@ function createComputerEntity(
     _type: COMPUTER_ENTITY_TYPE,
     _class: COMPUTER_ENTITY_CLASS,
     _rawData: [{ name: "default", rawData: device }],
-    id: device.id,
+    id: device.udid,
     displayName: device.name,
     name: device.name,
     managed: device.managed,

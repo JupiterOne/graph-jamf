@@ -13,11 +13,14 @@ export interface ComputerEntity extends EntityFromIntegration {
   department: string;
   building: string;
   macAddress: string;
+  altMacAddress?: string;
   udid: string;
   serialNumber: string;
-  reportDateUtc: string;
-  reportDateEpoch: number;
-  lastReportedOn: number;
+  createdOn?: number;
+  enrolledOn?: number;
+  reportedOn?: number;
+  lastReportedOn?: number;
+  lastSeenOn?: number;
   encrypted: boolean;
   gatekeeperEnabled: boolean;
   gatekeeperStatus?: string;

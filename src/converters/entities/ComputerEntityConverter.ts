@@ -3,6 +3,7 @@
 import {
   setRawData,
   convertProperties,
+  getTime,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { DataByID } from "../../jamf/types";
@@ -52,12 +53,10 @@ function createComputerEntity(
     model: device.model,
     department: device.department,
     building: device.building,
-    macAddress: device.mac_address,
+    macAddress: device.mac_address.toLowerCase(),
     udid: device.udid,
     serialNumber: device.serial_number,
-    reportDateUtc: device.report_date_utc,
-    reportDateEpoch: device.report_date_epoch,
-    lastReportedOn: device.report_date_epoch,
+    lastReportedOn: getTime(device.report_date_epoch),
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
@@ -69,6 +68,27 @@ function createComputerEntity(
     Object.assign(computer, {
       ...convertProperties(detailData.general),
     });
+
+    computer.createdOn = getTime(detailData.general.initial_entry_date_epoch);
+    computer.enrolledOn = getTime(detailData.general.last_enrolled_date_epoch);
+    computer.lastSeenOn = getTime(detailData.general.last_contact_time_epoch);
+
+    computer.altMacAddress =
+      detailData.general.alt_mac_address &&
+      detailData.general.alt_mac_address.toLowerCase();
+
+    delete (computer as any).initialEntryDate;
+    delete (computer as any).initialEntryDateEpoch;
+    delete (computer as any).initialEntryDateUtc;
+    delete (computer as any).lastContactTime;
+    delete (computer as any).lastContactTimeEpoch;
+    delete (computer as any).lastContactTimeUtc;
+    delete (computer as any).lastEnrolledDate;
+    delete (computer as any).lastEnrolledDateEpoch;
+    delete (computer as any).lastEnrolledDateUtc;
+    delete (computer as any).reportDate;
+    delete (computer as any).reportDateEpoch;
+    delete (computer as any).reportDateUtc;
 
     if (!device.username || device.username.length === 0) {
       computer.username = detailData.location.username;

@@ -3,7 +3,6 @@
 import {
   setRawData,
   convertProperties,
-  getTime,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { DataByID } from "../../jamf/types";
@@ -56,7 +55,9 @@ function createComputerEntity(
     macAddress: device.mac_address.toLowerCase(),
     udid: device.udid,
     serialNumber: device.serial_number,
-    lastReportedOn: getTime(device.report_date_epoch),
+    lastReportedOn: device.report_date_epoch
+      ? device.report_date_epoch
+      : undefined,
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
@@ -69,10 +70,19 @@ function createComputerEntity(
       ...convertProperties(detailData.general),
     });
 
-    computer.createdOn = getTime(detailData.general.initial_entry_date_epoch);
-    computer.enrolledOn = getTime(detailData.general.last_enrolled_date_epoch);
-    computer.lastSeenOn = getTime(detailData.general.last_contact_time_epoch);
+    computer.createdOn = detailData.general.initial_entry_date_epoch
+      ? detailData.general.initial_entry_date_epoch
+      : undefined;
+    computer.enrolledOn = detailData.general.last_enrolled_date_epoch
+      ? detailData.general.last_enrolled_date_epoch
+      : undefined;
+    computer.lastSeenOn = detailData.general.last_contact_time_epoch
+      ? detailData.general.last_contact_time_epoch
+      : undefined;
 
+    computer.macAddress =
+      detailData.general.mac_address &&
+      detailData.general.mac_address.toLowerCase();
     computer.altMacAddress =
       detailData.general.alt_mac_address &&
       detailData.general.alt_mac_address.toLowerCase();

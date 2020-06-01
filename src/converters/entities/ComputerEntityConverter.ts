@@ -50,11 +50,11 @@ function createComputerEntity(
     managed: device.managed,
     username: device.username,
     model: device.model,
+    serial: device.serial_number,
     department: device.department,
     building: device.building,
     macAddress: device.mac_address.toLowerCase(),
     udid: device.udid,
-    serialNumber: device.serial_number,
     lastReportedOn: device.report_date_epoch
       ? device.report_date_epoch
       : undefined,
@@ -99,6 +99,18 @@ function createComputerEntity(
     delete (computer as any).reportDate;
     delete (computer as any).reportDateEpoch;
     delete (computer as any).reportDateUtc;
+
+    computer.platform =
+      detailData.general.platform === "Mac"
+        ? "darwin"
+        : detailData.general.platform.toLowerCase();
+    computer.make = detailData.hardware.make;
+    computer.osName =
+      detailData.general.platform === "Mac"
+        ? "macOS"
+        : detailData.hardware.os_name;
+    computer.osVersion = detailData.hardware.os_version;
+    computer.osBuild = detailData.hardware.os_build;
 
     if (!device.username || device.username.length === 0) {
       computer.username = detailData.location.username;

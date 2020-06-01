@@ -546,10 +546,11 @@ const playerOne: ComputerEntity = {
   id: 1,
   macAddress: "78:4f:43:7f:7d:cb",
   managed: true,
+  make: "Apple",
   model: "MacBookPro13,3",
   name: "PlayerOne’s MacBook",
   lastReportedOn: 1557149588196,
-  serialNumber: "5EGTF1C02T70",
+  serial: "5EGTF1C02T70",
   udid: "1234TE12-3STT-1234-E1ST-23TE412ST341",
   username: "player.one",
   email: "jhon.doe@acmacorp.com",
@@ -568,6 +569,10 @@ const playerOne: ComputerEntity = {
   reportDate: undefined,
   reportDateEpoch: undefined,
   reportDateUtc: undefined,
+  platform: "darwin",
+  osName: "macOS",
+  osVersion: playerOneDetails.hardware.os_version,
+  osBuild: playerOneDetails.hardware.os_build,
 };
 
 const playerTwo: ComputerEntity = {
@@ -586,7 +591,7 @@ const playerTwo: ComputerEntity = {
   model: "MacBookPro13,3",
   name: "PlayerTwo’s MacBook",
   lastReportedOn: 1557149588196,
-  serialNumber: "5EGTF1C02T71",
+  serial: "5EGTF1C02T71",
   udid: "8195CA16-7FFE-5855-A3DD-53FD76ABC123",
   username: "player.two",
   encrypted: false,

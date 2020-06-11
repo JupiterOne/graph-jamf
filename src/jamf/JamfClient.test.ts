@@ -1,5 +1,6 @@
 import nock from "nock";
 import JamfClient from "./JamfClient";
+import { createTestLogger } from "@jupiterone/jupiter-managed-integration-sdk";
 
 const JAMF_LOCAL_EXECUTION_HOST =
   process.env.JAMF_LOCAL_EXECUTION_HOST || "example.jamfcloud.com";
@@ -19,7 +20,12 @@ function getClient(
     password?: string;
   } = {},
 ): JamfClient {
+  const context = {
+    logger: createTestLogger(),
+  };
+
   return new JamfClient(
+    context,
     config.host || JAMF_LOCAL_EXECUTION_HOST,
     config.username || JAMF_LOCAL_EXECUTION_USERNAME,
     config.password || JAMF_LOCAL_EXECUTION_PASSWORD,

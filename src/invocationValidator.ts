@@ -32,6 +32,7 @@ export default async function invocationValidator(
   }
 
   const provider = new JamfClient(
+    context,
     config.jamfHost,
     config.jamfUsername,
     config.jamfPassword,

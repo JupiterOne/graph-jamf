@@ -9,6 +9,7 @@ export default function initializeContext(
   const { config } = context.instance;
 
   const provider = new JamfClient(
+    context,
     config.jamfHost,
     config.jamfUsername,
     config.jamfPassword,

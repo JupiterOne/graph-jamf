@@ -1,4 +1,4 @@
-import fetch, { RequestInit, Response } from "node-fetch";
+import fetch, { RequestInit, Response, FetchError } from "node-fetch";
 import PQueue from "p-queue";
 
 import { retry } from "@lifeomic/attempt";
@@ -29,14 +29,28 @@ import {
   UserResponse,
   UsersResponse,
 } from "./types";
+import { IntegrationLogger } from "@jupiterone/jupiter-managed-integration-sdk";
+
+type LoggerContext = {
+  logger: IntegrationLogger;
+};
 
 export default class JamfClient {
+  private readonly context: LoggerContext;
   private readonly host: string;
   private readonly username: string;
   private readonly password: string;
   private readonly queue: PQueue;
 
-  constructor(host: string, username: string, password: string) {
+  constructor(
+    context: {
+      logger: IntegrationLogger;
+    },
+    host: string,
+    username: string,
+    password: string,
+  ) {
+    this.context = context;
     this.host = host;
     this.username = username;
     this.password = password;
@@ -183,12 +197,22 @@ export default class JamfClient {
     const request = (): Promise<Response | undefined> =>
       retry(
         async () => {
+          const fullUrl = `https://${this.host}/JSSResource${url}`;
+
           try {
-            return await fetch(
-              `https://${this.host}/JSSResource${url}`,
-              options,
-            );
+            return await fetch(fullUrl, options);
           } catch (err) {
+            const fetchErr = err as FetchError;
+
+            this.context.logger.error(
+              {
+                url: fullUrl,
+                errorCode: fetchErr.code,
+                err,
+              },
+              "Jamf API request failed",
+            );
+
             if (err.code === "ETIMEDOUT") {
               throw Object.assign(new Error(), {
                 message: `Timed out trying to connect to ${this.host} (${err.code})`,

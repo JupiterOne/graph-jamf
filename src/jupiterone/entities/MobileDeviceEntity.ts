@@ -1,6 +1,6 @@
 import { EntityFromIntegration } from "@jupiterone/jupiter-managed-integration-sdk";
 
-export const MOBILE_DEVICE_ENTITY_TYPE = "jamf_mobile_device";
+export const MOBILE_DEVICE_ENTITY_TYPE = "mobile_device";
 export const MOBILE_DEVICE_ENTITY_CLASS = "Device";
 
 export interface MobileDeviceEntity extends EntityFromIntegration {

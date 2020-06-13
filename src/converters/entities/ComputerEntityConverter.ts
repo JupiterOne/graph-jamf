@@ -51,6 +51,7 @@ function createComputerEntity(
     username: device.username,
     model: device.model,
     serial: device.serial_number,
+    deviceType: /macbook/i.test(device.model) ? "laptop" : "desktop",
     department: device.department,
     building: device.building,
     macAddress: device.mac_address.toLowerCase(),

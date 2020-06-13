@@ -12,6 +12,7 @@ export interface ComputerEntity extends EntityFromIntegration {
   make?: string;
   model: string;
   serial: string;
+  deviceType: string;
   platform?: string;
   osName?: string;
   osVersion?: string;

@@ -57,8 +57,8 @@ test("convert mobile device entity", () => {
   expect(entities).toEqual([
     {
       _class: "Device",
-      _key: "jamf_mobile_device_16",
-      _type: "jamf_mobile_device",
+      _key: "mobile_device_16",
+      _type: "mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[0] }],
       deviceName: "Update 1-1",
       displayName: "Unknown User's iPhone 5S (GSM)",
@@ -76,8 +76,8 @@ test("convert mobile device entity", () => {
     },
     {
       _class: "Device",
-      _key: "jamf_mobile_device_28",
-      _type: "jamf_mobile_device",
+      _key: "mobile_device_28",
+      _type: "mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[1] }],
       deviceName: "Update 1-2",
       displayName: "Rory Overbey's iPad mini (CDMA)",
@@ -95,8 +95,8 @@ test("convert mobile device entity", () => {
     },
     {
       _class: "Device",
-      _key: "jamf_mobile_device_35",
-      _type: "jamf_mobile_device",
+      _key: "mobile_device_35",
+      _type: "mobile_device",
       _rawData: [{ name: "default", rawData: mobileDevices[2] }],
       deviceName: "Update 1-3",
       displayName: "Heriberto Truby's iPhone 5 (CDMA)",

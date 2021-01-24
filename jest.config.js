@@ -1,6 +1,7 @@
 const { defaults } = require("jest-config");
 
 module.exports = {
+  globalSetup: "./jest.globalSetup.js",
   transform: {
     "^.+\\.ts?$": "ts-jest",
   },
@@ -19,10 +20,10 @@ module.exports = {
   collectCoverage: true,
   coverageThreshold: {
     global: {
-      statements: 99.79,
-      branches: 92.92,
+      statements: 98,
+      branches: 90,
       functions: 100,
-      lines: 99.78,
+      lines: 98,
     },
   },
 };

@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/unbound-method */
-import {
-  IntegrationActionName,
-  IntegrationExecutionContext,
-} from "@jupiterone/jupiter-managed-integration-sdk";
+import { IntegrationExecutionContext } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import executionHandler from "./executionHandler";
 import initializeContext from "./initializeContext";
@@ -51,7 +48,7 @@ test("executionHandler with INGEST action", async () => {
     },
     event: {
       action: {
-        name: IntegrationActionName.INGEST,
+        name: "INGEST",
       },
     },
   } as IntegrationExecutionContext;
@@ -92,7 +89,7 @@ test("executionHandler with unhandled action", async () => {
     },
     event: {
       action: {
-        name: IntegrationActionName.SCAN,
+        name: "SCAN",
       },
     },
   } as IntegrationExecutionContext;

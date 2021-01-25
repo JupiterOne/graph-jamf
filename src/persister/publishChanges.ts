@@ -71,10 +71,10 @@ function createEntitiesOperations(
 
     return [
       ...operations,
-      ...persister.processEntities<EntityFromIntegration>(
+      ...persister.processEntities<EntityFromIntegration>({
         oldEntities,
         newEntities,
-      ),
+      }),
     ];
   }, defaultOperations);
 }
@@ -90,15 +90,15 @@ function createRelationshipsOperations(
   ) as RelationshipsKeys[];
 
   return relationships.reduce((operations, relationshipName) => {
-    const oldRelationhips = oldData[relationshipName];
-    const newRelationhips = newData[relationshipName];
+    const oldRelationships = oldData[relationshipName];
+    const newRelationships = newData[relationshipName];
 
     return [
       ...operations,
-      ...persister.processRelationships<IntegrationRelationship>(
-        oldRelationhips,
-        newRelationhips,
-      ),
+      ...persister.processRelationships<IntegrationRelationship>({
+        oldRelationships,
+        newRelationships,
+      }),
     ];
   }, defatultOperations);
 }

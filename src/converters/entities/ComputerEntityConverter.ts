@@ -3,6 +3,7 @@
 import {
   setRawData,
   convertProperties,
+  RawDataTracking,
 } from "@jupiterone/jupiter-managed-integration-sdk";
 
 import { DataByID } from "../../jamf/types";
@@ -65,7 +66,10 @@ function createComputerEntity(
   };
 
   if (detailData) {
-    setRawData(computer, { name: "detail", rawData: detailData });
+    setRawData(computer as RawDataTracking, {
+      name: "detail",
+      rawData: detailData,
+    });
 
     Object.assign(computer, {
       ...convertProperties(detailData.general),

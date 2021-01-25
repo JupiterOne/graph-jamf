@@ -1,6 +1,5 @@
 import {
   GraphClient,
-  IntegrationActionName,
   IntegrationExecutionContext,
   IntegrationExecutionResult,
   PersisterClient,
@@ -33,7 +32,10 @@ async function removeDeprecatedEntities(
     ["jamf_configuration_profile"].map(async t => {
       const entitiesToDelete = await graph.findEntitiesByType(t);
       return persister.publishPersisterOperations([
-        persister.processEntities(entitiesToDelete, []),
+        persister.processEntities({
+          oldEntities: entitiesToDelete,
+          newEntities: [],
+        }),
         [],
       ]);
     }),
@@ -66,5 +68,5 @@ interface ActionMap {
 }
 
 const ACTIONS: ActionMap = {
-  [IntegrationActionName.INGEST]: synchronize,
+  INGEST: synchronize,
 };

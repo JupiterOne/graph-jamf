@@ -101,15 +101,12 @@ describe("JamfClient fetch err", () => {
         code: "ETIMEDOUT",
       });
 
-    expect.assertions(3);
+    expect.assertions(2);
 
     try {
       await getClient().fetchUsers();
     } catch (err) {
-      expect(err.message).toEqual(
-        `Timed out trying to connect to ${JAMF_LOCAL_EXECUTION_HOST} (ETIMEDOUT)`,
-      );
-      expect(err.code).toEqual("ETIMEDOUT");
+      expect(err.message).toEqual(expect.stringContaining(`ETIMEDOUT`));
       expect(err.statusCode).toBeUndefined();
     }
   });
@@ -123,15 +120,12 @@ describe("JamfClient fetch err", () => {
         code: "ESOCKETTIMEDOUT",
       });
 
-    expect.assertions(3);
+    expect.assertions(2);
 
     try {
       await getClient().fetchUsers();
     } catch (err) {
-      expect(err.message).toEqual(
-        `Established connection to ${JAMF_LOCAL_EXECUTION_HOST} timed out (ESOCKETTIMEDOUT)`,
-      );
-      expect(err.code).toEqual("ESOCKETTIMEDOUT");
+      expect(err.message).toEqual(expect.stringContaining(`ESOCKETTIMEDOUT`));
       expect(err.statusCode).toBeUndefined();
     }
   });

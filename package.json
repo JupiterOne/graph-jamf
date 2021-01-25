@@ -1,6 +1,6 @@
 {
   "name": "@jupiterone/graph-jamf",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A graph conversion tool for https://www.jamf.com.",
   "main": "dist/index.js",
   "repository": "https://github.com/JupiterOne/graph-jamf",
@@ -26,6 +26,7 @@
     "lint:md": "remark .",
     "lint:es": "eslint . --ext .ts --ignore-pattern dist",
     "format": "yarn prettier --write '**/*.{ts,js,json,md}'",
+    "prepack": "yarn build",
     "test": "jest"
   },
   "dependencies": {

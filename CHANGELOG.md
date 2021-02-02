@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.4.4 - 2021-02-02
+
 ### Fixed
 
 - Fixed failure to handle Jamf hosts such as

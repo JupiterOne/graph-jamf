@@ -172,8 +172,16 @@ export default class JamfClient {
     return result.os_x_configuration_profile;
   }
 
+  public getResourceUrl(path: string): string {
+    const url = new URL(
+      this.host.startsWith("http") ? this.host : `https://${this.host}`,
+    );
+    url.pathname = `JSSResource${path}`;
+    return url.href;
+  }
+
   private async makeRequest<T>(
-    url: string,
+    path: string,
     method: Method,
     params: {},
     headers?: {},
@@ -197,7 +205,7 @@ export default class JamfClient {
     const request = (): Promise<Response | undefined> =>
       retry(
         async () => {
-          const fullUrl = `https://${this.host}/JSSResource${url}`;
+          const fullUrl = this.getResourceUrl(path);
 
           try {
             return await fetch(fullUrl, options);

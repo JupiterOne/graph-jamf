@@ -37,6 +37,50 @@ beforeAll(() => {
   process.env.CI ? nock.back.setMode("lockdown") : nock.back.setMode("record");
 });
 
+describe("JamfClient getResourceUrl", () => {
+  test("no protocol", () => {
+    const client = getClient({ host: "jamfhost.com" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "https://jamfhost.com/JSSResource/computers/subset/basic",
+    );
+  });
+
+  test("http", () => {
+    const client = getClient({ host: "http://jamfhost.com" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "http://jamfhost.com/JSSResource/computers/subset/basic",
+    );
+  });
+
+  test("https", () => {
+    const client = getClient({ host: "https://jamfhost.com" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "https://jamfhost.com/JSSResource/computers/subset/basic",
+    );
+  });
+
+  test("port", () => {
+    const client = getClient({ host: "https://jamfhost.com:8080" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "https://jamfhost.com:8080/JSSResource/computers/subset/basic",
+    );
+  });
+
+  test("?failover", () => {
+    const client = getClient({ host: "https://jamfhost.com:8080?failover" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "https://jamfhost.com:8080/JSSResource/computers/subset/basic?failover",
+    );
+  });
+
+  test("/?failover", () => {
+    const client = getClient({ host: "https://jamfhost.com:8080/?failover" });
+    expect(client.getResourceUrl("/computers/subset/basic")).toEqual(
+      "https://jamfhost.com:8080/JSSResource/computers/subset/basic?failover",
+    );
+  });
+});
+
 describe("JamfClient fetch err", () => {
   test("unauthorized", async () => {
     const { nockDone } = await nock.back("users-unauthorized.json", {

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#fetchAccounts should collect data: accountData 1`] = `
+Object {
+  "groups": Array [
+    Object {
+      "id": 1,
+      "name": "Test Group",
+      "site": Object {
+        "id": 1,
+        "name": "Test site",
+      },
+    },
+    Object {
+      "id": 2,
+      "name": "Another Test Group",
+      "site": Object {
+        "id": 1,
+        "name": "Test site",
+      },
+    },
+    Object {
+      "id": 3,
+      "name": "Not all groups have members inside in api",
+      "site": Object {
+        "id": 1,
+        "name": "Test site",
+      },
+    },
+  ],
+  "users": Array [
+    Object {
+      "id": 1,
+      "name": "adam.williams",
+    },
+    Object {
+      "id": 9,
+      "name": "austin.kelleher",
+    },
+    Object {
+      "id": 3,
+      "name": "erkang.zheng",
+    },
+    Object {
+      "id": 7,
+      "name": "isaacwilliams",
+    },
+    Object {
+      "id": 8,
+      "name": "jupiterone.dev",
+    },
+  ],
+}
+`;
+
+exports[`#fetchAccounts should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Account",
+      ],
+      "_key": "jamf_account_local-integration-instance",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "id": "local-integration-instance",
+            "name": "Local Integration",
+          },
+        },
+      ],
+      "_type": "jamf_account",
+      "createdOn": undefined,
+      "displayName": "Local Integration",
+      "id": "local-integration-instance",
+      "name": "Local Integration",
+    },
+  ],
+  "collectedRelationships": Array [],
+  "encounteredTypes": Array [
+    "jamf_account",
+  ],
+  "numCollectedEntities": 1,
+  "numCollectedRelationships": 0,
+}
+`;

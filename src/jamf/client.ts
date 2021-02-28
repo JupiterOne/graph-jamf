@@ -1,0 +1,294 @@
+import fetch, { RequestInit, Response, FetchError } from 'node-fetch';
+import { retry } from '@lifeomic/attempt';
+import PQueue from 'p-queue';
+import {
+  Admin,
+  AdminsAndGroups,
+  ApplicationDetail,
+  Computer,
+  ComputerDetail,
+  Configuration,
+  Group,
+  Method,
+  MobileDevice,
+  OSXConfigurationDetail,
+  User,
+  AccountsResponse,
+  AdminResponse,
+  ApplicationDetailResponse,
+  ComputerDetailResponse,
+  ComputerResponse,
+  GroupResponse,
+  MobileDevicesResponse,
+  OSXConfigurationDetailResponse,
+  OSXConfigurationResponse,
+  UserResponse,
+  UsersResponse,
+} from './types';
+import {
+  IntegrationLogger,
+  IntegrationProviderAPIError,
+} from '@jupiterone/integration-sdk-core';
+import { URL } from 'url';
+
+interface OnApiRequestErrorParams {
+  url: string;
+  err: FetchError;
+  attemptNum: number;
+  attemptsRemaining: number;
+  code?: string;
+}
+
+interface CreateJamfClientParams {
+  host: string;
+  username: string;
+  password: string;
+  onApiRequestError?: (params: OnApiRequestErrorParams) => void;
+}
+
+export class JamfClient {
+  private readonly queue: PQueue;
+  private readonly host: string;
+  private readonly username: string;
+  private readonly password: string;
+  private readonly onApiRequestError:
+    | ((params: OnApiRequestErrorParams) => void)
+    | undefined;
+
+  constructor({
+    host,
+    username,
+    password,
+    onApiRequestError,
+  }: CreateJamfClientParams) {
+    this.host = host;
+    this.username = username;
+    this.password = password;
+    this.onApiRequestError = onApiRequestError;
+
+    this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
+  }
+
+  public async fetchAccounts(): Promise<AdminsAndGroups> {
+    const result = await this.makeRequest<AccountsResponse>(
+      `/accounts`,
+      Method.GET,
+      {},
+    );
+    const { users, groups } = result.accounts;
+
+    return { users, groups };
+  }
+
+  public async fetchAccountUserById(id: number): Promise<Admin> {
+    const result = await this.makeRequest<AdminResponse>(
+      `/accounts/userid/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.account;
+  }
+
+  public async fetchAccountGroupById(id: number): Promise<Group> {
+    const result = await this.makeRequest<GroupResponse>(
+      `/accounts/groupid/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.group;
+  }
+
+  public async fetchUsers(): Promise<User[]> {
+    const result = await this.makeRequest<UsersResponse>(
+      `/users`,
+      Method.GET,
+      {},
+    );
+
+    return result.users;
+  }
+
+  public async fetchUserById(id: number): Promise<User> {
+    const result = await this.makeRequest<UserResponse>(
+      `/users/id/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.user;
+  }
+
+  public async fetchMobileDevices(): Promise<MobileDevice[]> {
+    const result = await this.makeRequest<MobileDevicesResponse>(
+      '/mobiledevices',
+      Method.GET,
+      {},
+    );
+
+    return result.mobile_devices;
+  }
+
+  public async fetchComputers(): Promise<Computer[]> {
+    const result = await this.makeRequest<ComputerResponse>(
+      '/computers/subset/basic',
+      Method.GET,
+      {},
+    );
+
+    return result.computers;
+  }
+
+  public async fetchComputerById(id: number): Promise<ComputerDetail> {
+    const result = await this.makeRequest<ComputerDetailResponse>(
+      `/computers/id/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer;
+  }
+
+  public async fetchComputerApplicationByName(
+    name: string,
+  ): Promise<ApplicationDetail> {
+    const result = await this.makeRequest<ApplicationDetailResponse>(
+      `/computerapplications/application/${name}`,
+      Method.GET,
+      {},
+    );
+
+    return result.computer_applications;
+  }
+
+  public async fetchOSXConfigurationProfiles(): Promise<Configuration[]> {
+    const result = await this.makeRequest<OSXConfigurationResponse>(
+      `/osxconfigurationprofiles`,
+      Method.GET,
+      {},
+    );
+
+    return result.os_x_configuration_profiles;
+  }
+
+  public async fetchOSXConfigurationProfileById(
+    id: number,
+  ): Promise<OSXConfigurationDetail> {
+    const result = await this.makeRequest<OSXConfigurationDetailResponse>(
+      `/osxconfigurationprofiles/id/${id}`,
+      Method.GET,
+      {},
+    );
+
+    return result.os_x_configuration_profile;
+  }
+
+  public getResourceUrl(path: string): string {
+    const url = new URL(
+      this.host.startsWith('http') ? this.host : `https://${this.host}`,
+    );
+    url.pathname = `JSSResource${path}`;
+    return url.href;
+  }
+
+  private async makeRequest<T>(
+    path: string,
+    method: Method,
+    params: {},
+    headers?: {},
+  ): Promise<T> {
+    const options: RequestInit = {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Basic ${Buffer.from(
+          this.username + ':' + this.password,
+        ).toString('base64')}`,
+        'Accept-Encoding': 'identity',
+        ...headers,
+      },
+    };
+
+    const fullUrl = this.getResourceUrl(path);
+
+    // The goal here is to retry and ensure the final error includes information
+    // about the host we could not connect to, since users define the host and
+    // may mis-type the value.
+    const request = (): Promise<Response> =>
+      retry(async () => fetch(fullUrl, options), {
+        maxAttempts: 3,
+        handleError: (err, attemptContext) => {
+          const fetchErr = err as FetchError;
+
+          if (attemptContext.attemptsRemaining && this.onApiRequestError) {
+            // If there are no attempts remaining, we will just bubble up the
+            // entire error by default.
+            this.onApiRequestError({
+              url: fullUrl,
+              code: fetchErr.code,
+              err,
+              attemptNum: attemptContext.attemptNum,
+              attemptsRemaining: attemptContext.attemptsRemaining,
+            });
+          }
+
+          if (err.code === 'ETIMEDOUT') {
+            throw new IntegrationProviderAPIError({
+              cause: err,
+              endpoint: fullUrl,
+              statusText: `Timed out trying to connect to ${this.host} (${err.code})`,
+              status: err.code,
+            });
+          } else if (err.code === 'ESOCKETTIMEDOUT') {
+            throw new IntegrationProviderAPIError({
+              cause: err,
+              endpoint: fullUrl,
+              statusText: `Established connection to ${this.host} timed out (${err.code})`,
+              status: err.code,
+            });
+          }
+
+          throw err;
+        },
+      });
+
+    const response = await this.queue.add(request);
+
+    if (response.status === 200) {
+      return response.json();
+    } else {
+      throw new IntegrationProviderAPIError({
+        endpoint: fullUrl,
+        statusText: response.statusText,
+        status: response.status,
+      });
+    }
+  }
+}
+
+interface CreateJamfClientHelperParams {
+  host: string;
+  username: string;
+  password: string;
+  logger: IntegrationLogger;
+}
+
+export function createClient({
+  host,
+  username,
+  password,
+  logger,
+}: CreateJamfClientHelperParams) {
+  const client = new JamfClient({
+    host,
+    username,
+    password,
+    onApiRequestError(requestError) {
+      logger.info(requestError, 'Error making API requests (will retry)');
+    },
+  });
+
+  return client;
+}

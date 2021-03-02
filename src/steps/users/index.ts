@@ -8,7 +8,7 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { createClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
-import { Entities, Relationships } from '../constants';
+import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createAdminEntity, createDeviceUserEntity } from './converters';
 import { Admin, User } from '../../jamf/types';
 import { getAccountData, getAccountEntity } from '../../util/account';
@@ -149,15 +149,15 @@ export async function fetchDeviceUsers({
 
 export const userSteps: IntegrationStep<IntegrationConfig>[] = [
   {
-    id: 'fetch-admins',
+    id: IntegrationSteps.ADMINS,
     name: 'Fetch Admins',
     entities: [Entities.USER_ADMIN],
     relationships: [Relationships.ACCOUNT_HAS_USER_ADMIN],
     executionHandler: fetchAdminUsers,
-    dependsOn: ['fetch-accounts'],
+    dependsOn: [IntegrationSteps.ACCOUNTS],
   },
   {
-    id: 'fetch-device-users',
+    id: IntegrationSteps.DEVICE_USERS,
     name: 'Fetch Device Users',
     entities: [Entities.DEVICE_USER],
     relationships: [
@@ -166,6 +166,10 @@ export const userSteps: IntegrationStep<IntegrationConfig>[] = [
       Relationships.DEVICE_USER_HAS_COMPUTER,
     ],
     executionHandler: fetchDeviceUsers,
-    dependsOn: ['fetch-accounts', 'fetch-mobile-devices', 'fetch-computers'],
+    dependsOn: [
+      IntegrationSteps.ACCOUNTS,
+      IntegrationSteps.MOBILE_DEVICES,
+      IntegrationSteps.COMPUTERS
+    ],
   },
 ];

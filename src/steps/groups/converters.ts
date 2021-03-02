@@ -14,8 +14,8 @@ export function createGroupEntity(data: Group) {
         id: data.id.toString(),
         displayName: data.name,
         name: data.name,
-        accessLevel: data.access_level!,
-        privilegeSet: data.privilege_set!,
+        accessLevel: data.access_level,
+        privilegeSet: data.privilege_set,
       },
     },
   });

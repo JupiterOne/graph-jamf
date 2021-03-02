@@ -11,3 +11,8 @@ and this project adheres to
 ### Changed
 
 - Convert to new SDK
+
+## 1.4.4 - 2021-02-02
+
+- Fixed failure to handle Jamf hosts such as
+  `https://jss.myjamf.com:8443/?failover`

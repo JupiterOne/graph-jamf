@@ -4,7 +4,7 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { createClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
-import { Entities, ACCOUNT_DATA_KEY, ACCOUNT_ENTITY_KEY } from '../constants';
+import { Entities, ACCOUNT_DATA_KEY, ACCOUNT_ENTITY_KEY, IntegrationSteps } from '../constants';
 import { createAccountEntity } from './converters';
 
 export async function fetchAccounts({
@@ -36,7 +36,7 @@ export async function fetchAccounts({
 
 export const accountSteps: IntegrationStep<IntegrationConfig>[] = [
   {
-    id: 'fetch-accounts',
+    id: IntegrationSteps.ACCOUNTS,
     name: 'Fetch Accounts',
     entities: [Entities.ACCOUNT],
     relationships: [],

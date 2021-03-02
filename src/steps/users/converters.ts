@@ -19,14 +19,14 @@ export function createAdminEntity(data: Admin) {
         displayName: data.name,
         name: data.name,
         admin: true,
-        directoryUser: data.directory_user!,
-        fullName: data.full_name!,
+        directoryUser: data.directory_user,
+        fullName: data.full_name,
         email: data.email || undefined,
-        emailAddress: data.email_address!,
-        enabled: data.enabled!,
-        forcePasswordChange: data.force_password_change!,
-        accessLevel: data.access_level!,
-        privilegeSet: data.privilege_set!,
+        emailAddress: data.email_address,
+        enabled: data.enabled,
+        forcePasswordChange: data.force_password_change,
+        accessLevel: data.access_level,
+        privilegeSet: data.privilege_set,
         permissions:
           data.privilege_set === 'Administrator'
             ? [data.privilege_set]

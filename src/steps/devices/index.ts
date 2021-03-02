@@ -15,6 +15,7 @@ import {
   Entities,
   Relationships,
   MAC_OS_CONFIGURATION_DETAILS_BY_ID_KEY,
+  IntegrationSteps,
 } from '../constants';
 import {
   createMobileDeviceEntity,
@@ -125,7 +126,7 @@ async function createComputerInstalledApplicationRelationships(
       createMappedRelationship({
         _key: mappedRelationshipKey,
         _class: RelationshipClass.INSTALLED,
-        _type: 'user_endpoint_installed_application',
+        _type: Relationships.COMPUTER_INSTALLED_APPLICATION._type,
         _mapping: {
           relationshipDirection: RelationshipDirection.FORWARD,
           sourceEntityKey: computerEntity._key,
@@ -283,23 +284,23 @@ export async function fetchComputers({
 
 export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
   {
-    id: 'fetch-macos-configuration-profiles',
+    id: IntegrationSteps.MACOS_CONFIGURATION_PROFILES,
     name: 'Fetch macOS Configuration Profiles',
     entities: [Entities.MAC_OS_CONFIGURATION_PROFILE],
     relationships: [Relationships.ACCOUNT_HAS_MAC_OS_CONFIGURATION_PROFILE],
     executionHandler: fetchMacOsConfigurationDetails,
-    dependsOn: ['fetch-accounts'],
+    dependsOn: [IntegrationSteps.ACCOUNTS],
   },
   {
-    id: 'fetch-mobile-devices',
+    id: IntegrationSteps.MOBILE_DEVICES,
     name: 'Fetch Mobile Devices',
     entities: [Entities.MOBILE_DEVICE],
     relationships: [Relationships.ACCOUNT_HAS_MOBILE_DEVICE],
     executionHandler: fetchMobileDevices,
-    dependsOn: ['fetch-accounts'],
+    dependsOn: [IntegrationSteps.ACCOUNTS],
   },
   {
-    id: 'fetch-computers',
+    id: IntegrationSteps.COMPUTERS,
     name: 'Fetch Computers',
     entities: [Entities.COMPUTER],
     relationships: [
@@ -308,6 +309,9 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
       Relationships.COMPUTER_INSTALLED_APPLICATION,
     ],
     executionHandler: fetchComputers,
-    dependsOn: ['fetch-accounts', 'fetch-macos-configuration-profiles'],
+    dependsOn: [
+      IntegrationSteps.ACCOUNTS,
+      IntegrationSteps.MACOS_CONFIGURATION_PROFILES
+    ],
   },
 ];

@@ -8,7 +8,7 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { createClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
-import { Entities, Relationships } from '../constants';
+import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createGroupEntity } from './converters';
 import { Group } from '../../jamf/types';
 import { getAccountData, getAccountEntity } from '../../util/account';
@@ -83,7 +83,7 @@ export async function fetchGroups({
 
 export const groupSteps: IntegrationStep<IntegrationConfig>[] = [
   {
-    id: 'fetch-groups',
+    id: IntegrationSteps.GROUPS,
     name: 'Fetch Groups',
     entities: [Entities.GROUP],
     relationships: [
@@ -91,6 +91,6 @@ export const groupSteps: IntegrationStep<IntegrationConfig>[] = [
       Relationships.GROUP_HAS_USER_ADMIN_MEMBER,
     ],
     executionHandler: fetchGroups,
-    dependsOn: ['fetch-accounts', 'fetch-admins'],
+    dependsOn: [IntegrationSteps.ACCOUNTS, IntegrationSteps.ADMINS],
   },
 ];

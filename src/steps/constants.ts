@@ -9,6 +9,16 @@ export const ACCOUNT_DATA_KEY = 'ACCOUNT_DATA';
 export const MAC_OS_CONFIGURATION_DETAILS_BY_ID_KEY =
   'MAC_OS_CONFIGURATION_DETAILS_BY_ID';
 
+export enum IntegrationSteps {
+  ACCOUNTS = 'fetch-accounts',
+  MACOS_CONFIGURATION_PROFILES = 'fetch-macos-configuration-profiles',
+  MOBILE_DEVICES = 'fetch-mobile-devices',
+  COMPUTERS = 'fetch-computers',
+  GROUPS = 'fetch-groups',
+  ADMINS = 'fetch-admins',
+  DEVICE_USERS = 'fetch-device-users'
+}
+
 export const Entities: Record<
   | 'ACCOUNT'
   | 'GROUP'

@@ -169,7 +169,7 @@ export const userSteps: IntegrationStep<IntegrationConfig>[] = [
     dependsOn: [
       IntegrationSteps.ACCOUNTS,
       IntegrationSteps.MOBILE_DEVICES,
-      IntegrationSteps.COMPUTERS
+      IntegrationSteps.COMPUTERS,
     ],
   },
 ];

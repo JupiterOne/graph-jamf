@@ -16,7 +16,7 @@ export enum IntegrationSteps {
   COMPUTERS = 'fetch-computers',
   GROUPS = 'fetch-groups',
   ADMINS = 'fetch-admins',
-  DEVICE_USERS = 'fetch-device-users'
+  DEVICE_USERS = 'fetch-device-users',
 }
 
 export const Entities: Record<

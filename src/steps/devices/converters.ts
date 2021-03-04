@@ -119,7 +119,7 @@ export function createComputerEntity(
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
     _rawData: [{ name: 'default', rawData: device }],
-    id: device.udid,
+    id: device.udid.toString(),
     displayName: device.name,
     name: device.name,
     managed: device.managed,
@@ -137,6 +137,7 @@ export function createComputerEntity(
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
+    category: 'endpoint',
   };
 
   if (detailData) {
@@ -156,6 +157,7 @@ export function createComputerEntity(
 
     Object.assign(computer, {
       ...convertProperties(detailData.general),
+      id: detailData.general.id.toString(),
     });
 
     computer.createdOn = detailData.general.initial_entry_date_epoch

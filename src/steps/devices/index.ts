@@ -311,7 +311,7 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
     executionHandler: fetchComputers,
     dependsOn: [
       IntegrationSteps.ACCOUNTS,
-      IntegrationSteps.MACOS_CONFIGURATION_PROFILES
+      IntegrationSteps.MACOS_CONFIGURATION_PROFILES,
     ],
   },
 ];

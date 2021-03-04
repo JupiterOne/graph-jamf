@@ -1,23 +1,18 @@
-import { IntegrationInvocationConfig } from "@jupiterone/jupiter-managed-integration-sdk";
+import { IntegrationInvocationConfig } from '@jupiterone/integration-sdk-core';
+import { instanceConfigFields, IntegrationConfig } from './config';
+import { accountSteps } from './steps/accounts';
+import { deviceSteps } from './steps/devices';
+import { groupSteps } from './steps/groups';
+import { userSteps } from './steps/users';
+import { validateInvocation } from './validator';
 
-import executionHandler from "./executionHandler";
-import invocationValidator from "./invocationValidator";
-
-const invocationConfig: IntegrationInvocationConfig = {
-  instanceConfigFields: {
-    jamfHost: {
-      type: "string",
-    },
-    jamfPassword: {
-      type: "string",
-      mask: true,
-    },
-    jamfUsername: {
-      type: "string",
-    },
-  },
-  executionHandler,
-  invocationValidator,
+export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
+  instanceConfigFields,
+  validateInvocation,
+  integrationSteps: [
+    ...accountSteps,
+    ...groupSteps,
+    ...userSteps,
+    ...deviceSteps,
+  ],
 };
-
-export default invocationConfig;

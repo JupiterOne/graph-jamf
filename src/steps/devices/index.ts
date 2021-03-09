@@ -141,6 +141,10 @@ async function createComputerInstalledApplicationRelationships(
             version: application.version,
           },
         },
+        properties: {
+          path: application.path,
+          version: application.version,
+        },
       }),
     );
 

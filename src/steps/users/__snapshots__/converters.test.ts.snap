@@ -10,43 +10,8 @@ Object {
     Object {
       "name": "default",
       "rawData": Object {
-        "access_level": "Full Access",
-        "directory_user": false,
-        "email": "adam.williams@jupiterone.com",
-        "email_address": "adam.williams@jupiterone.com",
-        "enabled": "Enabled",
-        "force_password_change": false,
-        "full_name": "",
-        "id": 1,
-        "name": "adam.williams",
-        "password_sha256": undefined,
-        "privilege_set": "Administrator",
-        "privileges": Object {
-          "casper_admin": Array [
-            "Use Casper Admin",
-            "Save With Casper Admin",
-          ],
-          "casper_imaging": Array [
-            "Use Casper Imaging",
-          ],
-          "casper_remote": Array [
-            "Use Casper Remote",
-          ],
-          "jss_actions": Array [
-            "Allow User to Enroll",
-            "CLEAR_TEACHER_PROFILE_PRIVILEGE",
-          ],
-          "jss_objects": Array [
-            "Create Keystore",
-          ],
-          "jss_settings": Array [
-            "Read Jamf Imaging",
-          ],
-          "recon": Array [
-            "Add Computers Remotely",
-            "Create QuickAdd Packages",
-          ],
-        },
+        "uploadStatus": "SKIPPED",
+        "uploadStatusReason": "Raw data currently disabled for this entity type",
       },
     },
   ],
@@ -81,31 +46,8 @@ Object {
     Object {
       "name": "default",
       "rawData": Object {
-        "email": "test@gmail.com",
-        "email_address": "test@gmail.com",
-        "extension_attributes": Array [],
-        "full_name": "Test User",
-        "id": 1,
-        "ldap_server": Object {
-          "id": -1,
-          "name": "None",
-        },
-        "links": Object {
-          "computers": Array [],
-          "mobile_devices": Array [],
-          "peripherals": Array [],
-          "total_vpp_code_count": 0,
-          "vpp_assignments": Array [],
-        },
-        "managed_apple_id": "",
-        "name": "Test",
-        "password_sha256": undefined,
-        "phone_number": "",
-        "position": "",
-        "sites": Array [],
-        "user_groups": Object {
-          "size": 0,
-        },
+        "uploadStatus": "SKIPPED",
+        "uploadStatusReason": "Raw data currently disabled for this entity type",
       },
     },
   ],

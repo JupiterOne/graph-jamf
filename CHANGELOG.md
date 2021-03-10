@@ -8,7 +8,20 @@ and this project adheres to
 
 ## [Unreleased]
 
-### 2.0.0 - 2021-03-04
+## 2.0.1 - 2021-03-04
+
+### Added
+
+- New properties added to resources:
+  - Devices
+    - `device_user`
+      - `name`
+
+### Fixed
+
+- Remove raw data from various entities to drastically reduce upload size
+
+## 2.0.0 - 2021-03-04
 
 ### Changed
 

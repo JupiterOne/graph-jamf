@@ -1,12 +1,13 @@
 import { createIntegrationEntity } from '@jupiterone/integration-sdk-core';
 import { Group } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
+import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
 export function createGroupEntity(data: Group) {
   return createIntegrationEntity({
     entityData: {
-      source: data,
+      source: skippedRawDataSource,
       assign: {
         _class: Entities.GROUP._class,
         _type: Entities.GROUP._type,

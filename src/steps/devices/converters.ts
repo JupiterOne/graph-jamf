@@ -15,6 +15,7 @@ import {
   OSXConfigurationPayloadItem,
 } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
+import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
 export function createMobileDeviceEntity(data: MobileDevice) {
@@ -79,7 +80,7 @@ export function createMacOsConfigurationEntity(
 ) {
   return createIntegrationEntity({
     entityData: {
-      source: data,
+      source: skippedRawDataSource,
       assign: {
         _key: generateEntityKey(
           Entities.MAC_OS_CONFIGURATION_PROFILE._type,
@@ -118,7 +119,7 @@ export function createComputerEntity(
     _key: generateEntityKey(Entities.COMPUTER._type, device.id),
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
-    _rawData: [{ name: 'default', rawData: device }],
+    _rawData: [{ name: 'default', rawData: skippedRawDataSource }],
     id: device.udid.toString(),
     displayName: device.name,
     name: device.name,

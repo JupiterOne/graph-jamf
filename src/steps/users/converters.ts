@@ -1,15 +1,13 @@
 import { createIntegrationEntity } from '@jupiterone/integration-sdk-core';
 import { Admin, User } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
+import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
 export function createAdminEntity(data: Admin) {
   return createIntegrationEntity({
     entityData: {
-      source: {
-        ...data,
-        password_sha256: undefined,
-      },
+      source: skippedRawDataSource,
       assign: {
         _class: Entities.USER_ADMIN._class,
         _type: Entities.USER_ADMIN._type,
@@ -55,16 +53,14 @@ export function getUserOperatingSystems(data: User) {
 export function createDeviceUserEntity(data: User) {
   return createIntegrationEntity({
     entityData: {
-      source: {
-        ...data,
-        password_sha256: undefined,
-      },
+      source: skippedRawDataSource,
       assign: {
         _class: Entities.DEVICE_USER._class,
         _type: Entities.DEVICE_USER._type,
         _key: generateEntityKey(Entities.DEVICE_USER._type, data.id),
         id: data.id.toString(),
         displayName: data.name,
+        name: data.name,
         username: data.name,
         fullName: data.full_name,
         email: data.email || undefined,

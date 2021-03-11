@@ -8,7 +8,18 @@ and this project adheres to
 
 ## [Unreleased]
 
-## 2.0.1 - 2021-03-04
+## 2.0.2 - 2021-03-11
+
+### Changed
+
+- Make fetching computer details more resilient
+- Improve logging around fetching computer details
+
+### Fixed
+
+- Fix Jamf API requests not properly retrying non-200 status codes
+
+## 2.0.1 - 2021-03-10
 
 ### Added
 

@@ -87,12 +87,9 @@ async function iterateComputerDetails(
   }
 
   if (numComputerDetailFetchFailed) {
-    const errorMessage = `Unable to fetch all computer details (success=${numComputerDetailFetchSuccess}, failed=${numComputerDetailFetchFailed})`;
-
-    logger.publishErrorEvent({
-      name: 'fetch_computer_details_error',
-      message: errorMessage,
-      err: new Error(errorMessage),
+    throw new IntegrationError({
+      message: `Unable to fetch all computer details (success=${numComputerDetailFetchSuccess}, failed=${numComputerDetailFetchFailed})`,
+      code: 'ERROR_FETCH_COMPUTER_DETAILS',
     });
   }
 }
@@ -279,6 +276,8 @@ export async function fetchComputers({
     password: config.jamfPassword,
     logger,
   });
+
+  console.log('!!!!');
 
   const accountEntity = await getAccountEntity(jobState);
   const macOsConfigurationDetailByIdMap = await jobState.getData<

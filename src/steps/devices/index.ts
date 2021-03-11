@@ -3,6 +3,7 @@ import {
   createMappedRelationship,
   Entity,
   IntegrationError,
+  IntegrationLogger,
   IntegrationStep,
   IntegrationStepExecutionContext,
   JobState,
@@ -46,13 +47,50 @@ async function iterateMobileDevices(
 
 async function iterateComputerDetails(
   client: JamfClient,
+  logger: IntegrationLogger,
   iteratee: (
     computer: Computer,
     computerDetail: ComputerDetail,
   ) => Promise<void>,
 ) {
-  for (const computer of await client.fetchComputers()) {
-    await iteratee(computer, await client.fetchComputerById(computer.id));
+  const computers = await client.fetchComputers();
+  logger.info(
+    { numComputer: computers.length },
+    'Successfully fetched computers',
+  );
+
+  let numComputerDetailFetchSuccess: number = 0;
+  let numComputerDetailFetchFailed: number = 0;
+
+  for (const computer of computers) {
+    let computerDetail: ComputerDetail;
+
+    try {
+      computerDetail = await client.fetchComputerById(computer.id);
+      numComputerDetailFetchSuccess++;
+    } catch (err) {
+      // We sometimes see errors (e.g. 502 Bad Gateway) from the above API. If
+      // we fail to fetch a single computer, we should not just exit the entire
+      // step.
+      logger.error(
+        {
+          err,
+          computerId: computer.id,
+        },
+        'Could not fetch computer by id',
+      );
+      numComputerDetailFetchFailed++;
+      continue;
+    }
+
+    await iteratee(computer, computerDetail);
+  }
+
+  if (numComputerDetailFetchFailed) {
+    throw new IntegrationError({
+      message: `Unable to fetch all computer details (success=${numComputerDetailFetchSuccess}, failed=${numComputerDetailFetchFailed})`,
+      code: 'ERROR_FETCH_COMPUTER_DETAILS',
+    });
   }
 }
 
@@ -239,6 +277,8 @@ export async function fetchComputers({
     logger,
   });
 
+  console.log('!!!!');
+
   const accountEntity = await getAccountEntity(jobState);
   const macOsConfigurationDetailByIdMap = await jobState.getData<
     MacOsConfigurationDetailsById | undefined
@@ -251,35 +291,39 @@ export async function fetchComputers({
     });
   }
 
-  await iterateComputerDetails(client, async (computer, computerDetail) => {
-    const computerEntity = await jobState.addEntity(
-      createComputerEntity(
-        computer,
-        macOsConfigurationDetailByIdMap,
+  await iterateComputerDetails(
+    client,
+    logger,
+    async (computer, computerDetail) => {
+      const computerEntity = await jobState.addEntity(
+        createComputerEntity(
+          computer,
+          macOsConfigurationDetailByIdMap,
+          computerDetail,
+        ),
+      );
+
+      await jobState.addRelationship(
+        createDirectRelationship({
+          _class: RelationshipClass.HAS,
+          from: accountEntity,
+          to: computerEntity,
+        }),
+      );
+
+      await createComputerUsesProfileRelationships(
+        jobState,
+        computerEntity,
         computerDetail,
-      ),
-    );
+      );
 
-    await jobState.addRelationship(
-      createDirectRelationship({
-        _class: RelationshipClass.HAS,
-        from: accountEntity,
-        to: computerEntity,
-      }),
-    );
-
-    await createComputerUsesProfileRelationships(
-      jobState,
-      computerEntity,
-      computerDetail,
-    );
-
-    await createComputerInstalledApplicationRelationships(
-      jobState,
-      computerEntity,
-      computerDetail,
-    );
-  });
+      await createComputerInstalledApplicationRelationships(
+        jobState,
+        computerEntity,
+        computerDetail,
+      );
+    },
+  );
 }
 
 export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [

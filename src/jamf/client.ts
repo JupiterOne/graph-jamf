@@ -30,6 +30,7 @@ import {
   IntegrationProviderAPIError,
 } from '@jupiterone/integration-sdk-core';
 import { URL } from 'url';
+import { IntegrationProviderPermanentAPIError } from '../util/error';
 
 interface OnApiRequestErrorParams {
   url: string;
@@ -39,11 +40,49 @@ interface OnApiRequestErrorParams {
   code?: string;
 }
 
+type RequestFunction = (
+  url: string,
+  options?: RequestInit | undefined,
+) => Promise<Response>;
+
 interface CreateJamfClientParams {
   host: string;
   username: string;
   password: string;
+  request?: RequestFunction;
   onApiRequestError?: (params: OnApiRequestErrorParams) => void;
+}
+
+const noRetryStatusCodes: number[] = [400, 401, 403, 404, 413];
+
+function isSuccessfulStatusCode(status: number) {
+  return status >= 200 && status < 400;
+}
+
+async function request(
+  requestFn: RequestFunction,
+  url: string,
+  options?: RequestInit | undefined,
+): Promise<Response> {
+  const response = await requestFn(url, options);
+
+  if (isSuccessfulStatusCode(response.status)) {
+    return response;
+  }
+
+  if (noRetryStatusCodes.includes(response.status)) {
+    throw new IntegrationProviderPermanentAPIError({
+      endpoint: url,
+      statusText: 'Received non-retryable status code in API response',
+      status: response.status,
+    });
+  }
+
+  throw new IntegrationProviderAPIError({
+    endpoint: url,
+    statusText: response.statusText,
+    status: response.status,
+  });
 }
 
 export class JamfClient {
@@ -51,20 +90,18 @@ export class JamfClient {
   private readonly host: string;
   private readonly username: string;
   private readonly password: string;
+  private readonly request: RequestFunction;
+
   private readonly onApiRequestError:
     | ((params: OnApiRequestErrorParams) => void)
     | undefined;
 
-  constructor({
-    host,
-    username,
-    password,
-    onApiRequestError,
-  }: CreateJamfClientParams) {
-    this.host = host;
-    this.username = username;
-    this.password = password;
-    this.onApiRequestError = onApiRequestError;
+  constructor(options: CreateJamfClientParams) {
+    this.host = options.host;
+    this.username = options.username;
+    this.password = options.password;
+    this.request = options.request || fetch;
+    this.onApiRequestError = options.onApiRequestError;
 
     this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
   }
@@ -216,10 +253,15 @@ export class JamfClient {
     // The goal here is to retry and ensure the final error includes information
     // about the host we could not connect to, since users define the host and
     // may mis-type the value.
-    const request = (): Promise<Response> =>
-      retry(async () => fetch(fullUrl, options), {
+    const requestWithRetry = (): Promise<Response> =>
+      retry(async () => request(this.request, fullUrl, options), {
         maxAttempts: 3,
         handleError: (err, attemptContext) => {
+          if (err.retryable === false) {
+            attemptContext.abort();
+            return;
+          }
+
           const fetchErr = err as FetchError;
 
           if (attemptContext.attemptsRemaining && this.onApiRequestError) {
@@ -233,28 +275,10 @@ export class JamfClient {
               attemptsRemaining: attemptContext.attemptsRemaining,
             });
           }
-
-          if (err.code === 'ETIMEDOUT') {
-            throw new IntegrationProviderAPIError({
-              cause: err,
-              endpoint: fullUrl,
-              statusText: `Timed out trying to connect to ${this.host} (${err.code})`,
-              status: err.code,
-            });
-          } else if (err.code === 'ESOCKETTIMEDOUT') {
-            throw new IntegrationProviderAPIError({
-              cause: err,
-              endpoint: fullUrl,
-              statusText: `Established connection to ${this.host} timed out (${err.code})`,
-              status: err.code,
-            });
-          }
-
-          throw err;
         },
       });
 
-    const response = await this.queue.add(request);
+    const response = await this.queue.add(requestWithRetry);
 
     if (response.status === 200) {
       return response.json();

@@ -53,6 +53,7 @@ interface CreateJamfClientParams {
   onApiRequestError?: (params: OnApiRequestErrorParams) => void;
 }
 
+const defaultApiTimeoutMs = 60000; // 1 minute
 const noRetryStatusCodes: number[] = [400, 401, 403, 404, 413];
 
 function isSuccessfulStatusCode(status: number) {
@@ -237,6 +238,7 @@ export class JamfClient {
   ): Promise<T> {
     const options: RequestInit = {
       method,
+      timeout: defaultApiTimeoutMs,
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',

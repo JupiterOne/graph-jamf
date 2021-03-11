@@ -212,7 +212,7 @@ describe('#fetchComputers', () => {
               properties: {
                 _class: { const: RelationshipClass.USES },
                 _type: {
-                  const: 'user_endpoint_uses_osx_configuration_profile',
+                  const: 'user_endpoint_uses_jamf_osx_configuration_profile',
                 },
               },
             },

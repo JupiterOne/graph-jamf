@@ -1,6 +1,7 @@
 import {
   createDirectRelationship,
   Entity,
+  IntegrationLogger,
   IntegrationStep,
   IntegrationStepExecutionContext,
   JobState,
@@ -16,10 +17,12 @@ import { generateEntityKey } from '../../util/generateKey';
 
 async function iterateGroupProfiles(
   client: JamfClient,
+  logger: IntegrationLogger,
   jobState: JobState,
   iteratee: (user: Group) => Promise<void>,
 ) {
   const accountData = await getAccountData(jobState);
+  logger.info({ numGroups: accountData.groups }, 'Iterating groups');
 
   for (const group of accountData.groups) {
     await iteratee(await client.fetchAccountGroupById(group.id));
@@ -66,7 +69,7 @@ export async function fetchGroups({
 
   const accountEntity = await getAccountEntity(jobState);
 
-  await iterateGroupProfiles(client, jobState, async (group) => {
+  await iterateGroupProfiles(client, logger, jobState, async (group) => {
     const groupEntity = await jobState.addEntity(createGroupEntity(group));
 
     await jobState.addRelationship(

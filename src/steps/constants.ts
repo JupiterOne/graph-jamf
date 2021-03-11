@@ -123,7 +123,7 @@ export const Relationships: Record<
     targetType: Entities.MAC_OS_CONFIGURATION_PROFILE._type,
   },
   COMPUTER_USES_PROFILE: {
-    _type: 'user_endpoint_uses_osx_configuration_profile',
+    _type: 'user_endpoint_uses_jamf_osx_configuration_profile',
     _class: RelationshipClass.USES,
     sourceType: Entities.COMPUTER._type,
     targetType: Entities.MAC_OS_CONFIGURATION_PROFILE._type,

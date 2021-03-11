@@ -38,9 +38,17 @@ type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
 
 async function iterateMobileDevices(
   client: JamfClient,
+  logger: IntegrationLogger,
   iteratee: (user: MobileDevice) => Promise<void>,
 ) {
-  for (const device of await client.fetchMobileDevices()) {
+  const mobileDevices = await client.fetchMobileDevices();
+
+  logger.info(
+    { numDevices: mobileDevices.length },
+    'Successfully fetched mobile devices',
+  );
+
+  for (const device of mobileDevices) {
     await iteratee(device);
   }
 }
@@ -96,12 +104,18 @@ async function iterateComputerDetails(
 
 async function iterateMacOsConfigurationDetails(
   client: JamfClient,
+  logger: IntegrationLogger,
   iteratee: (
     configuration: Configuration,
     parsedConfiguration: OSXConfigurationDetailParsed,
   ) => Promise<void>,
 ) {
   const macOsConfigurationProfiles = await client.fetchOSXConfigurationProfiles();
+
+  logger.info(
+    { numProfiles: macOsConfigurationProfiles.length },
+    'Successfully fetched configuration profiles',
+  );
 
   for (const profile of macOsConfigurationProfiles) {
     const details = await client.fetchOSXConfigurationProfileById(profile.id);
@@ -202,7 +216,7 @@ export async function fetchMobileDevices({
 
   const accountEntity = await getAccountEntity(jobState);
 
-  await iterateMobileDevices(client, async (device) => {
+  await iterateMobileDevices(client, logger, async (device) => {
     const mobileDeviceEntity = await jobState.addEntity(
       createMobileDeviceEntity(device),
     );
@@ -237,6 +251,7 @@ export async function fetchMacOsConfigurationDetails({
   const accountEntity = await getAccountEntity(jobState);
   await iterateMacOsConfigurationDetails(
     client,
+    logger,
     async (configuration, parsedMacOsConfigurationDetail) => {
       const configurationEntity = await jobState.addEntity(
         createMacOsConfigurationEntity(parsedMacOsConfigurationDetail),
@@ -276,8 +291,6 @@ export async function fetchComputers({
     password: config.jamfPassword,
     logger,
   });
-
-  console.log('!!!!');
 
   const accountEntity = await getAccountEntity(jobState);
   const macOsConfigurationDetailByIdMap = await jobState.getData<

@@ -1,6 +1,8 @@
 import {
   createDirectRelationship,
   Entity,
+  IntegrationError,
+  IntegrationLogger,
   IntegrationStep,
   IntegrationStepExecutionContext,
   JobState,
@@ -13,13 +15,16 @@ import { createAdminEntity, createDeviceUserEntity } from './converters';
 import { Admin, User } from '../../jamf/types';
 import { getAccountData, getAccountEntity } from '../../util/account';
 import { generateEntityKey } from '../../util/generateKey';
+import { wrapWithTimer } from '../../util/timer';
 
 async function iterateAdminUserProfiles(
   client: JamfClient,
+  logger: IntegrationLogger,
   jobState: JobState,
   iteratee: (user: Admin) => Promise<void>,
 ) {
   const accountData = await getAccountData(jobState);
+  logger.info({ numAdmins: accountData.users }, 'Iterating account admins');
 
   for (const user of accountData.users) {
     await iteratee(await client.fetchAccountUserById(user.id));
@@ -28,23 +33,81 @@ async function iterateAdminUserProfiles(
 
 async function iterateUserProfiles(
   client: JamfClient,
+  logger: IntegrationLogger,
   iteratee: (user: User) => Promise<void>,
 ) {
-  const users = await client.fetchUsers();
+  const users = await wrapWithTimer(() => client.fetchUsers(), {
+    logger,
+    operationName: 'client_fetch_users',
+  });
+
+  logger.info({ numUsers: users.length }, 'Successfully fetched users');
+
+  let numUserProfileFetchSuccess: number = 0;
+  let numUserProfileFetchFailed: number = 0;
 
   for (const user of users) {
-    await iteratee(await client.fetchUserById(user.id));
+    let userFullProfile: User;
+
+    try {
+      userFullProfile = await wrapWithTimer(
+        async () => client.fetchUserById(user.id),
+        {
+          logger,
+          operationName: 'client_fetch_user_by_id',
+          metadata: {
+            userId: user.id,
+          },
+        },
+      );
+
+      numUserProfileFetchSuccess++;
+    } catch (err) {
+      logger.error(
+        {
+          err,
+          userId: user.id,
+        },
+        'Could not fetch user profile by id',
+      );
+      numUserProfileFetchFailed++;
+      continue;
+    }
+
+    await iteratee(userFullProfile);
+  }
+
+  if (numUserProfileFetchFailed) {
+    throw new IntegrationError({
+      message: `Unable to fetch all user profiles (success=${numUserProfileFetchSuccess}, failed=${numUserProfileFetchFailed})`,
+      code: 'ERROR_FETCH_USER_PROFILES',
+    });
   }
 }
 
 async function createUserHasMobileDeviceRelationships(
+  logger: IntegrationLogger,
   jobState: JobState,
   userEntity: Entity,
   user: User,
 ) {
   for (const mobileDevice of user.links?.mobile_devices || []) {
-    const mobileDeviceEntity = await jobState.findEntity(
-      generateEntityKey(Entities.MOBILE_DEVICE._type, mobileDevice.id),
+    const mobileDeviceEntityKey = generateEntityKey(
+      Entities.MOBILE_DEVICE._type,
+      mobileDevice.id,
+    );
+
+    // NOTE: This is probably a very a slow operation due to the way that
+    // `findEntity` is currently implemented...
+    const mobileDeviceEntity = await wrapWithTimer(
+      async () => jobState.findEntity(mobileDeviceEntityKey),
+      {
+        logger,
+        operationName: 'find_mobile_device_entity',
+        metadata: {
+          mobileDeviceEntityKey,
+        },
+      },
     );
 
     if (!mobileDeviceEntity) {
@@ -62,13 +125,28 @@ async function createUserHasMobileDeviceRelationships(
 }
 
 async function createUserHasComputerDeviceRelationships(
+  logger: IntegrationLogger,
   jobState: JobState,
   userEntity: Entity,
   user: User,
 ) {
   for (const computerDevice of user.links?.computers || []) {
-    const computerDeviceEntity = await jobState.findEntity(
-      generateEntityKey(Entities.COMPUTER._type, computerDevice.id),
+    const computerDeviceEntityKey = generateEntityKey(
+      Entities.COMPUTER._type,
+      computerDevice.id,
+    );
+
+    // NOTE: This is probably a very a slow operation due to the way that
+    // `findEntity` is currently implemented...
+    const computerDeviceEntity = await wrapWithTimer(
+      async () => jobState.findEntity(computerDeviceEntityKey),
+      {
+        logger,
+        operationName: 'find_computer_device_entity',
+        metadata: {
+          computerDeviceEntityKey,
+        },
+      },
     );
 
     if (!computerDeviceEntity) {
@@ -101,7 +179,7 @@ export async function fetchAdminUsers({
 
   const accountEntity = await getAccountEntity(jobState);
 
-  await iterateAdminUserProfiles(client, jobState, async (user) => {
+  await iterateAdminUserProfiles(client, logger, jobState, async (user) => {
     const adminEntity = await jobState.addEntity(createAdminEntity(user));
 
     await jobState.addRelationship(
@@ -130,7 +208,7 @@ export async function fetchDeviceUsers({
 
   const accountEntity = await getAccountEntity(jobState);
 
-  await iterateUserProfiles(client, async (user) => {
+  await iterateUserProfiles(client, logger, async (user) => {
     const userEntity = await jobState.addEntity(createDeviceUserEntity(user));
 
     await jobState.addRelationship(
@@ -141,9 +219,19 @@ export async function fetchDeviceUsers({
       }),
     );
 
-    await createUserHasMobileDeviceRelationships(jobState, userEntity, user);
+    await createUserHasMobileDeviceRelationships(
+      logger,
+      jobState,
+      userEntity,
+      user,
+    );
 
-    await createUserHasComputerDeviceRelationships(jobState, userEntity, user);
+    await createUserHasComputerDeviceRelationships(
+      logger,
+      jobState,
+      userEntity,
+      user,
+    );
   });
 }
 

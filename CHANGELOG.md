@@ -8,6 +8,16 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.0.3 - 2020-03-11
+
+### Changed
+
+- Added logging to various steps
+
+### Fixed
+
+- Add 60 second timeout to all API requests
+
 ## 2.0.2 - 2021-03-11
 
 ### Changed

@@ -24,7 +24,12 @@ async function iterateAdminUserProfiles(
   iteratee: (user: Admin) => Promise<void>,
 ) {
   const accountData = await getAccountData(jobState);
-  logger.info({ numAdmins: accountData.users }, 'Iterating account admins');
+  logger.info(
+    {
+      numAdmins: accountData.users.length,
+    },
+    'Iterating account admins',
+  );
 
   for (const user of accountData.users) {
     await iteratee(await client.fetchAccountUserById(user.id));

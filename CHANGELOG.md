@@ -8,6 +8,15 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.0 - 2020-03-16
+
+### Changed
+
+- Add `version` and `path` properties to the `INSTALLED` relationship between a
+  computer and a `macos_app`. This captures the version and path of an
+  application installed on a specific computer and allows users to query that
+  information as needed.
+
 ## 2.0.3 - 2020-03-11
 
 ### Changed

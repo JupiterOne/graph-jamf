@@ -4091,6 +4091,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P6/AAM Registration Notifier.app",
+      "version": "7.0.0.485",
     },
     Object {
       "_class": "INSTALLED",
@@ -4118,6 +4120,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/LWA/AAM Registration Notifier.app",
+      "version": "3.0.64.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -4145,6 +4149,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/UWA/AAM Updates Notifier.app",
+      "version": "9.0.0.281",
     },
     Object {
       "_class": "INSTALLED",
@@ -4172,6 +4178,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/core/AAMLauncherUtil.app",
+      "version": "10.0.0.49",
     },
     Object {
       "_class": "INSTALLED",
@@ -4199,6 +4207,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/AASIapp.app",
+      "version": "10.0.0.252",
     },
     Object {
       "_class": "INSTALLED",
@@ -4226,6 +4236,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Sync/CoreSyncExtension/ACCFinderBundleLoader.app",
+      "version": "2.4.6.82",
     },
     Object {
       "_class": "INSTALLED",
@@ -4253,6 +4265,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Adobe Acrobat DC/Acrobat Distiller.app",
+      "version": "19.012.20034",
     },
     Object {
       "_class": "INSTALLED",
@@ -4280,6 +4294,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Activity Monitor.app",
+      "version": "10.13",
     },
     Object {
       "_class": "INSTALLED",
@@ -4307,6 +4323,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Adobe Acrobat Reader DC.app",
+      "version": "19.012.20034",
     },
     Object {
       "_class": "INSTALLED",
@@ -4334,6 +4352,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Adobe Acrobat DC/Adobe Acrobat.app",
+      "version": "19.012.20034",
     },
     Object {
       "_class": "INSTALLED",
@@ -4361,6 +4381,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/core/Adobe Application Manager.app",
+      "version": "10.0.0.49",
     },
     Object {
       "_class": "INSTALLED",
@@ -4388,6 +4410,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/AppsPanel/Updater/Adobe Application Updater.app",
+      "version": "4.6.0.384",
     },
     Object {
       "_class": "INSTALLED",
@@ -4415,6 +4439,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licensing_helper.app",
+      "version": "1.0.0.22",
     },
     Object {
       "_class": "INSTALLED",
@@ -4442,6 +4468,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_lichelper.app",
+      "version": "1.0.0.274",
     },
     Object {
       "_class": "INSTALLED",
@@ -4469,6 +4497,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P6/adobe_licutil.app",
+      "version": "7.0.1.109",
     },
     Object {
       "_class": "INSTALLED",
@@ -4496,6 +4526,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licutil.app",
+      "version": "10.0.0.274",
     },
     Object {
       "_class": "INSTALLED",
@@ -4523,6 +4555,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/LWA/adobe_licutil.app",
+      "version": "Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
     },
     Object {
       "_class": "INSTALLED",
@@ -4550,6 +4584,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/IPC/AdobeIPCBroker.app",
+      "version": "5.4.0.57",
     },
     Object {
       "_class": "INSTALLED",
@@ -4577,6 +4613,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/AirPort Utility.app",
+      "version": "6.3.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -4604,6 +4642,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Amphetamine.app",
+      "version": "4.1.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -4631,6 +4671,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/App Store.app",
+      "version": "2.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -4658,6 +4700,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Atom.app",
+      "version": "1.31.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -4685,6 +4729,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Audio MIDI Setup.app",
+      "version": "3.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -4712,6 +4758,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Automator.app",
+      "version": "2.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -4739,6 +4787,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/BlueJeans.app",
+      "version": "2.10.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -4766,6 +4816,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Bluetooth File Exchange.app",
+      "version": "6.0.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -4793,6 +4845,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Boot Camp Assistant.app",
+      "version": "6.1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -4820,6 +4874,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Calculator.app",
+      "version": "10.13",
     },
     Object {
       "_class": "INSTALLED",
@@ -4847,6 +4903,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Calendar.app",
+      "version": "10.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -4874,6 +4932,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud Experience/CCXProcess.app",
+      "version": "2.3.0-30",
     },
     Object {
       "_class": "INSTALLED",
@@ -4901,6 +4961,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Chess.app",
+      "version": "3.15",
     },
     Object {
       "_class": "INSTALLED",
@@ -4928,6 +4990,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/ColorSync Utility.app",
+      "version": "4.13.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -4955,6 +5019,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Confer.app",
+      "version": "3.2.1.10",
     },
     Object {
       "_class": "INSTALLED",
@@ -4982,6 +5048,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Console.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5009,6 +5077,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Contacts.app",
+      "version": "11.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5036,6 +5106,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app",
+      "version": "3.0.3.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -5063,6 +5135,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Desktop App.app",
+      "version": "4.6.0.384",
     },
     Object {
       "_class": "INSTALLED",
@@ -5090,6 +5164,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Installer.app",
+      "version": "4.6.0.384",
     },
     Object {
       "_class": "INSTALLED",
@@ -5117,6 +5193,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Uninstaller.app",
+      "version": "4.6.0.384",
     },
     Object {
       "_class": "INSTALLED",
@@ -5144,6 +5222,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app",
+      "version": "4.6.0.384",
     },
     Object {
       "_class": "INSTALLED",
@@ -5171,6 +5251,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cytoscape_v3.5.1/Cytoscape Uninstaller.app",
+      "version": "3.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5198,6 +5280,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cytoscape_v3.5.1/Cytoscape.app",
+      "version": "3.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5225,6 +5309,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dashboard.app",
+      "version": "1.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -5252,6 +5338,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dashlane.app",
+      "version": "6.1909.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5279,6 +5367,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dictionary.app",
+      "version": "2.2.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -5306,6 +5396,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Digital Color Meter.app",
+      "version": "5.11",
     },
     Object {
       "_class": "INSTALLED",
@@ -5333,6 +5425,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Disk Utility.app",
+      "version": "17.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -5360,6 +5454,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Docker.app",
+      "version": "2.0.0.0-mac81",
     },
     Object {
       "_class": "INSTALLED",
@@ -5387,6 +5483,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dropbox.app",
+      "version": "74.4.115",
     },
     Object {
       "_class": "INSTALLED",
@@ -5414,6 +5512,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/DVD Player.app",
+      "version": "5.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -5441,6 +5541,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Epic Games Launcher.app",
+      "version": "9.12.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -5468,6 +5570,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/FaceTime.app",
+      "version": "4.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5495,6 +5599,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Font Book.app",
+      "version": "8.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5522,6 +5628,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Gephi.app",
+      "version": "0.9.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5549,6 +5657,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GIF Brewery 3.app",
+      "version": "3.9.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -5576,6 +5686,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GIPHY CAPTURE.app",
+      "version": "4.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5603,6 +5715,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Chrome.app",
+      "version": "75.0.3770.90",
     },
     Object {
       "_class": "INSTALLED",
@@ -5630,6 +5744,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Grab.app",
+      "version": "1.10",
     },
     Object {
       "_class": "INSTALLED",
@@ -5657,6 +5773,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Grapher.app",
+      "version": "2.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -5684,6 +5802,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/HandBrake.app",
+      "version": "1.0.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -5711,6 +5831,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/HSRToolkit.app",
+      "version": "1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5738,6 +5860,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/iBooks.app",
+      "version": "1.15",
     },
     Object {
       "_class": "INSTALLED",
@@ -5765,6 +5889,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Python 3.6/IDLE.app",
+      "version": "3.6.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5792,6 +5918,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Image Capture.app",
+      "version": "7.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -5819,6 +5947,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Insomnia.app",
+      "version": "6.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -5846,6 +5976,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Install macOS Mojave.app",
+      "version": "14.0.22",
     },
     Object {
       "_class": "INSTALLED",
@@ -5873,6 +6005,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/HDCore/Install.app",
+      "version": "4.3.0.256",
     },
     Object {
       "_class": "INSTALLED",
@@ -5900,6 +6034,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/IntelliJ IDEA CE.app",
+      "version": "2017.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -5927,6 +6063,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/iTunes.app",
+      "version": "12.8.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -5954,6 +6092,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Keybase.app",
+      "version": "4.1.0-20190612165948+952fee6c59",
     },
     Object {
       "_class": "INSTALLED",
@@ -5981,6 +6121,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Keychain Access.app",
+      "version": "10.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6008,6 +6150,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Keynote.app",
+      "version": "9.0.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -6035,6 +6179,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Kindle.app",
+      "version": "1.26.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -6062,6 +6208,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/LastPass.app",
+      "version": "4.4.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6089,6 +6237,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Launchpad.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6116,6 +6266,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/LiveSlides.app",
+      "version": "2.10.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -6143,6 +6295,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/UWA/LogTransport2.app",
+      "version": "2.1.2.1652",
     },
     Object {
       "_class": "INSTALLED",
@@ -6170,6 +6324,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Mail.app",
+      "version": "11.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -6197,6 +6353,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Maps.app",
+      "version": "2.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6224,6 +6382,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Messages.app",
+      "version": "11.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6251,6 +6411,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Excel.app",
+      "version": "16.25.19051201",
     },
     Object {
       "_class": "INSTALLED",
@@ -6278,6 +6440,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft OneNote.app",
+      "version": "16.26.19060901",
     },
     Object {
       "_class": "INSTALLED",
@@ -6305,6 +6469,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Outlook.app",
+      "version": "16.25.19051201",
     },
     Object {
       "_class": "INSTALLED",
@@ -6332,6 +6498,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft PowerPoint.app",
+      "version": "16.26.19060901",
     },
     Object {
       "_class": "INSTALLED",
@@ -6359,6 +6527,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Word.app",
+      "version": "16.25.19051201",
     },
     Object {
       "_class": "INSTALLED",
@@ -6386,6 +6556,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Migration Assistant.app",
+      "version": "10.13",
     },
     Object {
       "_class": "INSTALLED",
@@ -6413,6 +6585,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Mission Control.app",
+      "version": "1.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -6440,6 +6614,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Neo4j Community Edition 3.1.3.app",
+      "version": "3.1.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -6467,6 +6643,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Notes.app",
+      "version": "4.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -6494,6 +6672,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Noun Project.app",
+      "version": "2.2.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -6521,6 +6701,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Numbers.app",
+      "version": "6.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6548,6 +6730,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/OneDrive.app",
+      "version": "19.070.0410",
     },
     Object {
       "_class": "INSTALLED",
@@ -6575,6 +6759,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Pages.app",
+      "version": "8.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6602,6 +6788,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/PDF Expert.app",
+      "version": "2.4.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -6629,6 +6817,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Photo Booth.app",
+      "version": "9.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6656,6 +6846,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Photos.app",
+      "version": "3.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6683,6 +6875,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/ZoomOutlookPlugin/PluginLauncher.app",
+      "version": "4.7.53547",
     },
     Object {
       "_class": "INSTALLED",
@@ -6710,6 +6904,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Postman.app",
+      "version": "5.2.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6737,6 +6933,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Preview.app",
+      "version": "10.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6764,6 +6962,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Prezi Next.app",
+      "version": "1.34.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6791,6 +6991,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Pritunl.app",
+      "version": "1.0.1953.32",
     },
     Object {
       "_class": "INSTALLED",
@@ -6818,6 +7020,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Python 3.6/Python Launcher.app",
+      "version": "3.6.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -6845,6 +7049,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/QuickTime Player.app",
+      "version": "10.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -6872,6 +7078,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Reminders.app",
+      "version": "5.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -6899,6 +7107,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/RingCentral Meetings.app",
+      "version": "6.3.135305.1213",
     },
     Object {
       "_class": "INSTALLED",
@@ -6926,6 +7136,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Safari.app",
+      "version": "12.1.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -6953,6 +7165,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Script Editor.app",
+      "version": "2.10",
     },
     Object {
       "_class": "INSTALLED",
@@ -6980,6 +7194,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/D6/Setup.app",
+      "version": "9.0.0.65",
     },
     Object {
       "_class": "INSTALLED",
@@ -7007,6 +7223,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DWA/Setup.app",
+      "version": "5.0.65.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7034,6 +7252,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sim Daltonism.app",
+      "version": "2.0.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -7061,6 +7281,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Siri.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7088,6 +7310,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sketch.app",
+      "version": "50.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -7115,6 +7339,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skitch.app",
+      "version": "2.8.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -7142,6 +7368,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skype Meetings App.app",
+      "version": "1.0.0.186",
     },
     Object {
       "_class": "INSTALLED",
@@ -7169,6 +7397,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skype.app",
+      "version": "7.56",
     },
     Object {
       "_class": "INSTALLED",
@@ -7196,6 +7426,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Slack.app",
+      "version": "3.3.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -7223,6 +7455,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sonos.app",
+      "version": "7.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -7250,6 +7484,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Spectacle.app",
+      "version": "1.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -7277,6 +7513,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Station.app",
+      "version": "1.40.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -7304,6 +7542,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Stethoscope.app",
+      "version": "3.0.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -7331,6 +7571,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Stickies.app",
+      "version": "10.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -7358,6 +7600,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sublime Text.app",
+      "version": "Build 3143",
     },
     Object {
       "_class": "INSTALLED",
@@ -7385,6 +7629,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/System Information.app",
+      "version": "10.12",
     },
     Object {
       "_class": "INSTALLED",
@@ -7412,6 +7658,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/System Preferences.app",
+      "version": "14.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7439,6 +7687,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/TDR_ICBC_UsbKeyTools.app",
+      "version": "1.0.0.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -7466,6 +7716,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Terminal.app",
+      "version": "2.8.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -7493,6 +7745,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/TextEdit.app",
+      "version": "1.13",
     },
     Object {
       "_class": "INSTALLED",
@@ -7520,6 +7774,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Time Machine.app",
+      "version": "1.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -7547,6 +7803,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE6/resources/uninstall/Uninstall Product.app",
+      "version": "9.0.0.65",
     },
     Object {
       "_class": "INSTALLED",
@@ -7574,6 +7832,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE5/resources/uninstall/Uninstall Product.app",
+      "version": "5.0.65.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7601,6 +7861,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/ZoomOutlookPlugin/Uninstall.app",
+      "version": "4.7.53547",
     },
     Object {
       "_class": "INSTALLED",
@@ -7628,6 +7890,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Creative Cloud/HDCore/Uninstaller.app",
+      "version": "4.3.0.256",
     },
     Object {
       "_class": "INSTALLED",
@@ -7655,6 +7919,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Unsplash Wallpapers.app",
+      "version": "1.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -7682,6 +7948,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/VirtualBox.app",
+      "version": "5.2.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -7709,6 +7977,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Viscosity.app",
+      "version": "1.7.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -7736,6 +8006,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Visual Studio Code.app",
+      "version": "1.35.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7763,6 +8035,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/VoiceOver Utility.app",
+      "version": "8",
     },
     Object {
       "_class": "INSTALLED",
@@ -7790,6 +8064,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Wavebox.app",
+      "version": "3.1.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -7817,6 +8093,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Wireshark.app",
+      "version": "2.4.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -7844,6 +8122,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/WordPress.com.app",
+      "version": "2.8.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7871,6 +8151,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/WorkSpaces.app",
+      "version": "2.4.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -7898,6 +8180,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Xcode.app",
+      "version": "10.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -7925,6 +8209,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/YubiKey Manager.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -7952,6 +8238,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/YubiKey Personalization Tool.app",
+      "version": "3.1.24",
     },
     Object {
       "_class": "INSTALLED",
@@ -7979,6 +8267,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/zoom.us.app",
+      "version": "4.1.34801.1116",
     },
     Object {
       "_class": "HAS",
@@ -8014,6 +8304,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P6/AAM Registration Notifier.app",
+      "version": "7.0.0.485",
     },
     Object {
       "_class": "INSTALLED",
@@ -8041,6 +8333,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/LWA/AAM Registration Notifier.app",
+      "version": "3.0.64.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8068,6 +8362,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/UWA/AAM Updates Notifier.app",
+      "version": "9.0.0.281",
     },
     Object {
       "_class": "INSTALLED",
@@ -8095,6 +8391,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/core/AAMLauncherUtil.app",
+      "version": "10.0.0.49",
     },
     Object {
       "_class": "INSTALLED",
@@ -8122,6 +8420,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/AASIapp.app",
+      "version": "10.0.0.252",
     },
     Object {
       "_class": "INSTALLED",
@@ -8149,6 +8449,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Activity Monitor.app",
+      "version": "10.14",
     },
     Object {
       "_class": "INSTALLED",
@@ -8176,6 +8478,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/core/Adobe Application Manager.app",
+      "version": "10.0.0.49",
     },
     Object {
       "_class": "INSTALLED",
@@ -8203,6 +8507,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licensing_helper.app",
+      "version": "1.0.0.22",
     },
     Object {
       "_class": "INSTALLED",
@@ -8230,6 +8536,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_lichelper.app",
+      "version": "1.0.0.274",
     },
     Object {
       "_class": "INSTALLED",
@@ -8257,6 +8565,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/LWA/adobe_licutil.app",
+      "version": "Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
     },
     Object {
       "_class": "INSTALLED",
@@ -8284,6 +8594,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P7/adobe_licutil.app",
+      "version": "10.0.0.274",
     },
     Object {
       "_class": "INSTALLED",
@@ -8311,6 +8623,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/P6/adobe_licutil.app",
+      "version": "7.0.1.109",
     },
     Object {
       "_class": "INSTALLED",
@@ -8338,6 +8652,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/IPC/AdobeIPCBroker.app",
+      "version": "5.4.0.57",
     },
     Object {
       "_class": "INSTALLED",
@@ -8365,6 +8681,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/AirPort Utility.app",
+      "version": "6.3.9",
     },
     Object {
       "_class": "INSTALLED",
@@ -8392,6 +8710,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Alfred 4.app",
+      "version": "4.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -8419,6 +8739,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cisco AMP/AMP for Endpoints Connector.app",
+      "version": "1.12.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -8446,6 +8768,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Amphetamine.app",
+      "version": "5.0.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -8473,6 +8797,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/App Store.app",
+      "version": "3.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8500,6 +8826,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Atom.app",
+      "version": "1.43.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8527,6 +8855,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Audio MIDI Setup.app",
+      "version": "3.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -8554,6 +8884,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Automator.app",
+      "version": "2.10",
     },
     Object {
       "_class": "INSTALLED",
@@ -8581,6 +8913,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Bear.app",
+      "version": "1.7.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -8608,6 +8942,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/BlueJeans.app",
+      "version": "2.21.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8635,6 +8971,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Bluetooth File Exchange.app",
+      "version": "7.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -8662,6 +9000,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Books.app",
+      "version": "2.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -8689,6 +9029,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Boot Camp Assistant.app",
+      "version": "6.1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8716,6 +9058,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Calculator.app",
+      "version": "10.14",
     },
     Object {
       "_class": "INSTALLED",
@@ -8743,6 +9087,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Calendar.app",
+      "version": "11.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8770,6 +9116,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Chess.app",
+      "version": "3.16",
     },
     Object {
       "_class": "INSTALLED",
@@ -8797,6 +9145,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cisco Webex Meetings.app",
+      "version": "39.10.6.11",
     },
     Object {
       "_class": "INSTALLED",
@@ -8824,6 +9174,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cleaner-App.app",
+      "version": "8.0.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -8851,6 +9203,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/ColorSync Utility.app",
+      "version": "4.14.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8878,6 +9232,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Confer.app",
+      "version": "3.4.2.23",
     },
     Object {
       "_class": "INSTALLED",
@@ -8905,6 +9261,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Console.app",
+      "version": "1.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -8932,6 +9290,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Contacts.app",
+      "version": "12.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -8959,6 +9319,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cytoscape_v3.5.1/Cytoscape Uninstaller.app",
+      "version": "3.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -8986,6 +9348,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cytoscape_v3.5.1/Cytoscape.app",
+      "version": "3.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9013,6 +9377,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dashlane.app",
+      "version": "6.2004.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9040,6 +9406,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Dictionary.app",
+      "version": "2.3.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9067,6 +9435,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Digital Color Meter.app",
+      "version": "5.15",
     },
     Object {
       "_class": "INSTALLED",
@@ -9094,6 +9464,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Disk Utility.app",
+      "version": "19.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9121,6 +9493,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Docker.app",
+      "version": "2.3.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -9148,6 +9522,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Dropbox.app",
+      "version": "102.4.431",
     },
     Object {
       "_class": "INSTALLED",
@@ -9175,6 +9551,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/FaceTime.app",
+      "version": "5.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9202,6 +9580,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/FindMy.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9229,6 +9609,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Font Book.app",
+      "version": "10.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9256,6 +9638,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Gephi.app",
+      "version": "0.9.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9283,6 +9667,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GIF Brewery 3.app",
+      "version": "3.9.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -9310,6 +9696,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GIPHY CAPTURE.app",
+      "version": "4.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9337,6 +9725,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GitHub Desktop.app",
+      "version": "2.2.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -9364,6 +9754,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Chrome.app",
+      "version": "84.0.4147.105",
     },
     Object {
       "_class": "INSTALLED",
@@ -9391,6 +9783,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Docs.app",
+      "version": "40.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9418,6 +9812,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Drive File Stream.app",
+      "version": "40.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9445,6 +9841,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Sheets.app",
+      "version": "40.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9472,6 +9870,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Google Slides.app",
+      "version": "40.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9499,6 +9899,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/GoToMeeting.app",
+      "version": "10.10.1.17956",
     },
     Object {
       "_class": "INSTALLED",
@@ -9526,6 +9928,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Grapher.app",
+      "version": "2.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -9553,6 +9957,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/HandBrake.app",
+      "version": "1.0.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -9580,6 +9986,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Home.app",
+      "version": "4.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9607,6 +10015,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/HSRToolkit.app",
+      "version": "1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9634,6 +10044,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/HTTP Toolkit.app",
+      "version": "0.1.20",
     },
     Object {
       "_class": "INSTALLED",
@@ -9661,6 +10073,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/iBeesoft Data Recovery.app",
+      "version": "3.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -9688,6 +10102,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Python 3.6/IDLE.app",
+      "version": "3.6.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9715,6 +10131,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Image Capture.app",
+      "version": "8.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9742,6 +10160,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Insomnia.app",
+      "version": "6.5.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9769,6 +10189,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Keybase.app",
+      "version": "5.5.0-20200526170801+139bb348af",
     },
     Object {
       "_class": "INSTALLED",
@@ -9796,6 +10218,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Keychain Access.app",
+      "version": "10.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -9823,6 +10247,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Keynote.app",
+      "version": "7.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9850,6 +10276,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Kindle.app",
+      "version": "1.28.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9877,6 +10305,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/LastPass.app",
+      "version": "4.49.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9904,6 +10334,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Launchpad.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -9931,6 +10363,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/LiveSlides.app",
+      "version": "2.10.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -9958,6 +10392,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/UWA/LogTransport2.app",
+      "version": "2.1.2.1652",
     },
     Object {
       "_class": "INSTALLED",
@@ -9985,6 +10421,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Mail.app",
+      "version": "13.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10012,6 +10450,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Maps.app",
+      "version": "2.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10039,6 +10479,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Messages.app",
+      "version": "13.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10066,6 +10508,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Edge.app",
+      "version": "84.522.20072244",
     },
     Object {
       "_class": "INSTALLED",
@@ -10093,6 +10537,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Excel.app",
+      "version": "16.37.20051002",
     },
     Object {
       "_class": "INSTALLED",
@@ -10120,6 +10566,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft OneNote.app",
+      "version": "16.39.20071300",
     },
     Object {
       "_class": "INSTALLED",
@@ -10147,6 +10595,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Outlook.app",
+      "version": "16.38.20061401",
     },
     Object {
       "_class": "INSTALLED",
@@ -10174,6 +10624,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft PowerPoint.app",
+      "version": "16.37.20051002",
     },
     Object {
       "_class": "INSTALLED",
@@ -10201,6 +10653,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Teams.app",
+      "version": "309271",
     },
     Object {
       "_class": "INSTALLED",
@@ -10228,6 +10682,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft To Do.app",
+      "version": "200214.1439",
     },
     Object {
       "_class": "INSTALLED",
@@ -10255,6 +10711,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Microsoft Word.app",
+      "version": "16.38.20061401",
     },
     Object {
       "_class": "INSTALLED",
@@ -10282,6 +10740,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Migration Assistant.app",
+      "version": "10.15",
     },
     Object {
       "_class": "INSTALLED",
@@ -10309,6 +10769,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/MindNode.app",
+      "version": "7.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -10336,6 +10798,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Mission Control.app",
+      "version": "1.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -10363,6 +10827,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Music.app",
+      "version": "1.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -10390,6 +10856,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Neo4j Community Edition 3.1.3.app",
+      "version": "3.1.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -10417,6 +10885,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/News.app",
+      "version": "5.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10444,6 +10914,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Notes.app",
+      "version": "4.7",
     },
     Object {
       "_class": "INSTALLED",
@@ -10471,6 +10943,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Noun Project.app",
+      "version": "2.2.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10498,6 +10972,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Numbers.app",
+      "version": "4.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10525,6 +11001,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/OneDrive.app",
+      "version": "20.114.0607",
     },
     Object {
       "_class": "INSTALLED",
@@ -10552,6 +11030,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Pages.app",
+      "version": "6.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10579,6 +11059,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/PDF Expert.app",
+      "version": "2.4.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -10606,6 +11088,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Photo Booth.app",
+      "version": "11.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10633,6 +11117,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Photos.app",
+      "version": "5.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10660,6 +11146,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/ZoomOutlookPlugin/PluginLauncher.app",
+      "version": "5.1.27808",
     },
     Object {
       "_class": "INSTALLED",
@@ -10687,6 +11175,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Pock.app",
+      "version": "0.5.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -10714,6 +11204,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Podcasts.app",
+      "version": "1.0.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10741,6 +11233,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Postman.app",
+      "version": "5.2.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10768,6 +11262,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Preview.app",
+      "version": "11.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10795,6 +11291,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Prezi Next.app",
+      "version": "1.43.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10822,6 +11320,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Pritunl.app",
+      "version": "1.0.1953.32",
     },
     Object {
       "_class": "INSTALLED",
@@ -10849,6 +11349,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Python 3.6/Python Launcher.app",
+      "version": "3.6.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -10876,6 +11378,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/QuickTime Player.app",
+      "version": "10.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -10903,6 +11407,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Reminders.app",
+      "version": "7.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -10930,6 +11436,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/RingCentral Meetings.app",
+      "version": "6.3.135305.1213",
     },
     Object {
       "_class": "INSTALLED",
@@ -10957,6 +11465,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Safari.app",
+      "version": "13.0.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -10984,6 +11494,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Screenshot.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11011,6 +11523,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Script Editor.app",
+      "version": "2.11",
     },
     Object {
       "_class": "INSTALLED",
@@ -11038,6 +11552,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DECore/Setup.app",
+      "version": "9.0.0.65",
     },
     Object {
       "_class": "INSTALLED",
@@ -11065,6 +11581,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DWA/Setup.app",
+      "version": "5.0.65.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11092,6 +11610,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sim Daltonism.app",
+      "version": "2.0.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -11119,6 +11639,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/SimpleMind Lite.app",
+      "version": "1.25.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11146,6 +11668,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Siri.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11173,6 +11697,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sketch.app",
+      "version": "50.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -11200,6 +11726,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skitch.app",
+      "version": "2.8.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -11227,6 +11755,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skype for Business.app",
+      "version": "16.28.192",
     },
     Object {
       "_class": "INSTALLED",
@@ -11254,6 +11784,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skype Meetings App.app",
+      "version": "1.0.0.186",
     },
     Object {
       "_class": "INSTALLED",
@@ -11281,6 +11813,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Skype.app",
+      "version": "8.60",
     },
     Object {
       "_class": "INSTALLED",
@@ -11308,6 +11842,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Slack.app",
+      "version": "4.3.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -11335,6 +11871,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sonos.app",
+      "version": "7.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -11362,6 +11900,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Spectacle.app",
+      "version": "1.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -11389,6 +11929,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Station.app",
+      "version": "1.40.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -11416,6 +11958,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Stethoscope.app",
+      "version": "4.0.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11443,6 +11987,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Stickies.app",
+      "version": "10.2",
     },
     Object {
       "_class": "INSTALLED",
@@ -11470,6 +12016,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Stocks.app",
+      "version": "2.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -11497,6 +12045,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Sublime Text.app",
+      "version": "Build 3211",
     },
     Object {
       "_class": "INSTALLED",
@@ -11524,6 +12074,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Cisco AMP/Support Tool.app",
+      "version": "n/a",
     },
     Object {
       "_class": "INSTALLED",
@@ -11551,6 +12103,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/System Information.app",
+      "version": "10.14",
     },
     Object {
       "_class": "INSTALLED",
@@ -11578,6 +12132,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/System Preferences.app",
+      "version": "14.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11605,6 +12161,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/TDR_ICBC_UsbKeyTools.app",
+      "version": "1.0.0.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -11632,6 +12190,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/Terminal.app",
+      "version": "2.10",
     },
     Object {
       "_class": "INSTALLED",
@@ -11659,6 +12219,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/TextEdit.app",
+      "version": "1.15",
     },
     Object {
       "_class": "INSTALLED",
@@ -11686,6 +12248,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Time Machine.app",
+      "version": "1.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -11713,6 +12277,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Trello.app",
+      "version": "2.11.4",
     },
     Object {
       "_class": "INSTALLED",
@@ -11740,6 +12306,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/TV.app",
+      "version": "1.0.3",
     },
     Object {
       "_class": "INSTALLED",
@@ -11767,6 +12335,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE6/resources/uninstall/Uninstall Product.app",
+      "version": "9.0.0.65",
     },
     Object {
       "_class": "INSTALLED",
@@ -11794,6 +12364,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Utilities/Adobe Application Manager/DECore/DE5/resources/uninstall/Uninstall Product.app",
+      "version": "5.0.65.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -11821,6 +12393,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/ZoomOutlookPlugin/Uninstall.app",
+      "version": "5.1.27808",
     },
     Object {
       "_class": "INSTALLED",
@@ -11848,6 +12422,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Unsplash Wallpapers.app",
+      "version": "1.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -11875,6 +12451,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/VirtualBox.app",
+      "version": "6.1.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -11902,6 +12480,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Viscosity.app",
+      "version": "1.7.6",
     },
     Object {
       "_class": "INSTALLED",
@@ -11929,6 +12509,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Visual Studio Code.app",
+      "version": "1.45.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -11956,6 +12538,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/VoiceMemos.app",
+      "version": "2.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -11983,6 +12567,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/System/Applications/Utilities/VoiceOver Utility.app",
+      "version": "10",
     },
     Object {
       "_class": "INSTALLED",
@@ -12010,6 +12596,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Wavebox.app",
+      "version": "3.1.8",
     },
     Object {
       "_class": "INSTALLED",
@@ -12037,6 +12625,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Wireshark.app",
+      "version": "2.4.5",
     },
     Object {
       "_class": "INSTALLED",
@@ -12064,6 +12654,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/WordPress.com.app",
+      "version": "2.8.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -12091,6 +12683,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/WorkSpaces.app",
+      "version": "2.5.11",
     },
     Object {
       "_class": "INSTALLED",
@@ -12118,6 +12712,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/Xcode.app",
+      "version": "11.3.1",
     },
     Object {
       "_class": "INSTALLED",
@@ -12145,6 +12741,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/YubiKey Manager.app",
+      "version": "1.0",
     },
     Object {
       "_class": "INSTALLED",
@@ -12172,6 +12770,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/YubiKey Personalization Tool.app",
+      "version": "3.1.24",
     },
     Object {
       "_class": "INSTALLED",
@@ -12199,6 +12799,8 @@ Object {
       },
       "_type": "user_endpoint_installed_application",
       "displayName": "INSTALLED",
+      "path": "/Applications/zoom.us.app",
+      "version": "5.0.2 (24030.0508)",
     },
   ],
   "encounteredTypes": Array [

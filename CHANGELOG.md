@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.0 - 2020-03-16
+
 ### Changed
 
 - Add `version` and `path` properties to the `INSTALLED` relationship between a

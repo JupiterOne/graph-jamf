@@ -11,18 +11,8 @@ Object {
     Object {
       "name": "default",
       "rawData": Object {
-        "building": "",
-        "department": "",
-        "id": 1,
-        "mac_address": "12:34:67:8A:9B:1C",
-        "managed": true,
-        "model": "MacBookPro13,3",
-        "name": "John’s MacBook",
-        "report_date_epoch": 1560787256384,
-        "report_date_utc": "2019-06-17T16:00:56.384+0000",
-        "serial_number": "ABC123DEF456",
-        "udid": "DF7C48EF-D17E-4A5E-B192-8C758870F624",
-        "username": "john",
+        "uploadStatus": "SKIPPED",
+        "uploadStatusReason": "Raw data currently disabled for this entity type",
       },
     },
     Object {

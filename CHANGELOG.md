@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.1 - 2020-04-20
+
+### Changed
+
+- Upgraded `@jupiterone/integration-sdk-*@6.0.0`, which includes a more
+  performant `jobState.findEntity()`.
+
 ## 2.1.0 - 2020-03-16
 
 ### Changed

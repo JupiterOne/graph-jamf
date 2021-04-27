@@ -8,6 +8,14 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.2 - 2020-04-27
+
+### Fixed
+
+- Fixed [#39](https://github.com/JupiterOne/graph-jamf/issues/39) - Prevent
+  trying to create duplicate relationships between `jamf_computer` and
+  `jamf_osx_configuration_profile`.
+
 ## 2.1.1 - 2020-04-20
 
 ### Changed

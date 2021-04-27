@@ -125,11 +125,27 @@ async function iterateMacOsConfigurationDetails(
 }
 
 async function createComputerUsesProfileRelationships(
+  logger: IntegrationLogger,
   jobState: JobState,
   computerEntity: Entity,
   computerDetail: ComputerDetail,
 ) {
+  const configurationProfileIdSet = new Set<number>();
+  const duplicateConfigurationProfileIds: number[] = [];
+
   for (const profile of computerDetail.configuration_profiles || []) {
+    // See https://github.com/JupiterOne/graph-jamf/issues/39
+    //
+    // It seems as if multiple configuration profiles share the same ID on an
+    // individual `ComputerDetail`. We don't want to try creating a duplicate
+    // relationship, so we'll skip ones that we've seen.
+    if (configurationProfileIdSet.has(profile.id)) {
+      duplicateConfigurationProfileIds.push(profile.id);
+      continue;
+    }
+
+    configurationProfileIdSet.add(profile.id);
+
     const profileEntity = await jobState.findEntity(
       generateEntityKey(
         Entities.MAC_OS_CONFIGURATION_PROFILE._type,
@@ -147,6 +163,16 @@ async function createComputerUsesProfileRelationships(
         from: computerEntity,
         to: profileEntity,
       }),
+    );
+  }
+
+  if (duplicateConfigurationProfileIds.length) {
+    logger.info(
+      {
+        computerEntityKey: computerEntity._key,
+        duplicateConfigurationProfileIds,
+      },
+      'Found duplicate configuration profile IDs on computer',
     );
   }
 }
@@ -329,6 +355,7 @@ export async function fetchComputers({
       );
 
       await createComputerUsesProfileRelationships(
+        logger,
         jobState,
         computerEntity,
         computerDetail,

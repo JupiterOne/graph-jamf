@@ -277,7 +277,7 @@ function primaryDiskBootPartition(
 
   for (const storage of storageList) {
     const device = 'device' in storage ? storage.device : storage;
-    const partitionList = itemArray(device.partition);
+    const partitionList = itemArray(device.partition || device.partitions);
 
     // If there is only one disk and one partition, returns it as the primary
     // regardless of the type property value

@@ -314,7 +314,7 @@ Object {
   "displayName": "John’s MacBook",
   "distributionPoint": "",
   "email": "john.doe@test.com",
-  "encrypted": false,
+  "encrypted": true,
   "enrolledOn": 1591217314697,
   "gatekeeperEnabled": true,
   "gatekeeperStatus": "App Store and identified developers",

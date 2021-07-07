@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix `user_endpoint.encrypted` not reflecting state of `boot` partition.
+
 ## 2.1.2 - 2020-04-27
 
 ### Fixed

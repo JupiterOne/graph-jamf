@@ -8,11 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.3 - 2021-07-08
+
 ### Fixed
 
 - Fix `user_endpoint.encrypted` not reflecting state of `boot` partition.
 
-## 2.1.2 - 2020-04-27
+## 2.1.2 - 2021-04-27
 
 ### Fixed
 
@@ -20,14 +22,14 @@ and this project adheres to
   trying to create duplicate relationships between `jamf_computer` and
   `jamf_osx_configuration_profile`.
 
-## 2.1.1 - 2020-04-20
+## 2.1.1 - 2021-04-20
 
 ### Changed
 
 - Upgraded `@jupiterone/integration-sdk-*@6.0.0`, which includes a more
   performant `jobState.findEntity()`.
 
-## 2.1.0 - 2020-03-16
+## 2.1.0 - 2021-03-16
 
 ### Changed
 
@@ -36,7 +38,7 @@ and this project adheres to
   application installed on a specific computer and allows users to query that
   information as needed.
 
-## 2.0.3 - 2020-03-11
+## 2.0.3 - 2021-03-11
 
 ### Changed
 

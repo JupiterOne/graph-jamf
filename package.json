@@ -1,6 +1,6 @@
 {
   "name": "@jupiterone/graph-jamf",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A JupiterOne Integration for https://jamf.com",
   "repository": "https://github.com/jupiterone/graph-jamf",
   "license": "MPL-2.0",

@@ -25,7 +25,9 @@ export function createMobileDeviceEntity(data: MobileDevice) {
       assign: {
         _class: Entities.MOBILE_DEVICE._class,
         _type: Entities.MOBILE_DEVICE._type,
-        _key: generateEntityKey(Entities.MOBILE_DEVICE._type, data.id),
+        _key:
+          data.serial_number ||
+          generateEntityKey(Entities.MOBILE_DEVICE._type, data.id),
         id: data.udid,
         deviceName: data.device_name,
         displayName: `${data.username || 'Unknown User'}'s ${data.model}`,
@@ -116,7 +118,9 @@ export function createComputerEntity(
   detailData?: ComputerDetail,
 ): Entity {
   const computer: Entity = {
-    _key: generateEntityKey(Entities.COMPUTER._type, device.id),
+    _key:
+      device.serial_number ||
+      generateEntityKey(Entities.COMPUTER._type, device.id),
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
     _rawData: [{ name: 'default', rawData: skippedRawDataSource }],

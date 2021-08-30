@@ -6,7 +6,7 @@ Object {
     "Host",
     "Device",
   ],
-  "_key": "user_endpoint_1",
+  "_key": "ABC123DEF456",
   "_rawData": Array [
     Object {
       "name": "default",
@@ -356,7 +356,7 @@ Object {
   "_class": Array [
     "Device",
   ],
-  "_key": "mobile_device_16",
+  "_key": "CA44C68660A3",
   "_rawData": Array [
     Object {
       "name": "default",

@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- Updated all packages
+- Change build to target Node 14.x
+
 ## 2.1.3 - 2021-07-08
 
 ### Fixed

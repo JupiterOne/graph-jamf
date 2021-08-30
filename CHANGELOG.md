@@ -10,6 +10,8 @@ and this project adheres to
 
 ### Changed
 
+- Update `_key` for `user_endpoint` to be the serial number of the computer
+- Update `_key` for `mobile_device` to be the serial number of the mobile device
 - Updated all packages
 - Change build to target Node 14.x
 

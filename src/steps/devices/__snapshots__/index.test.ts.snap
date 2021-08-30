@@ -93,7 +93,7 @@ Object {
         "Host",
         "Device",
       ],
-      "_key": "user_endpoint_1",
+      "_key": "C02T705EGTF1",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -2240,7 +2240,7 @@ Object {
         "Host",
         "Device",
       ],
-      "_key": "user_endpoint_2",
+      "_key": "C02WJ01QHTD9",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -4060,18 +4060,18 @@ Object {
     Object {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
-      "_key": "jamf_account_local-integration-instance|has|user_endpoint_1",
-      "_toEntityKey": "user_endpoint_1",
+      "_key": "jamf_account_local-integration-instance|has|C02T705EGTF1",
+      "_toEntityKey": "C02T705EGTF1",
       "_type": "jamf_account_has_user_endpoint",
       "displayName": "HAS",
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AAM Registration Notifier.app_7.0.0.485",
+      "_key": "C02T705EGTF1_installed_macos_app_AAM Registration Notifier.app_7.0.0.485",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4096,11 +4096,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AAM Registration Notifier.app_3.0.64.0",
+      "_key": "C02T705EGTF1_installed_macos_app_AAM Registration Notifier.app_3.0.64.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4125,11 +4125,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AAM Updates Notifier.app_9.0.0.281",
+      "_key": "C02T705EGTF1_installed_macos_app_AAM Updates Notifier.app_9.0.0.281",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4154,11 +4154,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AAMLauncherUtil.app_10.0.0.49",
+      "_key": "C02T705EGTF1_installed_macos_app_AAMLauncherUtil.app_10.0.0.49",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4183,11 +4183,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AASIapp.app_10.0.0.252",
+      "_key": "C02T705EGTF1_installed_macos_app_AASIapp.app_10.0.0.252",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4212,11 +4212,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_ACCFinderBundleLoader.app_2.4.6.82",
+      "_key": "C02T705EGTF1_installed_macos_app_ACCFinderBundleLoader.app_2.4.6.82",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4241,11 +4241,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Acrobat Distiller.app_19.012.20034",
+      "_key": "C02T705EGTF1_installed_macos_app_Acrobat Distiller.app_19.012.20034",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4270,11 +4270,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Activity Monitor.app_10.13",
+      "_key": "C02T705EGTF1_installed_macos_app_Activity Monitor.app_10.13",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4299,11 +4299,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Adobe Acrobat Reader DC.app_19.012.20034",
+      "_key": "C02T705EGTF1_installed_macos_app_Adobe Acrobat Reader DC.app_19.012.20034",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4328,11 +4328,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Adobe Acrobat.app_19.012.20034",
+      "_key": "C02T705EGTF1_installed_macos_app_Adobe Acrobat.app_19.012.20034",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4357,11 +4357,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Adobe Application Manager.app_10.0.0.49",
+      "_key": "C02T705EGTF1_installed_macos_app_Adobe Application Manager.app_10.0.0.49",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4386,11 +4386,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Adobe Application Updater.app_4.6.0.384",
+      "_key": "C02T705EGTF1_installed_macos_app_Adobe Application Updater.app_4.6.0.384",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4415,11 +4415,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_adobe_licensing_helper.app_1.0.0.22",
+      "_key": "C02T705EGTF1_installed_macos_app_adobe_licensing_helper.app_1.0.0.22",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4444,11 +4444,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_adobe_lichelper.app_1.0.0.274",
+      "_key": "C02T705EGTF1_installed_macos_app_adobe_lichelper.app_1.0.0.274",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4473,11 +4473,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_adobe_licutil.app_7.0.1.109",
+      "_key": "C02T705EGTF1_installed_macos_app_adobe_licutil.app_7.0.1.109",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4502,11 +4502,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_adobe_licutil.app_10.0.0.274",
+      "_key": "C02T705EGTF1_installed_macos_app_adobe_licutil.app_10.0.0.274",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4531,11 +4531,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
+      "_key": "C02T705EGTF1_installed_macos_app_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4560,11 +4560,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AdobeIPCBroker.app_5.4.0.57",
+      "_key": "C02T705EGTF1_installed_macos_app_AdobeIPCBroker.app_5.4.0.57",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4589,11 +4589,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_AirPort Utility.app_6.3.8",
+      "_key": "C02T705EGTF1_installed_macos_app_AirPort Utility.app_6.3.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4618,11 +4618,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Amphetamine.app_4.1.6",
+      "_key": "C02T705EGTF1_installed_macos_app_Amphetamine.app_4.1.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4647,11 +4647,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_App Store.app_2.4",
+      "_key": "C02T705EGTF1_installed_macos_app_App Store.app_2.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4676,11 +4676,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Atom.app_1.31.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Atom.app_1.31.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4705,11 +4705,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Audio MIDI Setup.app_3.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Audio MIDI Setup.app_3.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4734,11 +4734,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Automator.app_2.8",
+      "_key": "C02T705EGTF1_installed_macos_app_Automator.app_2.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4763,11 +4763,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_BlueJeans.app_2.10.0",
+      "_key": "C02T705EGTF1_installed_macos_app_BlueJeans.app_2.10.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4792,11 +4792,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Bluetooth File Exchange.app_6.0.7",
+      "_key": "C02T705EGTF1_installed_macos_app_Bluetooth File Exchange.app_6.0.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4821,11 +4821,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Boot Camp Assistant.app_6.1.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Boot Camp Assistant.app_6.1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4850,11 +4850,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Calculator.app_10.13",
+      "_key": "C02T705EGTF1_installed_macos_app_Calculator.app_10.13",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4879,11 +4879,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Calendar.app_10.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Calendar.app_10.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4908,11 +4908,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_CCXProcess.app_2.3.0-30",
+      "_key": "C02T705EGTF1_installed_macos_app_CCXProcess.app_2.3.0-30",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4937,11 +4937,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Chess.app_3.15",
+      "_key": "C02T705EGTF1_installed_macos_app_Chess.app_3.15",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4966,11 +4966,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_ColorSync Utility.app_4.13.0",
+      "_key": "C02T705EGTF1_installed_macos_app_ColorSync Utility.app_4.13.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -4995,11 +4995,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Confer.app_3.2.1.10",
+      "_key": "C02T705EGTF1_installed_macos_app_Confer.app_3.2.1.10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5024,11 +5024,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Console.app_1.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Console.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5053,11 +5053,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Contacts.app_11.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Contacts.app_11.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5082,11 +5082,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Core Sync.app_3.0.3.6",
+      "_key": "C02T705EGTF1_installed_macos_app_Core Sync.app_3.0.3.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5111,11 +5111,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Creative Cloud Desktop App.app_4.6.0.384",
+      "_key": "C02T705EGTF1_installed_macos_app_Creative Cloud Desktop App.app_4.6.0.384",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5140,11 +5140,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Creative Cloud Installer.app_4.6.0.384",
+      "_key": "C02T705EGTF1_installed_macos_app_Creative Cloud Installer.app_4.6.0.384",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5169,11 +5169,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Creative Cloud Uninstaller.app_4.6.0.384",
+      "_key": "C02T705EGTF1_installed_macos_app_Creative Cloud Uninstaller.app_4.6.0.384",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5198,11 +5198,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Creative Cloud.app_4.6.0.384",
+      "_key": "C02T705EGTF1_installed_macos_app_Creative Cloud.app_4.6.0.384",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5227,11 +5227,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Cytoscape Uninstaller.app_3.5.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Cytoscape Uninstaller.app_3.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5256,11 +5256,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Cytoscape.app_3.5.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Cytoscape.app_3.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5285,11 +5285,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Dashboard.app_1.8",
+      "_key": "C02T705EGTF1_installed_macos_app_Dashboard.app_1.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5314,11 +5314,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Dashlane.app_6.1909.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Dashlane.app_6.1909.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5343,11 +5343,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Dictionary.app_2.2.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Dictionary.app_2.2.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5372,11 +5372,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Digital Color Meter.app_5.11",
+      "_key": "C02T705EGTF1_installed_macos_app_Digital Color Meter.app_5.11",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5401,11 +5401,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Disk Utility.app_17.0.3",
+      "_key": "C02T705EGTF1_installed_macos_app_Disk Utility.app_17.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5430,11 +5430,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Docker.app_2.0.0.0-mac81",
+      "_key": "C02T705EGTF1_installed_macos_app_Docker.app_2.0.0.0-mac81",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5459,11 +5459,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Dropbox.app_74.4.115",
+      "_key": "C02T705EGTF1_installed_macos_app_Dropbox.app_74.4.115",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5488,11 +5488,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_DVD Player.app_5.8",
+      "_key": "C02T705EGTF1_installed_macos_app_DVD Player.app_5.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5517,11 +5517,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Epic Games Launcher.app_9.12.4",
+      "_key": "C02T705EGTF1_installed_macos_app_Epic Games Launcher.app_9.12.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5546,11 +5546,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_FaceTime.app_4.0",
+      "_key": "C02T705EGTF1_installed_macos_app_FaceTime.app_4.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5575,11 +5575,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Font Book.app_8.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Font Book.app_8.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5604,11 +5604,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Gephi.app_0.9.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Gephi.app_0.9.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5633,11 +5633,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_GIF Brewery 3.app_3.9.5",
+      "_key": "C02T705EGTF1_installed_macos_app_GIF Brewery 3.app_3.9.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5662,11 +5662,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_GIPHY CAPTURE.app_4.1",
+      "_key": "C02T705EGTF1_installed_macos_app_GIPHY CAPTURE.app_4.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5691,11 +5691,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Google Chrome.app_75.0.3770.90",
+      "_key": "C02T705EGTF1_installed_macos_app_Google Chrome.app_75.0.3770.90",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5720,11 +5720,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Grab.app_1.10",
+      "_key": "C02T705EGTF1_installed_macos_app_Grab.app_1.10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5749,11 +5749,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Grapher.app_2.6",
+      "_key": "C02T705EGTF1_installed_macos_app_Grapher.app_2.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5778,11 +5778,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_HandBrake.app_1.0.7",
+      "_key": "C02T705EGTF1_installed_macos_app_HandBrake.app_1.0.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5807,11 +5807,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_HSRToolkit.app_1",
+      "_key": "C02T705EGTF1_installed_macos_app_HSRToolkit.app_1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5836,11 +5836,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_iBooks.app_1.15",
+      "_key": "C02T705EGTF1_installed_macos_app_iBooks.app_1.15",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5865,11 +5865,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_IDLE.app_3.6.1",
+      "_key": "C02T705EGTF1_installed_macos_app_IDLE.app_3.6.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5894,11 +5894,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Image Capture.app_7.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Image Capture.app_7.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5923,11 +5923,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Insomnia.app_6.5.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Insomnia.app_6.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5952,11 +5952,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Install macOS Mojave.app_14.0.22",
+      "_key": "C02T705EGTF1_installed_macos_app_Install macOS Mojave.app_14.0.22",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -5981,11 +5981,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Install.app_4.3.0.256",
+      "_key": "C02T705EGTF1_installed_macos_app_Install.app_4.3.0.256",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6010,11 +6010,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_IntelliJ IDEA CE.app_2017.2",
+      "_key": "C02T705EGTF1_installed_macos_app_IntelliJ IDEA CE.app_2017.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6039,11 +6039,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_iTunes.app_12.8.2",
+      "_key": "C02T705EGTF1_installed_macos_app_iTunes.app_12.8.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6068,11 +6068,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Keybase.app_4.1.0-20190612165948+952fee6c59",
+      "_key": "C02T705EGTF1_installed_macos_app_Keybase.app_4.1.0-20190612165948+952fee6c59",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6097,11 +6097,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Keychain Access.app_10.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Keychain Access.app_10.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6126,11 +6126,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Keynote.app_9.0.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Keynote.app_9.0.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6155,11 +6155,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Kindle.app_1.26.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Kindle.app_1.26.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6184,11 +6184,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_LastPass.app_4.4.0",
+      "_key": "C02T705EGTF1_installed_macos_app_LastPass.app_4.4.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6213,11 +6213,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Launchpad.app_1.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Launchpad.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6242,11 +6242,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_LiveSlides.app_2.10.1",
+      "_key": "C02T705EGTF1_installed_macos_app_LiveSlides.app_2.10.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6271,11 +6271,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_LogTransport2.app_2.1.2.1652",
+      "_key": "C02T705EGTF1_installed_macos_app_LogTransport2.app_2.1.2.1652",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6300,11 +6300,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Mail.app_11.5",
+      "_key": "C02T705EGTF1_installed_macos_app_Mail.app_11.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6329,11 +6329,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Maps.app_2.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Maps.app_2.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6358,11 +6358,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Messages.app_11.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Messages.app_11.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6387,11 +6387,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Microsoft Excel.app_16.25.19051201",
+      "_key": "C02T705EGTF1_installed_macos_app_Microsoft Excel.app_16.25.19051201",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6416,11 +6416,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Microsoft OneNote.app_16.26.19060901",
+      "_key": "C02T705EGTF1_installed_macos_app_Microsoft OneNote.app_16.26.19060901",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6445,11 +6445,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Microsoft Outlook.app_16.25.19051201",
+      "_key": "C02T705EGTF1_installed_macos_app_Microsoft Outlook.app_16.25.19051201",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6474,11 +6474,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Microsoft PowerPoint.app_16.26.19060901",
+      "_key": "C02T705EGTF1_installed_macos_app_Microsoft PowerPoint.app_16.26.19060901",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6503,11 +6503,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Microsoft Word.app_16.25.19051201",
+      "_key": "C02T705EGTF1_installed_macos_app_Microsoft Word.app_16.25.19051201",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6532,11 +6532,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Migration Assistant.app_10.13",
+      "_key": "C02T705EGTF1_installed_macos_app_Migration Assistant.app_10.13",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6561,11 +6561,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Mission Control.app_1.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Mission Control.app_1.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6590,11 +6590,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Neo4j Community Edition 3.1.3.app_3.1.3",
+      "_key": "C02T705EGTF1_installed_macos_app_Neo4j Community Edition 3.1.3.app_3.1.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6619,11 +6619,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Notes.app_4.5",
+      "_key": "C02T705EGTF1_installed_macos_app_Notes.app_4.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6648,11 +6648,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Noun Project.app_2.2.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Noun Project.app_2.2.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6677,11 +6677,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Numbers.app_6.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Numbers.app_6.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6706,11 +6706,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_OneDrive.app_19.070.0410",
+      "_key": "C02T705EGTF1_installed_macos_app_OneDrive.app_19.070.0410",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6735,11 +6735,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Pages.app_8.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Pages.app_8.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6764,11 +6764,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_PDF Expert.app_2.4.2",
+      "_key": "C02T705EGTF1_installed_macos_app_PDF Expert.app_2.4.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6793,11 +6793,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Photo Booth.app_9.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Photo Booth.app_9.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6822,11 +6822,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Photos.app_3.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Photos.app_3.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6851,11 +6851,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_PluginLauncher.app_4.7.53547",
+      "_key": "C02T705EGTF1_installed_macos_app_PluginLauncher.app_4.7.53547",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6880,11 +6880,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Postman.app_5.2.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Postman.app_5.2.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6909,11 +6909,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Preview.app_10.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Preview.app_10.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6938,11 +6938,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Prezi Next.app_1.34.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Prezi Next.app_1.34.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6967,11 +6967,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Pritunl.app_1.0.1953.32",
+      "_key": "C02T705EGTF1_installed_macos_app_Pritunl.app_1.0.1953.32",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -6996,11 +6996,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Python Launcher.app_3.6.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Python Launcher.app_3.6.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7025,11 +7025,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_QuickTime Player.app_10.4",
+      "_key": "C02T705EGTF1_installed_macos_app_QuickTime Player.app_10.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7054,11 +7054,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Reminders.app_5.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Reminders.app_5.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7083,11 +7083,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_RingCentral Meetings.app_6.3.135305.1213",
+      "_key": "C02T705EGTF1_installed_macos_app_RingCentral Meetings.app_6.3.135305.1213",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7112,11 +7112,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Safari.app_12.1.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Safari.app_12.1.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7141,11 +7141,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Script Editor.app_2.10",
+      "_key": "C02T705EGTF1_installed_macos_app_Script Editor.app_2.10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7170,11 +7170,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Setup.app_9.0.0.65",
+      "_key": "C02T705EGTF1_installed_macos_app_Setup.app_9.0.0.65",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7199,11 +7199,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Setup.app_5.0.65.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Setup.app_5.0.65.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7228,11 +7228,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Sim Daltonism.app_2.0.4",
+      "_key": "C02T705EGTF1_installed_macos_app_Sim Daltonism.app_2.0.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7257,11 +7257,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Siri.app_1.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Siri.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7286,11 +7286,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Sketch.app_50.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Sketch.app_50.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7315,11 +7315,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Skitch.app_2.8.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Skitch.app_2.8.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7344,11 +7344,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Skype Meetings App.app_1.0.0.186",
+      "_key": "C02T705EGTF1_installed_macos_app_Skype Meetings App.app_1.0.0.186",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7373,11 +7373,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Skype.app_7.56",
+      "_key": "C02T705EGTF1_installed_macos_app_Skype.app_7.56",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7402,11 +7402,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Slack.app_3.3.7",
+      "_key": "C02T705EGTF1_installed_macos_app_Slack.app_3.3.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7431,11 +7431,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Sonos.app_7.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Sonos.app_7.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7460,11 +7460,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Spectacle.app_1.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Spectacle.app_1.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7489,11 +7489,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Station.app_1.40.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Station.app_1.40.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7518,11 +7518,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Stethoscope.app_3.0.5",
+      "_key": "C02T705EGTF1_installed_macos_app_Stethoscope.app_3.0.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7547,11 +7547,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Stickies.app_10.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Stickies.app_10.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7576,11 +7576,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Sublime Text.app_Build 3143",
+      "_key": "C02T705EGTF1_installed_macos_app_Sublime Text.app_Build 3143",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7605,11 +7605,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_System Information.app_10.12",
+      "_key": "C02T705EGTF1_installed_macos_app_System Information.app_10.12",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7634,11 +7634,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_System Preferences.app_14.0",
+      "_key": "C02T705EGTF1_installed_macos_app_System Preferences.app_14.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7663,11 +7663,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
+      "_key": "C02T705EGTF1_installed_macos_app_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7692,11 +7692,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Terminal.app_2.8.3",
+      "_key": "C02T705EGTF1_installed_macos_app_Terminal.app_2.8.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7721,11 +7721,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_TextEdit.app_1.13",
+      "_key": "C02T705EGTF1_installed_macos_app_TextEdit.app_1.13",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7750,11 +7750,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Time Machine.app_1.3",
+      "_key": "C02T705EGTF1_installed_macos_app_Time Machine.app_1.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7779,11 +7779,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Uninstall Product.app_9.0.0.65",
+      "_key": "C02T705EGTF1_installed_macos_app_Uninstall Product.app_9.0.0.65",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7808,11 +7808,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Uninstall Product.app_5.0.65.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Uninstall Product.app_5.0.65.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7837,11 +7837,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Uninstall.app_4.7.53547",
+      "_key": "C02T705EGTF1_installed_macos_app_Uninstall.app_4.7.53547",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7866,11 +7866,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Uninstaller.app_4.3.0.256",
+      "_key": "C02T705EGTF1_installed_macos_app_Uninstaller.app_4.3.0.256",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7895,11 +7895,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Unsplash Wallpapers.app_1.2",
+      "_key": "C02T705EGTF1_installed_macos_app_Unsplash Wallpapers.app_1.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7924,11 +7924,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_VirtualBox.app_5.2.8",
+      "_key": "C02T705EGTF1_installed_macos_app_VirtualBox.app_5.2.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7953,11 +7953,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Viscosity.app_1.7.6",
+      "_key": "C02T705EGTF1_installed_macos_app_Viscosity.app_1.7.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -7982,11 +7982,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Visual Studio Code.app_1.35.0",
+      "_key": "C02T705EGTF1_installed_macos_app_Visual Studio Code.app_1.35.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8011,11 +8011,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_VoiceOver Utility.app_8",
+      "_key": "C02T705EGTF1_installed_macos_app_VoiceOver Utility.app_8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8040,11 +8040,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Wavebox.app_3.1.8",
+      "_key": "C02T705EGTF1_installed_macos_app_Wavebox.app_3.1.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8069,11 +8069,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Wireshark.app_2.4.5",
+      "_key": "C02T705EGTF1_installed_macos_app_Wireshark.app_2.4.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8098,11 +8098,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_WordPress.com.app_2.8.0",
+      "_key": "C02T705EGTF1_installed_macos_app_WordPress.com.app_2.8.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8127,11 +8127,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_WorkSpaces.app_2.4.4",
+      "_key": "C02T705EGTF1_installed_macos_app_WorkSpaces.app_2.4.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8156,11 +8156,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_Xcode.app_10.1",
+      "_key": "C02T705EGTF1_installed_macos_app_Xcode.app_10.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8185,11 +8185,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_YubiKey Manager.app_1.0",
+      "_key": "C02T705EGTF1_installed_macos_app_YubiKey Manager.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8214,11 +8214,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_YubiKey Personalization Tool.app_3.1.24",
+      "_key": "C02T705EGTF1_installed_macos_app_YubiKey Personalization Tool.app_3.1.24",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8243,11 +8243,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_1_installed_macos_app_zoom.us.app_4.1.34801.1116",
+      "_key": "C02T705EGTF1_installed_macos_app_zoom.us.app_4.1.34801.1116",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_1",
+        "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8273,18 +8273,18 @@ Object {
     Object {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
-      "_key": "jamf_account_local-integration-instance|has|user_endpoint_2",
-      "_toEntityKey": "user_endpoint_2",
+      "_key": "jamf_account_local-integration-instance|has|C02WJ01QHTD9",
+      "_toEntityKey": "C02WJ01QHTD9",
       "_type": "jamf_account_has_user_endpoint",
       "displayName": "HAS",
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AAM Registration Notifier.app_7.0.0.485",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AAM Registration Notifier.app_7.0.0.485",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8309,11 +8309,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AAM Registration Notifier.app_3.0.64.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AAM Registration Notifier.app_3.0.64.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8338,11 +8338,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AAM Updates Notifier.app_9.0.0.281",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AAM Updates Notifier.app_9.0.0.281",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8367,11 +8367,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AAMLauncherUtil.app_10.0.0.49",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AAMLauncherUtil.app_10.0.0.49",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8396,11 +8396,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AASIapp.app_10.0.0.252",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AASIapp.app_10.0.0.252",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8425,11 +8425,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Activity Monitor.app_10.14",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Activity Monitor.app_10.14",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8454,11 +8454,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Adobe Application Manager.app_10.0.0.49",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Adobe Application Manager.app_10.0.0.49",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8483,11 +8483,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_adobe_licensing_helper.app_1.0.0.22",
+      "_key": "C02WJ01QHTD9_installed_macos_app_adobe_licensing_helper.app_1.0.0.22",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8512,11 +8512,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_adobe_lichelper.app_1.0.0.274",
+      "_key": "C02WJ01QHTD9_installed_macos_app_adobe_lichelper.app_1.0.0.274",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8541,11 +8541,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
+      "_key": "C02WJ01QHTD9_installed_macos_app_adobe_licutil.app_Adobe License Utility 2.0.0.10 (BuildVersion: 2.0; BuildDate: Tue Jul 05 2011 18:00:00)",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8570,11 +8570,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_adobe_licutil.app_10.0.0.274",
+      "_key": "C02WJ01QHTD9_installed_macos_app_adobe_licutil.app_10.0.0.274",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8599,11 +8599,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_adobe_licutil.app_7.0.1.109",
+      "_key": "C02WJ01QHTD9_installed_macos_app_adobe_licutil.app_7.0.1.109",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8628,11 +8628,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AdobeIPCBroker.app_5.4.0.57",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AdobeIPCBroker.app_5.4.0.57",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8657,11 +8657,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AirPort Utility.app_6.3.9",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AirPort Utility.app_6.3.9",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8686,11 +8686,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Alfred 4.app_4.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Alfred 4.app_4.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8715,11 +8715,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_AMP for Endpoints Connector.app_1.12.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_AMP for Endpoints Connector.app_1.12.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8744,11 +8744,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Amphetamine.app_5.0.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Amphetamine.app_5.0.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8773,11 +8773,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_App Store.app_3.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_App Store.app_3.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8802,11 +8802,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Atom.app_1.43.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Atom.app_1.43.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8831,11 +8831,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Audio MIDI Setup.app_3.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Audio MIDI Setup.app_3.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8860,11 +8860,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Automator.app_2.10",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Automator.app_2.10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8889,11 +8889,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Bear.app_1.7.8",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Bear.app_1.7.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8918,11 +8918,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_BlueJeans.app_2.21.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_BlueJeans.app_2.21.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8947,11 +8947,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Bluetooth File Exchange.app_7.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Bluetooth File Exchange.app_7.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -8976,11 +8976,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Books.app_2.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Books.app_2.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9005,11 +9005,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Boot Camp Assistant.app_6.1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Boot Camp Assistant.app_6.1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9034,11 +9034,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Calculator.app_10.14",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Calculator.app_10.14",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9063,11 +9063,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Calendar.app_11.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Calendar.app_11.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9092,11 +9092,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Chess.app_3.16",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Chess.app_3.16",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9121,11 +9121,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Cisco Webex Meetings.app_39.10.6.11",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Cisco Webex Meetings.app_39.10.6.11",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9150,11 +9150,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Cleaner-App.app_8.0.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Cleaner-App.app_8.0.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9179,11 +9179,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_ColorSync Utility.app_4.14.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_ColorSync Utility.app_4.14.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9208,11 +9208,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Confer.app_3.4.2.23",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Confer.app_3.4.2.23",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9237,11 +9237,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Console.app_1.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Console.app_1.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9266,11 +9266,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Contacts.app_12.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Contacts.app_12.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9295,11 +9295,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Cytoscape Uninstaller.app_3.5.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Cytoscape Uninstaller.app_3.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9324,11 +9324,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Cytoscape.app_3.5.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Cytoscape.app_3.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9353,11 +9353,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Dashlane.app_6.2004.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Dashlane.app_6.2004.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9382,11 +9382,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Dictionary.app_2.3.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Dictionary.app_2.3.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9411,11 +9411,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Digital Color Meter.app_5.15",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Digital Color Meter.app_5.15",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9440,11 +9440,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Disk Utility.app_19.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Disk Utility.app_19.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9469,11 +9469,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Docker.app_2.3.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Docker.app_2.3.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9498,11 +9498,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Dropbox.app_102.4.431",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Dropbox.app_102.4.431",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9527,11 +9527,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_FaceTime.app_5.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_FaceTime.app_5.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9556,11 +9556,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_FindMy.app_1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_FindMy.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9585,11 +9585,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Font Book.app_10.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Font Book.app_10.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9614,11 +9614,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Gephi.app_0.9.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Gephi.app_0.9.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9643,11 +9643,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_GIF Brewery 3.app_3.9.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_GIF Brewery 3.app_3.9.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9672,11 +9672,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_GIPHY CAPTURE.app_4.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_GIPHY CAPTURE.app_4.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9701,11 +9701,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_GitHub Desktop.app_2.2.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_GitHub Desktop.app_2.2.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9730,11 +9730,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Google Chrome.app_84.0.4147.105",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Google Chrome.app_84.0.4147.105",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9759,11 +9759,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Google Docs.app_40.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Google Docs.app_40.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9788,11 +9788,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Google Drive File Stream.app_40.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Google Drive File Stream.app_40.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9817,11 +9817,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Google Sheets.app_40.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Google Sheets.app_40.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9846,11 +9846,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Google Slides.app_40.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Google Slides.app_40.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9875,11 +9875,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_GoToMeeting.app_10.10.1.17956",
+      "_key": "C02WJ01QHTD9_installed_macos_app_GoToMeeting.app_10.10.1.17956",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9904,11 +9904,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Grapher.app_2.7",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Grapher.app_2.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9933,11 +9933,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_HandBrake.app_1.0.7",
+      "_key": "C02WJ01QHTD9_installed_macos_app_HandBrake.app_1.0.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9962,11 +9962,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Home.app_4.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Home.app_4.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -9991,11 +9991,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_HSRToolkit.app_1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_HSRToolkit.app_1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10020,11 +10020,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_HTTP Toolkit.app_0.1.20",
+      "_key": "C02WJ01QHTD9_installed_macos_app_HTTP Toolkit.app_0.1.20",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10049,11 +10049,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_iBeesoft Data Recovery.app_3.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_iBeesoft Data Recovery.app_3.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10078,11 +10078,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_IDLE.app_3.6.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_IDLE.app_3.6.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10107,11 +10107,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Image Capture.app_8.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Image Capture.app_8.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10136,11 +10136,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Insomnia.app_6.5.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Insomnia.app_6.5.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10165,11 +10165,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Keybase.app_5.5.0-20200526170801+139bb348af",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Keybase.app_5.5.0-20200526170801+139bb348af",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10194,11 +10194,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Keychain Access.app_10.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Keychain Access.app_10.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10223,11 +10223,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Keynote.app_7.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Keynote.app_7.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10252,11 +10252,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Kindle.app_1.28.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Kindle.app_1.28.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10281,11 +10281,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_LastPass.app_4.49.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_LastPass.app_4.49.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10310,11 +10310,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Launchpad.app_1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Launchpad.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10339,11 +10339,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_LiveSlides.app_2.10.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_LiveSlides.app_2.10.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10368,11 +10368,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_LogTransport2.app_2.1.2.1652",
+      "_key": "C02WJ01QHTD9_installed_macos_app_LogTransport2.app_2.1.2.1652",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10397,11 +10397,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Mail.app_13.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Mail.app_13.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10426,11 +10426,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Maps.app_2.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Maps.app_2.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10455,11 +10455,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Messages.app_13.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Messages.app_13.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10484,11 +10484,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft Edge.app_84.522.20072244",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft Edge.app_84.522.20072244",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10513,11 +10513,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft Excel.app_16.37.20051002",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft Excel.app_16.37.20051002",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10542,11 +10542,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft OneNote.app_16.39.20071300",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft OneNote.app_16.39.20071300",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10571,11 +10571,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft Outlook.app_16.38.20061401",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft Outlook.app_16.38.20061401",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10600,11 +10600,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft PowerPoint.app_16.37.20051002",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft PowerPoint.app_16.37.20051002",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10629,11 +10629,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft Teams.app_309271",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft Teams.app_309271",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10658,11 +10658,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft To Do.app_200214.1439",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft To Do.app_200214.1439",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10687,11 +10687,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Microsoft Word.app_16.38.20061401",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Microsoft Word.app_16.38.20061401",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10716,11 +10716,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Migration Assistant.app_10.15",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Migration Assistant.app_10.15",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10745,11 +10745,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_MindNode.app_7.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_MindNode.app_7.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10774,11 +10774,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Mission Control.app_1.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Mission Control.app_1.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10803,11 +10803,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Music.app_1.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Music.app_1.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10832,11 +10832,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Neo4j Community Edition 3.1.3.app_3.1.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Neo4j Community Edition 3.1.3.app_3.1.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10861,11 +10861,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_News.app_5.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_News.app_5.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10890,11 +10890,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Notes.app_4.7",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Notes.app_4.7",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10919,11 +10919,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Noun Project.app_2.2.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Noun Project.app_2.2.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10948,11 +10948,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Numbers.app_4.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Numbers.app_4.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -10977,11 +10977,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_OneDrive.app_20.114.0607",
+      "_key": "C02WJ01QHTD9_installed_macos_app_OneDrive.app_20.114.0607",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11006,11 +11006,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Pages.app_6.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Pages.app_6.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11035,11 +11035,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_PDF Expert.app_2.4.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_PDF Expert.app_2.4.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11064,11 +11064,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Photo Booth.app_11.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Photo Booth.app_11.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11093,11 +11093,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Photos.app_5.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Photos.app_5.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11122,11 +11122,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_PluginLauncher.app_5.1.27808",
+      "_key": "C02WJ01QHTD9_installed_macos_app_PluginLauncher.app_5.1.27808",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11151,11 +11151,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Pock.app_0.5.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Pock.app_0.5.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11180,11 +11180,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Podcasts.app_1.0.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Podcasts.app_1.0.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11209,11 +11209,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Postman.app_5.2.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Postman.app_5.2.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11238,11 +11238,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Preview.app_11.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Preview.app_11.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11267,11 +11267,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Prezi Next.app_1.43.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Prezi Next.app_1.43.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11296,11 +11296,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Pritunl.app_1.0.1953.32",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Pritunl.app_1.0.1953.32",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11325,11 +11325,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Python Launcher.app_3.6.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Python Launcher.app_3.6.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11354,11 +11354,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_QuickTime Player.app_10.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_QuickTime Player.app_10.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11383,11 +11383,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Reminders.app_7.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Reminders.app_7.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11412,11 +11412,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_RingCentral Meetings.app_6.3.135305.1213",
+      "_key": "C02WJ01QHTD9_installed_macos_app_RingCentral Meetings.app_6.3.135305.1213",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11441,11 +11441,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Safari.app_13.0.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Safari.app_13.0.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11470,11 +11470,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Screenshot.app_1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Screenshot.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11499,11 +11499,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Script Editor.app_2.11",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Script Editor.app_2.11",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11528,11 +11528,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Setup.app_9.0.0.65",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Setup.app_9.0.0.65",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11557,11 +11557,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Setup.app_5.0.65.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Setup.app_5.0.65.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11586,11 +11586,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Sim Daltonism.app_2.0.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Sim Daltonism.app_2.0.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11615,11 +11615,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_SimpleMind Lite.app_1.25.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_SimpleMind Lite.app_1.25.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11644,11 +11644,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Siri.app_1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Siri.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11673,11 +11673,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Sketch.app_50.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Sketch.app_50.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11702,11 +11702,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Skitch.app_2.8.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Skitch.app_2.8.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11731,11 +11731,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Skype for Business.app_16.28.192",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Skype for Business.app_16.28.192",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11760,11 +11760,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Skype Meetings App.app_1.0.0.186",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Skype Meetings App.app_1.0.0.186",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11789,11 +11789,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Skype.app_8.60",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Skype.app_8.60",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11818,11 +11818,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Slack.app_4.3.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Slack.app_4.3.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11847,11 +11847,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Sonos.app_7.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Sonos.app_7.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11876,11 +11876,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Spectacle.app_1.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Spectacle.app_1.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11905,11 +11905,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Station.app_1.40.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Station.app_1.40.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11934,11 +11934,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Stethoscope.app_4.0.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Stethoscope.app_4.0.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11963,11 +11963,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Stickies.app_10.2",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Stickies.app_10.2",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -11992,11 +11992,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Stocks.app_2.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Stocks.app_2.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12021,11 +12021,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Sublime Text.app_Build 3211",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Sublime Text.app_Build 3211",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12050,11 +12050,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Support Tool.app_n/a",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Support Tool.app_n/a",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12079,11 +12079,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_System Information.app_10.14",
+      "_key": "C02WJ01QHTD9_installed_macos_app_System Information.app_10.14",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12108,11 +12108,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_System Preferences.app_14.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_System Preferences.app_14.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12137,11 +12137,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_TDR_ICBC_UsbKeyTools.app_1.0.0.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12166,11 +12166,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Terminal.app_2.10",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Terminal.app_2.10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12195,11 +12195,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_TextEdit.app_1.15",
+      "_key": "C02WJ01QHTD9_installed_macos_app_TextEdit.app_1.15",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12224,11 +12224,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Time Machine.app_1.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Time Machine.app_1.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12253,11 +12253,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Trello.app_2.11.4",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Trello.app_2.11.4",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12282,11 +12282,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_TV.app_1.0.3",
+      "_key": "C02WJ01QHTD9_installed_macos_app_TV.app_1.0.3",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12311,11 +12311,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Uninstall Product.app_9.0.0.65",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Uninstall Product.app_9.0.0.65",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12340,11 +12340,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Uninstall Product.app_5.0.65.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Uninstall Product.app_5.0.65.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12369,11 +12369,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Uninstall.app_5.1.27808",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Uninstall.app_5.1.27808",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12398,11 +12398,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Unsplash Wallpapers.app_1.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Unsplash Wallpapers.app_1.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12427,11 +12427,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_VirtualBox.app_6.1.6",
+      "_key": "C02WJ01QHTD9_installed_macos_app_VirtualBox.app_6.1.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12456,11 +12456,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Viscosity.app_1.7.6",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Viscosity.app_1.7.6",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12485,11 +12485,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Visual Studio Code.app_1.45.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Visual Studio Code.app_1.45.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12514,11 +12514,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_VoiceMemos.app_2.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_VoiceMemos.app_2.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12543,11 +12543,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_VoiceOver Utility.app_10",
+      "_key": "C02WJ01QHTD9_installed_macos_app_VoiceOver Utility.app_10",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12572,11 +12572,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Wavebox.app_3.1.8",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Wavebox.app_3.1.8",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12601,11 +12601,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Wireshark.app_2.4.5",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Wireshark.app_2.4.5",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12630,11 +12630,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_WordPress.com.app_2.8.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_WordPress.com.app_2.8.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12659,11 +12659,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_WorkSpaces.app_2.5.11",
+      "_key": "C02WJ01QHTD9_installed_macos_app_WorkSpaces.app_2.5.11",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12688,11 +12688,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_Xcode.app_11.3.1",
+      "_key": "C02WJ01QHTD9_installed_macos_app_Xcode.app_11.3.1",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12717,11 +12717,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_YubiKey Manager.app_1.0",
+      "_key": "C02WJ01QHTD9_installed_macos_app_YubiKey Manager.app_1.0",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12746,11 +12746,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_YubiKey Personalization Tool.app_3.1.24",
+      "_key": "C02WJ01QHTD9_installed_macos_app_YubiKey Personalization Tool.app_3.1.24",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",
@@ -12775,11 +12775,11 @@ Object {
     },
     Object {
       "_class": "INSTALLED",
-      "_key": "user_endpoint_2_installed_macos_app_zoom.us.app_5.0.2 (24030.0508)",
+      "_key": "C02WJ01QHTD9_installed_macos_app_zoom.us.app_5.0.2 (24030.0508)",
       "_mapping": Object {
         "relationshipDirection": "FORWARD",
         "skipTargetCreation": false,
-        "sourceEntityKey": "user_endpoint_2",
+        "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
             "Application",

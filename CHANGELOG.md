@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.2.0 - 2021-08-30
+
 ### Changed
 
 - Update `_key` for `user_endpoint` to be the serial number of the computer

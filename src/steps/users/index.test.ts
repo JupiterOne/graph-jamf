@@ -4,6 +4,10 @@ import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
 import { fetchAccounts } from '../accounts';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
+import {
+  setComputerDeviceIdToGraphObjectKeyMap,
+  setMobileDeviceIdToGraphObjectKeyMap,
+} from '../../util/device';
 
 describe('#fetchAdminUsers', () => {
   test('should collect data', async () => {
@@ -66,6 +70,13 @@ describe('#fetchAdminUsers', () => {
 describe('#fetchDeviceUsers', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({
+      async beforeRecord(context) {
+        await setMobileDeviceIdToGraphObjectKeyMap(context.jobState, new Map());
+        await setComputerDeviceIdToGraphObjectKeyMap(
+          context.jobState,
+          new Map(),
+        );
+      },
       recordingName: 'fetchDeviceUsers',
       recordingDirectory: __dirname,
       integrationConfig,

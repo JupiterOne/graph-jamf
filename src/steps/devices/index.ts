@@ -33,15 +33,33 @@ import {
 import { getAccountEntity } from '../../util/account';
 import { toOSXConfigurationDetailParsed } from '../../util/toOSXConfigurationParsed';
 import { generateEntityKey, generateRelationKey } from '../../util/generateKey';
+import {
+  DeviceIdToGraphObjectKeyMap,
+  setComputerDeviceIdToGraphObjectKeyMap,
+  setMobileDeviceIdToGraphObjectKeyMap,
+} from '../../util/device';
 
 type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
+
+interface SortableDevice {
+  id: number;
+}
+
+/**
+ * Ensure that we always process the devices from newest record to oldest
+ * record. Sometimes there are multiple devices with the same serial number. We
+ * trust that the computer with a higher ID is the latest device record.
+ */
+function sortByDeviceIdDesc<T extends SortableDevice>(devices: T[]): T[] {
+  return devices.sort((a, b) => b.id - a.id);
+}
 
 async function iterateMobileDevices(
   client: JamfClient,
   logger: IntegrationLogger,
   iteratee: (user: MobileDevice) => Promise<void>,
 ) {
-  const mobileDevices = await client.fetchMobileDevices();
+  const mobileDevices = sortByDeviceIdDesc(await client.fetchMobileDevices());
 
   logger.info(
     { numDevices: mobileDevices.length },
@@ -61,7 +79,7 @@ async function iterateComputerDetails(
     computerDetail: ComputerDetail,
   ) => Promise<void>,
 ) {
-  const computers = await client.fetchComputers();
+  const computers = sortByDeviceIdDesc(await client.fetchComputers());
   logger.info(
     { numComputer: computers.length },
     'Successfully fetched computers',
@@ -245,11 +263,18 @@ export async function fetchMobileDevices({
   });
 
   const accountEntity = await getAccountEntity(jobState);
+  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
 
   await iterateMobileDevices(client, logger, async (device) => {
-    const mobileDeviceEntity = await jobState.addEntity(
-      createMobileDeviceEntity(device),
+    const previouslyDiscoveredDevice = await jobState.hasKey(
+      device.serial_number,
     );
+
+    const mobileDeviceEntity = await jobState.addEntity(
+      createMobileDeviceEntity(device, previouslyDiscoveredDevice),
+    );
+
+    mobileDeviceIdToGraphObjectKeyMap.set(device.id, mobileDeviceEntity._key);
 
     await jobState.addRelationship(
       createDirectRelationship({
@@ -259,6 +284,11 @@ export async function fetchMobileDevices({
       }),
     );
   });
+
+  await setMobileDeviceIdToGraphObjectKeyMap(
+    jobState,
+    mobileDeviceIdToGraphObjectKeyMap,
+  );
 }
 
 export async function fetchMacOsConfigurationDetails({
@@ -334,17 +364,26 @@ export async function fetchComputers({
     });
   }
 
+  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+
   await iterateComputerDetails(
     client,
     logger,
     async (computer, computerDetail) => {
-      const computerEntity = await jobState.addEntity(
-        createComputerEntity(
-          computer,
-          macOsConfigurationDetailByIdMap,
-          computerDetail,
-        ),
+      const previouslyDiscoveredDevice = await jobState.hasKey(
+        computer.serial_number,
       );
+
+      const computerEntity = await jobState.addEntity(
+        createComputerEntity({
+          device: computer,
+          macOsConfigurationDetailByIdMap,
+          detailData: computerDetail,
+          previouslyDiscoveredDevice,
+        }),
+      );
+
+      computerDeviceIdToGraphObjectKeyMap.set(computer.id, computerEntity._key);
 
       await jobState.addRelationship(
         createDirectRelationship({
@@ -367,6 +406,11 @@ export async function fetchComputers({
         computerDetail,
       );
     },
+  );
+
+  await setComputerDeviceIdToGraphObjectKeyMap(
+    jobState,
+    computerDeviceIdToGraphObjectKeyMap,
   );
 }
 

@@ -18,14 +18,25 @@ import { generateEntityKey } from '../../util/generateKey';
 import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
-export function createMobileDeviceEntity(data: MobileDevice) {
+export function createMobileDeviceEntity(
+  data: MobileDevice,
+  previouslyDiscoveredDevice: boolean,
+) {
+  const defaultDeviceKey = generateEntityKey(
+    Entities.MOBILE_DEVICE._type,
+    data.id,
+  );
+  const _key = previouslyDiscoveredDevice
+    ? defaultDeviceKey
+    : data.serial_number || defaultDeviceKey;
+
   return createIntegrationEntity({
     entityData: {
       source: data,
       assign: {
         _class: Entities.MOBILE_DEVICE._class,
         _type: Entities.MOBILE_DEVICE._type,
-        _key: generateEntityKey(Entities.MOBILE_DEVICE._type, data.id),
+        _key,
         id: data.udid,
         deviceName: data.device_name,
         displayName: `${data.username || 'Unknown User'}'s ${data.model}`,
@@ -110,13 +121,28 @@ export function createMacOsConfigurationEntity(
 }
 
 // TODO: Refactor this to be simpler!
-export function createComputerEntity(
-  device: Computer,
-  macOsConfigurationDetailByIdMap: Map<number, OSXConfigurationDetailParsed>,
-  detailData?: ComputerDetail,
-): Entity {
+export function createComputerEntity({
+  device,
+  macOsConfigurationDetailByIdMap,
+  detailData,
+  previouslyDiscoveredDevice,
+}: {
+  device: Computer;
+  macOsConfigurationDetailByIdMap: Map<number, OSXConfigurationDetailParsed>;
+  detailData?: ComputerDetail;
+  previouslyDiscoveredDevice: boolean;
+}): Entity {
+  const defaultDeviceKey = generateEntityKey(
+    Entities.COMPUTER._type,
+    device.id,
+  );
+
+  const _key = previouslyDiscoveredDevice
+    ? defaultDeviceKey
+    : device.serial_number || defaultDeviceKey;
+
   const computer: Entity = {
-    _key: generateEntityKey(Entities.COMPUTER._type, device.id),
+    _key,
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
     _rawData: [{ name: 'default', rawData: skippedRawDataSource }],
@@ -277,7 +303,7 @@ function primaryDiskBootPartition(
 
   for (const storage of storageList) {
     const device = 'device' in storage ? storage.device : storage;
-    const partitionList = itemArray(device.partition);
+    const partitionList = itemArray(device.partition || device.partitions);
 
     // If there is only one disk and one partition, returns it as the primary
     // regardless of the type property value

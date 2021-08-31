@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.2.3 - 2021-08-31
+
 ### Fixed
 
 - Construct proper target entity `_key` for the following relationships:

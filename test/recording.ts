@@ -5,6 +5,7 @@ import {
   createMockStepExecutionContext,
   ToMatchGraphObjectSchemaParams,
   ToMatchRelationshipSchemaParams,
+  MockIntegrationStepExecutionContext,
 } from '@jupiterone/integration-sdk-testing';
 import * as url from 'url';
 
@@ -76,6 +77,9 @@ export interface CreateDataCollectionTestParams<IIntegrationConfig> {
   ) => Promise<void>)[];
   entitySchemaMatchers?: EntitySchemaMatcher[];
   relationshipSchemaMatchers?: RelationshipSchemaMatcher[];
+  beforeRecord?: (
+    context: MockIntegrationStepExecutionContext,
+  ) => Promise<void>;
 }
 
 export async function createDataCollectionTest<IIntegrationConfig>({
@@ -85,10 +89,15 @@ export async function createDataCollectionTest<IIntegrationConfig>({
   stepFunctions,
   entitySchemaMatchers,
   relationshipSchemaMatchers,
+  beforeRecord,
 }: CreateDataCollectionTestParams<IIntegrationConfig>) {
   const context = createMockStepExecutionContext<IIntegrationConfig>({
     instanceConfig: integrationConfig,
   });
+
+  if (beforeRecord) {
+    await beforeRecord(context);
+  }
 
   await withRecording(recordingName, recordingDirectory, async () => {
     for (const stepFunction of stepFunctions) {

@@ -22,9 +22,13 @@ export function createMobileDeviceEntity(
   data: MobileDevice,
   previouslyDiscoveredDevice: boolean,
 ) {
+  const defaultDeviceKey = generateEntityKey(
+    Entities.MOBILE_DEVICE._type,
+    data.id,
+  );
   const _key = previouslyDiscoveredDevice
-    ? generateEntityKey(Entities.MOBILE_DEVICE._type, data.id)
-    : data.serial_number;
+    ? defaultDeviceKey
+    : data.serial_number || defaultDeviceKey;
 
   return createIntegrationEntity({
     entityData: {
@@ -128,9 +132,14 @@ export function createComputerEntity({
   detailData?: ComputerDetail;
   previouslyDiscoveredDevice: boolean;
 }): Entity {
+  const defaultDeviceKey = generateEntityKey(
+    Entities.COMPUTER._type,
+    device.id,
+  );
+
   const _key = previouslyDiscoveredDevice
-    ? generateEntityKey(Entities.COMPUTER._type, device.id)
-    : device.serial_number;
+    ? defaultDeviceKey
+    : device.serial_number || defaultDeviceKey;
 
   const computer: Entity = {
     _key,

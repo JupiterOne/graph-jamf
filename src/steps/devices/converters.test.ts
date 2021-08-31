@@ -8,7 +8,7 @@ import {
 describe('#createMobileDeviceEntity', () => {
   test('should convert data', () => {
     expect(
-      createMobileDeviceEntity(createMockMobileDevice()),
+      createMobileDeviceEntity(createMockMobileDevice(), false),
     ).toMatchSnapshot();
   });
 });
@@ -16,11 +16,12 @@ describe('#createMobileDeviceEntity', () => {
 describe('#createComputerEntity', () => {
   test('should convert data', () => {
     expect(
-      createComputerEntity(
-        createMockComputer(),
-        new Map(),
-        createMockComputerDetail(),
-      ),
+      createComputerEntity({
+        device: createMockComputer(),
+        macOsConfigurationDetailByIdMap: new Map(),
+        detailData: createMockComputerDetail(),
+        previouslyDiscoveredDevice: false,
+      }),
     ).toMatchSnapshot();
   });
 });

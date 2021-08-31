@@ -18,16 +18,21 @@ import { generateEntityKey } from '../../util/generateKey';
 import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
-export function createMobileDeviceEntity(data: MobileDevice) {
+export function createMobileDeviceEntity(
+  data: MobileDevice,
+  previouslyDiscoveredDevice: boolean,
+) {
+  const _key = previouslyDiscoveredDevice
+    ? generateEntityKey(Entities.MOBILE_DEVICE._type, data.id)
+    : data.serial_number;
+
   return createIntegrationEntity({
     entityData: {
       source: data,
       assign: {
         _class: Entities.MOBILE_DEVICE._class,
         _type: Entities.MOBILE_DEVICE._type,
-        _key:
-          data.serial_number ||
-          generateEntityKey(Entities.MOBILE_DEVICE._type, data.id),
+        _key,
         id: data.udid,
         deviceName: data.device_name,
         displayName: `${data.username || 'Unknown User'}'s ${data.model}`,
@@ -112,15 +117,23 @@ export function createMacOsConfigurationEntity(
 }
 
 // TODO: Refactor this to be simpler!
-export function createComputerEntity(
-  device: Computer,
-  macOsConfigurationDetailByIdMap: Map<number, OSXConfigurationDetailParsed>,
-  detailData?: ComputerDetail,
-): Entity {
+export function createComputerEntity({
+  device,
+  macOsConfigurationDetailByIdMap,
+  detailData,
+  previouslyDiscoveredDevice,
+}: {
+  device: Computer;
+  macOsConfigurationDetailByIdMap: Map<number, OSXConfigurationDetailParsed>;
+  detailData?: ComputerDetail;
+  previouslyDiscoveredDevice: boolean;
+}): Entity {
+  const _key = previouslyDiscoveredDevice
+    ? generateEntityKey(Entities.COMPUTER._type, device.id)
+    : device.serial_number;
+
   const computer: Entity = {
-    _key:
-      device.serial_number ||
-      generateEntityKey(Entities.COMPUTER._type, device.id),
+    _key,
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
     _rawData: [{ name: 'default', rawData: skippedRawDataSource }],

@@ -33,6 +33,11 @@ import {
 import { getAccountEntity } from '../../util/account';
 import { toOSXConfigurationDetailParsed } from '../../util/toOSXConfigurationParsed';
 import { generateEntityKey, generateRelationKey } from '../../util/generateKey';
+import {
+  DeviceIdToGraphObjectKeyMap,
+  setComputerDeviceIdToGraphObjectKeyMap,
+  setMobileDeviceIdToGraphObjectKeyMap,
+} from '../../util/device';
 
 type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
 
@@ -258,6 +263,7 @@ export async function fetchMobileDevices({
   });
 
   const accountEntity = await getAccountEntity(jobState);
+  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
 
   await iterateMobileDevices(client, logger, async (device) => {
     const previouslyDiscoveredDevice = await jobState.hasKey(
@@ -268,6 +274,8 @@ export async function fetchMobileDevices({
       createMobileDeviceEntity(device, previouslyDiscoveredDevice),
     );
 
+    mobileDeviceIdToGraphObjectKeyMap.set(device.id, mobileDeviceEntity._key);
+
     await jobState.addRelationship(
       createDirectRelationship({
         _class: RelationshipClass.HAS,
@@ -276,6 +284,11 @@ export async function fetchMobileDevices({
       }),
     );
   });
+
+  await setMobileDeviceIdToGraphObjectKeyMap(
+    jobState,
+    mobileDeviceIdToGraphObjectKeyMap,
+  );
 }
 
 export async function fetchMacOsConfigurationDetails({
@@ -351,6 +364,8 @@ export async function fetchComputers({
     });
   }
 
+  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+
   await iterateComputerDetails(
     client,
     logger,
@@ -367,6 +382,8 @@ export async function fetchComputers({
           previouslyDiscoveredDevice,
         }),
       );
+
+      computerDeviceIdToGraphObjectKeyMap.set(computer.id, computerEntity._key);
 
       await jobState.addRelationship(
         createDirectRelationship({
@@ -389,6 +406,11 @@ export async function fetchComputers({
         computerDetail,
       );
     },
+  );
+
+  await setComputerDeviceIdToGraphObjectKeyMap(
+    jobState,
+    computerDeviceIdToGraphObjectKeyMap,
   );
 }
 

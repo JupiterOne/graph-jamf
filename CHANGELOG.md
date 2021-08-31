@@ -8,9 +8,15 @@ and this project adheres to
 
 ## [Unreleased]
 
-## 2.2.1 - 2021-08-31
+### Fixed
 
-### Changed
+- Construct proper target entity `_key` for the following relationships:
+  - `device_user` **HAS** `mobile_device`
+  - `device_user` **HAS** `user_endpoint`
+
+## 2.2.2 - 2021-08-31
+
+### Fixed
 
 - Prevent `user_endpoint` duplicate `_key`
 - Prevent `mobile_device` duplicate `_key`

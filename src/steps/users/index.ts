@@ -14,8 +14,11 @@ import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createAdminEntity, createDeviceUserEntity } from './converters';
 import { Admin, User } from '../../jamf/types';
 import { getAccountData, getAccountEntity } from '../../util/account';
-import { generateEntityKey } from '../../util/generateKey';
 import { wrapWithTimer } from '../../util/timer';
+import {
+  getComputerDeviceIdToGraphObjectKeyMap,
+  getMobileDeviceIdToGraphObjectKeyMap,
+} from '../../util/device';
 
 async function iterateAdminUserProfiles(
   client: JamfClient,
@@ -96,24 +99,23 @@ async function createUserHasMobileDeviceRelationships(
   userEntity: Entity,
   user: User,
 ) {
+  const mobileDeviceIdToGraphObjectKeyMap = await getMobileDeviceIdToGraphObjectKeyMap(
+    jobState,
+  );
+
+  const mobileDeviceIdsNotFound: number[] = [];
+
   for (const mobileDevice of user.links?.mobile_devices || []) {
-    const mobileDeviceEntityKey = generateEntityKey(
-      Entities.MOBILE_DEVICE._type,
+    const mobileDeviceEntityKey = mobileDeviceIdToGraphObjectKeyMap.get(
       mobileDevice.id,
     );
 
-    // NOTE: This is probably a very a slow operation due to the way that
-    // `findEntity` is currently implemented...
-    const mobileDeviceEntity = await wrapWithTimer(
-      async () => jobState.findEntity(mobileDeviceEntityKey),
-      {
-        logger,
-        operationName: 'find_mobile_device_entity',
-        metadata: {
-          mobileDeviceEntityKey,
-        },
-      },
-    );
+    if (!mobileDeviceEntityKey) {
+      mobileDeviceIdsNotFound.push(mobileDevice.id);
+      continue;
+    }
+
+    const mobileDeviceEntity = await jobState.findEntity(mobileDeviceEntityKey);
 
     if (!mobileDeviceEntity) {
       continue;
@@ -127,6 +129,15 @@ async function createUserHasMobileDeviceRelationships(
       }),
     );
   }
+
+  if (mobileDeviceIdsNotFound.length) {
+    logger.info(
+      {
+        mobileDeviceIdsNotFound,
+      },
+      'Missing mobile device IDs. Could not build relationships to user.',
+    );
+  }
 }
 
 async function createUserHasComputerDeviceRelationships(
@@ -135,23 +146,24 @@ async function createUserHasComputerDeviceRelationships(
   userEntity: Entity,
   user: User,
 ) {
+  const computerDeviceIdToGraphObjectKeyMap = await getComputerDeviceIdToGraphObjectKeyMap(
+    jobState,
+  );
+
+  const computerDeviceIdsNotFound: number[] = [];
+
   for (const computerDevice of user.links?.computers || []) {
-    const computerDeviceEntityKey = generateEntityKey(
-      Entities.COMPUTER._type,
+    const computerDeviceEntityKey = computerDeviceIdToGraphObjectKeyMap.get(
       computerDevice.id,
     );
 
-    // NOTE: This is probably a very a slow operation due to the way that
-    // `findEntity` is currently implemented...
-    const computerDeviceEntity = await wrapWithTimer(
-      async () => jobState.findEntity(computerDeviceEntityKey),
-      {
-        logger,
-        operationName: 'find_computer_device_entity',
-        metadata: {
-          computerDeviceEntityKey,
-        },
-      },
+    if (!computerDeviceEntityKey) {
+      computerDeviceIdsNotFound.push(computerDevice.id);
+      continue;
+    }
+
+    const computerDeviceEntity = await jobState.findEntity(
+      computerDeviceEntityKey,
     );
 
     if (!computerDeviceEntity) {
@@ -164,6 +176,15 @@ async function createUserHasComputerDeviceRelationships(
         from: userEntity,
         to: computerDeviceEntity,
       }),
+    );
+  }
+
+  if (computerDeviceIdsNotFound.length) {
+    logger.info(
+      {
+        computerDeviceIdsNotFound,
+      },
+      'Missing computer device IDs. Could not build relationships to user.',
     );
   }
 }

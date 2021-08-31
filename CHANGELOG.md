@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.2.1 - 2021-08-31
+
 ### Changed
 
 - Prevent `user_endpoint` duplicate `_key`

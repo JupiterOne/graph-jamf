@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- Prevent `user_endpoint` duplicate `_key`
+- Prevent `mobile_device` duplicate `_key`
+
 ## 2.2.0 - 2021-08-30
 
 ### Changed

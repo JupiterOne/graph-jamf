@@ -36,12 +36,25 @@ import { generateEntityKey, generateRelationKey } from '../../util/generateKey';
 
 type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
 
+interface SortableDevice {
+  id: number;
+}
+
+/**
+ * Ensure that we always process the devices from newest record to oldest
+ * record. Sometimes there are multiple devices with the same serial number. We
+ * trust that the computer with a higher ID is the latest device record.
+ */
+function sortByDeviceIdDesc<T extends SortableDevice>(devices: T[]): T[] {
+  return devices.sort((a, b) => b.id - a.id);
+}
+
 async function iterateMobileDevices(
   client: JamfClient,
   logger: IntegrationLogger,
   iteratee: (user: MobileDevice) => Promise<void>,
 ) {
-  const mobileDevices = await client.fetchMobileDevices();
+  const mobileDevices = sortByDeviceIdDesc(await client.fetchMobileDevices());
 
   logger.info(
     { numDevices: mobileDevices.length },
@@ -61,7 +74,7 @@ async function iterateComputerDetails(
     computerDetail: ComputerDetail,
   ) => Promise<void>,
 ) {
-  const computers = await client.fetchComputers();
+  const computers = sortByDeviceIdDesc(await client.fetchComputers());
   logger.info(
     { numComputer: computers.length },
     'Successfully fetched computers',
@@ -247,8 +260,12 @@ export async function fetchMobileDevices({
   const accountEntity = await getAccountEntity(jobState);
 
   await iterateMobileDevices(client, logger, async (device) => {
+    const previouslyDiscoveredDevice = await jobState.hasKey(
+      device.serial_number,
+    );
+
     const mobileDeviceEntity = await jobState.addEntity(
-      createMobileDeviceEntity(device),
+      createMobileDeviceEntity(device, previouslyDiscoveredDevice),
     );
 
     await jobState.addRelationship(
@@ -338,12 +355,17 @@ export async function fetchComputers({
     client,
     logger,
     async (computer, computerDetail) => {
+      const previouslyDiscoveredDevice = await jobState.hasKey(
+        computer.serial_number,
+      );
+
       const computerEntity = await jobState.addEntity(
-        createComputerEntity(
-          computer,
+        createComputerEntity({
+          device: computer,
           macOsConfigurationDetailByIdMap,
-          computerDetail,
-        ),
+          detailData: computerDetail,
+          previouslyDiscoveredDevice,
+        }),
       );
 
       await jobState.addRelationship(

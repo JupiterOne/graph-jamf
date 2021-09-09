@@ -107,6 +107,9 @@ export class JamfClient {
     this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
   }
 
+  /**
+   * Requires "Read - Jamf Pro User Accounts & Groups" permission
+   */
   public async fetchAccounts(): Promise<AdminsAndGroups> {
     const result = await this.makeRequest<AccountsResponse>(
       `/accounts`,
@@ -118,6 +121,9 @@ export class JamfClient {
     return { users, groups };
   }
 
+  /**
+   * Requires "Read - Jamf Pro User Accounts & Groups" permission
+   */
   public async fetchAccountUserById(id: number): Promise<Admin> {
     const result = await this.makeRequest<AdminResponse>(
       `/accounts/userid/${id}`,
@@ -128,6 +134,9 @@ export class JamfClient {
     return result.account;
   }
 
+  /**
+   * Requires "Read - Jamf Pro User Accounts & Groups" permission
+   */
   public async fetchAccountGroupById(id: number): Promise<Group> {
     const result = await this.makeRequest<GroupResponse>(
       `/accounts/groupid/${id}`,
@@ -138,6 +147,9 @@ export class JamfClient {
     return result.group;
   }
 
+  /**
+   * Requires "Read - Users" permission
+   */
   public async fetchUsers(): Promise<User[]> {
     const result = await this.makeRequest<UsersResponse>(
       `/users`,
@@ -148,6 +160,9 @@ export class JamfClient {
     return result.users;
   }
 
+  /**
+   * Requires "Read - Users" permission
+   */
   public async fetchUserById(id: number): Promise<User> {
     const result = await this.makeRequest<UserResponse>(
       `/users/id/${id}`,
@@ -158,6 +173,9 @@ export class JamfClient {
     return result.user;
   }
 
+  /**
+   * Requires "Read - Mobile Devices" permission
+   */
   public async fetchMobileDevices(): Promise<MobileDevice[]> {
     const result = await this.makeRequest<MobileDevicesResponse>(
       '/mobiledevices',
@@ -168,6 +186,9 @@ export class JamfClient {
     return result.mobile_devices;
   }
 
+  /**
+   * Requires "Read - Computers" permission
+   */
   public async fetchComputers(): Promise<Computer[]> {
     const result = await this.makeRequest<ComputerResponse>(
       '/computers/subset/basic',
@@ -178,6 +199,9 @@ export class JamfClient {
     return result.computers;
   }
 
+  /**
+   * Requires "Read - Computers" permission
+   */
   public async fetchComputerById(id: number): Promise<ComputerDetail> {
     const result = await this.makeRequest<ComputerDetailResponse>(
       `/computers/id/${id}`,
@@ -188,6 +212,9 @@ export class JamfClient {
     return result.computer;
   }
 
+  /**
+   * Requires "Read - Advanced Computer Searches" permission
+   */
   public async fetchComputerApplicationByName(
     name: string,
   ): Promise<ApplicationDetail> {
@@ -200,6 +227,9 @@ export class JamfClient {
     return result.computer_applications;
   }
 
+  /**
+   * Requires "Read - macOS Configuration Profiles" permission
+   */
   public async fetchOSXConfigurationProfiles(): Promise<Configuration[]> {
     const result = await this.makeRequest<OSXConfigurationResponse>(
       `/osxconfigurationprofiles`,
@@ -210,6 +240,9 @@ export class JamfClient {
     return result.os_x_configuration_profiles;
   }
 
+  /**
+   * Requires "Read - macOS Configuration Profiles" permission
+   */
   public async fetchOSXConfigurationProfileById(
     id: number,
   ): Promise<OSXConfigurationDetail> {

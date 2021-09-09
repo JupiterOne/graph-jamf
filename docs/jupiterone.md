@@ -33,7 +33,18 @@ If you need help with this integration, please contact
 
 ### In Jamf
 
-Jamf provides [detailed instructions on creating credentials][1].
+The JupiterOne integration uses the
+[Classic API](https://developer.jamf.com/jamf-pro/docs/getting-started-2) to
+fetch Jamf data.
+
+Required Permissions:
+
+- Read - Jamf Pro User Accounts & Groups
+- Read - Users
+- Read - Mobile Devices
+- Read - Computers
+- Read - Advanced Computer Searches
+- Read - macOS Configuration Profiles
 
 ### In JupiterOne
 
@@ -69,7 +80,7 @@ NOTE: ALL OF THE FOLLOWING DOCUMENTATION IS GENERATED USING THE
 "j1-integration document" COMMAND. DO NOT EDIT BY HAND! PLEASE SEE THE DEVELOPER
 DOCUMENTATION FOR USAGE INFORMATION:
 
-https://github.com/JupiterOne/sdk/blob/main/docs/integrations/development.md
+https://github.com/JupiterOne/sdk/blob/master/docs/integrations/development.md
 ********************************************************************************
 -->
 
@@ -113,5 +124,3 @@ END OF GENERATED DOCUMENTATION AFTER BELOW MARKER
 ********************************************************************************
 -->
 <!-- {J1_DOCUMENTATION_MARKER_END} -->
-
-[1]: https://developer.jamf.com/documentation#authentication

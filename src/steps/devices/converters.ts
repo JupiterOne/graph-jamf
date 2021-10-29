@@ -141,6 +141,13 @@ export function createComputerEntity({
     ? defaultDeviceKey
     : device.serial_number || defaultDeviceKey;
 
+  const extensionAttributes = {};
+  if (detailData && detailData.extension_attributes) {
+    for (const e of detailData?.extension_attributes) {
+      extensionAttributes['extensionAttribute.' + e.definitionId] = e.values;
+    }
+  }
+
   const computer: Entity = {
     _key,
     _type: Entities.COMPUTER._type,
@@ -165,6 +172,7 @@ export function createComputerEntity({
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
     category: 'endpoint',
+    ...extensionAttributes,
   };
 
   if (detailData) {

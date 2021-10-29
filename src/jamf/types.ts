@@ -293,8 +293,7 @@ export interface ComputerDetail {
     fonts: any[];
     plugins: any[];
   };
-  // TODO: Add typings for this
-  extension_attributes: any[];
+  extension_attributes: ExtensionAttribute[];
   hardware: {
     make: string;
     model: string;
@@ -355,6 +354,11 @@ export interface ComputerDetail {
   groups_accounts: Record<string, any>;
   // TODO: Add typings for this
   iphones: any[];
+}
+
+export interface ExtensionAttribute {
+  definitionId: string;
+  values: string[];
 }
 
 export interface Configuration {

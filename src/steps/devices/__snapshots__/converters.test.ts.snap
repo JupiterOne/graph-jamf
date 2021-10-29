@@ -48,7 +48,22 @@ Object {
             "uuid": "",
           },
         ],
-        "extension_attributes": Array [],
+        "extension_attributes": Array [
+          Object {
+            "definitionId": "123",
+            "values": Array [
+              "foo123",
+              "bar123",
+            ],
+          },
+          Object {
+            "definitionId": "456",
+            "values": Array [
+              "foo456",
+              "bar456",
+            ],
+          },
+        ],
         "general": Object {
           "alt_mac_address": "12:34:56:78:90:12",
           "alt_network_adapter_type": "Ethernet",
@@ -316,6 +331,14 @@ Object {
   "email": "john.doe@test.com",
   "encrypted": true,
   "enrolledOn": 1591217314697,
+  "extensionAttribute.123": Array [
+    "foo123",
+    "bar123",
+  ],
+  "extensionAttribute.456": Array [
+    "foo456",
+    "bar456",
+  ],
   "gatekeeperEnabled": true,
   "gatekeeperStatus": "App Store and identified developers",
   "id": "1",

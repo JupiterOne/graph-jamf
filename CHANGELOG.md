@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.0 - 2021-11-10
+
 ## Added
 
 - Added support for `extension_attributes` on Entity `user_endpoint` (Computer).

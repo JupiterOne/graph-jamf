@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## Added
+
+- Added support for `extension_attributes` on Entity `user_endpoint` (Computer).
+  An extension attribute will appear as a property `extensionAttribute.<id#>`,
+  with a value equal to the array of values of the JAMF extension attribute.
+
 ## 2.2.3 - 2021-08-31
 
 ### Fixed

@@ -316,7 +316,16 @@ export function createMockComputerDetail(): ComputerDetail {
       fonts: [],
       plugins: [],
     },
-    extension_attributes: [],
+    extension_attributes: [
+      {
+        definitionId: '123',
+        values: ['foo123', 'bar123'],
+      },
+      {
+        definitionId: '456',
+        values: ['foo456', 'bar456'],
+      },
+    ],
     groups_accounts: {
       computer_group_memberships: ['All Managed Clients'],
       local_accounts: [

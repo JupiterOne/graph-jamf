@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Fixed
+
+- Updated support for extension attributes to work with the classic API that
+  we're currently using.
+
 ## 2.3.0 - 2021-11-10
 
 ## Added

@@ -318,12 +318,14 @@ export function createMockComputerDetail(): ComputerDetail {
     },
     extension_attributes: [
       {
-        definitionId: '123',
-        values: ['foo123', 'bar123'],
+        id: 1,
+        name: '123',
+        value: ['foo123', 'bar123'],
       },
       {
-        definitionId: '456',
-        values: ['foo456', 'bar456'],
+        id: 2,
+        name: '456',
+        value: ['foo456', 'bar456'],
       },
     ],
     groups_accounts: {

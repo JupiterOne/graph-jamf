@@ -50,15 +50,17 @@ Object {
         ],
         "extension_attributes": Array [
           Object {
-            "definitionId": "123",
-            "values": Array [
+            "id": 1,
+            "name": "123",
+            "value": Array [
               "foo123",
               "bar123",
             ],
           },
           Object {
-            "definitionId": "456",
-            "values": Array [
+            "id": 2,
+            "name": "456",
+            "value": Array [
               "foo456",
               "bar456",
             ],

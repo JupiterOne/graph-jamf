@@ -357,8 +357,9 @@ export interface ComputerDetail {
 }
 
 export interface ExtensionAttribute {
-  definitionId: string;
-  values: string[];
+  id: number;
+  name: string;
+  value: string[];
 }
 
 export interface Configuration {

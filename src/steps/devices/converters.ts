@@ -144,7 +144,7 @@ export function createComputerEntity({
   const extensionAttributes = {};
   if (detailData && detailData.extension_attributes) {
     for (const e of detailData?.extension_attributes) {
-      extensionAttributes['extensionAttribute.' + e.definitionId] = e.values;
+      extensionAttributes['extensionAttribute.' + e.name] = e.value;
     }
   }
 
@@ -245,9 +245,8 @@ export function createComputerEntity({
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);
-    computer.systemIntegrityProtectionEnabled = systemIntegrityProtectionEnabled(
-      detailData,
-    );
+    computer.systemIntegrityProtectionEnabled =
+      systemIntegrityProtectionEnabled(detailData);
 
     const configurationProfiles = detailData.configuration_profiles
       .map((profile) => macOsConfigurationDetailByIdMap.get(profile.id))
@@ -263,12 +262,10 @@ export function createComputerEntity({
       );
 
       computer.firewallEnabled = collapseFirewallBoolean('EnableFirewall');
-      computer.firewallStealthModeEnabled = collapseFirewallBoolean(
-        'EnableStealthMode',
-      );
-      computer.firewallBlockAllIncoming = collapseFirewallBoolean(
-        'BlockAllIncoming',
-      );
+      computer.firewallStealthModeEnabled =
+        collapseFirewallBoolean('EnableStealthMode');
+      computer.firewallBlockAllIncoming =
+        collapseFirewallBoolean('BlockAllIncoming');
       computer.screensaverLockEnabled = collapsePayloadBoolean(
         configurationProfiles,
         'com.apple.screensaver',

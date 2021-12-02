@@ -9,6 +9,7 @@ import {
   JobState,
   RelationshipClass,
   RelationshipDirection,
+  getRawData,
 } from '@jupiterone/integration-sdk-core';
 import { createClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
@@ -22,6 +23,7 @@ import {
   createMobileDeviceEntity,
   createComputerEntity,
   createMacOsConfigurationEntity,
+  createComputerGroupEntity,
 } from './converters';
 import {
   Computer,
@@ -128,7 +130,8 @@ async function iterateMacOsConfigurationDetails(
     parsedConfiguration: OSXConfigurationDetailParsed,
   ) => Promise<void>,
 ) {
-  const macOsConfigurationProfiles = await client.fetchOSXConfigurationProfiles();
+  const macOsConfigurationProfiles =
+    await client.fetchOSXConfigurationProfiles();
 
   logger.info(
     { numProfiles: macOsConfigurationProfiles.length },
@@ -263,7 +266,8 @@ export async function fetchMobileDevices({
   });
 
   const accountEntity = await getAccountEntity(jobState);
-  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
+    new Map();
 
   await iterateMobileDevices(client, logger, async (device) => {
     const previouslyDiscoveredDevice = await jobState.hasKey(
@@ -306,7 +310,8 @@ export async function fetchMacOsConfigurationDetails({
   });
 
   // This map is used in a later step
-  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById = new Map();
+  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById =
+    new Map();
 
   const accountEntity = await getAccountEntity(jobState);
   await iterateMacOsConfigurationDetails(
@@ -364,7 +369,8 @@ export async function fetchComputers({
     });
   }
 
-  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
+    new Map();
 
   await iterateComputerDetails(
     client,
@@ -414,6 +420,45 @@ export async function fetchComputers({
   );
 }
 
+export async function fetchComputerGroups({
+  instance,
+  jobState,
+  logger,
+}: IntegrationStepExecutionContext<IntegrationConfig>) {
+  await jobState.iterateEntities(
+    { _type: Entities.COMPUTER._type },
+    async (computerEntity) => {
+      if (computerEntity) {
+        const computerData = getRawData<ComputerDetail>(
+          computerEntity,
+          'detail',
+        );
+        if (computerData) {
+          for (const group of computerData.groups_accounts
+            .computer_group_memberships) {
+            let computerGroupEntity = await jobState.findEntity(
+              generateEntityKey(Entities.COMPUTER_GROUP._type, group),
+            );
+            if (computerGroupEntity === null) {
+              //Add additional groups if they don't yet exist in the jobState
+              computerGroupEntity = await jobState.addEntity(
+                createComputerGroupEntity(group),
+              );
+            }
+            await jobState.addRelationship(
+              createDirectRelationship({
+                _class: RelationshipClass.HAS,
+                from: computerGroupEntity,
+                to: computerEntity,
+              }),
+            );
+          }
+        }
+      }
+    },
+  );
+}
+
 export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.MACOS_CONFIGURATION_PROFILES,
@@ -445,5 +490,13 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
       IntegrationSteps.ACCOUNTS,
       IntegrationSteps.MACOS_CONFIGURATION_PROFILES,
     ],
+  },
+  {
+    id: IntegrationSteps.COMPUTER_GROUPS,
+    name: 'Fetch Computer Groups',
+    entities: [Entities.COMPUTER_GROUP],
+    relationships: [Relationships.GROUP_HAS_COMPUTER],
+    executionHandler: fetchComputerGroups,
+    dependsOn: [IntegrationSteps.COMPUTERS],
   },
 ];

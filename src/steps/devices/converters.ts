@@ -282,6 +282,20 @@ export function createComputerEntity({
   return computer;
 }
 
+export function createComputerGroupEntity(groupName: string) {
+  return createIntegrationEntity({
+    entityData: {
+      source: { groupName },
+      assign: {
+        _key: generateEntityKey(Entities.COMPUTER_GROUP._type, groupName),
+        _type: Entities.COMPUTER_GROUP._type,
+        _class: Entities.COMPUTER_GROUP._class,
+        name: groupName,
+      },
+    },
+  });
+}
+
 function encrypted(detailData: ComputerDetail): boolean {
   const bootPartition = primaryDiskBootPartition(detailData);
   return (

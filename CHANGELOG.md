@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Added ingestion of Smart and Static Computer Groups.
+
 ## 2.3.1 - 2021-12-01
 
 ### Fixed

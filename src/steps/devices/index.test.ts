@@ -4,6 +4,7 @@ import { Entities, Relationships } from '../constants';
 import { fetchAccounts } from '../accounts';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 import {
+  fetchComputerGroups,
   fetchComputers,
   fetchMacOsConfigurationDetails,
   fetchMobileDevices,
@@ -139,7 +140,7 @@ describe('#fetchComputers', () => {
           matcher: {
             _class: ['Host', 'Device'],
             schema: {
-              additionalProperties: false,
+              additionalProperties: true,
               properties: {
                 _type: { const: 'user_endpoint' },
                 _rawData: {
@@ -226,6 +227,54 @@ describe('#fetchComputers', () => {
                 _class: { const: RelationshipClass.INSTALLED },
                 _type: { const: 'user_endpoint_installed_application' },
                 _mapping: { type: 'object' },
+              },
+            },
+          },
+        },
+      ],
+    });
+  });
+});
+
+describe('#fetchComputerGroups', () => {
+  test('should collect data', async () => {
+    await createDataCollectionTest({
+      recordingName: 'fetchComputers',
+      recordingDirectory: __dirname,
+      integrationConfig,
+      stepFunctions: [
+        fetchAccounts,
+        fetchMacOsConfigurationDetails,
+        fetchComputers,
+        fetchComputerGroups,
+      ],
+      entitySchemaMatchers: [
+        {
+          _type: Entities.COMPUTER_GROUP._type,
+          matcher: {
+            _class: ['Group'],
+            schema: {
+              additionalProperties: false,
+              properties: {
+                _type: { const: 'computer_group' },
+                _rawData: {
+                  type: 'array',
+                  items: { type: 'object' },
+                },
+                name: { type: 'string' },
+              },
+            },
+          },
+        },
+      ],
+      relationshipSchemaMatchers: [
+        {
+          _type: Relationships.GROUP_HAS_COMPUTER._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'computer_group_has_user_endpoint' },
               },
             },
           },

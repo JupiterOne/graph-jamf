@@ -256,7 +256,7 @@ describe('#fetchComputerGroups', () => {
             schema: {
               additionalProperties: false,
               properties: {
-                _type: { const: 'computer_group' },
+                _type: { const: 'jamf_computer_group' },
                 _rawData: {
                   type: 'array',
                   items: { type: 'object' },
@@ -269,12 +269,12 @@ describe('#fetchComputerGroups', () => {
       ],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.GROUP_HAS_COMPUTER._type,
+          _type: Relationships.COMPUTER_GROUP_HAS_COMPUTER._type,
           matcher: {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.HAS },
-                _type: { const: 'computer_group_has_user_endpoint' },
+                _type: { const: 'jamf_computer_group_has_user_endpoint' },
               },
             },
           },

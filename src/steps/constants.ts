@@ -63,7 +63,7 @@ export const Entities: Record<
     resourceName: 'Computer',
   },
   COMPUTER_GROUP: {
-    _type: 'computer_group',
+    _type: 'jamf_computer_group',
     _class: ['Group'],
     resourceName: 'Computer Group',
   },
@@ -91,7 +91,7 @@ export const Relationships: Record<
   | 'DEVICE_USER_HAS_MOBILE_DEVICE'
   | 'DEVICE_USER_HAS_COMPUTER'
   | 'GROUP_HAS_USER_ADMIN_MEMBER'
-  | 'GROUP_HAS_COMPUTER',
+  | 'COMPUTER_GROUP_HAS_COMPUTER',
   StepRelationshipMetadata
 > = {
   ACCOUNT_HAS_USER_ADMIN: {
@@ -160,8 +160,8 @@ export const Relationships: Record<
     sourceType: Entities.GROUP._type,
     targetType: Entities.USER_ADMIN._type,
   },
-  GROUP_HAS_COMPUTER: {
-    _type: 'computer_group_has_user_endpoint',
+  COMPUTER_GROUP_HAS_COMPUTER: {
+    _type: 'jamf_computer_group_has_user_endpoint',
     _class: RelationshipClass.HAS,
     sourceType: Entities.COMPUTER_GROUP._type,
     targetType: Entities.COMPUTER._type,

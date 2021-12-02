@@ -95,7 +95,7 @@ The following entities are created:
 | Account                     | `jamf_account`                   | `Account`        |
 | Admin                       | `jamf_user`                      | `User`           |
 | Computer                    | `user_endpoint`                  | `Host`, `Device` |
-| Computer Group              | `computer_group`                 | `Group`          |
+| Computer Group              | `jamf_computer_group`            | `Group`          |
 | Group                       | `jamf_group`                     | `UserGroup`      |
 | Mobile Device               | `mobile_device`                  | `Device`         |
 | User                        | `device_user`                    | `User`           |
@@ -107,7 +107,6 @@ The following relationships are created:
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type`            |
 | --------------------- | --------------------- | -------------------------------- |
-| `computer_group`      | **HAS**               | `user_endpoint`                  |
 | `device_user`         | **HAS**               | `mobile_device`                  |
 | `device_user`         | **HAS**               | `user_endpoint`                  |
 | `jamf_account`        | **HAS**               | `device_user`                    |
@@ -116,6 +115,7 @@ The following relationships are created:
 | `jamf_account`        | **HAS**               | `jamf_osx_configuration_profile` |
 | `jamf_account`        | **HAS**               | `jamf_user`                      |
 | `jamf_account`        | **HAS**               | `user_endpoint`                  |
+| `jamf_computer_group` | **HAS**               | `user_endpoint`                  |
 | `jamf_group`          | **HAS**               | `jamf_user`                      |
 | `user_endpoint`       | **INSTALLED**         | `macos_app`                      |
 | `user_endpoint`       | **USES**              | `jamf_osx_configuration_profile` |

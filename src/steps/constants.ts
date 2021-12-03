@@ -14,6 +14,7 @@ export enum IntegrationSteps {
   MACOS_CONFIGURATION_PROFILES = 'fetch-macos-configuration-profiles',
   MOBILE_DEVICES = 'fetch-mobile-devices',
   COMPUTERS = 'fetch-computers',
+  COMPUTER_GROUPS = 'fetch-computer-groups',
   GROUPS = 'fetch-groups',
   ADMINS = 'fetch-admins',
   DEVICE_USERS = 'fetch-device-users',
@@ -26,6 +27,7 @@ export const Entities: Record<
   | 'DEVICE_USER'
   | 'MOBILE_DEVICE'
   | 'COMPUTER'
+  | 'COMPUTER_GROUP'
   | 'MAC_OS_CONFIGURATION_PROFILE'
   | 'MAC_OS_APPLICATION',
   StepEntityMetadata
@@ -60,6 +62,11 @@ export const Entities: Record<
     _class: ['Host', 'Device'],
     resourceName: 'Computer',
   },
+  COMPUTER_GROUP: {
+    _type: 'jamf_computer_group',
+    _class: ['Group'],
+    resourceName: 'Computer Group',
+  },
   MAC_OS_CONFIGURATION_PROFILE: {
     _type: 'jamf_osx_configuration_profile',
     _class: ['Configuration'],
@@ -83,7 +90,8 @@ export const Relationships: Record<
   | 'COMPUTER_USES_PROFILE'
   | 'DEVICE_USER_HAS_MOBILE_DEVICE'
   | 'DEVICE_USER_HAS_COMPUTER'
-  | 'GROUP_HAS_USER_ADMIN_MEMBER',
+  | 'GROUP_HAS_USER_ADMIN_MEMBER'
+  | 'COMPUTER_GROUP_HAS_COMPUTER',
   StepRelationshipMetadata
 > = {
   ACCOUNT_HAS_USER_ADMIN: {
@@ -151,5 +159,11 @@ export const Relationships: Record<
     _class: RelationshipClass.HAS,
     sourceType: Entities.GROUP._type,
     targetType: Entities.USER_ADMIN._type,
+  },
+  COMPUTER_GROUP_HAS_COMPUTER: {
+    _type: 'jamf_computer_group_has_user_endpoint',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.COMPUTER_GROUP._type,
+    targetType: Entities.COMPUTER._type,
   },
 };

@@ -453,7 +453,7 @@ export async function fetchComputerGroups({
               from: computerGroupEntity,
               to: computerEntity,
             });
-            if (!jobState.hasKey(groupHasComputerRelatioinship._key)) {
+            if (!(await jobState.hasKey(groupHasComputerRelatioinship._key))) {
               await jobState.addRelationship(groupHasComputerRelatioinship);
             }
           }

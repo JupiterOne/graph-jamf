@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Fixed
+
+- Preventing duplicate relationships for jamf_computer_group-HAS->user_endpoint.
+
 ## 2.3.2 - 2021-12-03
 
 ### Added

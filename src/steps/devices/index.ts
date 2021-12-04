@@ -445,13 +445,17 @@ export async function fetchComputerGroups({
                 createComputerGroupEntity(group),
               );
             }
-            await jobState.addRelationship(
-              createDirectRelationship({
-                _class: RelationshipClass.HAS,
-                from: computerGroupEntity,
-                to: computerEntity,
-              }),
-            );
+
+            // Some large Jamf datasets are causing issues with duplicate relationships,
+            // so check that we won't have a duplicate before creating.
+            const groupHasComputerRelatioinship = createDirectRelationship({
+              _class: RelationshipClass.HAS,
+              from: computerGroupEntity,
+              to: computerEntity,
+            });
+            if (!(await jobState.hasKey(groupHasComputerRelatioinship._key))) {
+              await jobState.addRelationship(groupHasComputerRelatioinship);
+            }
           }
         }
       }

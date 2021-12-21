@@ -290,7 +290,7 @@ export class JamfClient {
     // may mis-type the value.
     const requestWithRetry = (): Promise<Response> =>
       retry(async () => request(this.request, fullUrl, options), {
-        maxAttempts: 3,
+        maxAttempts: 5,
         handleError: (err, attemptContext) => {
           if (err.retryable === false) {
             attemptContext.abort();

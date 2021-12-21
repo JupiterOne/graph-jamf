@@ -87,10 +87,15 @@ async function iterateComputerDetails(
   );
 
   let numComputerDetailFetchSuccess: number = 0;
-  let numComputerDetailFetchFailed: number = 0;
+  const computerIdsFetchFailedSet = new Set<string>();
 
   for (const computer of computers) {
     let computerDetail: ComputerDetail;
+
+    if (typeof computer.id === 'undefined') {
+      logger.warn(`Found an "undefined" computer ID!`);
+      continue;
+    }
 
     try {
       computerDetail = await client.fetchComputerById(computer.id);
@@ -99,14 +104,15 @@ async function iterateComputerDetails(
       // We sometimes see errors (e.g. 502 Bad Gateway) from the above API. If
       // we fail to fetch a single computer, we should not just exit the entire
       // step.
-      logger.error(
+      logger.warn(
         {
           err,
           computerId: computer.id,
         },
         'Could not fetch computer by id',
       );
-      numComputerDetailFetchFailed++;
+
+      computerIdsFetchFailedSet.add(computer.id.toString());
       continue;
     }
 
@@ -116,16 +122,21 @@ async function iterateComputerDetails(
   logger.info(
     {
       numComputerDetailFetchSuccess,
-      numComputerDetailFetchFailed,
+      numComputerDetailFetchFailed: computerIdsFetchFailedSet.size,
     },
     'Number of computer details processed',
   );
 
-  if (numComputerDetailFetchFailed) {
-    throw new IntegrationError({
-      message: `Unable to fetch all computer details (success=${numComputerDetailFetchSuccess}, failed=${numComputerDetailFetchFailed})`,
-      code: 'ERROR_FETCH_COMPUTER_DETAILS',
-    });
+  if (computerIdsFetchFailedSet.size) {
+    // The Jamf API is failing intermittemently with 500 errors. The same
+    // computer IDs are causing failures across integration executions. We'll
+    // be reporting this issue to Jamf.
+    logger.info(
+      {
+        computerIdsFailed: Array.from(computerIdsFetchFailedSet),
+      },
+      'Could not fetch computer details for IDs',
+    );
   }
 }
 
@@ -137,7 +148,8 @@ async function iterateMacOsConfigurationDetails(
     parsedConfiguration: OSXConfigurationDetailParsed,
   ) => Promise<void>,
 ) {
-  const macOsConfigurationProfiles = await client.fetchOSXConfigurationProfiles();
+  const macOsConfigurationProfiles =
+    await client.fetchOSXConfigurationProfiles();
 
   logger.info(
     { numProfiles: macOsConfigurationProfiles.length },
@@ -272,7 +284,8 @@ export async function fetchMobileDevices({
   });
 
   const accountEntity = await getAccountEntity(jobState);
-  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
+    new Map();
 
   await iterateMobileDevices(client, logger, async (device) => {
     const previouslyDiscoveredDevice = await jobState.hasKey(
@@ -315,7 +328,8 @@ export async function fetchMacOsConfigurationDetails({
   });
 
   // This map is used in a later step
-  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById = new Map();
+  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById =
+    new Map();
 
   const accountEntity = await getAccountEntity(jobState);
   await iterateMacOsConfigurationDetails(
@@ -408,7 +422,8 @@ export async function fetchComputers({
     });
   }
 
-  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
+  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
+    new Map();
 
   await iterateComputerDetails(
     client,

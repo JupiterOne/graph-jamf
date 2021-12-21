@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.5 - 2021-12-21
+
+### Fixed
+
+- Do not hard fail when some devices cannot be fetched from the computer details
+  API
+
 ## 2.3.4 - 2021-12-21
 
 ### Fixed

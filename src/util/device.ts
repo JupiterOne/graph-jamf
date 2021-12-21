@@ -37,7 +37,7 @@ export async function getComputerDeviceIdToGraphObjectKeyMap(
     throw new IntegrationError({
       message:
         'Could not find computer device ID to graph object _key map in job state',
-      code: 'ACCOUNT_ENTITY_NOT_FOUND',
+      code: 'COMPUTER_DEVICE_ID_TO_GRAPH_OBJECT_KEY_MAP',
       fatal: true,
     });
   }

@@ -74,7 +74,7 @@ describe('#JamfClient', () => {
       url: 'https://jupiteronedev.jamfcloud.com/JSSResource/computers/id/1',
       code: 'PROVIDER_API_ERROR',
       attemptNum: 0,
-      attemptsRemaining: 2,
+      attemptsRemaining: 4,
     });
   });
 

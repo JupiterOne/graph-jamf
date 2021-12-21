@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.4 - 2021-12-21
+
+### Fixed
+
+- Remove raw data from `user_endpoint` entities
+
 ## 2.3.3 - 2021-12-04
 
 ### Fixed

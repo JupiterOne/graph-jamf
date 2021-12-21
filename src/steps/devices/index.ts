@@ -92,6 +92,11 @@ async function iterateComputerDetails(
   for (const computer of computers) {
     let computerDetail: ComputerDetail;
 
+    if (typeof computer.id === 'undefined') {
+      logger.warn(`Found an "undefined" computer ID!`);
+      continue;
+    }
+
     try {
       computerDetail = await client.fetchComputerById(computer.id);
       numComputerDetailFetchSuccess++;

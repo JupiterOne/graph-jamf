@@ -4,7 +4,6 @@ import { Entities, Relationships } from '../constants';
 import { fetchAccounts } from '../accounts';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 import {
-  fetchComputerGroups,
   fetchComputers,
   fetchMacOsConfigurationDetails,
   fetchMobileDevices,
@@ -193,6 +192,23 @@ describe('#fetchComputers', () => {
             },
           },
         },
+        {
+          _type: Entities.COMPUTER_GROUP._type,
+          matcher: {
+            _class: ['Group'],
+            schema: {
+              additionalProperties: false,
+              properties: {
+                _type: { const: 'jamf_computer_group' },
+                _rawData: {
+                  type: 'array',
+                  items: { type: 'object' },
+                },
+                name: { type: 'string' },
+              },
+            },
+          },
+        },
       ],
       relationshipSchemaMatchers: [
         {
@@ -231,43 +247,6 @@ describe('#fetchComputers', () => {
             },
           },
         },
-      ],
-    });
-  });
-});
-
-describe('#fetchComputerGroups', () => {
-  test('should collect data', async () => {
-    await createDataCollectionTest({
-      recordingName: 'fetchComputers',
-      recordingDirectory: __dirname,
-      integrationConfig,
-      stepFunctions: [
-        fetchAccounts,
-        fetchMacOsConfigurationDetails,
-        fetchComputers,
-        fetchComputerGroups,
-      ],
-      entitySchemaMatchers: [
-        {
-          _type: Entities.COMPUTER_GROUP._type,
-          matcher: {
-            _class: ['Group'],
-            schema: {
-              additionalProperties: false,
-              properties: {
-                _type: { const: 'jamf_computer_group' },
-                _rawData: {
-                  type: 'array',
-                  items: { type: 'object' },
-                },
-                name: { type: 'string' },
-              },
-            },
-          },
-        },
-      ],
-      relationshipSchemaMatchers: [
         {
           _type: Relationships.COMPUTER_GROUP_HAS_COMPUTER._type,
           matcher: {

@@ -178,16 +178,7 @@ export function createComputerEntity({
   if (detailData) {
     setRawData(computer as RawDataTracking, {
       name: 'detail',
-      rawData: {
-        ...detailData,
-        general: {
-          ...detailData.general,
-          remote_management: {
-            ...detailData.general.remote_management,
-            management_password_sha256: undefined,
-          },
-        },
-      },
+      rawData: skippedRawDataSource,
     });
 
     Object.assign(computer, {
@@ -245,8 +236,9 @@ export function createComputerEntity({
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);
-    computer.systemIntegrityProtectionEnabled =
-      systemIntegrityProtectionEnabled(detailData);
+    computer.systemIntegrityProtectionEnabled = systemIntegrityProtectionEnabled(
+      detailData,
+    );
 
     const configurationProfiles = detailData.configuration_profiles
       .map((profile) => macOsConfigurationDetailByIdMap.get(profile.id))
@@ -262,10 +254,12 @@ export function createComputerEntity({
       );
 
       computer.firewallEnabled = collapseFirewallBoolean('EnableFirewall');
-      computer.firewallStealthModeEnabled =
-        collapseFirewallBoolean('EnableStealthMode');
-      computer.firewallBlockAllIncoming =
-        collapseFirewallBoolean('BlockAllIncoming');
+      computer.firewallStealthModeEnabled = collapseFirewallBoolean(
+        'EnableStealthMode',
+      );
+      computer.firewallBlockAllIncoming = collapseFirewallBoolean(
+        'BlockAllIncoming',
+      );
       computer.screensaverLockEnabled = collapsePayloadBoolean(
         configurationProfiles,
         'com.apple.screensaver',

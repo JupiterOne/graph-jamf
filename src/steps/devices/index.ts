@@ -9,7 +9,6 @@ import {
   JobState,
   RelationshipClass,
   RelationshipDirection,
-  getRawData,
 } from '@jupiterone/integration-sdk-core';
 import { createClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
@@ -114,6 +113,14 @@ async function iterateComputerDetails(
     await iteratee(computer, computerDetail);
   }
 
+  logger.info(
+    {
+      numComputerDetailFetchSuccess,
+      numComputerDetailFetchFailed,
+    },
+    'Number of computer details processed',
+  );
+
   if (numComputerDetailFetchFailed) {
     throw new IntegrationError({
       message: `Unable to fetch all computer details (success=${numComputerDetailFetchSuccess}, failed=${numComputerDetailFetchFailed})`,
@@ -130,8 +137,7 @@ async function iterateMacOsConfigurationDetails(
     parsedConfiguration: OSXConfigurationDetailParsed,
   ) => Promise<void>,
 ) {
-  const macOsConfigurationProfiles =
-    await client.fetchOSXConfigurationProfiles();
+  const macOsConfigurationProfiles = await client.fetchOSXConfigurationProfiles();
 
   logger.info(
     { numProfiles: macOsConfigurationProfiles.length },
@@ -266,8 +272,7 @@ export async function fetchMobileDevices({
   });
 
   const accountEntity = await getAccountEntity(jobState);
-  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
-    new Map();
+  const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
 
   await iterateMobileDevices(client, logger, async (device) => {
     const previouslyDiscoveredDevice = await jobState.hasKey(
@@ -310,8 +315,7 @@ export async function fetchMacOsConfigurationDetails({
   });
 
   // This map is used in a later step
-  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById =
-    new Map();
+  const macOsConfigurationDetailsById: MacOsConfigurationDetailsById = new Map();
 
   const accountEntity = await getAccountEntity(jobState);
   await iterateMacOsConfigurationDetails(
@@ -343,6 +347,41 @@ export async function fetchMacOsConfigurationDetails({
   );
 }
 
+async function createComputerGroupEntities({
+  computerDetail,
+  computerEntity,
+  jobState,
+}: {
+  computerDetail: ComputerDetail;
+  computerEntity: Entity;
+  jobState: JobState;
+}) {
+  for (const group of computerDetail.groups_accounts
+    .computer_group_memberships) {
+    let computerGroupEntity = await jobState.findEntity(
+      generateEntityKey(Entities.COMPUTER_GROUP._type, group),
+    );
+    if (computerGroupEntity === null) {
+      //Add additional groups if they don't yet exist in the jobState
+      computerGroupEntity = await jobState.addEntity(
+        createComputerGroupEntity(group),
+      );
+    }
+
+    // Some large Jamf datasets are causing issues with duplicate relationships,
+    // so check that we won't have a duplicate before creating.
+    const groupHasComputerRelatioinship = createDirectRelationship({
+      _class: RelationshipClass.HAS,
+      from: computerGroupEntity,
+      to: computerEntity,
+    });
+
+    if (!(await jobState.hasKey(groupHasComputerRelatioinship._key))) {
+      await jobState.addRelationship(groupHasComputerRelatioinship);
+    }
+  }
+}
+
 export async function fetchComputers({
   instance,
   jobState,
@@ -369,8 +408,7 @@ export async function fetchComputers({
     });
   }
 
-  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
-    new Map();
+  const computerDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap = new Map();
 
   await iterateComputerDetails(
     client,
@@ -411,55 +449,18 @@ export async function fetchComputers({
         computerEntity,
         computerDetail,
       );
+
+      await createComputerGroupEntities({
+        jobState,
+        computerDetail,
+        computerEntity,
+      });
     },
   );
 
   await setComputerDeviceIdToGraphObjectKeyMap(
     jobState,
     computerDeviceIdToGraphObjectKeyMap,
-  );
-}
-
-export async function fetchComputerGroups({
-  instance,
-  jobState,
-  logger,
-}: IntegrationStepExecutionContext<IntegrationConfig>) {
-  await jobState.iterateEntities(
-    { _type: Entities.COMPUTER._type },
-    async (computerEntity) => {
-      if (computerEntity) {
-        const computerData = getRawData<ComputerDetail>(
-          computerEntity,
-          'detail',
-        );
-        if (computerData) {
-          for (const group of computerData.groups_accounts
-            .computer_group_memberships) {
-            let computerGroupEntity = await jobState.findEntity(
-              generateEntityKey(Entities.COMPUTER_GROUP._type, group),
-            );
-            if (computerGroupEntity === null) {
-              //Add additional groups if they don't yet exist in the jobState
-              computerGroupEntity = await jobState.addEntity(
-                createComputerGroupEntity(group),
-              );
-            }
-
-            // Some large Jamf datasets are causing issues with duplicate relationships,
-            // so check that we won't have a duplicate before creating.
-            const groupHasComputerRelatioinship = createDirectRelationship({
-              _class: RelationshipClass.HAS,
-              from: computerGroupEntity,
-              to: computerEntity,
-            });
-            if (!(await jobState.hasKey(groupHasComputerRelatioinship._key))) {
-              await jobState.addRelationship(groupHasComputerRelatioinship);
-            }
-          }
-        }
-      }
-    },
   );
 }
 
@@ -483,24 +484,17 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.COMPUTERS,
     name: 'Fetch Computers',
-    entities: [Entities.COMPUTER],
+    entities: [Entities.COMPUTER, Entities.COMPUTER_GROUP],
     relationships: [
       Relationships.ACCOUNT_HAS_COMPUTER,
       Relationships.COMPUTER_USES_PROFILE,
       Relationships.COMPUTER_INSTALLED_APPLICATION,
+      Relationships.COMPUTER_GROUP_HAS_COMPUTER,
     ],
     executionHandler: fetchComputers,
     dependsOn: [
       IntegrationSteps.ACCOUNTS,
       IntegrationSteps.MACOS_CONFIGURATION_PROFILES,
     ],
-  },
-  {
-    id: IntegrationSteps.COMPUTER_GROUPS,
-    name: 'Fetch Computer Groups',
-    entities: [Entities.COMPUTER_GROUP],
-    relationships: [Relationships.COMPUTER_GROUP_HAS_COMPUTER],
-    executionHandler: fetchComputerGroups,
-    dependsOn: [IntegrationSteps.COMPUTERS],
   },
 ];

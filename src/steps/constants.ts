@@ -14,7 +14,6 @@ export enum IntegrationSteps {
   MACOS_CONFIGURATION_PROFILES = 'fetch-macos-configuration-profiles',
   MOBILE_DEVICES = 'fetch-mobile-devices',
   COMPUTERS = 'fetch-computers',
-  COMPUTER_GROUPS = 'fetch-computer-groups',
   GROUPS = 'fetch-groups',
   ADMINS = 'fetch-admins',
   DEVICE_USERS = 'fetch-device-users',

@@ -484,11 +484,12 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.COMPUTERS,
     name: 'Fetch Computers',
-    entities: [Entities.COMPUTER],
+    entities: [Entities.COMPUTER, Entities.COMPUTER_GROUP],
     relationships: [
       Relationships.ACCOUNT_HAS_COMPUTER,
       Relationships.COMPUTER_USES_PROFILE,
       Relationships.COMPUTER_INSTALLED_APPLICATION,
+      Relationships.COMPUTER_GROUP_HAS_COMPUTER,
     ],
     executionHandler: fetchComputers,
     dependsOn: [

@@ -47,6 +47,7 @@ Object {
     "foo456",
     "bar456",
   ],
+  "firewallEnabled": false,
   "gatekeeperEnabled": true,
   "gatekeeperStatus": "App Store and identified developers",
   "id": "1",

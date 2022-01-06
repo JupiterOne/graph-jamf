@@ -60,7 +60,10 @@ function getMacOsFirewallProperties(data: OSXConfigurationDetailParsed) {
     return item.PayloadType === 'com.apple.security.firewall';
   }) as OSXConfigurationFirewallPayload;
 
-  if (!firewallPayload || !firewallPayload.PayloadEnabled) {
+  // I don't believe we need to check for firewallPayload.PayloadEnabled for
+  // com.apple.security.firewall.  In the current payload, it doesn't contain
+  // that value like other properties do.
+  if (!firewallPayload) {
     return;
   }
 
@@ -270,6 +273,13 @@ export function createComputerEntity({
         'com.apple.screensaver',
         'loginWindowIdleTime',
       );
+    }
+
+    // TODO:  Should we let the Security tab Firewall value override the above
+    // firewall data set by the profile (if one is attached)?  In theory, they
+    // should always match
+    if(detailData.security && detailData.security.firewall_enabled !== undefined) {
+      computer.firewallEnabled = detailData.security.firewall_enabled;
     }
   }
 

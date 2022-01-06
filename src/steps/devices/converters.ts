@@ -276,7 +276,8 @@ export function createComputerEntity({
     }
 
     // TODO:  Should we let the Security tab Firewall value override the above
-    // firewall data set by the profile (if one is attached)?
+    // firewall data set by the profile (if one is attached)?  In theory, they
+    // should always match
     if(detailData.security && detailData.security.firewall_enabled !== undefined) {
       computer.firewallEnabled = detailData.security.firewall_enabled;
     }

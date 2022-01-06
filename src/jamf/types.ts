@@ -343,7 +343,7 @@ export interface ComputerDetail {
     activation_lock: boolean;
     secure_boot_level: string;
     external_boot_level: string;
-    firewall_enabled: string;
+    firewall_enabled: boolean;
   };
   configuration_profiles: Array<{
     id: number;

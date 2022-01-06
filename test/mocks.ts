@@ -295,6 +295,7 @@ export function createMockComputerDetail(): ComputerDetail {
       activation_lock: false,
       secure_boot_level: 'not supported',
       external_boot_level: 'not supported',
+      firewall_enabled: false,
     },
     software: {
       unix_executables: [],

@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.6 - 2023-01-06
+
+### Fixed
+
+- Updated how firewall properties are being populated.
+
 ## 2.3.5 - 2021-12-21
 
 ### Fixed

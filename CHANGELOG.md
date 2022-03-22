@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.5.0 - 2022-03-28
+
 ### Added
 
 - deviceId property to computer and mobile device entities produced by this

@@ -99,9 +99,8 @@ async function createUserHasMobileDeviceRelationships(
   userEntity: Entity,
   user: User,
 ) {
-  const mobileDeviceIdToGraphObjectKeyMap = await getMobileDeviceIdToGraphObjectKeyMap(
-    jobState,
-  );
+  const mobileDeviceIdToGraphObjectKeyMap =
+    await getMobileDeviceIdToGraphObjectKeyMap(jobState);
 
   const mobileDeviceIdsNotFound: number[] = [];
 
@@ -146,9 +145,8 @@ async function createUserHasComputerDeviceRelationships(
   userEntity: Entity,
   user: User,
 ) {
-  const computerDeviceIdToGraphObjectKeyMap = await getComputerDeviceIdToGraphObjectKeyMap(
-    jobState,
-  );
+  const computerDeviceIdToGraphObjectKeyMap =
+    await getComputerDeviceIdToGraphObjectKeyMap(jobState);
 
   const computerDeviceIdsNotFound: number[] = [];
 

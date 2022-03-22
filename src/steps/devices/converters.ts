@@ -41,6 +41,7 @@ export function createMobileDeviceEntity(
         deviceName: data.device_name,
         displayName: `${data.username || 'Unknown User'}'s ${data.model}`,
         udid: data.udid,
+        deviceId: data.udid,
         serialNumber: data.serial_number,
         phoneNumber: data.phone_number,
         wifiMacAddress: data.wifi_mac_address,
@@ -168,6 +169,7 @@ export function createComputerEntity({
     building: device.building,
     macAddress: device.mac_address.toLowerCase(),
     udid: device.udid,
+    deviceId: device.udid,
     lastReportedOn: device.report_date_epoch
       ? device.report_date_epoch
       : undefined,
@@ -239,9 +241,8 @@ export function createComputerEntity({
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);
-    computer.systemIntegrityProtectionEnabled = systemIntegrityProtectionEnabled(
-      detailData,
-    );
+    computer.systemIntegrityProtectionEnabled =
+      systemIntegrityProtectionEnabled(detailData);
 
     const configurationProfiles = detailData.configuration_profiles
       .map((profile) => macOsConfigurationDetailByIdMap.get(profile.id))
@@ -257,12 +258,10 @@ export function createComputerEntity({
       );
 
       computer.firewallEnabled = collapseFirewallBoolean('EnableFirewall');
-      computer.firewallStealthModeEnabled = collapseFirewallBoolean(
-        'EnableStealthMode',
-      );
-      computer.firewallBlockAllIncoming = collapseFirewallBoolean(
-        'BlockAllIncoming',
-      );
+      computer.firewallStealthModeEnabled =
+        collapseFirewallBoolean('EnableStealthMode');
+      computer.firewallBlockAllIncoming =
+        collapseFirewallBoolean('BlockAllIncoming');
       computer.screensaverLockEnabled = collapsePayloadBoolean(
         configurationProfiles,
         'com.apple.screensaver',
@@ -278,7 +277,10 @@ export function createComputerEntity({
     // TODO:  Should we let the Security tab Firewall value override the above
     // firewall data set by the profile (if one is attached)?  In theory, they
     // should always match
-    if(detailData.security && detailData.security.firewall_enabled !== undefined) {
+    if (
+      detailData.security &&
+      detailData.security.firewall_enabled !== undefined
+    ) {
       computer.firewallEnabled = detailData.security.firewall_enabled;
     }
   }

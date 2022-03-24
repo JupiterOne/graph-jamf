@@ -8,7 +8,22 @@ and this project adheres to
 
 ## [Unreleased]
 
-## 2.3.6 - 2023-01-06
+## 2.4.0 - 2022-03-24
+
+### Added
+
+- New properties added to entities
+
+  | Entity        | Property | Type      |
+  | ------------- | -------- | --------- |
+  | `device_user` | `active` | `boolean` |
+  | `jamf_user`   | `active` | `boolean` |
+
+### Changed
+
+- Upgrade `@jupiterone/integration-sdk-*` to v8.6.4
+
+## 2.3.6 - 2022-01-06
 
 ### Fixed
 

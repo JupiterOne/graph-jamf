@@ -21,6 +21,7 @@ export function createAdminEntity(data: Admin) {
         fullName: data.full_name,
         email: data.email || undefined,
         emailAddress: data.email_address,
+        active: data.enabled === 'Enabled',
         enabled: data.enabled,
         forcePasswordChange: data.force_password_change,
         accessLevel: data.access_level,
@@ -63,6 +64,9 @@ export function createDeviceUserEntity(data: User) {
         name: data.name,
         username: data.name,
         fullName: data.full_name,
+        // Jamf device users are always considered active. Jamf _admins_ can
+        // be explicitly disabled
+        active: true,
         email: data.email || undefined,
         emailAddress: data.email_address,
         phoneNumber: data.phone_number,

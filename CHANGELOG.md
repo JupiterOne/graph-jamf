@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- deviceId property to computer and mobile device entities produced by this
+  integration
+- will allow SentinelOne HostAgents create mapped PROTECTS relationships with
+  these entities if they match
+
 ## 2.4.0 - 2022-03-24
 
 ### Added

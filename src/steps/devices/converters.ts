@@ -15,7 +15,6 @@ import {
   OSXConfigurationPayloadItem,
 } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
-import { skippedRawDataSource } from '../../util/graphObject';
 import { Entities } from '../constants';
 
 export function createMobileDeviceEntity(

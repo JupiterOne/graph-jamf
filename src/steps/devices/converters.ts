@@ -95,7 +95,7 @@ export function createMacOsConfigurationEntity(
 ) {
   return createIntegrationEntity({
     entityData: {
-      source: skippedRawDataSource,
+      source: data,
       assign: {
         _key: generateEntityKey(
           Entities.MAC_OS_CONFIGURATION_PROFILE._type,
@@ -156,7 +156,7 @@ export function createComputerEntity({
     _key,
     _type: Entities.COMPUTER._type,
     _class: Entities.COMPUTER._class,
-    _rawData: [{ name: 'default', rawData: skippedRawDataSource }],
+    _rawData: [{ name: 'default', rawData: device }],
     id: device.udid.toString(),
     displayName: device.name,
     name: device.name,
@@ -183,7 +183,7 @@ export function createComputerEntity({
   if (detailData) {
     setRawData(computer as RawDataTracking, {
       name: 'detail',
-      rawData: skippedRawDataSource,
+      rawData: detailData,
     });
 
     Object.assign(computer, {

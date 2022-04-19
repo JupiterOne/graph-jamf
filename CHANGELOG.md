@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.6.0 - 2022-04-18
+
+### Changed
+
+- re-enable raw data for devices step after bumping to latest sdk
+- update plist, url-parse, moment to non-vulnerable versions
+
 ## 2.5.0 - 2022-03-28
 
 ### Added

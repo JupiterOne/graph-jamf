@@ -8,9 +8,9 @@ import {
 export function toOSXConfigurationDetailParsed(
   detail: OSXConfigurationDetail,
 ): OSXConfigurationDetailParsed {
-  const payload = plist.parse(
+  const payload = (plist.parse(
     detail.general.payloads,
-  ) as unknown as OSXConfigurationPayload;
+  ) as unknown) as OSXConfigurationPayload;
 
   return {
     ...detail,

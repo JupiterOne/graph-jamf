@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.7.0 - 2022-04-18
+
+- re-disable raw data for devices step and sdk bump due to possible regression.
+
 ## 2.6.0 - 2022-04-18
 
 ### Changed

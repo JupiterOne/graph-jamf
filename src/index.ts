@@ -6,13 +6,14 @@ import { groupSteps } from './steps/groups';
 import { userSteps } from './steps/users';
 import { validateInvocation } from './validator';
 
-export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
-  instanceConfigFields,
-  validateInvocation,
-  integrationSteps: [
-    ...accountSteps,
-    ...groupSteps,
-    ...userSteps,
-    ...deviceSteps,
-  ],
-};
+export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> =
+  {
+    instanceConfigFields,
+    validateInvocation,
+    integrationSteps: [
+      ...accountSteps,
+      ...groupSteps,
+      ...userSteps,
+      ...deviceSteps,
+    ],
+  };

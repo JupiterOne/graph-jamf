@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src", "package.json", "**/README.md"],
+  "include": ["src", "package.json"],
   "exclude": [
     "dist",
     "**/*.test.ts",

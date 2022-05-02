@@ -1,0 +1,20 @@
+---
+sourceId: managed:jamf
+integrationDefinitionId: "${integration_definition_id}"
+questions:
+- id: managed-question-endpoint-jamf-devices-macos-app
+  title: Which Jamf monitored end-user devices have a specific macOS app installed?
+  description: Return a list of endpoint devices that have a specified macOS app installed.
+  queries:
+    query: |
+      FIND jamf_account AS a
+        THAT HAS user_endpoint AS e
+        THAT INSTALLED macos_app WITH name ~='{{macos_app name}}' AS m
+        RETURN
+          a.displayName AS JamfAccount, 
+          e.displayName AS UserEndpoint, e.macAddress AS MacAddress, e.encrypted AS EncryptionStatus, e.jamfVersion AS JamfVersion, e.osVersion AS OSVersion, 
+          m.displayName AS App, m.version AS AppVersion
+  tags:
+  - jamf
+  - device
+  - endpoint

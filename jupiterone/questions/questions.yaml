@@ -18,3 +18,16 @@ questions:
   - jamf
   - device
   - endpoint
+- id: managed-question-endpoint-jamf-devices-macos-app-version
+  title: Which Jamf monitored end-user devices have a specific macOS app and version installed?
+  description: Return a list of endpoint devices that have a specified macOS app version installed. For ZeroDay exploits or other IR use cases.
+  queries:
+    - query: |
+        FIND user_endpoint AS E 
+        THAT INSTALLED AS R macos_app with displayName ~= '{{Application Name}}' AS A 
+        WHERE R.version ^= '{{Version}}'
+        RETURN E.displayName AS Machine, E.email AS User, R.displayName AS Has, A.displayName AS Application, R.version AS Version, R.path AS Path
+  tags:
+  - jamf
+  - device
+  - endpoint

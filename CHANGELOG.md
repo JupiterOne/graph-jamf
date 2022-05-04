@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.7.1 - 2022-05-02
+
+### Added
+
+- new question in questions.yaml
+- `code-ql` and `questions.yml` workflows
+
 ## 2.7.0 - 2022-04-18
 
 - re-disable raw data for devices step and sdk bump due to possible regression.

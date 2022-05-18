@@ -95,7 +95,7 @@ export function createMacOsConfigurationEntity(
 ) {
   return createIntegrationEntity({
     entityData: {
-      source: skippedRawDataSource,
+      source: data,
       assign: {
         _key: generateEntityKey(
           Entities.MAC_OS_CONFIGURATION_PROFILE._type,

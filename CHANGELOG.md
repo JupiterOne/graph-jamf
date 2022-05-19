@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- add rawData back for osxConfiguration
+
 ## 2.7.1 - 2022-05-02
 
 ### Added

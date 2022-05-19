@@ -10,27 +10,29 @@ and this project adheres to
 
 ### Changed
 
+## [2.7.2] - 2022-05-19
+
 - add rawData back for osxConfiguration
 
-## 2.7.1 - 2022-05-02
+## [2.7.1] - 2022-05-02
 
 ### Added
 
 - new question in questions.yaml
 - `code-ql` and `questions.yml` workflows
 
-## 2.7.0 - 2022-04-18
+## [2.7.0] - 2022-04-18
 
 - re-disable raw data for devices step and sdk bump due to possible regression.
 
-## 2.6.0 - 2022-04-18
+## [2.6.0] - 2022-04-18
 
 ### Changed
 
 - re-enable raw data for devices step after bumping to latest sdk
 - update plist, url-parse, moment to non-vulnerable versions
 
-## 2.5.0 - 2022-03-28
+## [2.5.0] - 2022-03-28
 
 ### Added
 
@@ -39,7 +41,7 @@ and this project adheres to
 - will allow SentinelOne HostAgents create mapped PROTECTS relationships with
   these entities if they match
 
-## 2.4.0 - 2022-03-24
+## [2.4.0] - 2022-03-24
 
 ### Added
 
@@ -52,40 +54,40 @@ and this project adheres to
 
 ### Changed
 
-- Upgrade `@jupiterone/integration-sdk-*` to v8.6.4
+- Upgrade `@jupiterone/integration-sdk-*` to v[8.6.4]
 
-## 2.3.6 - 2022-01-06
+## [2.3.6] - 2022-01-06
 
 ### Fixed
 
 - Updated how firewall properties are being populated.
 
-## 2.3.5 - 2021-12-21
+## [2.3.5] - 2021-12-21
 
 ### Fixed
 
 - Do not hard fail when some devices cannot be fetched from the computer details
   API
 
-## 2.3.4 - 2021-12-21
+## [2.3.4] - 2021-12-21
 
 ### Fixed
 
 - Remove raw data from `user_endpoint` entities
 
-## 2.3.3 - 2021-12-04
+## [2.3.3] - 2021-12-04
 
 ### Fixed
 
 - Preventing duplicate relationships for jamf_computer_group-HAS->user_endpoint.
 
-## 2.3.2 - 2021-12-03
+## [2.3.2] - 2021-12-03
 
 ### Added
 
 - Added ingestion of Smart and Static Computer Groups.
 
-## 2.3.1 - 2021-12-01
+## [2.3.1] - 2021-12-01
 
 ### Fixed
 
@@ -100,7 +102,7 @@ and this project adheres to
   An extension attribute will appear as a property `extensionAttribute.<id#>`,
   with a value equal to the array of values of the JAMF extension attribute.
 
-## 2.2.3 - 2021-08-31
+## [2.2.3] - 2021-08-31
 
 ### Fixed
 
@@ -108,7 +110,7 @@ and this project adheres to
   - `device_user` **HAS** `mobile_device`
   - `device_user` **HAS** `user_endpoint`
 
-## 2.2.2 - 2021-08-31
+## [2.2.2] - 2021-08-31
 
 ### Fixed
 
@@ -124,13 +126,13 @@ and this project adheres to
 - Updated all packages
 - Change build to target Node 14.x
 
-## 2.1.3 - 2021-07-08
+## [2.1.3] - 2021-07-08
 
 ### Fixed
 
 - Fix `user_endpoint.encrypted` not reflecting state of `boot` partition.
 
-## 2.1.2 - 2021-04-27
+## [2.1.2] - 2021-04-27
 
 ### Fixed
 
@@ -138,7 +140,7 @@ and this project adheres to
   trying to create duplicate relationships between `jamf_computer` and
   `jamf_osx_configuration_profile`.
 
-## 2.1.1 - 2021-04-20
+## [2.1.1] - 2021-04-20
 
 ### Changed
 
@@ -194,7 +196,7 @@ and this project adheres to
 
 - Convert to new SDK
 
-## 1.4.4 - 2021-02-02
+## [1.4.4] - 2021-02-02
 
 - Fixed failure to handle Jamf hosts such as
   `https://jss.myjamf.com:8443/?failover`

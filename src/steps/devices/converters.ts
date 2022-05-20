@@ -95,7 +95,7 @@ export function createMacOsConfigurationEntity(
 ) {
   return createIntegrationEntity({
     entityData: {
-      source: data,
+      source: { ...data }, // prevent osx configuration map contents from getting mutated during rawData shrinking
       assign: {
         _key: generateEntityKey(
           Entities.MAC_OS_CONFIGURATION_PROFILE._type,

@@ -8,9 +8,15 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.7.3] - 2022-05-23
+
 ### Changed
 
+- clone source before setting as rawData for osxConfiguration
+
 ## [2.7.2] - 2022-05-19
+
+### Changed
 
 - add rawData back for osxConfiguration
 

@@ -11,6 +11,7 @@ and this project adheres to
 ### Changed
 
 - enable rawData for computer
+- bump sdk to 8.13.10
 
 ## [2.7.3] - 2022-05-23
 

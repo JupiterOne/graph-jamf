@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- enable rawData for computer
+
 ## [2.7.3] - 2022-05-23
 
 ### Changed

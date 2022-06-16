@@ -284,8 +284,25 @@ export class JamfClient {
     // The goal here is to retry and ensure the final error includes information
     // about the host we could not connect to, since users define the host and
     // may mis-type the value.
-    const requestWithRetry = (): Promise<Response> =>
-      retry(async () => request(this.request, fullUrl, options), {
+
+    const response: Response = await retry(
+      async () => {
+        const options: RequestInit = {
+          method,
+          timeout: defaultApiTimeoutMs,
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            Authorization: `Basic ${Buffer.from(
+              this.username + ':' + this.password,
+            ).toString('base64')}`,
+            'Accept-Encoding': 'identity',
+            ...headers,
+          },
+        };
+        return await request(this.request, fullUrl, options);
+      },
+      {
         maxAttempts: 5,
         handleError: (err, attemptContext) => {
           if (err.retryable === false) {
@@ -307,9 +324,8 @@ export class JamfClient {
             });
           }
         },
-      });
-
-    const response = await requestWithRetry();
+      },
+    );
 
     if (response.status === 200) {
       return response.json();

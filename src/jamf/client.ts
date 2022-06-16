@@ -265,20 +265,6 @@ export class JamfClient {
     params: {},
     headers?: {},
   ): Promise<T> {
-    const options: RequestInit = {
-      method,
-      timeout: defaultApiTimeoutMs,
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Basic ${Buffer.from(
-          this.username + ':' + this.password,
-        ).toString('base64')}`,
-        'Accept-Encoding': 'identity',
-        ...headers,
-      },
-    };
-
     const fullUrl = this.getResourceUrl(path);
 
     // The goal here is to retry and ensure the final error includes information

@@ -1,6 +1,5 @@
 import fetch, { RequestInit, Response, FetchError } from 'node-fetch';
 import { retry } from '@lifeomic/attempt';
-import PQueue from 'p-queue';
 import {
   Admin,
   AdminsAndGroups,
@@ -87,7 +86,6 @@ async function request(
 }
 
 export class JamfClient {
-  private readonly queue: PQueue;
   private readonly host: string;
   private readonly username: string;
   private readonly password: string;
@@ -103,8 +101,6 @@ export class JamfClient {
     this.password = options.password;
     this.request = options.request || fetch;
     this.onApiRequestError = options.onApiRequestError;
-
-    this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
   }
 
   /**
@@ -313,7 +309,7 @@ export class JamfClient {
         },
       });
 
-    const response = await this.queue.add(requestWithRetry);
+    const response = await requestWithRetry();
 
     if (response.status === 200) {
       return response.json();

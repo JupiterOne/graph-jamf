@@ -755,20 +755,6 @@
   version "8.13.10"
   resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-cli/-/integration-sdk-cli-8.13.10.tgz#8fe8b996e4da03093120a9a303982a4a8ff07002"
   integrity sha512-cDbzTeNUedfqoYOLUYWo0TC4KNZY/vO5qdpBgjT+KNXTnob3rXnqNYptugH1WFrKGdxYkNA19391+BWg+6Bt7w==
-  dependencies:
-    "@jupiterone/integration-sdk-runtime" "^8.13.10"
-    chalk "^4"
-    commander "^5.0.0"
-    fs-extra "^10.1.0"
-    globby "^11.0.0"
-    js-yaml "^4.1.0"
-    json-diff "^0.5.4"
-    lodash "^4.17.19"
-    markdown-table "^2.0.0"
-    neo4j-driver "^4.3.3"
-    runtypes "5.1.0"
-    upath "^1.2.0"
-    vis "^4.21.0-EOL"
 
 "@jupiterone/integration-sdk-core@^8.13.10":
   version "8.13.10"
@@ -3969,7 +3955,7 @@ p-map@^4.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-p-queue@^6.3.0, p-queue@^6.6.2:
+p-queue@^6.3.0:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.6.2.tgz#2068a9dcf8e67dd0ec3e7a2bcb76810faa85e426"
   integrity sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==

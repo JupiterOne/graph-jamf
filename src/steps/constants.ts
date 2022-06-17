@@ -9,6 +9,9 @@ export const ACCOUNT_DATA_KEY = 'ACCOUNT_DATA';
 export const MAC_OS_CONFIGURATION_DETAILS_BY_ID_KEY =
   'MAC_OS_CONFIGURATION_DETAILS_BY_ID';
 
+// This is used in an extension attribute when forming a Device entity
+export const DEPLOYMENT_STATUS = 'Deployment status';
+
 export enum IntegrationSteps {
   ACCOUNTS = 'fetch-accounts',
   MACOS_CONFIGURATION_PROFILES = 'fetch-macos-configuration-profiles',

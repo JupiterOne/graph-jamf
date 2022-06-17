@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.7.5] - 2022-06-17
+
+- bump @lifeomic/attempt
+
 ## [2.7.4] - 2022-05-24
 
 ### Changed

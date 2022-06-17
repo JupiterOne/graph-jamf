@@ -8,9 +8,16 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.7.6] - 2022-06-17
+
+### Changed
+
+- Edit `extensionAttributes` properties of `user_endpoint` entity to only
+  include the `Deployment status` property due to entity size concerns
+
 ## [2.7.5] - 2022-06-17
 
-### Chagned
+### Changed
 
 - Upgrades @lifeomic/attempt
 

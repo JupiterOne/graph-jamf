@@ -75,6 +75,13 @@ Object {
               "bar456",
             ],
           },
+          Object {
+            "id": 3,
+            "name": "Deployment status",
+            "value": Array [
+              "active",
+            ],
+          },
         ],
         "general": Object {
           "alt_mac_address": "12:34:56:78:90:12",
@@ -345,13 +352,8 @@ Object {
   "email": "john.doe@test.com",
   "encrypted": true,
   "enrolledOn": 1591217314697,
-  "extensionAttribute.123": Array [
-    "foo123",
-    "bar123",
-  ],
-  "extensionAttribute.456": Array [
-    "foo456",
-    "bar456",
+  "extensionAttribute.Deployment status": Array [
+    "active",
   ],
   "firewallEnabled": false,
   "gatekeeperEnabled": true,

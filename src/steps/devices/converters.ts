@@ -9,13 +9,14 @@ import {
   Computer,
   ComputerDetail,
   DiskPartition,
+  ExtensionAttribute,
   MobileDevice,
   OSXConfigurationDetailParsed,
   OSXConfigurationFirewallPayload,
   OSXConfigurationPayloadItem,
 } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
-import { Entities } from '../constants';
+import { Entities, DEPLOYMENT_STATUS } from '../constants';
 
 export function createMobileDeviceEntity(
   data: MobileDevice,
@@ -123,6 +124,19 @@ export function createMacOsConfigurationEntity(
   });
 }
 
+export function getDeploymentStatus(
+  extensionAttributes: ExtensionAttribute[] = [],
+) {
+  if (!Array.isArray(extensionAttributes)) return [];
+
+  const deploymentStatusAttribute = extensionAttributes.find(
+    (attribute) => attribute.name === DEPLOYMENT_STATUS,
+  );
+  if (!deploymentStatusAttribute) return [];
+
+  return deploymentStatusAttribute.value;
+}
+
 // TODO: Refactor this to be simpler!
 export function createComputerEntity({
   device,
@@ -145,10 +159,14 @@ export function createComputerEntity({
     : device.serial_number || defaultDeviceKey;
 
   const extensionAttributes = {};
+
+  // 06/17/21 CRB
+  // Making an update here to prevent all extensionAttributes from being uploaded
+  // due to the size of the entity that can be generated as a result from uploading
+  // every extensionAttribute property.
   if (detailData && detailData.extension_attributes) {
-    for (const e of detailData?.extension_attributes) {
-      extensionAttributes['extensionAttribute.' + e.name] = e.value;
-    }
+    extensionAttributes[`extensionAttribute.${DEPLOYMENT_STATUS}`] =
+      getDeploymentStatus(detailData.extension_attributes);
   }
 
   const computer: Entity = {

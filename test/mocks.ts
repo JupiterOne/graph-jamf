@@ -95,6 +95,24 @@ export function createMockComputer(): Computer {
   };
 }
 
+export const EXTENSION_ATTRIBUTES = [
+  {
+    id: 1,
+    name: '123',
+    value: ['foo123', 'bar123'],
+  },
+  {
+    id: 2,
+    name: '456',
+    value: ['foo456', 'bar456'],
+  },
+  {
+    id: 3,
+    name: 'Deployment status',
+    value: ['active'],
+  },
+];
+
 export function createMockComputerDetail(): ComputerDetail {
   return {
     general: {
@@ -317,18 +335,7 @@ export function createMockComputerDetail(): ComputerDetail {
       fonts: [],
       plugins: [],
     },
-    extension_attributes: [
-      {
-        id: 1,
-        name: '123',
-        value: ['foo123', 'bar123'],
-      },
-      {
-        id: 2,
-        name: '456',
-        value: ['foo456', 'bar456'],
-      },
-    ],
+    extension_attributes: EXTENSION_ATTRIBUTES,
     groups_accounts: {
       computer_group_memberships: ['All Managed Clients'],
       local_accounts: [

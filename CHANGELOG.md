@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.8.0] - 2022-06-22
+
+### Changed
+
+- client now uses `gaxios` instead of `node-fetch`
+- `p-queue` and `@lifeomic/alpha` dependencies have been removed
+
 ## [2.7.6] - 2022-06-17
 
 ### Changed

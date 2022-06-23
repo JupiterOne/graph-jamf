@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.8.0] - 2022-06-23
+
+### Changed
+
+- now uses `gaxios` as underlying client. Removed `@lifeomic/attempt` and
+  `p-queue` dependencies
+
 ## [2.7.6] - 2022-06-17
 
 ### Changed

@@ -1,3 +1,6 @@
+import fetch, { RequestInit, Response, FetchError } from 'node-fetch';
+import { retry } from '@lifeomic/attempt';
+import PQueue from 'p-queue';
 import {
   Admin,
   AdminsAndGroups,
@@ -25,29 +28,83 @@ import {
 import {
   IntegrationLogger,
   IntegrationProviderAPIError,
-  IntegrationProviderAuthenticationError,
-  IntegrationProviderAuthorizationError,
 } from '@jupiterone/integration-sdk-core';
 import { URL } from 'url';
-import { GaxiosOptions, request } from 'gaxios';
+import { IntegrationProviderPermanentAPIError } from '../util/error';
+
+interface OnApiRequestErrorParams {
+  url: string;
+  err: FetchError;
+  attemptNum: number;
+  attemptsRemaining: number;
+  code?: string;
+}
+
+type RequestFunction = (
+  url: string,
+  options?: RequestInit | undefined,
+) => Promise<Response>;
 
 interface CreateJamfClientParams {
   host: string;
   username: string;
   password: string;
+  request?: RequestFunction;
+  onApiRequestError?: (params: OnApiRequestErrorParams) => void;
 }
 
 const defaultApiTimeoutMs = 60000; // 1 minute
+const noRetryStatusCodes: number[] = [400, 401, 403, 404, 413];
+
+function isSuccessfulStatusCode(status: number) {
+  return status >= 200 && status < 400;
+}
+
+async function request(
+  requestFn: RequestFunction,
+  url: string,
+  options?: RequestInit | undefined,
+): Promise<Response> {
+  const response = await requestFn(url, options);
+
+  if (isSuccessfulStatusCode(response.status)) {
+    return response;
+  }
+
+  if (noRetryStatusCodes.includes(response.status)) {
+    throw new IntegrationProviderPermanentAPIError({
+      endpoint: url,
+      statusText: 'Received non-retryable status code in API response',
+      status: response.status,
+    });
+  }
+
+  throw new IntegrationProviderAPIError({
+    endpoint: url,
+    statusText: response.statusText,
+    status: response.status,
+  });
+}
 
 export class JamfClient {
+  private readonly queue: PQueue;
   private readonly host: string;
   private readonly username: string;
   private readonly password: string;
+  private readonly request: RequestFunction;
+
+  private readonly onApiRequestError:
+    | ((params: OnApiRequestErrorParams) => void)
+    | undefined;
 
   constructor(options: CreateJamfClientParams) {
     this.host = options.host;
     this.username = options.username;
     this.password = options.password;
+    this.request = options.request || fetch;
+    this.onApiRequestError = options.onApiRequestError;
+
+    this.queue = new PQueue({ concurrency: 1, intervalCap: 1, interval: 50 });
   }
 
   /**
@@ -212,10 +269,9 @@ export class JamfClient {
     params: {},
     headers?: {},
   ): Promise<T> {
-    const url = this.getResourceUrl(path);
-    const requestOptions: GaxiosOptions = {
-      url: url,
+    const options: RequestInit = {
       method,
+      timeout: defaultApiTimeoutMs,
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
@@ -225,36 +281,48 @@ export class JamfClient {
         'Accept-Encoding': 'identity',
         ...headers,
       },
-      timeout: defaultApiTimeoutMs,
-      // https://github.com/googleapis/gaxios
-      // See README.md for default retry behavior
-      retry: true,
     };
 
-    try {
-      const response = await request<T>(requestOptions);
-      return response.data;
-    } catch (err) {
-      switch (err.response.status) {
-        case 401:
-          throw new IntegrationProviderAuthenticationError({
-            endpoint: url,
-            status: err.response.status,
-            statusText: err.response.statusText,
-          });
-        case 403:
-          throw new IntegrationProviderAuthorizationError({
-            endpoint: url,
-            status: err.response.status,
-            statusText: err.response.statusText,
-          });
-        default:
-          throw new IntegrationProviderAPIError({
-            endpoint: url,
-            status: err.response.status,
-            statusText: err.response.statusText,
-          });
-      }
+    const fullUrl = this.getResourceUrl(path);
+
+    // The goal here is to retry and ensure the final error includes information
+    // about the host we could not connect to, since users define the host and
+    // may mis-type the value.
+    const requestWithRetry = (): Promise<Response> =>
+      retry(async () => request(this.request, fullUrl, options), {
+        maxAttempts: 5,
+        handleError: (err, attemptContext) => {
+          if (err.retryable === false) {
+            attemptContext.abort();
+            return;
+          }
+
+          const fetchErr = err as FetchError;
+
+          if (attemptContext.attemptsRemaining && this.onApiRequestError) {
+            // If there are no attempts remaining, we will just bubble up the
+            // entire error by default.
+            this.onApiRequestError({
+              url: fullUrl,
+              code: fetchErr.code,
+              err,
+              attemptNum: attemptContext.attemptNum,
+              attemptsRemaining: attemptContext.attemptsRemaining,
+            });
+          }
+        },
+      });
+
+    const response = await this.queue.add(requestWithRetry);
+
+    if (response.status === 200) {
+      return response.json();
+    } else {
+      throw new IntegrationProviderAPIError({
+        endpoint: fullUrl,
+        statusText: response.statusText,
+        status: response.status,
+      });
     }
   }
 }
@@ -276,6 +344,9 @@ export function createClient({
     host,
     username,
     password,
+    onApiRequestError(requestError) {
+      logger.info(requestError, 'Error making API requests (will retry)');
+    },
   });
 
   return client;

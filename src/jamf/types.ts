@@ -431,8 +431,8 @@ export interface MobileDevice {
 }
 
 export enum Method {
-  GET = 'GET',
-  POST = 'POST',
+  GET = 'get',
+  POST = 'post',
 }
 
 export interface AccountsResponse {

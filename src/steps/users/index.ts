@@ -53,7 +53,7 @@ async function iterateUserProfiles(
 
   let numUserProfileFetchSuccess: number = 0;
   let numUserProfileFetchFailed: number = 0;
-  
+
   const batchSize = 10;
   const promiseArray: Promise<boolean>[] = [];
   let currentPromiseCount = 0;
@@ -62,13 +62,12 @@ async function iterateUserProfiles(
     promiseArray.push(enrichUser(client, logger, user, iteratee));
     currentPromiseCount++;
 
-    if(currentPromiseCount >= batchSize) {
+    if (currentPromiseCount >= batchSize) {
       await Promise.all(promiseArray).then((results) => {
-        for (const success of results ) {
+        for (const success of results) {
           if (success) {
             numUserProfileFetchSuccess++;
-          }
-          else {
+          } else {
             numUserProfileFetchFailed++;
           }
         }
@@ -81,11 +80,10 @@ async function iterateUserProfiles(
   // We have to await one more time in case our total count wasn't perfectly
   // divisible by the batch size.  Is it worth moving this into a function?
   await Promise.all(promiseArray).then((results) => {
-    for (const success of results ) {
+    for (const success of results) {
       if (success) {
         numUserProfileFetchSuccess++;
-      }
-      else {
+      } else {
         numUserProfileFetchFailed++;
       }
     }
@@ -100,11 +98,11 @@ async function iterateUserProfiles(
 }
 
 async function enrichUser(
-  client: JamfClient, 
+  client: JamfClient,
   logger: IntegrationLogger,
   user: User,
   iteratee: (user: User) => Promise<void>,
-  ): Promise<boolean> {
+): Promise<boolean> {
   let userFullProfile: User;
   try {
     userFullProfile = await wrapWithTimer(

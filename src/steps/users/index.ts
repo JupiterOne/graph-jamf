@@ -59,7 +59,7 @@ async function iterateUserProfiles(
   let currentPromiseCount = 0;
 
   for (const user of users) {
-    promiseArray.push(enrichUser(client, logger, user, iteratee));
+    promiseArray.push(queryAndCreateUser(client, logger, user, iteratee));
     currentPromiseCount++;
 
     if (currentPromiseCount >= batchSize) {
@@ -97,7 +97,7 @@ async function iterateUserProfiles(
   }
 }
 
-async function enrichUser(
+async function queryAndCreateUser(
   client: JamfClient,
   logger: IntegrationLogger,
   user: User,

@@ -97,9 +97,6 @@ async function iterateUserProfiles(
       code: 'ERROR_FETCH_USER_PROFILES',
     });
   }
-  else {
-    console.log(`APAPAPAP ${numUserProfileFetchSuccess}`);
-  }
 }
 
 async function enrichUser(

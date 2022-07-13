@@ -73,6 +73,8 @@ async function iterateUserProfiles(
           }
         }
       });
+      //empty out completed promises
+      promiseArray.splice(0, promiseArray.length);
       currentPromiseCount = 0;
     }
   }
@@ -94,6 +96,9 @@ async function iterateUserProfiles(
       message: `Unable to fetch all user profiles (success=${numUserProfileFetchSuccess}, failed=${numUserProfileFetchFailed})`,
       code: 'ERROR_FETCH_USER_PROFILES',
     });
+  }
+  else {
+    console.log(`APAPAPAP ${numUserProfileFetchSuccess}`);
   }
 }
 

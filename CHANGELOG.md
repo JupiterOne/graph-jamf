@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.8.1] - 2022-08-01
+
+### Changed
+
+- Updated user query to run concurrently using pMap.
+
 ## [2.8.0] - 2022-06-23
 
 ### Changed

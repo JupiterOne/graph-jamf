@@ -19,6 +19,7 @@ import {
   getComputerDeviceIdToGraphObjectKeyMap,
   getMobileDeviceIdToGraphObjectKeyMap,
 } from '../../util/device';
+import pMap from 'p-map';
 
 async function iterateAdminUserProfiles(
   client: JamfClient,
@@ -55,77 +56,41 @@ async function iterateUserProfiles(
   let numUserProfileFetchFailed: number = 0;
 
   const batchSize = 10;
-  const promiseArray: Promise<boolean>[] = [];
-  let currentPromiseCount = 0;
 
-  for (const user of users) {
-    promiseArray.push(queryAndCreateUser(client, logger, user, iteratee));
-    currentPromiseCount++;
-
-    if (currentPromiseCount >= batchSize) {
-      await Promise.all(promiseArray).then((results) => {
-        for (const success of results) {
-          if (success) {
-            numUserProfileFetchSuccess++;
-          } else {
-            numUserProfileFetchFailed++;
-          }
-        }
-      });
-      //empty out completed promises
-      promiseArray.splice(0, promiseArray.length);
-      currentPromiseCount = 0;
+  const mapper = async user => {
+    let userFullProfile: User;
+    try {
+      userFullProfile = await wrapWithTimer(
+        async () => client.fetchUserById(user.id),
+        {
+          logger,
+          operationName: 'client_fetch_user_by_id',
+          metadata: {
+            userId: user.id,
+          },
+        },
+      );
+      await iteratee(userFullProfile);
+      numUserProfileFetchSuccess++;
+    } catch (err) {
+      logger.error(
+        {
+          err,
+          userId: user.id,
+        },
+        'Could not fetch user profile by id',
+      );
+      numUserProfileFetchFailed++;
     }
   }
-  // We have to await one more time in case our total count wasn't perfectly
-  // divisible by the batch size.  Is it worth moving this into a function?
-  await Promise.all(promiseArray).then((results) => {
-    for (const success of results) {
-      if (success) {
-        numUserProfileFetchSuccess++;
-      } else {
-        numUserProfileFetchFailed++;
-      }
-    }
-  });
+
+  await pMap(users, mapper, {concurrency: batchSize});
 
   if (numUserProfileFetchFailed) {
     throw new IntegrationError({
       message: `Unable to fetch all user profiles (success=${numUserProfileFetchSuccess}, failed=${numUserProfileFetchFailed})`,
       code: 'ERROR_FETCH_USER_PROFILES',
     });
-  }
-}
-
-async function queryAndCreateUser(
-  client: JamfClient,
-  logger: IntegrationLogger,
-  user: User,
-  iteratee: (user: User) => Promise<void>,
-): Promise<boolean> {
-  let userFullProfile: User;
-  try {
-    userFullProfile = await wrapWithTimer(
-      async () => client.fetchUserById(user.id),
-      {
-        logger,
-        operationName: 'client_fetch_user_by_id',
-        metadata: {
-          userId: user.id,
-        },
-      },
-    );
-    await iteratee(userFullProfile);
-    return true;
-  } catch (err) {
-    logger.error(
-      {
-        err,
-        userId: user.id,
-      },
-      'Could not fetch user profile by id',
-    );
-    return false;
   }
 }
 

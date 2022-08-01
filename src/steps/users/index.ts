@@ -19,6 +19,7 @@ import {
   getComputerDeviceIdToGraphObjectKeyMap,
   getMobileDeviceIdToGraphObjectKeyMap,
 } from '../../util/device';
+import pMap from 'p-map';
 
 async function iterateAdminUserProfiles(
   client: JamfClient,
@@ -54,9 +55,10 @@ async function iterateUserProfiles(
   let numUserProfileFetchSuccess: number = 0;
   let numUserProfileFetchFailed: number = 0;
 
-  for (const user of users) {
-    let userFullProfile: User;
+  const batchSize = 10;
 
+  const mapper = async (user) => {
+    let userFullProfile: User;
     try {
       userFullProfile = await wrapWithTimer(
         async () => client.fetchUserById(user.id),
@@ -68,7 +70,7 @@ async function iterateUserProfiles(
           },
         },
       );
-
+      await iteratee(userFullProfile);
       numUserProfileFetchSuccess++;
     } catch (err) {
       logger.error(
@@ -79,11 +81,10 @@ async function iterateUserProfiles(
         'Could not fetch user profile by id',
       );
       numUserProfileFetchFailed++;
-      continue;
     }
+  };
 
-    await iteratee(userFullProfile);
-  }
+  await pMap(users, mapper, { concurrency: batchSize });
 
   if (numUserProfileFetchFailed) {
     throw new IntegrationError({

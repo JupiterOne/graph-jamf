@@ -57,7 +57,7 @@ async function iterateUserProfiles(
 
   const batchSize = 10;
 
-  const mapper = async user => {
+  const mapper = async (user) => {
     let userFullProfile: User;
     try {
       userFullProfile = await wrapWithTimer(
@@ -82,9 +82,9 @@ async function iterateUserProfiles(
       );
       numUserProfileFetchFailed++;
     }
-  }
+  };
 
-  await pMap(users, mapper, {concurrency: batchSize});
+  await pMap(users, mapper, { concurrency: batchSize });
 
   if (numUserProfileFetchFailed) {
     throw new IntegrationError({

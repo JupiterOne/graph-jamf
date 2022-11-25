@@ -64,7 +64,7 @@ describe('#fetchAdminUsers', () => {
         },
       ],
     });
-  });
+  }, 10000);
 });
 
 describe('#fetchDeviceUsers', () => {
@@ -127,5 +127,5 @@ describe('#fetchDeviceUsers', () => {
         },
       ],
     });
-  });
+  }, 10000);
 });

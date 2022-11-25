@@ -1,3 +1,8 @@
+export interface Token {
+  token: string;
+  expires: string;
+}
+
 export interface Account {
   id: string;
   name: string;
@@ -11,6 +16,17 @@ export interface Site {
 export type Category = Site;
 
 export type PListDocument = string;
+
+export enum AuthType {
+  BasicAuthentication,
+  BearerToken,
+}
+
+export interface JamfProVersion {
+  major: number;
+  minor: number;
+  patch: number;
+}
 
 export interface AdminsAndGroups {
   users: Admin[];

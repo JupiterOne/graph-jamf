@@ -10,7 +10,7 @@ import {
   RelationshipClass,
   RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
-import { createClient, JamfClient } from '../../jamf/client';
+import { JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import {
   Entities,
@@ -276,12 +276,12 @@ export async function fetchMobileDevices({
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const { config } = instance;
 
-  const client = createClient({
+  const client = JamfClient.getInstance({
     host: config.jamfHost,
     username: config.jamfUsername,
     password: config.jamfPassword,
-    logger,
   });
+  await client.initialize();
 
   const accountEntity = await getAccountEntity(jobState);
   const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
@@ -320,12 +320,12 @@ export async function fetchMacOsConfigurationDetails({
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const { config } = instance;
 
-  const client = createClient({
+  const client = JamfClient.getInstance({
     host: config.jamfHost,
     username: config.jamfUsername,
     password: config.jamfPassword,
-    logger,
   });
+  await client.initialize();
 
   // This map is used in a later step
   const macOsConfigurationDetailsById: MacOsConfigurationDetailsById =
@@ -403,12 +403,12 @@ export async function fetchComputers({
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const { config } = instance;
 
-  const client = createClient({
+  const client = JamfClient.getInstance({
     host: config.jamfHost,
     username: config.jamfUsername,
     password: config.jamfPassword,
-    logger,
   });
+  await client.initialize();
 
   const accountEntity = await getAccountEntity(jobState);
   const macOsConfigurationDetailByIdMap = await jobState.getData<

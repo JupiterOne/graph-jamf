@@ -235,6 +235,15 @@ export class JamfClient {
       const response = await request<T>(requestOptions);
       return response.data;
     } catch (err) {
+      if (!err.response || !err.response.status) {
+        throw new IntegrationProviderAPIError({
+          endpoint: url,
+          status: 500,
+          statusText: 'Failed to fetch response',
+          cause: err,
+        });
+      }
+
       switch (err.response.status) {
         case 401:
           throw new IntegrationProviderAuthenticationError({

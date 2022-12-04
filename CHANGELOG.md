@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.8.2] - 2022-12-02
+
 ### Changed
 
 - Errors should be thrown even if response is lacking details.

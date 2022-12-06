@@ -381,6 +381,7 @@ Object {
   "osName": "macOS",
   "osVersion": "10.15.3",
   "platform": "darwin",
+  "realName": "John Doe",
   "serial": "ABC123DEF456",
   "serialNumber": "ABC123DEF456",
   "supervised": false,

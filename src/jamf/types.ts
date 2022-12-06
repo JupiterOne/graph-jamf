@@ -370,6 +370,7 @@ export interface ComputerDetail {
   groups_accounts: {
     computer_group_memberships: string[];
     local_accounts: Array<LocalAccount>;
+    user_inventories: any;
   };
   // TODO: Add typings for this
   iphones: any[];

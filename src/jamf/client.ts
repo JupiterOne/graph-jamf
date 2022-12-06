@@ -378,7 +378,7 @@ export class JamfClient {
     } catch (err) {
       if (!err.response || !err.response.status) {
         throw new IntegrationProviderAPIError({
-          endpoint: url,
+          endpoint: path,
           status: 500,
           statusText: 'Failed to fetch response',
           cause: err,

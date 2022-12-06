@@ -367,10 +367,23 @@ export interface ComputerDetail {
     uuid: string;
     is_removable: boolean;
   }>;
-  // TODO: Add typings for this
-  groups_accounts: Record<string, any>;
+  groups_accounts: {
+    computer_group_memberships: string[];
+    local_accounts: Array<LocalAccount>;
+  };
   // TODO: Add typings for this
   iphones: any[];
+}
+
+export interface LocalAccount {
+  name: string;
+  realname: string;
+  uid: string;
+  home: string;
+  home_size: string;
+  home_size_mb: number;
+  administrator: boolean;
+  filevault_enabled: boolean;
 }
 
 export interface ExtensionAttribute {

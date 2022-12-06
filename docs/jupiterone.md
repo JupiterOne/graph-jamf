@@ -117,8 +117,16 @@ The following relationships are created:
 | `jamf_account`        | **HAS**               | `user_endpoint`                  |
 | `jamf_computer_group` | **HAS**               | `user_endpoint`                  |
 | `jamf_group`          | **HAS**               | `jamf_user`                      |
-| `user_endpoint`       | **INSTALLED**         | `macos_app`                      |
 | `user_endpoint`       | **USES**              | `jamf_osx_configuration_profile` |
+
+### Mapped Relationships
+
+The following mapped relationships are created:
+
+| Source Entity `_type` | Relationship `_class` | Target Entity `_type` | Direction |
+| --------------------- | --------------------- | --------------------- | --------- |
+| `jamf_local_account`  | **USES**              | `*user_endpoint*`     | REVERSE   |
+| `user_endpoint`       | **INSTALLED**         | `*macos_app*`         | FORWARD   |
 
 <!--
 ********************************************************************************

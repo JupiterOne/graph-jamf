@@ -1,6 +1,6 @@
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
-import { Entities, Relationships } from '../constants';
+import { Entities, MappedRelationships, Relationships } from '../constants';
 import { fetchAccounts } from '../accounts';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 import {
@@ -236,7 +236,18 @@ describe('#fetchComputers', () => {
           },
         },
         {
-          _type: Relationships.COMPUTER_INSTALLED_APPLICATION._type,
+          _type: Relationships.COMPUTER_GROUP_HAS_COMPUTER._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'jamf_computer_group_has_user_endpoint' },
+              },
+            },
+          },
+        },
+        {
+          _type: MappedRelationships.COMPUTER_INSTALLED_APPLICATION._type,
           matcher: {
             schema: {
               properties: {
@@ -248,12 +259,13 @@ describe('#fetchComputers', () => {
           },
         },
         {
-          _type: Relationships.COMPUTER_GROUP_HAS_COMPUTER._type,
+          _type: MappedRelationships.LOCAL_ACCOUNT_USES_COMPUTER._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'jamf_computer_group_has_user_endpoint' },
+                _class: { const: RelationshipClass.USES },
+                _type: { const: 'jamf_local_account_uses_user_endpoint' },
+                _mapping: { type: 'object' },
               },
             },
           },

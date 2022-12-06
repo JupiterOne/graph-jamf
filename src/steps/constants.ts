@@ -1,6 +1,8 @@
 import {
   RelationshipClass,
+  RelationshipDirection,
   StepEntityMetadata,
+  StepMappedRelationshipMetadata,
   StepRelationshipMetadata,
 } from '@jupiterone/integration-sdk-core';
 
@@ -24,6 +26,7 @@ export enum IntegrationSteps {
 
 export const Entities: Record<
   | 'ACCOUNT'
+  | 'LOCAL_ACCOUNT'
   | 'GROUP'
   | 'USER_ADMIN'
   | 'DEVICE_USER'
@@ -36,6 +39,11 @@ export const Entities: Record<
 > = {
   ACCOUNT: {
     _type: 'jamf_account',
+    _class: ['Account'],
+    resourceName: 'Account',
+  },
+  LOCAL_ACCOUNT: {
+    _type: 'jamf_local_account',
     _class: ['Account'],
     resourceName: 'Account',
   },
@@ -88,7 +96,6 @@ export const Relationships: Record<
   | 'ACCOUNT_HAS_MOBILE_DEVICE'
   | 'ACCOUNT_HAS_COMPUTER'
   | 'ACCOUNT_HAS_MAC_OS_CONFIGURATION_PROFILE'
-  | 'COMPUTER_INSTALLED_APPLICATION'
   | 'COMPUTER_USES_PROFILE'
   | 'DEVICE_USER_HAS_MOBILE_DEVICE'
   | 'DEVICE_USER_HAS_COMPUTER'
@@ -138,12 +145,6 @@ export const Relationships: Record<
     sourceType: Entities.COMPUTER._type,
     targetType: Entities.MAC_OS_CONFIGURATION_PROFILE._type,
   },
-  COMPUTER_INSTALLED_APPLICATION: {
-    _type: 'user_endpoint_installed_application',
-    _class: RelationshipClass.INSTALLED,
-    sourceType: Entities.COMPUTER._type,
-    targetType: Entities.MAC_OS_APPLICATION._type,
-  },
   DEVICE_USER_HAS_MOBILE_DEVICE: {
     _type: 'device_user_has_mobile_device',
     _class: RelationshipClass.HAS,
@@ -166,6 +167,26 @@ export const Relationships: Record<
     _type: 'jamf_computer_group_has_user_endpoint',
     _class: RelationshipClass.HAS,
     sourceType: Entities.COMPUTER_GROUP._type,
+    targetType: Entities.COMPUTER._type,
+  },
+};
+
+export const MappedRelationships: Record<
+  'COMPUTER_INSTALLED_APPLICATION' | 'LOCAL_ACCOUNT_USES_COMPUTER',
+  StepMappedRelationshipMetadata
+> = {
+  COMPUTER_INSTALLED_APPLICATION: {
+    _type: 'user_endpoint_installed_application',
+    _class: RelationshipClass.INSTALLED,
+    direction: RelationshipDirection.FORWARD,
+    sourceType: Entities.COMPUTER._type,
+    targetType: Entities.MAC_OS_APPLICATION._type,
+  },
+  LOCAL_ACCOUNT_USES_COMPUTER: {
+    _type: 'jamf_local_account_uses_user_endpoint',
+    _class: RelationshipClass.USES,
+    direction: RelationshipDirection.REVERSE,
+    sourceType: Entities.LOCAL_ACCOUNT._type,
     targetType: Entities.COMPUTER._type,
   },
 };

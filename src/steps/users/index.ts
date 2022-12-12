@@ -55,7 +55,7 @@ async function iterateUserProfiles(
   let numUserProfileFetchSuccess: number = 0;
   let numUserProfileFetchFailed: number = 0;
 
-  const batchSize = 10;
+  const batchSize = 5;
 
   const mapper = async (user) => {
     let userFullProfile: User;

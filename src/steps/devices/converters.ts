@@ -177,6 +177,7 @@ export function createComputerEntity({
     id: device.udid.toString(),
     displayName: device.name,
     name: device.name,
+    realName: detailData?.location.real_name || detailData?.location.realname,
     managed: device.managed,
     username: device.username,
     model: device.model,

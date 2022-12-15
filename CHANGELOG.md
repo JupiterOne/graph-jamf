@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.9.0] - 2022-12-15
+
 ### Added
 
 - Added `realName` property to `user_endpoint` entity.

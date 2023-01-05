@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.9.1] - 2023-01-05
+
+## Changed
+
+- Email addresses properties are now set to all lower case on user and device
+  entities.
+
 ## [2.9.0] - 2022-12-15
 
 ### Added

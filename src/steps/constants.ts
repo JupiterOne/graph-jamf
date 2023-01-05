@@ -44,7 +44,7 @@ export const Entities: Record<
   },
   LOCAL_ACCOUNT: {
     _type: 'jamf_local_account',
-    _class: ['Account'],
+    _class: ['User'],
     resourceName: 'Account',
   },
   GROUP: {

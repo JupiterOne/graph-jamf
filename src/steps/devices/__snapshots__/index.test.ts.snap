@@ -9345,7 +9345,7 @@ Object {
         "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
-            "Account",
+            "User",
           ],
           "_type": "jamf_local_account",
           "displayName": "erkang.zheng",
@@ -9379,7 +9379,7 @@ Object {
         "sourceEntityKey": "C02WJ01QHTD9",
         "targetEntity": Object {
           "_class": Array [
-            "Account",
+            "User",
           ],
           "_type": "jamf_local_account",
           "displayName": "macOS",
@@ -13642,7 +13642,7 @@ Object {
         "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
-            "Account",
+            "User",
           ],
           "_type": "jamf_local_account",
           "displayName": "erkang.zheng",
@@ -13676,7 +13676,7 @@ Object {
         "sourceEntityKey": "C02T705EGTF1",
         "targetEntity": Object {
           "_class": Array [
-            "Account",
+            "User",
           ],
           "_type": "jamf_local_account",
           "displayName": "macOS",

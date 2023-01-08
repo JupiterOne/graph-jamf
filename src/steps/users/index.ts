@@ -35,8 +35,45 @@ async function iterateAdminUserProfiles(
     'Iterating account admins',
   );
 
-  for (const user of accountData.users) {
-    await iteratee(await client.fetchAccountUserById(user.id));
+  let numUserAdminProfileFetchSuccess: number = 0;
+  let numUserAdminProfileFetchFailed: number = 0;
+
+  const batchSize = 5;
+
+  const mapper = async (user) => {
+    let userAdminFullProfile: Admin;
+    try {
+      userAdminFullProfile = await wrapWithTimer(
+        async () => client.fetchAccountUserById(user.id),
+        {
+          logger,
+          operationName: 'client_fetch_account_user_by_id',
+          metadata: {
+            userId: user.id,
+          },
+        },
+      );
+      await iteratee(userAdminFullProfile);
+      numUserAdminProfileFetchSuccess++;
+    } catch (err) {
+      logger.error(
+        {
+          err,
+          userId: user.id,
+        },
+        'Could not fetch user profile by id',
+      );
+      numUserAdminProfileFetchFailed++;
+    }
+  };
+
+  await pMap(accountData.users, mapper, { concurrency: batchSize });
+
+  if (numUserAdminProfileFetchFailed) {
+    throw new IntegrationError({
+      message: `Unable to fetch all admin user profiles (success=${numUserAdminProfileFetchSuccess}, failed=${numUserAdminProfileFetchFailed})`,
+      code: 'ERROR_FETCH_ADMIN_USER_PROFILES',
+    });
   }
 }
 

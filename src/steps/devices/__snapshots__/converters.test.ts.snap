@@ -269,7 +269,7 @@ Object {
         "location": Object {
           "building": "",
           "department": "",
-          "email_address": "john.doe@test.com",
+          "email_address": "JOHN.doe@test.com",
           "phone": "111",
           "phone_number": "111",
           "position": "CISO",

@@ -19,8 +19,8 @@ export function createAdminEntity(data: Admin) {
         admin: true,
         directoryUser: data.directory_user,
         fullName: data.full_name,
-        email: data.email || undefined,
-        emailAddress: data.email_address,
+        email: data.email?.toLowerCase() || undefined,
+        emailAddress: data.email_address?.toLowerCase(),
         active: data.enabled === 'Enabled',
         enabled: data.enabled,
         forcePasswordChange: data.force_password_change,
@@ -67,8 +67,8 @@ export function createDeviceUserEntity(data: User) {
         // Jamf device users are always considered active. Jamf _admins_ can
         // be explicitly disabled
         active: true,
-        email: data.email || undefined,
-        emailAddress: data.email_address,
+        email: data.email?.toLowerCase() || undefined,
+        emailAddress: data.email_address?.toLowerCase(),
         phoneNumber: data.phone_number,
         position: data.position,
         enableCustomPhotoUrl: data.enable_custom_photo_url,

@@ -255,7 +255,7 @@ export function createComputerEntity({
       computer.username = detailData.location.username;
     }
 
-    computer.email = detailData.location.email_address;
+    computer.email = detailData.location.email_address?.toLowerCase();
     computer.encrypted = encrypted(detailData);
     computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
     computer.gatekeeperEnabled = gatekeeperEnabled(detailData);

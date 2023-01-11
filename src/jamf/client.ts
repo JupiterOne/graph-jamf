@@ -106,9 +106,7 @@ export class JamfClient {
         );
         version = result.version;
       } catch (err) {
-        // TODO: this means both attempts at getting version failed (which is unexpected)
-        // should we just return undefined value and let other pieces of code handle it
-        // or throw some error in here?
+        throw new IntegrationProviderAPIError(err);
       }
     }
 

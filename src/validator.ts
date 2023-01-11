@@ -22,9 +22,9 @@ export async function validateInvocation(
     username: config.jamfUsername,
     password: config.jamfPassword,
   });
-  await client.initialize();
 
   try {
+    await client.initialize();
     await client.fetchUsers();
   } catch (err) {
     throw new IntegrationValidationError(err.message);

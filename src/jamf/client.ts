@@ -29,6 +29,7 @@ import {
   IntegrationProviderAPIError,
   IntegrationProviderAuthenticationError,
   IntegrationProviderAuthorizationError,
+  IntegrationValidationError,
   parseTimePropertyValue,
 } from '@jupiterone/integration-sdk-core';
 import { URL } from 'url';
@@ -106,7 +107,8 @@ export class JamfClient {
         );
         version = result.version;
       } catch (err) {
-        throw new IntegrationProviderAPIError(err);
+        // Wrong credentials
+        throw new IntegrationValidationError(err);
       }
     }
 

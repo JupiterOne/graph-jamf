@@ -72,7 +72,7 @@ export class JamfClient {
       return;
     }
 
-    if (version.major >= 10 && version.minor >= 35) {
+    if ((version.major === 10 && version.minor >= 35) || version.major >= 11) {
       this.authType = AuthType.BearerToken;
     } else {
       this.authType = AuthType.BasicAuthentication;

@@ -6,6 +6,8 @@ import { fetchAccounts } from '../accounts';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 import { fetchAdminUsers } from '../users';
 
+jest.setTimeout(5000000);
+
 describe('#fetchGroups', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({

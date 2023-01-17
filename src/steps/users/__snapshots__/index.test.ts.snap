@@ -751,7 +751,9 @@ Object {
       "id": "1",
       "ldapServer": "None",
       "name": "Test",
-      "os": Array [],
+      "os": Array [
+        "macOS",
+      ],
       "phoneNumber": "",
       "position": "",
       "totalVppCodeCount": 0,
@@ -790,6 +792,38 @@ Object {
       "position": "CISO",
       "totalVppCodeCount": 0,
       "username": "erkang.zheng",
+    },
+    Object {
+      "_class": Array [
+        "User",
+      ],
+      "_key": "device_user_7",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "uploadStatus": "SKIPPED",
+            "uploadStatusReason": "Raw data currently disabled for this entity type",
+          },
+        },
+      ],
+      "_type": "device_user",
+      "active": true,
+      "createdOn": undefined,
+      "customPhotoUrl": "",
+      "displayName": "j1 test user",
+      "email": "stefan@creativice.com",
+      "emailAddress": "stefan@creativice.com",
+      "enableCustomPhotoUrl": false,
+      "fullName": "Test User",
+      "id": "7",
+      "ldapServer": "None",
+      "name": "j1 test user",
+      "os": Array [],
+      "phoneNumber": "",
+      "position": "",
+      "totalVppCodeCount": 0,
+      "username": "j1 test user",
     },
   ],
   "collectedRelationships": Array [
@@ -841,13 +875,21 @@ Object {
       "_type": "jamf_account_has_device_user",
       "displayName": "HAS",
     },
+    Object {
+      "_class": "HAS",
+      "_fromEntityKey": "jamf_account_local-integration-instance",
+      "_key": "jamf_account_local-integration-instance|has|device_user_7",
+      "_toEntityKey": "device_user_7",
+      "_type": "jamf_account_has_device_user",
+      "displayName": "HAS",
+    },
   ],
   "encounteredTypes": Array [
     "jamf_account",
     "device_user",
     "jamf_account_has_device_user",
   ],
-  "numCollectedEntities": 7,
-  "numCollectedRelationships": 6,
+  "numCollectedEntities": 8,
+  "numCollectedRelationships": 7,
 }
 `;

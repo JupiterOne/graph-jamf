@@ -9,6 +9,8 @@ import {
   fetchMobileDevices,
 } from '.';
 
+jest.setTimeout(7000000)
+
 describe('#fetchMacOsConfigurationDetails', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({

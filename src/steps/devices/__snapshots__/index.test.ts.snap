@@ -14155,3 +14155,36 @@ Object {
   "numCollectedRelationships": 3,
 }
 `;
+
+exports[`#fetchMobileDevices should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Account",
+      ],
+      "_key": "jamf_account_local-integration-instance",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "id": "local-integration-instance",
+            "name": "Local Integration",
+          },
+        },
+      ],
+      "_type": "jamf_account",
+      "createdOn": undefined,
+      "displayName": "Local Integration",
+      "id": "local-integration-instance",
+      "name": "Local Integration",
+    },
+  ],
+  "collectedRelationships": Array [],
+  "encounteredTypes": Array [
+    "jamf_account",
+  ],
+  "numCollectedEntities": 1,
+  "numCollectedRelationships": 0,
+}
+`;

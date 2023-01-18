@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.9.2] - 2023-01-18
+
 ### Changed
 
 - Changed `batchSize` from `10` to `5` to limit the number of concurrently

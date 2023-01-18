@@ -1,3 +1,19 @@
+export interface Token {
+  token: string;
+  expires: string;
+}
+
+export enum AuthType {
+  BasicAuthentication,
+  BearerToken,
+}
+
+export interface JamfProVersion {
+  major: number;
+  minor: number;
+  patch: number;
+}
+
 export interface Account {
   id: string;
   name: string;

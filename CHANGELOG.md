@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- Changed `batchSize` from `10` to `5` to limit the number of concurrently
+  pending promises made for users requests.
+
 ## [2.9.1] - 2023-01-05
 
 ## Changed

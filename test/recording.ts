@@ -16,6 +16,11 @@ function isUserIdEndpoint(requestUrl: string) {
   return !!pathname && pathname.split('/').includes('userid');
 }
 
+function isApiTokenEndpoint(requestUrl: string) {
+  const { pathname } = url.parse(requestUrl);
+  return !!pathname && pathname.includes('auth/token');
+}
+
 function redact(entry: any) {
   const requestUrl = entry.request.url;
 
@@ -28,6 +33,12 @@ function redact(entry: any) {
 
   if (isUserIdEndpoint(requestUrl)) {
     delete parsedResponseText?.account?.password_sha256;
+  }
+
+  if (isApiTokenEndpoint(requestUrl)) {
+    if (parsedResponseText) {
+      parsedResponseText.token = '[REDACTED]';
+    }
   }
 
   entry.response.content.text = JSON.stringify(parsedResponseText);

@@ -7,7 +7,7 @@ import {
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { createClient, JamfClient } from '../../jamf/client';
+import { JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createGroupEntity } from './converters';
@@ -60,12 +60,12 @@ export async function fetchGroups({
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const { config } = instance;
 
-  const client = createClient({
+  const client = JamfClient.getInstance({
     host: config.jamfHost,
     username: config.jamfUsername,
     password: config.jamfPassword,
-    logger,
   });
+  await client.initialize();
 
   const accountEntity = await getAccountEntity(jobState);
 

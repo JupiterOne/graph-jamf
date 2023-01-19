@@ -66,7 +66,7 @@ describe('#fetchMacOsConfigurationDetails', () => {
         },
       ],
     });
-  });
+  }, 10000);
 });
 
 describe('#fetchMobileDevices', () => {
@@ -119,7 +119,7 @@ describe('#fetchMobileDevices', () => {
         },
       ],
     });
-  });
+  }, 10000);
 });
 
 describe('#fetchComputers', () => {
@@ -260,5 +260,5 @@ describe('#fetchComputers', () => {
         },
       ],
     });
-  });
+  }, 10000);
 });

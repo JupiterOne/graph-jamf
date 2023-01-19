@@ -2,7 +2,7 @@ import {
   IntegrationStep,
   IntegrationStepExecutionContext,
 } from '@jupiterone/integration-sdk-core';
-import { createClient } from '../../jamf/client';
+import { JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import {
   Entities,
@@ -15,16 +15,15 @@ import { createAccountEntity } from './converters';
 export async function fetchAccounts({
   instance,
   jobState,
-  logger,
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const { config, id, name } = instance;
 
-  const client = createClient({
+  const client = JamfClient.getInstance({
     host: config.jamfHost,
     username: config.jamfUsername,
     password: config.jamfPassword,
-    logger,
   });
+  await client.initialize();
 
   await jobState.setData(
     ACCOUNT_ENTITY_KEY,

@@ -38,7 +38,7 @@ function redact(entry: any) {
   if (isApiTokenEndpoint(requestUrl)) {
     if (parsedResponseText) {
       parsedResponseText.token = '[REDACTED]';
-      parsedResponseText.expires = '2099-01-01T00:00:00.000Z'
+      parsedResponseText.expires = '2099-01-01T00:00:00.000Z';
     }
   }
 

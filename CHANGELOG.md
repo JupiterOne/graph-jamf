@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.10.0] - 2023-01-20
+
+### Changed
+
+- Changed authentication method to support both `Basic Auth` and `Bearer Token`
+  depending on the Jamf version in use.
+
 ## [2.9.2] - 2023-01-18
 
 ### Changed

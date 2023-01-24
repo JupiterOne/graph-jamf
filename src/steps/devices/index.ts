@@ -8,7 +8,6 @@ import {
   IntegrationStepExecutionContext,
   JobState,
   RelationshipClass,
-  RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
 import { JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
@@ -17,6 +16,7 @@ import {
   Relationships,
   MAC_OS_CONFIGURATION_DETAILS_BY_ID_KEY,
   IntegrationSteps,
+  MappedRelationships,
 } from '../constants';
 import {
   createMobileDeviceEntity,
@@ -243,9 +243,10 @@ async function createComputerInstalledApplicationRelationships(
       createMappedRelationship({
         _key: mappedRelationshipKey,
         _class: RelationshipClass.INSTALLED,
-        _type: Relationships.COMPUTER_INSTALLED_APPLICATION._type,
+        _type: MappedRelationships.COMPUTER_INSTALLED_APPLICATION._type,
         _mapping: {
-          relationshipDirection: RelationshipDirection.FORWARD,
+          relationshipDirection:
+            MappedRelationships.COMPUTER_INSTALLED_APPLICATION.direction,
           sourceEntityKey: computerEntity._key,
           skipTargetCreation: false,
           targetFilterKeys: [['_type', 'name']],
@@ -465,6 +466,12 @@ export async function fetchComputers({
         computerDetail,
       );
 
+      await createLocalAccountUsesComputerRelationships(
+        jobState,
+        computerEntity,
+        computerDetail,
+      );
+
       await createComputerGroupEntities({
         jobState,
         computerDetail,
@@ -477,6 +484,64 @@ export async function fetchComputers({
     jobState,
     computerDeviceIdToGraphObjectKeyMap,
   );
+}
+
+async function createLocalAccountUsesComputerRelationships(
+  jobState: JobState,
+  computerEntity: Entity,
+  computerDetail: ComputerDetail,
+) {
+  const mappedRelationshipKeySet = new Set<string>();
+
+  for (const localAccount of computerDetail.groups_accounts.local_accounts ||
+    []) {
+    const childKey = generateEntityKey(
+      Entities.LOCAL_ACCOUNT._type,
+      `${localAccount.name}_${localAccount.uid}_${localAccount.home}`,
+    );
+
+    const mappedRelationshipKey = generateRelationKey(
+      childKey,
+      RelationshipClass.USES,
+      computerEntity._key,
+    );
+
+    if (mappedRelationshipKeySet.has(mappedRelationshipKey)) {
+      continue;
+    }
+
+    await jobState.addRelationship(
+      createMappedRelationship({
+        _key: mappedRelationshipKey,
+        _class: RelationshipClass.USES,
+        _type: MappedRelationships.LOCAL_ACCOUNT_USES_COMPUTER._type,
+        _mapping: {
+          relationshipDirection:
+            MappedRelationships.LOCAL_ACCOUNT_USES_COMPUTER.direction,
+          sourceEntityKey: computerEntity._key,
+          skipTargetCreation: false,
+          targetFilterKeys: [['_type', 'name', 'uid', 'home']],
+          targetEntity: {
+            _class: Entities.LOCAL_ACCOUNT._class,
+            _type: Entities.LOCAL_ACCOUNT._type,
+            displayName: localAccount.name,
+            name: localAccount.name,
+            realName: localAccount.realname,
+            uid: localAccount.uid,
+            home: localAccount.home,
+          },
+        },
+        properties: {
+          homeSize: localAccount.home_size,
+          homeSizeMb: localAccount.home_size_mb,
+          administrator: localAccount.administrator,
+          filevaultEnabled: localAccount.filevault_enabled,
+        },
+      }),
+    );
+
+    mappedRelationshipKeySet.add(mappedRelationshipKey);
+  }
 }
 
 export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
@@ -503,8 +568,11 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [
       Relationships.ACCOUNT_HAS_COMPUTER,
       Relationships.COMPUTER_USES_PROFILE,
-      Relationships.COMPUTER_INSTALLED_APPLICATION,
       Relationships.COMPUTER_GROUP_HAS_COMPUTER,
+    ],
+    mappedRelationships: [
+      MappedRelationships.COMPUTER_INSTALLED_APPLICATION,
+      MappedRelationships.LOCAL_ACCOUNT_USES_COMPUTER,
     ],
     executionHandler: fetchComputers,
     dependsOn: [

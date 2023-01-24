@@ -8,6 +8,16 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Integration now ingests `local_account` entities.
+
+The following mapped relationship is **now** created:
+
+| Source Entity `_type` | Relationship `_class` | Target Entity `_type` | Direction |
+| --------------------- | --------------------- | --------------------- | --------- |
+| `jamf_local_account`  | **USES**              | `*user_endpoint*`     | REVERSE   |
+
 ## [2.10.0] - 2023-01-20
 
 ### Changed

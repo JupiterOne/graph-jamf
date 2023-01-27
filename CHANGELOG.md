@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.11.0] - 2023-01-27
+
 ### Added
 
 - Integration now ingests `local_account` entities.

@@ -358,6 +358,7 @@ Object {
   "firewallEnabled": false,
   "gatekeeperEnabled": true,
   "gatekeeperStatus": "App Store and identified developers",
+  "hostname": null,
   "id": "1",
   "ipAddress": "12.34.567.890",
   "itunesStoreAccountIsActive": true,

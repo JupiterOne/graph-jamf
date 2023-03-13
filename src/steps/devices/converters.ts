@@ -195,6 +195,7 @@ export function createComputerEntity({
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
     category: 'endpoint',
+    hostname: null,
     ...extensionAttributes,
   };
 

@@ -37,6 +37,32 @@ with JupiterOne in the [integration documentation](docs/jupiterone.md).
 2. `yarn graph` to show a visualization of the collected data
 3. `yarn j1-integration -h` for additional commands
 
+### How to add a new developer to the JupiterOne Jamf Integration Development directory
+
+In order to add a new user you need to:
+
+1. Login to your `jamf` pro account
+2. Click the `gear` settings icon
+3. Click `User accounts and groups`
+4. Click `+ New` on the top right section
+5. Click `Next` on the bottom right section
+6. Fill new user data
+   - Enter `username`
+   - Set `Privilege Set` to administrator
+   - Enter full name
+   - Enter email address
+   - Enter Password
+   - Confirm Password
+   - Check `Force user to change password at next login`
+7. Click `Save`
+
+![Instructions](/images/add-account.gif)
+
+When user log-ins for the first time `jamf` will notify them their password has
+expired and they need to set a new password.
+
+![First Login](/images/first-login.gif)
+
 ### Making Contributions
 
 Start by taking a look at the source code. The integration is basically a set of

@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.12.0] - 2023-03-14
+
+### Changed
+
+- Add "add new developer" documentation section
+
 ## [2.11.0] - 2023-01-27
 
 ### Added

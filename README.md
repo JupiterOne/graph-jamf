@@ -61,8 +61,12 @@ In order to add a new user you need to:
 > Note: Jamf doesn't send an invitation email when a new user is added. We have
 > to manually share the `jamf` pro url.
 
-When user log-ins for the first time `jamf` will notify them their password has
-expired and they need to set a new password.
+#### New User First Login
+
+First, go to `https://jupiteronedev.jamfcloud.com/`:
+
+When the new user log-ins for the first time `jamf` will notify them their
+password has expired and they need to set a new password.
 
 ![First Login](/images/first-login.gif)
 

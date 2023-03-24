@@ -633,38 +633,6 @@ Object {
       "_class": Array [
         "User",
       ],
-      "_key": "device_user_2",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": Object {
-            "uploadStatus": "SKIPPED",
-            "uploadStatusReason": "Raw data currently disabled for this entity type",
-          },
-        },
-      ],
-      "_type": "device_user",
-      "active": true,
-      "createdOn": undefined,
-      "customPhotoUrl": "",
-      "displayName": "Lael Buresh",
-      "email": "lael.buresh@gmail.com",
-      "emailAddress": "lael.buresh@gmail.com",
-      "enableCustomPhotoUrl": false,
-      "fullName": "",
-      "id": "2",
-      "ldapServer": "None",
-      "name": "Lael Buresh",
-      "os": Array [],
-      "phoneNumber": "",
-      "position": "",
-      "totalVppCodeCount": 0,
-      "username": "Lael Buresh",
-    },
-    Object {
-      "_class": Array [
-        "User",
-      ],
       "_key": "device_user_4",
       "_rawData": Array [
         Object {
@@ -724,40 +692,6 @@ Object {
       "position": "",
       "totalVppCodeCount": 0,
       "username": "Rory Overbey",
-    },
-    Object {
-      "_class": Array [
-        "User",
-      ],
-      "_key": "device_user_1",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": Object {
-            "uploadStatus": "SKIPPED",
-            "uploadStatusReason": "Raw data currently disabled for this entity type",
-          },
-        },
-      ],
-      "_type": "device_user",
-      "active": true,
-      "createdOn": undefined,
-      "customPhotoUrl": "",
-      "displayName": "Test",
-      "email": "test@gmail.com",
-      "emailAddress": "test@gmail.com",
-      "enableCustomPhotoUrl": false,
-      "fullName": "Test User",
-      "id": "1",
-      "ldapServer": "None",
-      "name": "Test",
-      "os": Array [
-        "macOS",
-      ],
-      "phoneNumber": "",
-      "position": "",
-      "totalVppCodeCount": 0,
-      "username": "Test",
     },
     Object {
       "_class": Array [
@@ -838,14 +772,6 @@ Object {
     Object {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
-      "_key": "jamf_account_local-integration-instance|has|device_user_2",
-      "_toEntityKey": "device_user_2",
-      "_type": "jamf_account_has_device_user",
-      "displayName": "HAS",
-    },
-    Object {
-      "_class": "HAS",
-      "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|device_user_4",
       "_toEntityKey": "device_user_4",
       "_type": "jamf_account_has_device_user",
@@ -856,14 +782,6 @@ Object {
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|device_user_3",
       "_toEntityKey": "device_user_3",
-      "_type": "jamf_account_has_device_user",
-      "displayName": "HAS",
-    },
-    Object {
-      "_class": "HAS",
-      "_fromEntityKey": "jamf_account_local-integration-instance",
-      "_key": "jamf_account_local-integration-instance|has|device_user_1",
-      "_toEntityKey": "device_user_1",
       "_type": "jamf_account_has_device_user",
       "displayName": "HAS",
     },
@@ -889,7 +807,7 @@ Object {
     "device_user",
     "jamf_account_has_device_user",
   ],
-  "numCollectedEntities": 8,
-  "numCollectedRelationships": 7,
+  "numCollectedEntities": 6,
+  "numCollectedRelationships": 5,
 }
 `;

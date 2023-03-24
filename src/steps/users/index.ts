@@ -95,10 +95,23 @@ async function iterateUserProfiles(
   const batchSize = 5;
 
   const mapper = async (user) => {
-    let userFullProfile: User;
+    let userFullProfile: User | undefined;
     try {
       userFullProfile = await wrapWithTimer(
-        async () => client.fetchUserById(user.id),
+        async () => {
+          try {
+            return await client.fetchUserById(user.id);
+          } catch (err) {
+            if (err.status === 401) {
+              logger.error(
+                { err, userId: user.id },
+                `Could not feth user profile by id (userId=${user.id}). 401 Unauthorized.`,
+              );
+            } else {
+              throw err;
+            }
+          }
+        },
         {
           logger,
           operationName: 'client_fetch_user_by_id',
@@ -107,8 +120,11 @@ async function iterateUserProfiles(
           },
         },
       );
-      await iteratee(userFullProfile);
-      numUserProfileFetchSuccess++;
+
+      if (userFullProfile !== undefined) {
+        await iteratee(userFullProfile);
+        numUserProfileFetchSuccess++;
+      }
     } catch (err) {
       logger.error(
         {
@@ -323,3 +339,6 @@ export const userSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
   },
 ];
+
+// investigate: can we know if an account is an admin?
+// investigate: premissions / roles - graph-jamf

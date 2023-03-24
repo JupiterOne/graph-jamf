@@ -339,6 +339,3 @@ export const userSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
   },
 ];
-
-// investigate: can we know if an account is an admin?
-// investigate: premissions / roles - graph-jamf

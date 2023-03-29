@@ -7,7 +7,7 @@ import {
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { JamfClient } from '../../jamf/client';
+import { IJamfClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createGroupEntity } from './converters';
@@ -16,7 +16,7 @@ import { getAccountData, getAccountEntity } from '../../util/account';
 import { generateEntityKey } from '../../util/generateKey';
 
 async function iterateGroupProfiles(
-  client: JamfClient,
+  client: IJamfClient,
   logger: IntegrationLogger,
   jobState: JobState,
   iteratee: (user: Group) => Promise<void>,

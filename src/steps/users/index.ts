@@ -8,7 +8,7 @@ import {
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { JamfClient } from '../../jamf/client';
+import { IJamfClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createAdminEntity, createDeviceUserEntity } from './converters';
@@ -20,9 +20,10 @@ import {
   getMobileDeviceIdToGraphObjectKeyMap,
 } from '../../util/device';
 import pMap from 'p-map';
+import { iterator } from './interator';
 
 async function iterateAdminUserProfiles(
-  client: JamfClient,
+  client: IJamfClient,
   logger: IntegrationLogger,
   jobState: JobState,
   iteratee: (user: Admin) => Promise<void>,
@@ -73,76 +74,6 @@ async function iterateAdminUserProfiles(
     throw new IntegrationError({
       message: `Unable to fetch all admin user profiles (success=${numUserAdminProfileFetchSuccess}, failed=${numUserAdminProfileFetchFailed})`,
       code: 'ERROR_FETCH_ADMIN_USER_PROFILES',
-    });
-  }
-}
-
-async function iterateUserProfiles(
-  client: JamfClient,
-  logger: IntegrationLogger,
-  iteratee: (user: User) => Promise<void>,
-) {
-  const users = await wrapWithTimer(() => client.fetchUsers(), {
-    logger,
-    operationName: 'client_fetch_users',
-  });
-
-  logger.info({ numUsers: users.length }, 'Successfully fetched users');
-
-  let numUserProfileFetchSuccess: number = 0;
-  let numUserProfileFetchFailed: number = 0;
-
-  const batchSize = 5;
-
-  const mapper = async (user) => {
-    let userFullProfile: User | undefined;
-    try {
-      userFullProfile = await wrapWithTimer(
-        async () => {
-          try {
-            return await client.fetchUserById(user.id);
-          } catch (err) {
-            if (err.status === 401) {
-              logger.error(
-                { err, userId: user.id },
-                `Could not feth user profile by id (userId=${user.id}). 401 Unauthorized.`,
-              );
-            } else {
-              throw err;
-            }
-          }
-        },
-        {
-          logger,
-          operationName: 'client_fetch_user_by_id',
-          metadata: {
-            userId: user.id,
-          },
-        },
-      );
-
-      if (userFullProfile !== undefined) {
-        await iteratee(userFullProfile);
-        numUserProfileFetchSuccess++;
-      }
-    } catch (err) {
-      logger.error(
-        {
-          err,
-          userId: user.id,
-        },
-        'Could not fetch user profile by id',
-      );
-      numUserProfileFetchFailed++;
-    }
-  };
-
-  await pMap(users, mapper, { concurrency: batchSize });
-
-  if (numUserProfileFetchFailed) {
-    throw new IntegrationError({
-      message: `Unable to fetch all user profiles (success=${numUserProfileFetchSuccess}, failed=${numUserProfileFetchFailed})`,
-      code: 'ERROR_FETCH_USER_PROFILES',
     });
   }
 }
@@ -286,7 +217,7 @@ export async function fetchDeviceUsers({
 
   const accountEntity = await getAccountEntity(jobState);
 
-  await iterateUserProfiles(client, logger, async (user) => {
+  await iterator.iterateUserProfiles(client, logger, async (user) => {
     const userEntity = await jobState.addEntity(createDeviceUserEntity(user));
 
     await jobState.addRelationship(

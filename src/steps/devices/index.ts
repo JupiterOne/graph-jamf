@@ -9,7 +9,7 @@ import {
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { JamfClient } from '../../jamf/client';
+import { IJamfClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import {
   Entities,
@@ -56,7 +56,7 @@ function sortByDeviceIdDesc<T extends SortableDevice>(devices: T[]): T[] {
 }
 
 async function iterateMobileDevices(
-  client: JamfClient,
+  client: IJamfClient,
   logger: IntegrationLogger,
   iteratee: (user: MobileDevice) => Promise<void>,
 ) {
@@ -73,7 +73,7 @@ async function iterateMobileDevices(
 }
 
 async function iterateComputerDetails(
-  client: JamfClient,
+  client: IJamfClient,
   logger: IntegrationLogger,
   iteratee: (
     computer: Computer,
@@ -141,7 +141,7 @@ async function iterateComputerDetails(
 }
 
 async function iterateMacOsConfigurationDetails(
-  client: JamfClient,
+  client: IJamfClient,
   logger: IntegrationLogger,
   iteratee: (
     configuration: Configuration,

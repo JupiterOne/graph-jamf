@@ -43,7 +43,23 @@ interface CreateJamfClientParams {
 
 const defaultApiTimeoutMs = 60000; // 1 minute
 
-export class JamfClient {
+export interface IJamfClient {
+  initialize(): Promise<void>;
+  fetchAccounts(): Promise<AdminsAndGroups>;
+  fetchAccountUserById(id: number): Promise<Admin>;
+  fetchAccountGroupById(id: number): Promise<Group>;
+  fetchUsers(): Promise<User[]>;
+  fetchUserById(id: number): Promise<User>;
+  fetchMobileDevices(): Promise<MobileDevice[]>;
+  fetchComputers(): Promise<Computer[]>;
+  fetchComputerById(id: number): Promise<ComputerDetail>;
+  fetchComputerApplicationByName(name: string): Promise<ApplicationDetail>;
+  fetchOSXConfigurationProfiles(): Promise<Configuration[]>;
+  fetchOSXConfigurationProfileById(id: number): Promise<OSXConfigurationDetail>;
+  getResourceUrl(path: string, isJSSResource: boolean): string;
+}
+
+export class JamfClient implements IJamfClient {
   private static _instance: JamfClient;
 
   private readonly host: string;
@@ -80,7 +96,7 @@ export class JamfClient {
     }
   }
 
-  public static getInstance(options: CreateJamfClientParams) {
+  public static getInstance(options: CreateJamfClientParams): IJamfClient {
     return this._instance || (this._instance = new this(options));
   }
 

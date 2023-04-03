@@ -1,9 +1,14 @@
+import { IJamfClient } from '../src/jamf/client';
 import {
   Admin,
+  AdminsAndGroups,
+  ApplicationDetail,
   Computer,
   ComputerDetail,
+  Configuration,
   Group,
   MobileDevice,
+  OSXConfigurationDetail,
   User,
 } from '../src/jamf/types';
 
@@ -449,5 +454,67 @@ export function createMockGroup(): Group {
       casper_imaging: [],
     },
     members: [{ id: 6, name: 'Test Account' }],
+  };
+}
+
+export function createMockJamfClient(): IJamfClient {
+  return {
+    initialize: function (): Promise<void> {
+      throw new Error('Function not implemented.');
+    },
+    fetchAccounts: function (): Promise<AdminsAndGroups> {
+      throw new Error('Function not implemented.');
+    },
+    fetchAccountUserById: function (id: number): Promise<Admin> {
+      throw new Error('Function not implemented.');
+    },
+    fetchAccountGroupById: function (id: number): Promise<Group> {
+      throw new Error('Function not implemented.');
+    },
+    fetchUsers: (): Promise<User[]> => {
+      return Promise.resolve([
+        {
+          id: 1,
+          name: 'John',
+          full_name: 'John Doe',
+          email: 'jonh@doe.com',
+          email_address: 'john.doe@example.com',
+          phone_number: '',
+          position: '',
+          user_groups: {
+            size: 1,
+          },
+          managed_apple_id: '1',
+        },
+      ]);
+    },
+    fetchUserById: function (id: number): Promise<User> {
+      throw new Error('Function not implemented.');
+    },
+    fetchMobileDevices: function (): Promise<MobileDevice[]> {
+      throw new Error('Function not implemented.');
+    },
+    fetchComputers: function (): Promise<Computer[]> {
+      throw new Error('Function not implemented.');
+    },
+    fetchComputerById: function (id: number): Promise<ComputerDetail> {
+      throw new Error('Function not implemented.');
+    },
+    fetchComputerApplicationByName: function (
+      name: string,
+    ): Promise<ApplicationDetail> {
+      throw new Error('Function not implemented.');
+    },
+    fetchOSXConfigurationProfiles: function (): Promise<Configuration[]> {
+      throw new Error('Function not implemented.');
+    },
+    fetchOSXConfigurationProfileById: function (
+      id: number,
+    ): Promise<OSXConfigurationDetail> {
+      throw new Error('Function not implemented.');
+    },
+    getResourceUrl: function (path: string, isJSSResource: boolean): string {
+      throw new Error('Function not implemented.');
+    },
   };
 }

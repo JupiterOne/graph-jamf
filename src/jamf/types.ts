@@ -441,7 +441,7 @@ export interface OSXConfigurationScreensaverPayload
 }
 
 export interface OSXConfigurationDetailParsed extends OSXConfigurationDetail {
-  parsedPayload: OSXConfigurationPayload;
+  parsedPayload?: OSXConfigurationPayload;
 }
 
 export interface MobileDevice {

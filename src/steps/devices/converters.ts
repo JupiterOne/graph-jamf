@@ -57,6 +57,10 @@ export function createMobileDeviceEntity(
 }
 
 function getMacOsFirewallProperties(data: OSXConfigurationDetailParsed) {
+  if (data.parsedPayload === undefined) {
+    return;
+  }
+
   const firewallPayload = data.parsedPayload.PayloadContent.find((item) => {
     return item.PayloadType === 'com.apple.security.firewall';
   }) as OSXConfigurationFirewallPayload;
@@ -76,6 +80,10 @@ function getMacOsFirewallProperties(data: OSXConfigurationDetailParsed) {
 }
 
 function getMacOsScreensaverProperties(data: OSXConfigurationDetailParsed) {
+  if (data.parsedPayload === undefined) {
+    return;
+  }
+
   const screensaverPayload = data.parsedPayload.PayloadContent.find((item) => {
     return item.PayloadType === 'com.apple.screensaver';
   });
@@ -431,7 +439,7 @@ function collapsePayloadValue(
   let value = initialValue;
 
   for (const profile of configurationProfiles) {
-    const payload = profile.parsedPayload.PayloadContent.find((item) => {
+    const payload = profile?.parsedPayload?.PayloadContent.find((item) => {
       return item.PayloadType === payloadType;
     }) as OSXConfigurationPayloadItem;
 

@@ -1,19 +1,12 @@
 import plist from 'plist';
-import {
-  OSXConfigurationDetail,
-  OSXConfigurationDetailParsed,
-  OSXConfigurationPayload,
-} from '../jamf/types';
+import { OSXConfigurationPayload, PListDocument } from '../jamf/types';
 
 export function toOSXConfigurationDetailParsed(
-  detail: OSXConfigurationDetail,
-): OSXConfigurationDetailParsed {
-  const payload = plist.parse(
-    detail.general.payloads,
-  ) as unknown as OSXConfigurationPayload;
-
-  return {
-    ...detail,
-    parsedPayload: payload,
-  };
+  payloads: PListDocument,
+): OSXConfigurationPayload | undefined {
+  try {
+    return plist.parse(payloads) as unknown as OSXConfigurationPayload;
+  } catch (err) {
+    return;
+  }
 }

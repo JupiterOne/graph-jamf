@@ -7,7 +7,7 @@ import {
 
 export function toOSXConfigurationDetailParsed(
   detail: OSXConfigurationDetail,
-): OSXConfigurationDetailParsed | null {
+): OSXConfigurationDetailParsed | undefined {
   try {
     const payload = plist.parse(
       detail.general.payloads,
@@ -18,6 +18,6 @@ export function toOSXConfigurationDetailParsed(
       parsedPayload: payload,
     };
   } catch (err) {
-    return null;
+    return;
   }
 }

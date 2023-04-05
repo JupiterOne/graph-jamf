@@ -22,7 +22,7 @@ describe('toOSXConfigurationDetailParsed()', () => {
         },
       });
 
-      expect(result).toEqual(null);
+      expect(result).not.toBeDefined();
     });
   });
 

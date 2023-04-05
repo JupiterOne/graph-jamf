@@ -7,13 +7,17 @@ import {
 
 export function toOSXConfigurationDetailParsed(
   detail: OSXConfigurationDetail,
-): OSXConfigurationDetailParsed {
-  const payload = plist.parse(
-    detail.general.payloads,
-  ) as unknown as OSXConfigurationPayload;
+): OSXConfigurationDetailParsed | null {
+  try {
+    const payload = plist.parse(
+      detail.general.payloads,
+    ) as unknown as OSXConfigurationPayload;
 
-  return {
-    ...detail,
-    parsedPayload: payload,
-  };
+    return {
+      ...detail,
+      parsedPayload: payload,
+    };
+  } catch (err) {
+    return null;
+  }
 }

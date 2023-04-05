@@ -159,7 +159,15 @@ async function iterateMacOsConfigurationDetails(
   for (const profile of macOsConfigurationProfiles) {
     const details = await client.fetchOSXConfigurationProfileById(profile.id);
     const parsed = toOSXConfigurationDetailParsed(details);
-    await iteratee(profile, parsed);
+
+    if (parsed !== null) {
+      await iteratee(profile, parsed);
+    } else {
+      logger.info(
+        { profileId: profile.id },
+        'Could not parse OSX Configuration Details',
+      );
+    }
   }
 }
 

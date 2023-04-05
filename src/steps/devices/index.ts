@@ -29,6 +29,7 @@ import {
   ComputerDetail,
   Configuration,
   MobileDevice,
+  OSXConfigurationDetail,
   OSXConfigurationDetailParsed,
 } from '../../jamf/types';
 import { getAccountEntity } from '../../util/account';
@@ -145,7 +146,7 @@ async function iterateMacOsConfigurationDetails(
   logger: IntegrationLogger,
   iteratee: (
     configuration: Configuration,
-    parsedConfiguration: OSXConfigurationDetailParsed,
+    parsedConfiguration: OSXConfigurationDetail,
   ) => Promise<void>,
 ) {
   const macOsConfigurationProfiles =
@@ -158,16 +159,7 @@ async function iterateMacOsConfigurationDetails(
 
   for (const profile of macOsConfigurationProfiles) {
     const details = await client.fetchOSXConfigurationProfileById(profile.id);
-    const parsed = toOSXConfigurationDetailParsed(details);
-
-    if (parsed !== null) {
-      await iteratee(profile, parsed);
-    } else {
-      logger.info(
-        { profileId: profile.id },
-        'Could not parse OSX Configuration Details',
-      );
-    }
+    await iteratee(profile, details);
   }
 }
 
@@ -344,7 +336,16 @@ export async function fetchMacOsConfigurationDetails({
   await iterateMacOsConfigurationDetails(
     client,
     logger,
-    async (configuration, parsedMacOsConfigurationDetail) => {
+    async (configuration, macOsConfigurationDetail) => {
+      const parsedPayload = toOSXConfigurationDetailParsed(
+        macOsConfigurationDetail.general.payloads,
+      );
+
+      const parsedMacOsConfigurationDetail: OSXConfigurationDetailParsed = {
+        ...macOsConfigurationDetail,
+        parsedPayload,
+      };
+
       const configurationEntity = await jobState.addEntity(
         createMacOsConfigurationEntity(parsedMacOsConfigurationDetail),
       );

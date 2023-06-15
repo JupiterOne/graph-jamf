@@ -256,6 +256,10 @@ export function createComputerEntity({
     lastReportedOn: device.report_date_epoch
       ? device.report_date_epoch
       : undefined,
+    lastSeenOn: parseTimePropertyValue(
+      detailData?.general?.last_contact_time_epoch ?? device.report_date_epoch,
+      'ms',
+    ),
     encrypted: false,
     gatekeeperEnabled: false,
     systemIntegrityProtectionEnabled: false,
@@ -280,9 +284,6 @@ export function createComputerEntity({
       : undefined;
     computer.enrolledOn = detailData.general.last_enrolled_date_epoch
       ? detailData.general.last_enrolled_date_epoch
-      : undefined;
-    computer.lastSeenOn = detailData.general.last_contact_time_epoch
-      ? detailData.general.last_contact_time_epoch
       : undefined;
 
     computer.macAddress =

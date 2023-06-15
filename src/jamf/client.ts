@@ -1,29 +1,30 @@
 import {
+  AccountsResponse,
   Admin,
+  AdminResponse,
   AdminsAndGroups,
   ApplicationDetail,
+  ApplicationDetailResponse,
+  AuthType,
   Computer,
   ComputerDetail,
-  Configuration,
-  Group,
-  Method,
-  MobileDevice,
-  OSXConfigurationDetail,
-  User,
-  AccountsResponse,
-  AdminResponse,
-  ApplicationDetailResponse,
   ComputerDetailResponse,
   ComputerResponse,
+  Configuration,
+  Group,
   GroupResponse,
+  JamfProVersion,
+  Method,
+  MobileDevice,
+  MobileDeviceDetail,
   MobileDevicesResponse,
+  OSXConfigurationDetail,
   OSXConfigurationDetailResponse,
   OSXConfigurationResponse,
+  Token,
+  User,
   UserResponse,
   UsersResponse,
-  Token,
-  AuthType,
-  JamfProVersion,
 } from './types';
 import {
   IntegrationProviderAPIError,
@@ -51,6 +52,7 @@ export interface IJamfClient {
   fetchUsers(): Promise<User[]>;
   fetchUserById(id: number): Promise<User>;
   fetchMobileDevices(): Promise<MobileDevice[]>;
+  fetchMobileDeviceById(id: number): Promise<MobileDeviceDetail>;
   fetchComputers(): Promise<Computer[]>;
   fetchComputerById(id: number): Promise<ComputerDetail>;
   fetchComputerApplicationByName(name: string): Promise<ApplicationDetail>;
@@ -274,6 +276,16 @@ export class JamfClient implements IJamfClient {
     );
 
     return result.mobile_devices;
+  }
+
+  /**
+   * Requires "Read - Mobile Devices" permission
+   */
+  public async fetchMobileDeviceById(id: number): Promise<MobileDeviceDetail> {
+    const result = await this.makeRequest<{
+      mobile_device: MobileDeviceDetail;
+    }>(this.getResourceUrl(`/mobiledevices/id/${id}`), Method.GET, {});
+    return result.mobile_device;
   }
 
   /**

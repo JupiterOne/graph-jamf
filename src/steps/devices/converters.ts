@@ -2,6 +2,7 @@ import {
   convertProperties,
   createIntegrationEntity,
   Entity,
+  parseTimePropertyValue,
   RawDataTracking,
   setRawData,
 } from '@jupiterone/integration-sdk-core';
@@ -11,6 +12,7 @@ import {
   DiskPartition,
   ExtensionAttribute,
   MobileDevice,
+  MobileDeviceDetail,
   OSXConfigurationDetailParsed,
   OSXConfigurationFirewallPayload,
   OSXConfigurationPayloadItem,
@@ -19,41 +21,96 @@ import { generateEntityKey } from '../../util/generateKey';
 import { Entities, DEPLOYMENT_STATUS } from '../constants';
 
 export function createMobileDeviceEntity(
-  data: MobileDevice,
+  device: MobileDevice,
+  deviceDetail: MobileDeviceDetail,
   previouslyDiscoveredDevice: boolean,
 ) {
   const defaultDeviceKey = generateEntityKey(
     Entities.MOBILE_DEVICE._type,
-    data.id,
+    device.id,
   );
   const _key = previouslyDiscoveredDevice
     ? defaultDeviceKey
-    : data.serial_number || defaultDeviceKey;
+    : device.serial_number || defaultDeviceKey;
 
-  return createIntegrationEntity({
+  const extensionAttributes = {};
+
+  // Prevent all extensionAttributes from being uploaded due to the size of the
+  // entities that can be generated as a result from uploading every property.
+  if (deviceDetail && deviceDetail.extension_attributes) {
+    extensionAttributes[`extensionAttribute.${DEPLOYMENT_STATUS}`] =
+      getDeploymentStatus(deviceDetail.extension_attributes);
+  }
+
+  const mobileDeviceEntity = createIntegrationEntity({
     entityData: {
-      source: data,
+      source: [{ name: 'default', rawData: device }],
       assign: {
         _class: Entities.MOBILE_DEVICE._class,
         _type: Entities.MOBILE_DEVICE._type,
         _key,
-        id: data.udid,
-        deviceName: data.device_name,
-        displayName: `${data.username || 'Unknown User'}'s ${data.model}`,
-        udid: data.udid,
-        deviceId: data.udid,
-        serialNumber: data.serial_number,
-        phoneNumber: data.phone_number,
-        wifiMacAddress: data.wifi_mac_address,
-        managed: data.managed,
-        supervised: data.supervised,
-        model: data.model,
-        modelIdentifier: data.model_identifier,
-        modelDisplay: data.model_display,
-        username: data.username,
+        name: device.name,
+        id: device.udid,
+        deviceName: device.device_name,
+        displayName: `${device.username || 'Unknown User'}'s ${device.model}`,
+        category: 'mobile',
+        make: null,
+        udid: device.udid,
+        deviceId: device.udid,
+        serial: device.serial_number,
+        serialNumber: device.serial_number,
+        phoneNumber: device.phone_number,
+        wifiMacAddress: device.wifi_mac_address,
+        macAddress: device.wifi_mac_address?.toLowerCase(),
+        managed: device.managed,
+        supervised: device.supervised,
+        model: device.model,
+        modelIdentifier: device.model_identifier,
+        modelDisplay: device.model_display,
+        username: device.username,
+        email: deviceDetail?.location?.email_address,
+        lastSeenOn: parseTimePropertyValue(
+          deviceDetail?.general?.last_inventory_update_epoch,
+          'ms',
+        ),
+        createdOn: parseTimePropertyValue(
+          deviceDetail?.general?.initial_entry_date_epoch,
+          'ms',
+        ),
+        capacity: deviceDetail?.general?.capacity,
+        osType: deviceDetail?.general?.os_type,
+        osVersion: deviceDetail?.general?.os_version,
+        locatorServiceEnabled:
+          deviceDetail?.general?.device_locator_service_enabled,
+        cloudBackupEnabled: deviceDetail?.general?.cloud_backup_enabled,
+        lastBackupOn: parseTimePropertyValue(
+          deviceDetail?.general?.last_cloud_backup_date_epoch,
+          'ms',
+        ),
+        dataProtectionEnabled: deviceDetail?.security?.data_protection,
+        blockLevelEncryption:
+          deviceDetail?.security?.block_level_encryption_capable,
+        fileLevelEncryption:
+          deviceDetail?.security?.file_level_encryption_capable,
+        hasPasscode: deviceDetail?.security?.passcode_present,
+        passcodeCompliant: deviceDetail?.security?.passcode_compliant,
+        profileCompliant:
+          deviceDetail?.security?.passcode_compliant_with_profile,
+        passcodeLockGracePeriodEnforced:
+          deviceDetail?.security?.passcode_lock_grace_period_enforced,
+        activationLockEnabled: deviceDetail?.security?.activation_lock_enabled,
+        jailbroken: deviceDetail?.security?.jailbreak_detected,
+        ...extensionAttributes,
       },
     },
   });
+  if (deviceDetail) {
+    setRawData(mobileDeviceEntity as RawDataTracking, {
+      name: 'detail',
+      rawData: deviceDetail,
+    });
+  }
+  return mobileDeviceEntity;
 }
 
 function getMacOsFirewallProperties(data: OSXConfigurationDetailParsed) {

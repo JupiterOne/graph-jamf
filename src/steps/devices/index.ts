@@ -624,7 +624,7 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
     entities: [Entities.MOBILE_DEVICE],
     relationships: [Relationships.ACCOUNT_HAS_MOBILE_DEVICE],
     executionHandler: fetchMobileDevices,
-    dependsOn: [IntegrationSteps.ACCOUNTS, IntegrationSteps.COMPUTERS],
+    dependsOn: [IntegrationSteps.ACCOUNTS],
   },
   {
     id: IntegrationSteps.COMPUTERS,

@@ -1,3 +1,20 @@
+# v2.13.0 (Fri Jun 16 2023)
+
+#### 🚀 Enhancement
+
+- DEVICE-123 - Fetch more detailed mobile device information [#143](https://github.com/JupiterOne/graph-jamf/pull/143) ([@mknoedel](https://github.com/mknoedel))
+
+#### 🐛 Bug Fix
+
+- Update integration-deployment.yml [#142](https://github.com/JupiterOne/graph-jamf/pull/142) ([@Nick-NCSU](https://github.com/Nick-NCSU))
+
+#### Authors: 2
+
+- Michael Knoedel ([@mknoedel](https://github.com/mknoedel))
+- Nick Thompson ([@Nick-NCSU](https://github.com/Nick-NCSU))
+
+---
+
 ## [2.11.1] - 2023-05-09
 
 ### Added

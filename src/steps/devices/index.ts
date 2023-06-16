@@ -29,6 +29,7 @@ import {
   ComputerDetail,
   Configuration,
   MobileDevice,
+  MobileDeviceDetail,
   OSXConfigurationDetail,
   OSXConfigurationDetailParsed,
 } from '../../jamf/types';
@@ -59,17 +60,68 @@ function sortByDeviceIdDesc<T extends SortableDevice>(devices: T[]): T[] {
 async function iterateMobileDevices(
   client: IJamfClient,
   logger: IntegrationLogger,
-  iteratee: (user: MobileDevice) => Promise<void>,
+  iteratee: (
+    device: MobileDevice,
+    deviceDetail: MobileDeviceDetail,
+  ) => Promise<void>,
 ) {
   const mobileDevices = sortByDeviceIdDesc(await client.fetchMobileDevices());
-
   logger.info(
     { numDevices: mobileDevices.length },
     'Successfully fetched mobile devices',
   );
 
+  let numDeviceDetailFetchSuccess: number = 0;
+  const deviceIdsFetchFailedSet = new Set<string>();
+
   for (const device of mobileDevices) {
-    await iteratee(device);
+    let deviceDetail: MobileDeviceDetail;
+
+    if (typeof device.id === 'undefined') {
+      logger.warn(`Found an "undefined" computer ID!`);
+      continue;
+    }
+
+    try {
+      deviceDetail = await client.fetchMobileDeviceById(device.id);
+      numDeviceDetailFetchSuccess++;
+    } catch (err) {
+      // We sometimes see errors (e.g. 502 Bad Gateway) from the above API. If
+      // we fail to fetch a single device, we should not just exit the entire
+      // step.
+      logger.warn(
+        {
+          err,
+          deviceId: device.id,
+        },
+        'Could not fetch mobile device by id',
+      );
+
+      deviceIdsFetchFailedSet.add(device.id.toString());
+      continue;
+    }
+
+    await iteratee(device, deviceDetail);
+  }
+
+  logger.info(
+    {
+      numDeviceDetailFetchSuccess,
+      numDeviceDetailFetchFailed: deviceIdsFetchFailedSet.size,
+    },
+    'Number of computer details processed',
+  );
+
+  if (deviceIdsFetchFailedSet.size) {
+    // The Jamf API is failing intermittemently with 500 errors. The same
+    // device IDs are causing failures across integration executions. We'll
+    // be reporting this issue to Jamf.
+    logger.info(
+      {
+        deviceIdsFailed: Array.from(deviceIdsFetchFailedSet),
+      },
+      'Could not fetch computer details for IDs',
+    );
   }
 }
 
@@ -288,13 +340,17 @@ export async function fetchMobileDevices({
   const mobileDeviceIdToGraphObjectKeyMap: DeviceIdToGraphObjectKeyMap =
     new Map();
 
-  await iterateMobileDevices(client, logger, async (device) => {
+  await iterateMobileDevices(client, logger, async (device, deviceDetail) => {
     const previouslyDiscoveredDevice = await jobState.hasKey(
       device.serial_number,
     );
 
     const mobileDeviceEntity = await jobState.addEntity(
-      createMobileDeviceEntity(device, previouslyDiscoveredDevice),
+      createMobileDeviceEntity(
+        device,
+        deviceDetail,
+        previouslyDiscoveredDevice,
+      ),
     );
 
     mobileDeviceIdToGraphObjectKeyMap.set(device.id, mobileDeviceEntity._key);

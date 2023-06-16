@@ -460,6 +460,186 @@ export interface MobileDevice {
   username: string | undefined;
 }
 
+export interface MobileDeviceDetail {
+  general: {
+    id: number;
+    display_name: string;
+    device_name: string;
+    name: string;
+    asset_tag: string;
+    last_inventory_update: string;
+    last_inventory_update_epoch: number;
+    last_inventory_update_utc: string;
+    capacity: number;
+    capacity_mb: number;
+    available: number;
+    available_mb: number;
+    percentage_used: number;
+    os_type: string;
+    os_version: string;
+    os_build: string;
+    serial_number: string;
+    udid: string;
+    initial_entry_date_epoch: number;
+    initial_entry_date_utc: string;
+    phone_number: string;
+    ip_address: string;
+    wifi_mac_address: string;
+    bluetooth_mac_address: string;
+    modem_firmware: string;
+    model: string;
+    model_identifier: string;
+    model_number: string;
+    model_display: string;
+    device_ownership_level: string;
+    last_enrollment_epoch: number;
+    last_enrollment_utc: string;
+    managed: boolean;
+    supervised: boolean;
+    exchange_activesync_device_identifier: string;
+    shared: string;
+    tethered: string;
+    battery_level: 95;
+    ble_capable: boolean;
+    device_locator_service_enabled: boolean;
+    do_not_disturb_enabled: boolean;
+    cloud_backup_enabled: boolean;
+    last_cloud_backup_date_epoch: number;
+    last_cloud_backup_date_utc: string;
+    location_services_enabled: boolean;
+    itunes_store_account_is_active: boolean;
+    last_backup_time_epoch: number;
+    last_backup_time_utc: string;
+  };
+  location: {
+    username: string;
+    realname: string;
+    real_name: string;
+    email_address: string;
+    position: string;
+    phone: string;
+    phone_number: string;
+    department: string;
+    building: string;
+    room: number;
+  };
+  purchasing: {
+    is_purchased: boolean;
+    is_leased: boolean;
+    po_number: string;
+    vendor: string;
+    applecare_id: string;
+    purchase_price: string;
+    purchasing_account: string;
+    po_date: string;
+    po_date_epoch: number;
+    po_date_utc: string;
+    warranty_expires: string;
+    warranty_expires_epoch: number;
+    warranty_expires_utc: string;
+    lease_expires: string;
+    lease_expires_epoch: number;
+    lease_expires_utc: string;
+    life_expectancy: number;
+    purchasing_contact: string;
+  };
+  applications: [
+    {
+      size: number;
+      application: {
+        application_name: string;
+        application_version: string;
+        identifier: string;
+      };
+    },
+  ];
+  security: {
+    data_protection: boolean;
+    block_level_encryption_capable: boolean;
+    file_level_encryption_capable: boolean;
+    passcode_present: boolean;
+    passcode_compliant: boolean;
+    passcode_compliant_with_profile: boolean;
+    passcode_lock_grace_period_enforced: string;
+    hardware_encryption: string;
+    activation_lock_enabled: boolean;
+    jailbreak_detected: string;
+    lost_mode_enabled: boolean;
+    lost_mode_enforced: boolean;
+    lost_mode_enable_issued_epoch: number;
+    lost_mode_enable_issued_utc: string;
+    lost_mode_message: string;
+    lost_mode_phone: string;
+    lost_mode_footnote: string;
+    lost_location_epoch: number;
+    lost_location_utc: string;
+    lost_location_latitude: number;
+    lost_location_longitude: number;
+    lost_location_altitude: number;
+    lost_location_speed: number;
+    lost_location_course: number;
+    lost_location_horizontal_accuracy: number;
+    lost_location_vertical_accuracy: number;
+  };
+  network: {
+    home_carrier_network: string;
+    cellular_technology: string;
+    voice_roaming_enabled: string;
+    imei: string;
+    iccid: string;
+    current_carrier_network: string;
+    carrier_settings_version: number;
+    current_mobile_country_code: number;
+    current_mobile_network_code: number;
+    home_mobile_country_code: number;
+    home_mobile_network_code: number;
+    data_roaming_enabled: boolean;
+    phone_number: number;
+  };
+  certificates: [
+    {
+      size: number;
+      certificate: {
+        common_name: string;
+        identity: true;
+      };
+    },
+  ];
+  configuration_profiles: [
+    {
+      size: number;
+      configuration_profile: {
+        display_name: string;
+        version: number;
+        identifier: string;
+        uuid: string;
+      };
+    },
+  ];
+  provisioning_profiles: [
+    {
+      size: number;
+      mobile_device_provisioning_profile: {
+        display_name: string;
+        expiration_date: string;
+        expiration_date_epoch: number;
+        expiration_date_utc: string;
+        uuid: string;
+      };
+    },
+  ];
+  mobile_device_groups: [
+    {
+      size: number;
+      mobile_device_group: {
+        id: number;
+        name: string;
+      };
+    },
+  ];
+  extension_attributes: ExtensionAttribute[];
+}
+
 export enum Method {
   GET = 'GET',
   POST = 'POST',

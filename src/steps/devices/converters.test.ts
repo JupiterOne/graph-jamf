@@ -8,12 +8,17 @@ import {
   createMockComputer,
   createMockComputerDetail,
   EXTENSION_ATTRIBUTES,
+  createMockMobileDeviceDetail,
 } from '../../../test/mocks';
 
 describe('#createMobileDeviceEntity', () => {
   test('should convert data', () => {
     expect(
-      createMobileDeviceEntity(createMockMobileDevice(), false),
+      createMobileDeviceEntity(
+        createMockMobileDevice(),
+        createMockMobileDeviceDetail(),
+        false,
+      ),
     ).toMatchSnapshot();
   });
 });

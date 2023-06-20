@@ -1,3 +1,15 @@
+# v2.13.1 (Tue Jun 20 2023)
+
+#### 🐛 Bug Fix
+
+- Do nothing so CI can republish this project [#145](https://github.com/JupiterOne/graph-jamf/pull/145) ([@mknoedel](https://github.com/mknoedel))
+
+#### Authors: 1
+
+- Michael Knoedel ([@mknoedel](https://github.com/mknoedel))
+
+---
+
 # v2.13.0 (Fri Jun 16 2023)
 
 #### 🚀 Enhancement

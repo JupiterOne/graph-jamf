@@ -1,3 +1,16 @@
+# v2.13.2 (Wed Jun 21 2023)
+
+#### 🐛 Bug Fix
+
+- NOTICKET - Add preversion hook to fix published package [#147](https://github.com/JupiterOne/graph-jamf/pull/147) ([@mknoedel](https://github.com/mknoedel))
+- fix auto packaging [#146](https://github.com/JupiterOne/graph-jamf/pull/146) ([@mknoedel](https://github.com/mknoedel))
+
+#### Authors: 1
+
+- Michael Knoedel ([@mknoedel](https://github.com/mknoedel))
+
+---
+
 # v2.13.1 (Tue Jun 20 2023)
 
 #### 🐛 Bug Fix

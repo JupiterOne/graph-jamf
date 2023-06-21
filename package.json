@@ -28,6 +28,7 @@
     "format:check": "prettier --check '**/*.{ts,js,json,css,md,yml}'",
     "graph:spec": "j1-integration visualize-types --project-path docs/spec --output-file ./.j1-integration/types-graph/index.spec.html",
     "graph:types": "j1-integration visualize-types",
+    "postversion": "cp package.json ./dist/package.json",
     "validate:questions": "j1-integration validate-question-file -a $MANAGED_QUESTIONS_JUPITERONE_ACCOUNT_ID -k $MANAGED_QUESTIONS_JUPITERONE_API_KEY",
     "validate:questions:dry": "j1-integration validate-question-file --dry-run"
   },

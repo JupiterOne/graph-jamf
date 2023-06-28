@@ -19,6 +19,7 @@ import {
 } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
 import { Entities, DEPLOYMENT_STATUS } from '../constants';
+import { deviceNormalizer } from './normalizer';
 
 export function createMobileDeviceEntity(
   device: MobileDevice,
@@ -79,7 +80,9 @@ export function createMobileDeviceEntity(
         ),
         capacity: deviceDetail?.general?.capacity,
         osType: deviceDetail?.general?.os_type,
-        osVersion: deviceDetail?.general?.os_version,
+        osVersion: deviceNormalizer.normalizeOsVersion(
+          deviceDetail?.general?.os_version,
+        ),
         locatorServiceEnabled:
           deviceDetail?.general?.device_locator_service_enabled,
         cloudBackupEnabled: deviceDetail?.general?.cloud_backup_enabled,

@@ -243,7 +243,8 @@ export function createComputerEntity({
     _class: Entities.COMPUTER._class,
     _rawData: [{ name: 'default', rawData: device }],
     id: device.udid.toString(),
-    displayName: device.name,
+    displayName:
+      device.name || `${device.username || 'Unknown User'}'s ${device.model}`,
     name: device.name,
     realName: detailData?.location.real_name || detailData?.location.realname,
     managed: device.managed,

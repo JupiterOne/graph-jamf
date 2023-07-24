@@ -1,3 +1,15 @@
+# v2.14.1 (Mon Jul 24 2023)
+
+#### 🐛 Bug Fix
+
+- DEVICE-107 -  ensure displayName is provided on all Device entities [#149](https://github.com/JupiterOne/graph-jamf/pull/149) ([@mknoedel](https://github.com/mknoedel))
+
+#### Authors: 1
+
+- Michael Knoedel ([@mknoedel](https://github.com/mknoedel))
+
+---
+
 # v2.14.0 (Wed Jun 28 2023)
 
 #### 🚀 Enhancement

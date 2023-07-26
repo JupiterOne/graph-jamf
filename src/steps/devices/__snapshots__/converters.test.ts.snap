@@ -402,23 +402,20 @@ Object {
   "_rawData": Array [
     Object {
       "name": "default",
-      "rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": Object {
-            "device_name": "Update 1-1",
-            "id": 16,
-            "managed": true,
-            "model": "iPhone 5S (GSM)",
-            "model_display": "iPhone 5S (GSM)",
-            "model_identifier": "iPhone6,1",
-            "name": "Update 1-1",
-            "phone_number": "612-356-4364",
-            "serial_number": "CA44C68660A3",
-            "supervised": false,
-            "udid": "ca44c66860a311e490b812df261f2c7e",
-            "username": undefined,
-            "wifi_mac_address": "0C:3E:9F:49:99:67",
+        "rawData": Object {
+          "device_name": "Update 1-1",
+          "id": 16,
+          "managed": true,
+          "model": "iPhone 5S (GSM)",
+          "model_display": "iPhone 5S (GSM)",
+          "model_identifier": "iPhone6,1",
+          "name": "Update 1-1",
+          "phone_number": "612-356-4364",
+          "serial_number": "CA44C68660A3",
+          "supervised": false,
+          "udid": "ca44c66860a311e490b812df261f2c7e",
+          "username": undefined,
+          "wifi_mac_address": "0C:3E:9F:49:99:67",
           },
         },
       ],

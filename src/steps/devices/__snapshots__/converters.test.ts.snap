@@ -418,8 +418,6 @@ Object {
           "wifi_mac_address": "0C:3E:9F:49:99:67",
           },
         },
-      ],
-    },
     Object {
       "name": "detail",
       "rawData": Object {

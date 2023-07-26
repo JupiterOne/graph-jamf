@@ -36,14 +36,14 @@
     "@jupiterone/integration-sdk-core": "^9.9.2"
   },
   "devDependencies": {
+    "@jupiterone/integration-sdk-core": "^9.9.2",
+    "@jupiterone/integration-sdk-dev-tools": "^9.9.2",
+    "@jupiterone/integration-sdk-testing": "^9.9.2",
     "@types/plist": "^3.0.2",
     "@types/uuid": "^8.3.1",
     "auto": "^10.37.4"
   },
   "dependencies": {
-    "@jupiterone/integration-sdk-core": "^9.9.2",
-    "@jupiterone/integration-sdk-dev-tools": "^9.9.2",
-    "@jupiterone/integration-sdk-testing": "^9.9.2",
     "gaxios": "^5.0.0",
     "p-map": "^4.0.0",
     "plist": "^3.0.4",

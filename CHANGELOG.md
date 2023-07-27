@@ -1,3 +1,15 @@
+# v2.14.2 (Thu Jul 27 2023)
+
+#### 🐛 Bug Fix
+
+- Int 8912 jamf upload error -sdk upgrade [#150](https://github.com/JupiterOne/graph-jamf/pull/150) (gonzaloavalosribas@Gonzalos-MacBook-Pro.local)
+
+#### Authors: 1
+
+- Gonzalo Avalos Ribas ([@Gonzalo-Avalos-Ribas](https://github.com/Gonzalo-Avalos-Ribas))
+
+---
+
 # v2.14.1 (Mon Jul 24 2023)
 
 #### 🐛 Bug Fix

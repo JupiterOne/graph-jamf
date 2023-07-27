@@ -341,9 +341,7 @@ export async function fetchMobileDevices({
     new Map();
 
   await iterateMobileDevices(client, logger, async (device, deviceDetail) => {
-    const previouslyDiscoveredDevice = await jobState.hasKey(
-      device.serial_number,
-    );
+    const previouslyDiscoveredDevice = jobState.hasKey(device.serial_number);
 
     const mobileDeviceEntity = await jobState.addEntity(
       createMobileDeviceEntity(
@@ -456,7 +454,7 @@ async function createComputerGroupEntities({
       to: computerEntity,
     });
 
-    if (!(await jobState.hasKey(groupHasComputerRelatioinship._key))) {
+    if (!jobState.hasKey(groupHasComputerRelatioinship._key)) {
       await jobState.addRelationship(groupHasComputerRelatioinship);
     }
   }
@@ -495,7 +493,7 @@ export async function fetchComputers({
     client,
     logger,
     async (computer, computerDetail) => {
-      const previouslyDiscoveredDevice = await jobState.hasKey(
+      const previouslyDiscoveredDevice = jobState.hasKey(
         computer.serial_number,
       );
 

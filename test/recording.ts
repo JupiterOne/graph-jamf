@@ -1,4 +1,7 @@
-import { IntegrationStepExecutionContext } from '@jupiterone/integration-sdk-core';
+import {
+  IntegrationInstanceConfig,
+  IntegrationStepExecutionContext,
+} from '@jupiterone/integration-sdk-core';
 import {
   setupRecording,
   SetupRecordingInput,
@@ -80,7 +83,9 @@ export interface RelationshipSchemaMatcher {
   matcher: ToMatchRelationshipSchemaParams;
 }
 
-export interface CreateDataCollectionTestParams<IIntegrationConfig> {
+export interface CreateDataCollectionTestParams<
+  IIntegrationConfig extends IntegrationInstanceConfig,
+> {
   recordingName: string;
   recordingDirectory: string;
   integrationConfig: IIntegrationConfig;
@@ -94,7 +99,9 @@ export interface CreateDataCollectionTestParams<IIntegrationConfig> {
   ) => Promise<void>;
 }
 
-export async function createDataCollectionTest<IIntegrationConfig>({
+export async function createDataCollectionTest<
+  IIntegrationConfig extends IntegrationInstanceConfig,
+>({
   recordingName,
   recordingDirectory,
   integrationConfig,

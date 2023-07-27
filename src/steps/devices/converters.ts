@@ -45,7 +45,7 @@ export function createMobileDeviceEntity(
 
   const mobileDeviceEntity = createIntegrationEntity({
     entityData: {
-      source: [{ name: 'default', rawData: device }],
+      source: device,
       assign: {
         _class: Entities.MOBILE_DEVICE._class,
         _type: Entities.MOBILE_DEVICE._type,

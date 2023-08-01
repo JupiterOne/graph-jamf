@@ -10,7 +10,7 @@ import {
 import { IJamfClient, JamfClient } from '../../jamf/client';
 import { IntegrationConfig } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
-import { createGroupEntity } from './converters';
+import { createGroupEntity, printSizeOfField } from './converters';
 import { Group } from '../../jamf/types';
 import { getAccountData, getAccountEntity } from '../../util/account';
 import { generateEntityKey } from '../../util/generateKey';
@@ -71,7 +71,7 @@ export async function fetchGroups({
 
   await iterateGroupProfiles(client, logger, jobState, async (group) => {
     const groupEntity = await jobState.addEntity(createGroupEntity(group));
-
+    printSizeOfField(group, logger);
     await jobState.addRelationship(
       createDirectRelationship({
         _class: RelationshipClass.HAS,

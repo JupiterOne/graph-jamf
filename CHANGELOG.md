@@ -1,3 +1,15 @@
+# v2.14.3 (Tue Aug 01 2023)
+
+#### 🐛 Bug Fix
+
+- Log sizes of fields of group entity [#151](https://github.com/JupiterOne/graph-jamf/pull/151) (gonzaloavalosribas@Gonzalos-MacBook-Pro.local)
+
+#### Authors: 1
+
+- Gonzalo Avalos Ribas ([@Gonzalo-Avalos-Ribas](https://github.com/Gonzalo-Avalos-Ribas))
+
+---
+
 # v2.14.2 (Thu Jul 27 2023)
 
 #### 🐛 Bug Fix

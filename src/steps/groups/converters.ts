@@ -1,7 +1,4 @@
-import {
-  IntegrationLogger,
-  createIntegrationEntity,
-} from '@jupiterone/integration-sdk-core';
+import { createIntegrationEntity } from '@jupiterone/integration-sdk-core';
 import { Group } from '../../jamf/types';
 import { generateEntityKey } from '../../util/generateKey';
 import { skippedRawDataSource } from '../../util/graphObject';
@@ -23,20 +20,4 @@ export function createGroupEntity(data: Group) {
       },
     },
   });
-}
-//INT-8912
-export function printSizeOfField(data: Group, logger: IntegrationLogger) {
-  logger.info(
-    {
-      _class: Entities.GROUP._class.length,
-      _type: Entities.GROUP._type.length,
-      _key: generateEntityKey(Entities.GROUP._type, data.id).length,
-      id: data.id.toString().length,
-      displayName: data.name.length,
-      name: data.name.length,
-      accessLevel: data.access_level?.length,
-      privilegeSet: data.privilege_set?.length,
-    },
-    'Size of Group fields',
-  );
 }

@@ -1,3 +1,15 @@
+# v2.14.4 (Wed Aug 02 2023)
+
+#### 🐛 Bug Fix
+
+- Added wrapper to log the size of entities [#152](https://github.com/JupiterOne/graph-jamf/pull/152) (gonzaloavalosribas@Gonzalos-MacBook-Pro.local)
+
+#### Authors: 1
+
+- Gonzalo Avalos Ribas ([@Gonzalo-Avalos-Ribas](https://github.com/Gonzalo-Avalos-Ribas))
+
+---
+
 # v2.14.3 (Tue Aug 01 2023)
 
 #### 🐛 Bug Fix

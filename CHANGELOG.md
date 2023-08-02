@@ -1,3 +1,15 @@
+# v2.14.5 (Wed Aug 02 2023)
+
+#### 🐛 Bug Fix
+
+- Removed the logs added [#153](https://github.com/JupiterOne/graph-jamf/pull/153) (gonzaloavalosribas@Gonzalos-MacBook-Pro.local)
+
+#### Authors: 1
+
+- Gonzalo Avalos Ribas ([@Gonzalo-Avalos-Ribas](https://github.com/Gonzalo-Avalos-Ribas))
+
+---
+
 # v2.14.4 (Wed Aug 02 2023)
 
 #### 🐛 Bug Fix

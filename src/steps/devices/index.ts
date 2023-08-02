@@ -344,14 +344,10 @@ export async function fetchMobileDevices({
     const previouslyDiscoveredDevice = jobState.hasKey(device.serial_number);
 
     const mobileDeviceEntity = await jobState.addEntity(
-      logSizeOfEntity(
-        createMobileDeviceEntity(
-          device,
-          deviceDetail,
-          previouslyDiscoveredDevice,
-        ),
-        logger,
-        'MobileDevice',
+      createMobileDeviceEntity(
+        device,
+        deviceDetail,
+        previouslyDiscoveredDevice,
       ),
     );
 
@@ -405,11 +401,7 @@ export async function fetchMacOsConfigurationDetails({
       };
 
       const configurationEntity = await jobState.addEntity(
-        logSizeOfEntity(
-          createMacOsConfigurationEntity(parsedMacOsConfigurationDetail),
-          logger,
-          'MacOsConfiguration',
-        ),
+        createMacOsConfigurationEntity(parsedMacOsConfigurationDetail),
       );
 
       await jobState.addRelationship(
@@ -506,16 +498,12 @@ export async function fetchComputers({
       );
 
       const computerEntity = await jobState.addEntity(
-        logSizeOfEntity(
-          createComputerEntity({
-            device: computer,
-            macOsConfigurationDetailByIdMap,
-            detailData: computerDetail,
-            previouslyDiscoveredDevice,
-          }),
-          logger,
-          'computer',
-        ),
+        createComputerEntity({
+          device: computer,
+          macOsConfigurationDetailByIdMap,
+          detailData: computerDetail,
+          previouslyDiscoveredDevice,
+        }),
       );
 
       computerDeviceIdToGraphObjectKeyMap.set(computer.id, computerEntity._key);
@@ -618,18 +606,7 @@ async function createLocalAccountUsesComputerRelationships(
     mappedRelationshipKeySet.add(mappedRelationshipKey);
   }
 }
-//INT-8924
-function logSizeOfEntity(
-  entity: Entity,
-  logger: IntegrationLogger,
-  name: string,
-) {
-  logger.info(
-    { nameOfEntity: name, size: Buffer.byteLength(JSON.stringify(entity)) },
-    `Size of Entity`,
-  );
-  return entity;
-}
+
 export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.MACOS_CONFIGURATION_PROFILES,

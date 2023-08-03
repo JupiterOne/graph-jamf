@@ -1,8 +1,6 @@
 import { createMobileDeviceEntity, getDeploymentStatus } from './converters';
 import {
   createMockMobileDevice,
-  createMockComputer,
-  createMockComputerDetail,
   EXTENSION_ATTRIBUTES,
   createMockMobileDeviceDetail,
 } from '../../../test/mocks';

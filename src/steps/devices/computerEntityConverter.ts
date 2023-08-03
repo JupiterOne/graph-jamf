@@ -148,7 +148,146 @@ function collapsePayloadNumber(
   );
 }
 
-// TODO: Refactor this to be simpler!
+export const getConfigurationProfileData = (
+  detailData,
+  macOsConfigurationDetailByIdMap,
+) => {
+  const configurationProfiles = detailData.configuration_profiles
+    .map((profile) => macOsConfigurationDetailByIdMap.get(profile.id))
+    .filter(
+      (profile) => typeof profile !== 'undefined',
+    ) as OSXConfigurationDetailParsed[];
+
+  const collapseFirewallBoolean = collapsePayloadBoolean.bind(
+    null,
+    configurationProfiles,
+    'com.apple.security.firewall',
+  );
+
+  if (configurationProfiles.length > 0) {
+    return {
+      firewallEnabled: collapseFirewallBoolean('EnableFirewall'),
+      firewallStealthModeEnabled: collapseFirewallBoolean('EnableStealthMode'),
+      firewallBlockAllIncoming: collapseFirewallBoolean('BlockAllIncoming'),
+      screensaverLockEnabled: collapsePayloadBoolean(
+        configurationProfiles,
+        'com.apple.screensaver',
+        'PayloadEnabled',
+      ),
+      screensaverIdleTime: collapsePayloadNumber(
+        configurationProfiles,
+        'com.apple.screensaver',
+        'loginWindowIdleTime',
+      ),
+    };
+  }
+
+  return {};
+};
+
+export const getUserNameData = (
+  username: string,
+  detailData: ComputerDetail,
+) => {
+  if (!username || username.length === 0) {
+    return { username: detailData.location.username };
+  }
+
+  return {};
+};
+
+const getFirewallEnabledData = (detailData) => {
+  // TODO:  Should we let the Security tab Firewall value override the above
+  // firewall data set by the profile (if one is attached)?  In theory, they
+  // should always match
+  if (
+    detailData.security &&
+    detailData.security.firewall_enabled !== undefined
+  ) {
+    return { firewallEnabled: detailData.security.firewall_enabled };
+  }
+
+  return {};
+};
+
+const getDetailedData = (
+  detailData: ComputerDetail,
+  device: Computer,
+  macOsConfigurationDetailByIdMap: Map<number, OSXConfigurationDetailParsed>,
+) => {
+  const convertedProperties = convertProperties(detailData.general);
+  // eslint-disable-next-line prefer-const
+  let data: any = {
+    id: detailData.general.id.toString(),
+    name: convertedProperties.name,
+    networkAdapterType: convertedProperties.networkAdapterType,
+    ipAddress: convertedProperties.ipAddress,
+    altNetworkAdapterType: convertedProperties.altNetworkAdapterType,
+    lastReportedIp: convertedProperties.lastReportedIp,
+    serialNumber: convertedProperties.serialNumber,
+    udid: convertedProperties.udid,
+    jamfVersion: convertedProperties.jamfVersion,
+    barcode1: convertedProperties.barcode1,
+    barcode2: convertedProperties.barcode2,
+    assetTag: convertedProperties.assetTag,
+    supervised: convertedProperties.supervised,
+    mdmCapable: convertedProperties.mdmCapable,
+    lastCloudBackupDateEpoch: convertedProperties.lastCloudBackupDateEpoch,
+    lastCloudBackupDateUtc: convertedProperties.lastCloudBackupDateUtc,
+    mdmProfileExpirationEpoch: convertedProperties.mdmProfileExpirationEpoch,
+    mdmProfileExpirationUtc: convertedProperties.mdmProfileExpirationUtc,
+    distributionPoint: convertedProperties.distributionPoint,
+    sus: convertedProperties.sus,
+    netbootServer: convertedProperties.netbootServer || '',
+    itunesStoreAccountIsActive: convertedProperties.itunesStoreAccountIsActive,
+    platform:
+      detailData.general.platform === 'Mac'
+        ? 'darwin'
+        : detailData.general.platform.toLowerCase(),
+    createdOn: detailData.general.initial_entry_date_epoch
+      ? detailData.general.initial_entry_date_epoch
+      : undefined,
+    enrolledOn: detailData.general.last_enrolled_date_epoch
+      ? detailData.general.last_enrolled_date_epoch
+      : undefined,
+    macAddress:
+      detailData.general.mac_address &&
+      detailData.general.mac_address.toLowerCase(),
+    altMacAddress:
+      detailData.general.alt_mac_address &&
+      detailData.general.alt_mac_address.toLowerCase(),
+    make: detailData.hardware.make,
+    osName:
+      detailData.general.platform === 'Mac'
+        ? 'macOS'
+        : detailData.hardware.os_name,
+    osVersion: deviceNormalizer.normalizeOsVersion(
+      detailData.hardware.os_version,
+    ),
+    osBuild: detailData.hardware.os_build,
+    systemIntegrityProtectionEnabled:
+      systemIntegrityProtectionEnabled(detailData),
+    email: detailData.location.email_address?.toLowerCase(),
+    encrypted: encrypted(detailData),
+    gatekeeperStatus: detailData.hardware.gatekeeper_status,
+    gatekeeperEnabled: gatekeeperEnabled(detailData),
+  };
+
+  const configurationProfileData = getConfigurationProfileData(
+    detailData,
+    macOsConfigurationDetailByIdMap,
+  );
+  const firewallEnabledData = getFirewallEnabledData(detailData);
+  const usernameData = getUserNameData(device.username, detailData);
+
+  return {
+    ...data,
+    ...configurationProfileData,
+    ...usernameData,
+    ...firewallEnabledData,
+  };
+};
+
 export function createComputerEntity({
   device,
   macOsConfigurationDetailByIdMap,
@@ -221,102 +360,13 @@ export function createComputerEntity({
       rawData: detailData,
     });
 
-    Object.assign(computer, {
-      ...convertProperties(detailData.general),
-      id: detailData.general.id.toString(),
-    });
-
-    computer.createdOn = detailData.general.initial_entry_date_epoch
-      ? detailData.general.initial_entry_date_epoch
-      : undefined;
-    computer.enrolledOn = detailData.general.last_enrolled_date_epoch
-      ? detailData.general.last_enrolled_date_epoch
-      : undefined;
-
-    computer.macAddress =
-      detailData.general.mac_address &&
-      detailData.general.mac_address.toLowerCase();
-    computer.altMacAddress =
-      detailData.general.alt_mac_address &&
-      detailData.general.alt_mac_address.toLowerCase();
-
-    delete (computer as any).initialEntryDate;
-    delete (computer as any).initialEntryDateEpoch;
-    delete (computer as any).initialEntryDateUtc;
-    delete (computer as any).lastContactTime;
-    delete (computer as any).lastContactTimeEpoch;
-    delete (computer as any).lastContactTimeUtc;
-    delete (computer as any).lastEnrolledDate;
-    delete (computer as any).lastEnrolledDateEpoch;
-    delete (computer as any).lastEnrolledDateUtc;
-    delete (computer as any).reportDate;
-    delete (computer as any).reportDateEpoch;
-    delete (computer as any).reportDateUtc;
-
-    computer.platform =
-      detailData.general.platform === 'Mac'
-        ? 'darwin'
-        : detailData.general.platform.toLowerCase();
-    computer.make = detailData.hardware.make;
-    computer.osName =
-      detailData.general.platform === 'Mac'
-        ? 'macOS'
-        : detailData.hardware.os_name;
-    computer.osVersion = deviceNormalizer.normalizeOsVersion(
-      detailData.hardware.os_version,
+    const data = getDetailedData(
+      detailData,
+      device,
+      macOsConfigurationDetailByIdMap,
     );
-    computer.osBuild = detailData.hardware.os_build;
 
-    if (!device.username || device.username.length === 0) {
-      computer.username = detailData.location.username;
-    }
-
-    computer.email = detailData.location.email_address?.toLowerCase();
-    computer.encrypted = encrypted(detailData);
-    computer.gatekeeperStatus = detailData.hardware.gatekeeper_status;
-    computer.gatekeeperEnabled = gatekeeperEnabled(detailData);
-    computer.systemIntegrityProtectionEnabled =
-      systemIntegrityProtectionEnabled(detailData);
-
-    const configurationProfiles = detailData.configuration_profiles
-      .map((profile) => macOsConfigurationDetailByIdMap.get(profile.id))
-      .filter((profile) => {
-        return typeof profile !== 'undefined';
-      }) as OSXConfigurationDetailParsed[];
-
-    if (configurationProfiles.length > 0) {
-      const collapseFirewallBoolean = collapsePayloadBoolean.bind(
-        null,
-        configurationProfiles,
-        'com.apple.security.firewall',
-      );
-
-      computer.firewallEnabled = collapseFirewallBoolean('EnableFirewall');
-      computer.firewallStealthModeEnabled =
-        collapseFirewallBoolean('EnableStealthMode');
-      computer.firewallBlockAllIncoming =
-        collapseFirewallBoolean('BlockAllIncoming');
-      computer.screensaverLockEnabled = collapsePayloadBoolean(
-        configurationProfiles,
-        'com.apple.screensaver',
-        'PayloadEnabled',
-      );
-      computer.screensaverIdleTime = collapsePayloadNumber(
-        configurationProfiles,
-        'com.apple.screensaver',
-        'loginWindowIdleTime',
-      );
-    }
-
-    // TODO:  Should we let the Security tab Firewall value override the above
-    // firewall data set by the profile (if one is attached)?  In theory, they
-    // should always match
-    if (
-      detailData.security &&
-      detailData.security.firewall_enabled !== undefined
-    ) {
-      computer.firewallEnabled = detailData.security.firewall_enabled;
-    }
+    return { ...computer, ...data };
   }
 
   return computer;

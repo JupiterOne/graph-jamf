@@ -25,14 +25,13 @@ describe('#createMobileDeviceEntity', () => {
 
 describe('#createComputerEntity', () => {
   test('should convert data', () => {
-    expect(
-      createComputerEntity({
-        device: createMockComputer(),
-        macOsConfigurationDetailByIdMap: new Map(),
-        detailData: createMockComputerDetail(),
-        previouslyDiscoveredDevice: false,
-      }),
-    ).toMatchSnapshot();
+    const data = createComputerEntity({
+      device: createMockComputer(),
+      macOsConfigurationDetailByIdMap: new Map(),
+      detailData: createMockComputerDetail(),
+      previouslyDiscoveredDevice: false,
+    });
+    expect(data).toMatchSnapshot();
   });
 });
 

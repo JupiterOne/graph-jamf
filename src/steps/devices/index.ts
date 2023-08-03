@@ -20,7 +20,6 @@ import {
 } from '../constants';
 import {
   createMobileDeviceEntity,
-  createComputerEntity,
   createMacOsConfigurationEntity,
   createComputerGroupEntity,
 } from './converters';
@@ -41,6 +40,7 @@ import {
   setComputerDeviceIdToGraphObjectKeyMap,
   setMobileDeviceIdToGraphObjectKeyMap,
 } from '../../util/device';
+import { createComputerEntity } from './computerEntityConverter';
 
 type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
 

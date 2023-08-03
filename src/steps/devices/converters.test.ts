@@ -1,8 +1,4 @@
-import {
-  createComputerEntity,
-  createMobileDeviceEntity,
-  getDeploymentStatus,
-} from './converters';
+import { createMobileDeviceEntity, getDeploymentStatus } from './converters';
 import {
   createMockMobileDevice,
   createMockComputer,
@@ -20,18 +16,6 @@ describe('#createMobileDeviceEntity', () => {
         false,
       ),
     ).toMatchSnapshot();
-  });
-});
-
-describe('#createComputerEntity', () => {
-  test('should convert data', () => {
-    const data = createComputerEntity({
-      device: createMockComputer(),
-      macOsConfigurationDetailByIdMap: new Map(),
-      detailData: createMockComputerDetail(),
-      previouslyDiscoveredDevice: false,
-    });
-    expect(data).toMatchSnapshot();
   });
 });
 

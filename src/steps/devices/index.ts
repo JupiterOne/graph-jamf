@@ -341,13 +341,15 @@ export async function fetchMobileDevices({
     new Map();
 
   await iterateMobileDevices(client, logger, async (device, deviceDetail) => {
-    const previouslyDiscoveredDevice = jobState.hasKey(device.serial_number);
+    const previouslyDiscoveredDevice = jobState.hasKey(
+      device.serial_number,
+    ) as boolean;
 
     const mobileDeviceEntity = await jobState.addEntity(
       createMobileDeviceEntity(
         device,
         deviceDetail,
-        previouslyDiscoveredDevice as boolean,
+        previouslyDiscoveredDevice,
       ),
     );
 

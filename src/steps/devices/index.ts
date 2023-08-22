@@ -347,7 +347,7 @@ export async function fetchMobileDevices({
       createMobileDeviceEntity(
         device,
         deviceDetail,
-        previouslyDiscoveredDevice,
+        previouslyDiscoveredDevice as boolean,
       ),
     );
 
@@ -495,7 +495,7 @@ export async function fetchComputers({
     async (computer, computerDetail) => {
       const previouslyDiscoveredDevice = jobState.hasKey(
         computer.serial_number,
-      );
+      ) as boolean;
 
       const computerEntity = await jobState.addEntity(
         createComputerEntity({

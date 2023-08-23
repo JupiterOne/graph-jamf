@@ -319,7 +319,9 @@ export function createComputerEntity({
       detailData.general.platform === 'Mac'
         ? 'macOS'
         : detailData.hardware.os_name;
-    computer.osVersion = detailData.hardware.os_version;
+    computer.osVersion = deviceNormalizer.normalizeOsVersion(
+      detailData.hardware.os_version,
+    );
     computer.osBuild = detailData.hardware.os_build;
 
     if (!device.username || device.username.length === 0) {

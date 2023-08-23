@@ -1,3 +1,16 @@
+# v2.14.6 (Wed Aug 23 2023)
+
+#### 🐛 Bug Fix
+
+- INT-8586: normalize hardware os version [#155](https://github.com/JupiterOne/graph-jamf/pull/155) (michell.ayalagalvan@contractor.jupterone.com [@mishelashala](https://github.com/mishelashala))
+
+#### Authors: 2
+
+- Mich (michell.ayalagalvan@contractor.jupterone.com)
+- Michell Ayala ([@mishelashala](https://github.com/mishelashala))
+
+---
+
 # v2.14.5 (Wed Aug 02 2023)
 
 #### 🐛 Bug Fix

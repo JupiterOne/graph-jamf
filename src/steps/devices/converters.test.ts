@@ -1,12 +1,6 @@
-import {
-  createComputerEntity,
-  createMobileDeviceEntity,
-  getDeploymentStatus,
-} from './converters';
+import { createMobileDeviceEntity, getDeploymentStatus } from './converters';
 import {
   createMockMobileDevice,
-  createMockComputer,
-  createMockComputerDetail,
   EXTENSION_ATTRIBUTES,
   createMockMobileDeviceDetail,
 } from '../../../test/mocks';
@@ -19,19 +13,6 @@ describe('#createMobileDeviceEntity', () => {
         createMockMobileDeviceDetail(),
         false,
       ),
-    ).toMatchSnapshot();
-  });
-});
-
-describe('#createComputerEntity', () => {
-  test('should convert data', () => {
-    expect(
-      createComputerEntity({
-        device: createMockComputer(),
-        macOsConfigurationDetailByIdMap: new Map(),
-        detailData: createMockComputerDetail(),
-        previouslyDiscoveredDevice: false,
-      }),
     ).toMatchSnapshot();
   });
 });

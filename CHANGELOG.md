@@ -1,3 +1,16 @@
+# v2.14.7 (Thu Aug 24 2023)
+
+#### 🐛 Bug Fix
+
+- INT-8568: fix user endpoint os version [#154](https://github.com/JupiterOne/graph-jamf/pull/154) (michell.ayalagalvan@contractor.jupterone.com [@mishelashala](https://github.com/mishelashala))
+
+#### Authors: 2
+
+- Mich (michell.ayalagalvan@contractor.jupterone.com)
+- Michell Ayala ([@mishelashala](https://github.com/mishelashala))
+
+---
+
 # v2.14.6 (Wed Aug 23 2023)
 
 #### 🐛 Bug Fix

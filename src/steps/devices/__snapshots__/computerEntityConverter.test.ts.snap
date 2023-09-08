@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createComputerEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Host",
     "Device",
   ],
   "_key": "ABC123DEF456",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
+      "rawData": {
         "building": "",
         "department": "",
         "id": 1,
@@ -25,18 +25,18 @@ Object {
         "username": "john",
       },
     },
-    Object {
+    {
       "name": "detail",
-      "rawData": Object {
-        "certificates": Array [
-          Object {
+      "rawData": {
+        "certificates": [
+          {
             "common_name": "com.apple.kerberos.kdc",
             "expires_epoch": "",
             "expires_utc": "",
             "identity": true,
             "name": "",
           },
-          Object {
+          {
             "common_name": "Apple Worldwide Developer Relations Certification Authority",
             "expires_epoch": 1675806527000,
             "expires_utc": "2023-02-07T21:48:47.000+0000",
@@ -44,46 +44,46 @@ Object {
             "name": "",
           },
         ],
-        "configuration_profiles": Array [
-          Object {
+        "configuration_profiles": [
+          {
             "id": -2,
             "is_removable": false,
             "name": "",
             "uuid": "",
           },
-          Object {
+          {
             "id": -1,
             "is_removable": false,
             "name": "",
             "uuid": "",
           },
         ],
-        "extension_attributes": Array [
-          Object {
+        "extension_attributes": [
+          {
             "id": 1,
             "name": "123",
-            "value": Array [
+            "value": [
               "foo123",
               "bar123",
             ],
           },
-          Object {
+          {
             "id": 2,
             "name": "456",
-            "value": Array [
+            "value": [
               "foo456",
               "bar456",
             ],
           },
-          Object {
+          {
             "id": 3,
             "name": "Deployment status",
-            "value": Array [
+            "value": [
               "active",
             ],
           },
         ],
-        "general": Object {
+        "general": {
           "alt_mac_address": "12:34:56:78:90:12",
           "alt_network_adapter_type": "Ethernet",
           "asset_tag": "",
@@ -106,13 +106,13 @@ Object {
           "last_enrolled_date_utc": "2020-06-03T20:48:34.697+0000",
           "last_reported_ip": "192.168.1.139",
           "mac_address": "12:34:67:8A:9B:1C",
-          "management_status": Object {
+          "management_status": {
             "enrolled_via_dep": false,
             "user_approved_enrollment": false,
             "user_approved_mdm": false,
           },
           "mdm_capable": true,
-          "mdm_capable_users": Object {
+          "mdm_capable_users": {
             "mdm_capable_user": "john.doe",
           },
           "mdm_profile_expiration_epoch": 1748983791000,
@@ -121,7 +121,7 @@ Object {
           "netboot_server": "",
           "network_adapter_type": "IEEE80211",
           "platform": "Mac",
-          "remote_management": Object {
+          "remote_management": {
             "managed": true,
             "management_password_sha256": "abc123",
             "management_username": "macOS",
@@ -130,7 +130,7 @@ Object {
           "report_date_epoch": 1596457469968,
           "report_date_utc": "2020-08-03T12:24:29.968+0000",
           "serial_number": "ABC123DEF456",
-          "site": Object {
+          "site": {
             "id": 1,
             "name": "Test site",
           },
@@ -138,12 +138,12 @@ Object {
           "sus": "",
           "udid": "DF7C48EF-D17E-4A5E-B192-8C758870F624",
         },
-        "groups_accounts": Object {
-          "computer_group_memberships": Array [
+        "groups_accounts": {
+          "computer_group_memberships": [
             "All Managed Clients",
           ],
-          "local_accounts": Array [
-            Object {
+          "local_accounts": [
+            {
               "administrator": true,
               "filevault_enabled": true,
               "home": "/Users/john",
@@ -153,7 +153,7 @@ Object {
               "realname": "John",
               "uid": "501",
             },
-            Object {
+            {
               "administrator": true,
               "filevault_enabled": true,
               "home": "/Users/macOS",
@@ -164,9 +164,9 @@ Object {
               "uid": "502",
             },
           ],
-          "user_inventories": Object {
+          "user_inventories": {
             "disable_automatic_login": true,
-            "user": Object {
+            "user": {
               "password_history_depth": "",
               "password_max_age": "",
               "password_min_complex_characters": "",
@@ -176,7 +176,7 @@ Object {
             },
           },
         },
-        "hardware": Object {
+        "hardware": {
           "active_directory_status": "Not Bound",
           "available_ram_slots": 0,
           "battery_capacity": 93,
@@ -187,15 +187,15 @@ Object {
           "cache_size": 8192,
           "cache_size_kb": 8192,
           "disk_encryption_configuration": "",
-          "filevault2_users": Array [
+          "filevault2_users": [
             "macOS",
             "john.doe",
           ],
           "gatekeeper_status": "App Store and identified developers",
           "institutional_recovery_key": "Not Present",
           "make": "Apple",
-          "mapped_printers": Array [
-            Object {
+          "mapped_printers": [
+            {
               "location": "",
               "name": "Brother ABC",
               "type": "Brother ABC",
@@ -219,14 +219,14 @@ Object {
           "service_pack": "",
           "sip_status": "Enabled",
           "smc_version": "2.45f1",
-          "storage": Array [
-            Object {
+          "storage": [
+            {
               "connection_type": "NO",
               "disk": "disk0",
               "drive_capacity_mb": 1000555,
               "model": "APPLE SSD SM1024L",
-              "partitions": Array [
-                Object {
+              "partitions": [
+                {
                   "available_mb": 207295,
                   "boot_drive_available_mb": 207295,
                   "filevault2_percent": 100,
@@ -242,7 +242,7 @@ Object {
                   "size": 1000240,
                   "type": "boot",
                 },
-                Object {
+                {
                   "available_mb": 207295,
                   "filevault2_percent": 100,
                   "filevault2_status": "Encrypted",
@@ -265,8 +265,8 @@ Object {
           "total_ram_mb": 16384,
           "xprotect_version": "2127",
         },
-        "iphones": Array [],
-        "location": Object {
+        "iphones": [],
+        "location": {
           "building": "",
           "department": "",
           "email_address": "JOHN.doe@test.com",
@@ -278,10 +278,10 @@ Object {
           "room": "",
           "username": "john.doe",
         },
-        "peripherals": Array [],
-        "purchasing": Object {
+        "peripherals": [],
+        "purchasing": {
           "applecare_id": "",
-          "attachments": Array [],
+          "attachments": [],
           "is_leased": false,
           "is_purchased": true,
           "lease_expires": "",
@@ -302,35 +302,35 @@ Object {
           "warranty_expires_epoch": 0,
           "warranty_expires_utc": "",
         },
-        "security": Object {
+        "security": {
           "activation_lock": false,
           "external_boot_level": "not supported",
           "firewall_enabled": false,
           "secure_boot_level": "not supported",
         },
-        "software": Object {
-          "applications": Array [
-            Object {
+        "software": {
+          "applications": [
+            {
               "bundle_id": "com.github.atom",
               "name": "Atom.app",
               "path": "/Applications/Atom.app",
               "version": "1.43.0",
             },
           ],
-          "available_software_updates": Array [],
-          "available_updates": Object {},
-          "cached_by_casper": Array [],
-          "fonts": Array [],
-          "installed_by_casper": Array [],
-          "installed_by_installer_swu": Array [
+          "available_software_updates": [],
+          "available_updates": {},
+          "cached_by_casper": [],
+          "fonts": [],
+          "installed_by_casper": [],
+          "installed_by_installer_swu": [
             "com.apple.pkg.Core",
           ],
-          "licensed_software": Array [],
-          "plugins": Array [],
-          "running_services": Array [
+          "licensed_software": [],
+          "plugins": [],
+          "running_services": [
             "com.apple.accessoryd",
           ],
-          "unix_executables": Array [],
+          "unix_executables": [],
         },
       },
     },
@@ -352,7 +352,7 @@ Object {
   "email": "john.doe@test.com",
   "encrypted": true,
   "enrolledOn": 1591217314697,
-  "extensionAttribute.Deployment status": Array [
+  "extensionAttribute.Deployment status": [
     "active",
   ],
   "firewallEnabled": false,

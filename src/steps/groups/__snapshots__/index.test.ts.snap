@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchGroups should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Account",
       ],
       "_key": "jamf_account_local-integration-instance",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "id": "local-integration-instance",
             "name": "Local Integration",
           },
@@ -23,15 +23,15 @@ Object {
       "id": "local-integration-instance",
       "name": "Local Integration",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_12",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -51,21 +51,21 @@ Object {
       "fullName": "Adam Pierson",
       "id": "12",
       "name": "adam.pierson",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "adam.pierson",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -85,21 +85,21 @@ Object {
       "fullName": "",
       "id": "1",
       "name": "adam.williams",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "adam.williams",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_9",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -119,21 +119,21 @@ Object {
       "fullName": "Austin Kelleher",
       "id": "9",
       "name": "austin.kelleher",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "austin.kelleher",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_13",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -153,21 +153,21 @@ Object {
       "fullName": "",
       "id": "13",
       "name": "chasen.bettinger",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "chasen.bettinger",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -187,21 +187,21 @@ Object {
       "fullName": "Erkang Zheng",
       "id": "3",
       "name": "erkang.zheng",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "erkang.zheng",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_7",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -221,21 +221,21 @@ Object {
       "fullName": "Isaac Williams",
       "id": "7",
       "name": "isaacwilliams",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "isaacwilliams",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_8",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -259,15 +259,15 @@ Object {
       "privilegeSet": "Custom",
       "username": "jupiterone.dev",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_14",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -291,15 +291,15 @@ Object {
       "privilegeSet": "Custom",
       "username": "max.daum",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_17",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -323,15 +323,15 @@ Object {
       "privilegeSet": "Auditor",
       "username": "my.new.account",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_10",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -351,21 +351,21 @@ Object {
       "fullName": "",
       "id": "10",
       "name": "nick.dowmon",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "nick.dowmon",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_15",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -385,21 +385,21 @@ Object {
       "fullName": "Samuel Poulton",
       "id": "15",
       "name": "samuel.poulton",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "samuel.poulton",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_11",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -419,21 +419,21 @@ Object {
       "fullName": "Stefan Virag",
       "id": "11",
       "name": "stefan.virag",
-      "permissions": Array [
+      "permissions": [
         "Administrator",
       ],
       "privilegeSet": "Administrator",
       "username": "stefan.virag",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "jamf_user_16",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -457,15 +457,15 @@ Object {
       "privilegeSet": "Custom",
       "username": "Wrong_Permissions",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "UserGroup",
       ],
       "_key": "jamf_group_1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -479,15 +479,15 @@ Object {
       "name": "Test Group",
       "privilegeSet": "Custom",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "UserGroup",
       ],
       "_key": "jamf_group_2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -501,15 +501,15 @@ Object {
       "name": "Another Test Group",
       "privilegeSet": "Custom",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "UserGroup",
       ],
       "_key": "jamf_group_3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "uploadStatus": "SKIPPED",
             "uploadStatusReason": "Raw data currently disabled for this entity type",
           },
@@ -524,8 +524,8 @@ Object {
       "privilegeSet": "Custom",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_12",
@@ -533,7 +533,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_1",
@@ -541,7 +541,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_9",
@@ -549,7 +549,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_13",
@@ -557,7 +557,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_3",
@@ -565,7 +565,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_7",
@@ -573,7 +573,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_8",
@@ -581,7 +581,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_14",
@@ -589,7 +589,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_17",
@@ -597,7 +597,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_10",
@@ -605,7 +605,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_15",
@@ -613,7 +613,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_11",
@@ -621,7 +621,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_user_16",
@@ -629,7 +629,7 @@ Object {
       "_type": "jamf_account_has_user",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_group_1",
@@ -637,7 +637,7 @@ Object {
       "_type": "jamf_account_has_group",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_group_2",
@@ -645,7 +645,7 @@ Object {
       "_type": "jamf_account_has_group",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "jamf_account_local-integration-instance",
       "_key": "jamf_account_local-integration-instance|has|jamf_group_3",
@@ -654,7 +654,7 @@ Object {
       "displayName": "HAS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "jamf_account",
     "jamf_user",
     "jamf_account_has_user",

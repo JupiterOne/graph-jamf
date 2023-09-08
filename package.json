@@ -33,12 +33,12 @@
     "validate:questions:dry": "j1-integration validate-question-file --dry-run"
   },
   "peerDependencies": {
-    "@jupiterone/integration-sdk-core": "^9.9.2"
+    "@jupiterone/integration-sdk-core": "^10.3.0"
   },
   "devDependencies": {
-    "@jupiterone/integration-sdk-core": "^9.9.2",
-    "@jupiterone/integration-sdk-dev-tools": "^9.9.2",
-    "@jupiterone/integration-sdk-testing": "^9.9.2",
+    "@jupiterone/integration-sdk-core": "^10.3.0",
+    "@jupiterone/integration-sdk-dev-tools": "^10.3.0",
+    "@jupiterone/integration-sdk-testing": "^10.3.0",
     "@types/plist": "^3.0.2",
     "@types/uuid": "^8.3.1",
     "auto": "^10.37.4"

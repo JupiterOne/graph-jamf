@@ -31,9 +31,8 @@ describe('#fetchAccounts', () => {
       ],
     });
 
-    const accountData = await context.jobState.getData<AdminsAndGroups>(
-      ACCOUNT_DATA_KEY,
-    );
+    const accountData =
+      await context.jobState.getData<AdminsAndGroups>(ACCOUNT_DATA_KEY);
 
     expect(accountData).toMatchSnapshot('accountData');
   });

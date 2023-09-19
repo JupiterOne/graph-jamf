@@ -1,3 +1,15 @@
+# v2.15.0 (Tue Sep 19 2023)
+
+#### 🚀 Enhancement
+
+- Collector Dockerfile, Package Updates, Prettier [#156](https://github.com/JupiterOne/graph-jamf/pull/156) ([@zemberdotnet](https://github.com/zemberdotnet))
+
+#### Authors: 1
+
+- Matthew Zember ([@zemberdotnet](https://github.com/zemberdotnet))
+
+---
+
 # v2.14.7 (Thu Aug 24 2023)
 
 #### 🐛 Bug Fix

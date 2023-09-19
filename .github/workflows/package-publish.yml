@@ -1,0 +1,13 @@
+name: Build and Package
+
+on:
+  push:
+    tags: '*'
+
+jobs:
+  publish-image:
+    uses: jupiterone/.github/.github/workflows/halo_publish_integration_collector_image.yaml@main
+    with:
+      secrets:
+        GHCR_USERNAME: ${{ github.actor }}
+        GHCR_PASSWORD: ${{ secrets.GITHUB_TOKEN }}

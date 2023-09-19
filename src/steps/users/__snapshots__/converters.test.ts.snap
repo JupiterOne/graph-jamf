@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createAdminEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "User",
   ],
   "_key": "jamf_user_1",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
+      "rawData": {
         "uploadStatus": "SKIPPED",
         "uploadStatusReason": "Raw data currently disabled for this entity type",
       },
@@ -29,7 +29,7 @@ Object {
   "fullName": "",
   "id": "1",
   "name": "adam.williams",
-  "permissions": Array [
+  "permissions": [
     "Administrator",
   ],
   "privilegeSet": "Administrator",
@@ -38,15 +38,15 @@ Object {
 `;
 
 exports[`#createDeviceUserEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "User",
   ],
   "_key": "device_user_1",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
+      "rawData": {
         "uploadStatus": "SKIPPED",
         "uploadStatusReason": "Raw data currently disabled for this entity type",
       },
@@ -64,7 +64,7 @@ Object {
   "id": "1",
   "ldapServer": "None",
   "name": "Test",
-  "os": Array [],
+  "os": [],
   "phoneNumber": "",
   "position": "",
   "totalVppCodeCount": 0,

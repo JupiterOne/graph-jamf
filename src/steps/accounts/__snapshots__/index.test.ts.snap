@@ -1,83 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchAccounts should collect data: accountData 1`] = `
-Object {
-  "groups": Array [
-    Object {
+{
+  "groups": [
+    {
       "id": 1,
       "name": "Test Group",
-      "site": Object {
+      "site": {
         "id": 1,
         "name": "Test site",
       },
     },
-    Object {
+    {
       "id": 2,
       "name": "Another Test Group",
-      "site": Object {
+      "site": {
         "id": 1,
         "name": "Test site",
       },
     },
-    Object {
+    {
       "id": 3,
       "name": "Not all groups have members inside in api",
-      "site": Object {
+      "site": {
         "id": 1,
         "name": "Test site",
       },
     },
   ],
-  "users": Array [
-    Object {
+  "users": [
+    {
       "id": 12,
       "name": "adam.pierson",
     },
-    Object {
+    {
       "id": 1,
       "name": "adam.williams",
     },
-    Object {
+    {
       "id": 9,
       "name": "austin.kelleher",
     },
-    Object {
+    {
       "id": 13,
       "name": "chasen.bettinger",
     },
-    Object {
+    {
       "id": 3,
       "name": "erkang.zheng",
     },
-    Object {
+    {
       "id": 7,
       "name": "isaacwilliams",
     },
-    Object {
+    {
       "id": 8,
       "name": "jupiterone.dev",
     },
-    Object {
+    {
       "id": 14,
       "name": "max.daum",
     },
-    Object {
+    {
       "id": 17,
       "name": "my.new.account",
     },
-    Object {
+    {
       "id": 10,
       "name": "nick.dowmon",
     },
-    Object {
+    {
       "id": 15,
       "name": "samuel.poulton",
     },
-    Object {
+    {
       "id": 11,
       "name": "stefan.virag",
     },
-    Object {
+    {
       "id": 16,
       "name": "Wrong_Permissions",
     },
@@ -86,17 +86,17 @@ Object {
 `;
 
 exports[`#fetchAccounts should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Account",
       ],
       "_key": "jamf_account_local-integration-instance",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "id": "local-integration-instance",
             "name": "Local Integration",
           },
@@ -109,8 +109,8 @@ Object {
       "name": "Local Integration",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "jamf_account",
   ],
   "numCollectedEntities": 1,

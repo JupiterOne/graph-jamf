@@ -6,8 +6,11 @@ on:
 
 jobs:
   publish-image:
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: jupiterone/.github/.github/workflows/halo_publish_integration_collector_image.yaml@main
-    with:
-      secrets:
-        GHCR_USERNAME: ${{ github.actor }}
-        GHCR_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+    secrets:
+      GHCR_USERNAME: ${{ github.actor }}
+      GHCR_PASSWORD: ${{ secrets.GITHUB_TOKEN }}

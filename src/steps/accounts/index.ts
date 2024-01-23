@@ -11,7 +11,6 @@ import {
   IntegrationSteps,
 } from '../constants';
 import { createAccountEntity } from './converters';
-import { IngestionSources } from '../../constants';
 
 export async function fetchAccounts({
   instance,
@@ -45,7 +44,6 @@ export const accountSteps: IntegrationStep<IntegrationConfig>[] = [
     name: 'Fetch Accounts',
     entities: [Entities.ACCOUNT],
     relationships: [],
-    ingestionSourceId: IngestionSources.ACCOUNTS,
     executionHandler: fetchAccounts,
   },
 ];

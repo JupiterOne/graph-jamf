@@ -2,11 +2,6 @@ import { IntegrationIngestionConfigFieldMap } from '@jupiterone/integration-sdk-
 import { IngestionSources } from './constants';
 
 export const ingestionConfig: IntegrationIngestionConfigFieldMap = {
-  [IngestionSources.ACCOUNTS]: {
-    title: 'Accounts',
-    description:
-      'Users with access, permissions, and roles in device management',
-  },
   [IngestionSources.MACOS_CONFIGURATION_PROFILES]: {
     title: 'MacOS configuration profiles',
     description: 'Device behavior settings including network and security',

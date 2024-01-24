@@ -5,6 +5,7 @@ import { deviceSteps } from './steps/devices';
 import { groupSteps } from './steps/groups';
 import { userSteps } from './steps/users';
 import { validateInvocation } from './validator';
+import { ingestionConfig } from './ingestionConfig';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> =
   {
@@ -16,4 +17,5 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> =
       ...userSteps,
       ...deviceSteps,
     ],
+    ingestionConfig,
   };

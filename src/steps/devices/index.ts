@@ -41,6 +41,7 @@ import {
   setMobileDeviceIdToGraphObjectKeyMap,
 } from '../../util/device';
 import { createComputerEntity } from './computerEntityConverter';
+import { IngestionSources } from '../../constants';
 
 type MacOsConfigurationDetailsById = Map<number, OSXConfigurationDetailParsed>;
 
@@ -615,6 +616,7 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
     name: 'Fetch macOS Configuration Profiles',
     entities: [Entities.MAC_OS_CONFIGURATION_PROFILE],
     relationships: [Relationships.ACCOUNT_HAS_MAC_OS_CONFIGURATION_PROFILE],
+    ingestionSourceId: IngestionSources.MACOS_CONFIGURATION_PROFILES,
     executionHandler: fetchMacOsConfigurationDetails,
     dependsOn: [IntegrationSteps.ACCOUNTS],
   },
@@ -623,6 +625,7 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
     name: 'Fetch Mobile Devices',
     entities: [Entities.MOBILE_DEVICE],
     relationships: [Relationships.ACCOUNT_HAS_MOBILE_DEVICE],
+    ingestionSourceId: IngestionSources.MOBILE_DEVICES,
     executionHandler: fetchMobileDevices,
     dependsOn: [IntegrationSteps.ACCOUNTS],
   },
@@ -639,6 +642,7 @@ export const deviceSteps: IntegrationStep<IntegrationConfig>[] = [
       MappedRelationships.COMPUTER_INSTALLED_APPLICATION,
       MappedRelationships.LOCAL_ACCOUNT_USES_COMPUTER,
     ],
+    ingestionSourceId: IngestionSources.COMPUTERS,
     executionHandler: fetchComputers,
     dependsOn: [
       IntegrationSteps.ACCOUNTS,

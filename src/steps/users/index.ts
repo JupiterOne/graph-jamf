@@ -21,6 +21,7 @@ import {
 } from '../../util/device';
 import pMap from 'p-map';
 import { iterator } from './interator';
+import { IngestionSources } from '../../constants';
 
 async function iterateAdminUserProfiles(
   client: IJamfClient,
@@ -250,6 +251,7 @@ export const userSteps: IntegrationStep<IntegrationConfig>[] = [
     name: 'Fetch Admins',
     entities: [Entities.USER_ADMIN],
     relationships: [Relationships.ACCOUNT_HAS_USER_ADMIN],
+    ingestionSourceId: IngestionSources.ADMINS,
     executionHandler: fetchAdminUsers,
     dependsOn: [IntegrationSteps.ACCOUNTS],
   },

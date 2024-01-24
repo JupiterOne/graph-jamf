@@ -1,6 +1,6 @@
 {
   "name": "@jupiterone/graph-jamf",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "description": "A JupiterOne Integration for https://jamf.com",
   "repository": {
     "type": "git",

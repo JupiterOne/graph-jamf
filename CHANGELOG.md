@@ -1,3 +1,31 @@
+# v2.15.0 (Wed Jan 24 2024)
+
+#### 🚀 Enhancement
+
+- Add ingestion sources [#159](https://github.com/JupiterOne/graph-jamf/pull/159) ([@jehisonprada](https://github.com/jehisonprada))
+- Collector Dockerfile, Package Updates, Prettier [#156](https://github.com/JupiterOne/graph-jamf/pull/156) ([@zemberdotnet](https://github.com/zemberdotnet))
+
+#### 🐛 Bug Fix
+
+- Fix collector workflow [#158](https://github.com/JupiterOne/graph-jamf/pull/158) ([@maxheckel](https://github.com/maxheckel))
+- Fix Workflow [#157](https://github.com/JupiterOne/graph-jamf/pull/157) ([@zemberdotnet](https://github.com/zemberdotnet))
+
+#### ⚠️ Pushed to `main`
+
+- Apply remove-codeql with multi-gitter [ci skip] ([@electricgull](https://github.com/electricgull))
+- Fix x-cortex-service-groups where tier-4 was set incorrectly ([@jablonnc](https://github.com/jablonnc))
+- Populate CODEOWENRS, baseline package.json and baseline cortex.yaml ([@jablonnc](https://github.com/jablonnc))
+
+#### Authors: 5
+
+- [@jehisonprada](https://github.com/jehisonprada)
+- [@maxheckel](https://github.com/maxheckel)
+- Cameron Griffin ([@electricgull](https://github.com/electricgull))
+- Matthew Zember ([@zemberdotnet](https://github.com/zemberdotnet))
+- Noah Jablonski ([@jablonnc](https://github.com/jablonnc))
+
+---
+
 # v2.15.0 (Tue Sep 19 2023)
 
 #### 🚀 Enhancement
